@@ -31,11 +31,25 @@ android {
         versionName = flutter.versionName
     }
 
+    // Doimiy imzo kaliti: yangi versiya eskisining ustidan o'rnatiladi va foydalanuvchi ma'lumotlari
+    // (sozlamalar, progress) saqlanib qoladi. Kalit faqat CI'da GitHub Secrets'dan olinadi.
+    val keystorePath = System.getenv("ANDROID_KEYSTORE_PATH")
+    signingConfigs {
+        if (keystorePath != null && file(keystorePath).exists()) {
+            create("release") {
+                storeFile = file(keystorePath)
+                storePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("ANDROID_KEY_ALIAS")
+                keyPassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+                storeType = "pkcs12"
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            // Kalit bo'lmasa (lokal yig'ishda) — debug kaliti.
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
         }
     }
 }

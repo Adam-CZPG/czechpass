@@ -104,6 +104,9 @@ class ProgressStore {
   static String dayKey(DateTime time) =>
       '${time.year.toString().padLeft(4, '0')}-${time.month.toString().padLeft(2, '0')}-${time.day.toString().padLeft(2, '0')}';
 
+  /// Barcha kunlar bo'yicha berilgan javoblar soni.
+  int get totalAnswers => _activity.values.fold(0, (sum, n) => sum + n);
+
   /// Bugun berilgan javoblar soni.
   int todayCount({DateTime? now}) => _activity[dayKey(now ?? DateTime.now())] ?? 0;
 

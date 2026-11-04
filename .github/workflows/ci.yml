@@ -106,14 +106,33 @@ jobs:
       # Hozircha sinov kaliti bilan imzolanadi. Google Play uchun keyin o'z kalitimiz
       # GitHub Secrets orqali qo'shiladi va AAB yig'iladi.
       # Ikki variant: "full" — sinov uchun barcha bo'limlar ochiq (DEV_UNLOCK), "free" — foydalanuvchi ko'radigan bepul versiya.
-      - name: APK (full, sinov uchun)
+      # Imzo kaliti GitHub Secrets'dan vaqtinchalik faylga yoziladi (repoga tushmaydi).
+      - name: Imzo kaliti
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
         run: |
-          flutter build apk --release --dart-define=DEV_UNLOCK=true
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+            echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/upload.jks" >> "$GITHUB_ENV"
+            echo "Doimiy kalit bilan imzolanadi"
+          else
+            echo "::warning::ANDROID_KEYSTORE_BASE64 yo'q — APK debug kaliti bilan imzolanadi (yangilanishda ma'lumotlar saqlanmaydi)"
+          fi
+      - name: APK (full, sinov uchun)
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          # Har bir yig'ish raqami oldingisidan katta: yangi APK eskisining ustidan o'rnatiladi.
+          flutter build apk --release --dart-define=DEV_UNLOCK=true --build-number=${{ github.run_number }}
           mkdir -p dist
           cp build/app/outputs/flutter-apk/app-release.apk dist/czechpass-full.apk
       - name: APK (free)
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
         run: |
-          flutter build apk --release
+          flutter build apk --release --build-number=${{ github.run_number }}
           cp build/app/outputs/flutter-apk/app-release.apk dist/czechpass-free.apk
       - uses: actions/upload-artifact@v7
         with:

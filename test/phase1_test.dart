@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
+import 'package:czech_pass/core/badges.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/progress_store.dart';
@@ -181,5 +182,23 @@ void main() {
       expect(AppController.formatMinutes(8 * 60 + 5), '08:05');
       expect(const S('uz').reminderAt('17:00'), 'Har kuni soat 17:00 da');
     });
+  });
+
+  test('nishonlar progress bo\'yicha beriladi va qayta berilmaydi', () async {
+    SharedPreferences.setMockInitialValues({});
+    final progress = await ProgressStore.load();
+    final day = DateTime(2026, 11, 4, 12);
+    for (var i = 0; i < 12; i++) {
+      await progress.record(Exams.realie, 'q$i', true, now: day);
+    }
+    final got = BadgeStore.qualified(progress: progress, dailyGoal: 10, realieTotal: 20, now: day);
+    expect(got, containsAll([Badges.firstSteps, Badges.goal, Badges.realieHalf]));
+    expect(got, isNot(contains(Badges.hundred)));
+    expect(got, isNot(contains(Badges.streak3)));
+
+    final store = await BadgeStore.load();
+    expect((await store.award(got)).length, got.length);
+    expect(await store.award(got), isEmpty);
+    expect((await BadgeStore.load()).has(Badges.firstSteps), isTrue);
   });
 }

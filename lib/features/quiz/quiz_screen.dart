@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/badges.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/progress_store.dart';
@@ -134,6 +135,12 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _showResult(QuestionBank bank) {
     if (!_isExam) SessionStore.clear(_sessionKey);
+    if (_isExam) {
+      final right = _answers.where((a) => a.correct).length;
+      if (right >= RealieRules.passFor(_answers.length)) {
+        AppScope.read(context).markMockPassed(Badges.realieMock);
+      }
+    }
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => ResultScreen(

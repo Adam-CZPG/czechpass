@@ -6,11 +6,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
 import 'package:czech_pass/core/app_language.dart';
+import 'package:czech_pass/core/app_update.dart';
+import 'package:czech_pass/core/badges.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/settings_store.dart';
 import 'package:czech_pass/features/home/home_screen.dart';
 import 'package:czech_pass/features/onboarding/language_screen.dart';
+import 'package:czech_pass/l10n/strings.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,6 +32,7 @@ Future<void> main() async {
     initialExamDate: await settings.loadExamDate(),
     initialDailyGoal: await settings.loadDailyGoal(),
     initialReminder: await settings.loadReminder(),
+    badges: await BadgeStore.load(),
   );
   // Ilova yangilangandan keyin ham eslatma ishlashi uchun qayta rejalashtiramiz.
   controller.rescheduleReminder();
@@ -47,12 +51,32 @@ class CzechPassApp extends StatefulWidget {
 /// Telefonning yorug'/qorong'i mavzusini kuzatadi.
 class _CzechPassAppState extends State<CzechPassApp> with WidgetsBindingObserver {
   AppController get controller => widget.controller;
+  final _navigatorKey = GlobalKey<NavigatorState>();
+  final _messengerKey = GlobalKey<ScaffoldMessengerState>();
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
     _syncBrightness();
+    controller.onBadge = _showBadge;
+    // Ilova ochilgach Google Play'da yangi versiya bor-yo'qligini tekshiramiz.
+    WidgetsBinding.instance.addPostFrameCallback((_) => AppUpdate.check(_navigatorKey, controller.language.code));
+  }
+
+  void _showBadge(AppBadge badge) {
+    final s = S(controller.language.code);
+    _messengerKey.currentState?.showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            Icon(badge.icon, color: Colors.white),
+            const SizedBox(width: 12),
+            Expanded(child: Text(s.badgeEarned(badge.titleFor(s.lang)))),
+          ],
+        ),
+      ),
+    );
   }
 
   @override
@@ -77,6 +101,8 @@ class _CzechPassAppState extends State<CzechPassApp> with WidgetsBindingObserver
     return AppScope(
       controller: controller,
       child: MaterialApp(
+        navigatorKey: _navigatorKey,
+        scaffoldMessengerKey: _messengerKey,
         title: 'CzechPass',
         debugShowCheckedModeBanner: false,
         theme: buildTheme(Brightness.light),

@@ -1523,4 +1523,54 @@ class S {
         'ru': 'Продолжаем с того места, где вы остановились',
         'uk': 'Продовжуємо з того місця, де ви зупинилися',
       });
+
+  // ── Yangilanish va nishonlar ──
+  String get updateTitle => _t(const {
+        'uz': 'Yangi versiya mavjud',
+        'cs': 'Je k dispozici nová verze',
+        'en': 'A new version is available',
+        'vi': 'Đã có phiên bản mới',
+        'ru': 'Доступна новая версия',
+        'uk': 'Доступна нова версія',
+      });
+  String get updateText => _t(const {
+        'uz': 'Ilovaning yangi versiyasi chiqdi. Yangilagandan keyin sozlamalaringiz va mashg\'ulotlaringiz saqlanib qoladi.',
+        'cs': 'Vyšla nová verze aplikace. Po aktualizaci zůstanou vaše nastavení i rozpracovaná cvičení zachována.',
+        'en': 'A new version of the app is out. Your settings and practice progress will be kept after the update.',
+        'vi': 'Đã có phiên bản mới của ứng dụng. Cài đặt và tiến độ luyện tập của bạn sẽ được giữ nguyên sau khi cập nhật.',
+        'ru': 'Вышла новая версия приложения. После обновления ваши настройки и прогресс сохранятся.',
+        'uk': 'Вийшла нова версія застосунку. Після оновлення ваші налаштування та прогрес збережуться.',
+      });
+  String get updateNow => _t(const {
+        'uz': 'Yangilash',
+        'cs': 'Aktualizovat',
+        'en': 'Update',
+        'vi': 'Cập nhật',
+        'ru': 'Обновить',
+        'uk': 'Оновити',
+      });
+  String get later => _t(const {
+        'uz': 'Keyinroq',
+        'cs': 'Později',
+        'en': 'Later',
+        'vi': 'Để sau',
+        'ru': 'Позже',
+        'uk': 'Пізніше',
+      });
+  String get badgesTitle => _t(const {
+        'uz': 'Nishonlar',
+        'cs': 'Odznaky',
+        'en': 'Badges',
+        'vi': 'Huy hiệu',
+        'ru': 'Значки',
+        'uk': 'Значки',
+      });
+  String badgeEarned(String name) => _t(const {
+        'uz': 'Yangi nishon: {n}',
+        'cs': 'Nový odznak: {n}',
+        'en': 'New badge: {n}',
+        'vi': 'Huy hiệu mới: {n}',
+        'ru': 'Новый значок: {n}',
+        'uk': 'Новий значок: {n}',
+      }).replaceAll('{n}', name);
 }

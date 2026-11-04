@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
 import 'package:czech_pass/core/audio_clips.dart';
+import 'package:czech_pass/core/badges.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/progress_store.dart';
@@ -205,14 +206,14 @@ class _A2MockScreenState extends State<A2MockScreen> {
       keywords += t.keywords.length;
     }
 
-    setState(() {
-      _score = A2MockScore(
-        reading: A2Rules.scale(readingRight, readingTotal, A2Rules.readingPoints),
-        writing: A2Rules.scale(writingOk, writingAll, A2Rules.writingPoints),
-        listening: A2Rules.scale(listeningRight, listeningTotal, A2Rules.listeningPoints),
-        speaking: A2Rules.scale(hits, keywords, A2Rules.speakingPoints),
-      );
-    });
+    final score = A2MockScore(
+      reading: A2Rules.scale(readingRight, readingTotal, A2Rules.readingPoints),
+      writing: A2Rules.scale(writingOk, writingAll, A2Rules.writingPoints),
+      listening: A2Rules.scale(listeningRight, listeningTotal, A2Rules.listeningPoints),
+      speaking: A2Rules.scale(hits, keywords, A2Rules.speakingPoints),
+    );
+    if (score.passed) controller.markMockPassed(Badges.a2Mock);
+    setState(() => _score = score);
   }
 
   Future<void> _play(ListeningTask task) async {

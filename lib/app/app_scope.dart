@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 import 'package:czech_pass/core/app_language.dart';
+import 'package:czech_pass/core/badges.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question_repository.dart';
@@ -22,7 +23,9 @@ class AppController extends ChangeNotifier {
     DateTime? initialExamDate,
     int initialDailyGoal = SettingsStore.defaultGoal,
     int? initialReminder,
+    BadgeStore? badges,
   })  : _language = initialLanguage,
+        badges = badges ?? BadgeStore.memory(),
         _reminder = initialReminder,
         entitlements = entitlements ?? Entitlements(),
         _examDate = initialExamDate,
@@ -34,6 +37,35 @@ class AppController extends ChangeNotifier {
 
   /// Sotib olingan tariflar va bepul urinishlar.
   final Entitlements entitlements;
+
+  /// Olingan nishonlar.
+  final BadgeStore badges;
+
+  /// Yangi nishon olinganda chaqiriladi (ekranda qisqa xabar ko'rsatish uchun).
+  void Function(AppBadge badge)? onBadge;
+
+  int? _realieTotal;
+
+  Future<void> _checkBadges() async {
+    _realieTotal ??= (await repository.loadRealie()).questions.length;
+    final fresh = await badges.award(BadgeStore.qualified(
+      progress: progress,
+      dailyGoal: dailyGoal,
+      realieTotal: _realieTotal!,
+    ));
+    _announce(fresh);
+  }
+
+  void _announce(List<AppBadge> fresh) {
+    if (fresh.isEmpty) return;
+    notifyListeners();
+    for (final badge in fresh) {
+      onBadge?.call(badge);
+    }
+  }
+
+  /// Sinov imtihonidan o'tilganda.
+  Future<void> markMockPassed(AppBadge badge) async => _announce(await badges.award([badge]));
 
   DateTime? _examDate;
   int _dailyGoal;
@@ -128,6 +160,11 @@ class AppController extends ChangeNotifier {
   Future<void> recordAnswer(String exam, String questionId, bool correct) async {
     await progress.record(exam, questionId, correct);
     notifyListeners();
+    try {
+      await _checkBadges();
+    } catch (_) {
+      // Nishonlarni hisoblab bo'lmasa ham mashg'ulot davom etadi.
+    }
   }
 
   Future<void> resetProgress() async {

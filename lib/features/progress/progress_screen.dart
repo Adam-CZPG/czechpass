@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/badges.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
 import 'package:czech_pass/l10n/strings.dart';
@@ -97,6 +98,8 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 ScreenHeader(title: s.navProgress, tooltip: s.back),
                 const SizedBox(height: 20),
                 _CourseCard(percent: coursePercent, done: done, all: all, s: s),
+                const SizedBox(height: 14),
+                _BadgesCard(badges: AppScope.of(context).badges, s: s),
                 const SizedBox(height: 14),
                 if (nothingYet) ...[
                   AppCard(child: Text(s.noProgress, style: const TextStyle(fontSize: 15, height: 1.5))),
@@ -254,6 +257,84 @@ class _SectionProgress extends StatelessWidget {
             ProgressLine(value: list.isEmpty ? 0 : correctIn(list) / list.length, height: 6),
           ],
         ],
+      ),
+    );
+  }
+}
+
+/// Nishonlar: olinganlari rangli, qolganlari kulrang.
+class _BadgesCard extends StatelessWidget {
+  const _BadgesCard({required this.badges, required this.s});
+
+  final BadgeStore badges;
+  final S s;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Expanded(child: Text(s.badgesTitle, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800))),
+              Text('${badges.count} / ${Badges.all.length}', style: TextStyle(fontSize: 14, color: AppColors.muted)),
+            ],
+          ),
+          const SizedBox(height: 14),
+          Wrap(
+            spacing: 10,
+            runSpacing: 14,
+            children: [
+              for (final badge in Badges.all) _BadgeTile(badge: badge, earned: badges.has(badge), lang: s.lang),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _BadgeTile extends StatelessWidget {
+  const _BadgeTile({required this.badge, required this.earned, required this.lang});
+
+  final AppBadge badge;
+  final bool earned;
+  final String lang;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: badge.descriptionFor(lang),
+      triggerMode: TooltipTriggerMode.tap,
+      child: SizedBox(
+        width: 92,
+        child: Column(
+          children: [
+            Container(
+              width: 52,
+              height: 52,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: earned ? AppColors.accentSoft : AppColors.surface,
+                border: Border.all(color: earned ? AppColors.accent : AppColors.border, width: 1.5),
+              ),
+              child: Icon(badge.icon, color: earned ? AppColors.accent : AppColors.muted.withValues(alpha: 0.5)),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              badge.titleFor(lang),
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              style: TextStyle(
+                fontSize: 12,
+                height: 1.25,
+                fontWeight: earned ? FontWeight.w700 : FontWeight.w500,
+                color: earned ? AppColors.ink : AppColors.muted,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
