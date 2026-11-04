@@ -16,9 +16,9 @@ void main() {
     final controller = AppController(settings: SettingsStore(), progress: await ProgressStore.load());
     await tester.pumpWidget(CzechPassApp(controller: controller));
 
-    expect(find.text('Tilni tanlang'), findsOneWidget);
+    expect(find.text('Vyberte jazyk'), findsOneWidget);
     // Ro'yxat boshidagi til (pastdagilari kichik test ekranida hali chizilmagan bo'ladi).
-    expect(find.text('English'), findsOneWidget);
+    expect(find.text('Čeština'), findsOneWidget);
   });
 
   testWidgets("Til saqlangan bo'lsa, bosh sahifa chiqadi", (tester) async {
@@ -37,6 +37,10 @@ void main() {
     expect(const S('cs').welcome, 'Vítejte');
     expect(const S('en').welcome, 'Welcome');
     expect(const S('uz').mastered(40), "40% o'zlashtirildi");
+    expect(const S('vi').welcome, 'Xin chào');
+    expect(const S('vi').courseCompleted(75), 'Đã hoàn thành 75% khóa học');
+    // Noma'lum til bo'lsa — chex tili.
+    expect(const S('xx').welcome, 'Vítejte');
   });
 
   test('Chex harflari solishtirish uchun soddalashtiriladi', () {

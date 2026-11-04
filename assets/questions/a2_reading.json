@@ -10,7 +10,8 @@
         "uz": "Shifokor e'loni",
         "en": "A notice at the doctor's",
         "ru": "Объявление у врача",
-        "uk": "Оголошення в лікаря"
+        "uk": "Оголошення в лікаря",
+        "vi": "Thông báo ở phòng khám"
       },
       "text": "OZNÁMENÍ\n\nOrdinace MUDr. Jany Novákové bude od 4. do 15. srpna zavřená.\n\nV naléhavých případech vás ošetří MUDr. Petr Svoboda, Lipová 12, Brno.\nOrdinační hodiny: pondělí až pátek 7:30–12:00.\n\nRecepty si můžete objednat e-mailem: ordinace@example.cz",
       "questions": [
@@ -21,7 +22,8 @@
             "uz": "MUDr. Novákova qabulxonasi qachon yopiq?",
             "en": "When is Dr Nováková's surgery closed?",
             "ru": "Когда кабинет доктора Новаковой закрыт?",
-            "uk": "Коли кабінет лікарки Новакової зачинений?"
+            "uk": "Коли кабінет лікарки Новакової зачинений?",
+            "vi": "Phòng khám của bác sĩ Nováková đóng cửa khi nào?"
           },
           "options": [
             "Od 4. do 15. srpna",
@@ -38,7 +40,8 @@
             "uz": "MUDr. Svoboda qayerda qabul qiladi?",
             "en": "Where does Dr Svoboda see patients?",
             "ru": "Где принимает доктор Свобода?",
-            "uk": "Де приймає лікар Свобода?"
+            "uk": "Де приймає лікар Свобода?",
+            "vi": "Bác sĩ Svoboda khám bệnh ở đâu?"
           },
           "options": [
             "Lipová 12, Brno",
@@ -55,7 +58,8 @@
             "uz": "Retseptga qanday buyurtma berish mumkin?",
             "en": "How can you order a prescription?",
             "ru": "Как можно заказать рецепт?",
-            "uk": "Як можна замовити рецепт?"
+            "uk": "Як можна замовити рецепт?",
+            "vi": "Bạn có thể đặt đơn thuốc bằng cách nào?"
           },
           "options": [
             "E-mailem",
@@ -74,7 +78,8 @@
         "uz": "Dugonadan xat",
         "en": "An email from a friend",
         "ru": "Письмо от подруги",
-        "uk": "Лист від подруги"
+        "uk": "Лист від подруги",
+        "vi": "Thư từ một người bạn"
       },
       "text": "Ahoj Leno,\n\nv sobotu jedeme s Tomášem na výlet do Kutné Hory. Odjíždíme vlakem v 8:15 z hlavního nádraží. Chceš jet s námi? Lístek stojí asi 150 Kč. Vezmi si pohodlné boty, budeme hodně chodit. Večer se vrátíme kolem sedmé.\n\nNapiš mi prosím do čtvrtka.\n\nMarie",
       "questions": [
@@ -85,7 +90,8 @@
             "uz": "Marie shanba kuni qayerga boradi?",
             "en": "Where is Marie going on Saturday?",
             "ru": "Куда Мария едет в субботу?",
-            "uk": "Куди Марія їде в суботу?"
+            "uk": "Куди Марія їде в суботу?",
+            "vi": "Thứ bảy Marie đi đâu?"
           },
           "options": [
             "Do Kutné Hory",
@@ -102,7 +108,8 @@
             "uz": "Ular nima bilan boradi?",
             "en": "How will they travel?",
             "ru": "На чём они поедут?",
-            "uk": "Чим вони поїдуть?"
+            "uk": "Чим вони поїдуть?",
+            "vi": "Họ sẽ đi bằng gì?"
           },
           "options": [
             "Vlakem",
@@ -119,7 +126,8 @@
             "uz": "Lena qachongacha javob berishi kerak?",
             "en": "By when should Lena reply?",
             "ru": "До какого дня Лена должна ответить?",
-            "uk": "До якого дня Лена має відповісти?"
+            "uk": "До якого дня Лена має відповісти?",
+            "vi": "Lena phải trả lời trước khi nào?"
           },
           "options": [
             "Do čtvrtka",
@@ -138,7 +146,8 @@
         "uz": "Dugonadan SMS",
         "en": "A text from a friend",
         "ru": "СМС от подруги",
-        "uk": "СМС від подруги"
+        "uk": "СМС від подруги",
+        "vi": "Tin nhắn từ một người bạn"
       },
       "text": "Ahoj, jsem ve vlaku, ale vlak má zpoždění. Přijedu až v 18:30, ne v 17:00. Počkej na mě prosím u pokladen. Jana",
       "questions": [
@@ -149,7 +158,8 @@
             "uz": "Nega Jana kechroq keladi?",
             "en": "Why will Jana arrive later?",
             "ru": "Почему Яна приедет позже?",
-            "uk": "Чому Яна приїде пізніше?"
+            "uk": "Чому Яна приїде пізніше?",
+            "vi": "Tại sao Jana đến muộn?"
           },
           "options": [
             "Vlak má zpoždění",
@@ -166,7 +176,8 @@
             "uz": "Jana soat nechada keladi?",
             "en": "What time will Jana arrive?",
             "ru": "Во сколько приедет Яна?",
-            "uk": "О котрій приїде Яна?"
+            "uk": "О котрій приїде Яна?",
+            "vi": "Jana đến lúc mấy giờ?"
           },
           "options": [
             "V 18:30",
@@ -183,7 +194,8 @@
             "uz": "Do'sti qayerda kutishi kerak?",
             "en": "Where should the friend wait?",
             "ru": "Где должен ждать друг?",
-            "uk": "Де має чекати друг?"
+            "uk": "Де має чекати друг?",
+            "vi": "Người bạn nên đợi ở đâu?"
           },
           "options": [
             "U pokladen",
@@ -202,7 +214,8 @@
         "uz": "E'lon",
         "en": "An advert",
         "ru": "Объявление",
-        "uk": "Оголошення"
+        "uk": "Оголошення",
+        "vi": "Tin rao vặt"
       },
       "text": "PRODÁM dětské kolo, modré, 3 roky staré, ve velmi dobrém stavu. Cena 1 500 Kč.\nVolejte po 17. hodině na číslo 777 123 456.",
       "questions": [
@@ -213,7 +226,8 @@
             "uz": "Nima sotilyapti?",
             "en": "What is for sale?",
             "ru": "Что продаётся?",
-            "uk": "Що продається?"
+            "uk": "Що продається?",
+            "vi": "Món đồ gì được rao bán?"
           },
           "options": [
             "Dětské kolo",
@@ -230,7 +244,8 @@
             "uz": "U qancha turadi?",
             "en": "How much does it cost?",
             "ru": "Сколько это стоит?",
-            "uk": "Скільки це коштує?"
+            "uk": "Скільки це коштує?",
+            "vi": "Giá bao nhiêu?"
           },
           "options": [
             "1 500 Kč",
@@ -247,7 +262,8 @@
             "uz": "Qachon qo'ng'iroq qilish mumkin?",
             "en": "When can you call?",
             "ru": "Когда можно звонить?",
-            "uk": "Коли можна телефонувати?"
+            "uk": "Коли можна телефонувати?",
+            "vi": "Khi nào có thể gọi điện?"
           },
           "options": [
             "Po 17. hodině",
@@ -266,7 +282,8 @@
         "uz": "Kutubxona ish vaqti",
         "en": "Library opening hours",
         "ru": "Часы работы библиотеки",
-        "uk": "Години роботи бібліотеки"
+        "uk": "Години роботи бібліотеки",
+        "vi": "Giờ mở cửa thư viện"
       },
       "text": "MĚSTSKÁ KNIHOVNA\nPo–Čt: 9:00–18:00\nPá: 9:00–14:00\nSo: 9:00–12:00\nNe: zavřeno\n\nKnihy můžete vrátit i do schránky u vchodu.",
       "questions": [
@@ -277,7 +294,8 @@
             "uz": "Kutubxona qachon yopiq?",
             "en": "When is the library closed?",
             "ru": "Когда библиотека закрыта?",
-            "uk": "Коли бібліотека зачинена?"
+            "uk": "Коли бібліотека зачинена?",
+            "vi": "Thư viện đóng cửa khi nào?"
           },
           "options": [
             "V neděli",
@@ -294,7 +312,8 @@
             "uz": "Juma kuni kutubxona soat nechagacha ochiq?",
             "en": "Until what time is the library open on Friday?",
             "ru": "До скольки библиотека открыта в пятницу?",
-            "uk": "До котрої бібліотека відчинена в п'ятницю?"
+            "uk": "До котрої бібліотека відчинена в п'ятницю?",
+            "vi": "Thứ sáu thư viện mở cửa đến mấy giờ?"
           },
           "options": [
             "Do 14:00",
@@ -311,7 +330,8 @@
             "uz": "Yopiq bo'lsa, kitoblarni qanday qaytarish mumkin?",
             "en": "How can you return books when it is closed?",
             "ru": "Как вернуть книги, когда закрыто?",
-            "uk": "Як повернути книжки, коли зачинено?"
+            "uk": "Як повернути книжки, коли зачинено?",
+            "vi": "Khi thư viện đóng cửa, bạn trả sách bằng cách nào?"
           },
           "options": [
             "Do schránky u vchodu",
@@ -330,7 +350,8 @@
         "uz": "Tushlik menyusi",
         "en": "Lunch menu",
         "ru": "Обеденное меню",
-        "uk": "Обіднє меню"
+        "uk": "Обіднє меню",
+        "vi": "Thực đơn buổi trưa"
       },
       "text": "POLEDNÍ MENU (11:00–14:00)\nPolévka: hovězí vývar – 45 Kč\n1. Svíčková na smetaně, knedlík – 165 Kč\n2. Kuřecí řízek, brambory – 150 Kč\n3. Zeleninové rizoto – 135 Kč (vegetariánské)",
       "questions": [
@@ -341,7 +362,8 @@
             "uz": "Qaysi taom go'shtsiz?",
             "en": "Which dish is meat-free?",
             "ru": "Какое блюдо без мяса?",
-            "uk": "Яка страва без м'яса?"
+            "uk": "Яка страва без м'яса?",
+            "vi": "Món nào không có thịt?"
           },
           "options": [
             "Zeleninové rizoto",
@@ -358,7 +380,8 @@
             "uz": "Svíčková qancha turadi?",
             "en": "How much is the svíčková?",
             "ru": "Сколько стоит свичкова?",
-            "uk": "Скільки коштує свічкова?"
+            "uk": "Скільки коштує свічкова?",
+            "vi": "Món svíčková giá bao nhiêu?"
           },
           "options": [
             "165 Kč",
@@ -375,7 +398,8 @@
             "uz": "Tushlik menyusi soat nechagacha amal qiladi?",
             "en": "Until what time is the lunch menu served?",
             "ru": "До скольки действует обеденное меню?",
-            "uk": "До котрої діє обіднє меню?"
+            "uk": "До котрої діє обіднє меню?",
+            "vi": "Thực đơn buổi trưa áp dụng đến mấy giờ?"
           },
           "options": [
             "Do 14:00",
@@ -394,7 +418,8 @@
         "uz": "Uy boshqaruvchisidan xabar",
         "en": "A message from the building manager",
         "ru": "Сообщение от управляющего домом",
-        "uk": "Повідомлення від керівника будинку"
+        "uk": "Повідомлення від керівника будинку",
+        "vi": "Thông báo của người quản lý tòa nhà"
       },
       "text": "Vážení nájemníci,\nve čtvrtek 10. března od 8 do 12 hodin nepoteče v domě teplá voda. Opravujeme kotel.\nDěkujeme za pochopení.\nJan Dvořák, správce domu",
       "questions": [
@@ -405,7 +430,8 @@
             "uz": "Payshanba kuni ertalab nima bo'lmaydi?",
             "en": "What will not be available on Thursday morning?",
             "ru": "Чего не будет в четверг утром?",
-            "uk": "Чого не буде в четвер уранці?"
+            "uk": "Чого не буде в четвер уранці?",
+            "vi": "Sáng thứ năm sẽ không có gì?"
           },
           "options": [
             "Teplá voda",
@@ -422,7 +448,8 @@
             "uz": "Nega?",
             "en": "Why?",
             "ru": "Почему?",
-            "uk": "Чому?"
+            "uk": "Чому?",
+            "vi": "Tại sao?"
           },
           "options": [
             "Opravují kotel",
@@ -439,7 +466,8 @@
             "uz": "Xabarni kim yozgan?",
             "en": "Who wrote the message?",
             "ru": "Кто написал сообщение?",
-            "uk": "Хто написав повідомлення?"
+            "uk": "Хто написав повідомлення?",
+            "vi": "Ai viết thông báo này?"
           },
           "options": [
             "Správce domu",
@@ -458,7 +486,8 @@
         "uz": "Ochiq eshiklar kuni",
         "en": "Open day",
         "ru": "День открытых дверей",
-        "uk": "День відкритих дверей"
+        "uk": "День відкритих дверей",
+        "vi": "Ngày hội mở cửa"
       },
       "text": "Základní škola Komenského zve rodiče a děti na den otevřených dveří.\nKdy: sobota 15. dubna, 9:00–13:00\nProhlídka tříd a setkání s učiteli. Pro děti je připravena výtvarná dílna.\nVstup zdarma.",
       "questions": [
@@ -469,7 +498,8 @@
             "uz": "Ochiq eshiklar kuni qachon?",
             "en": "When is the open day?",
             "ru": "Когда день открытых дверей?",
-            "uk": "Коли день відкритих дверей?"
+            "uk": "Коли день відкритих дверей?",
+            "vi": "Ngày hội mở cửa diễn ra khi nào?"
           },
           "options": [
             "V sobotu 15. dubna",
@@ -486,7 +516,8 @@
             "uz": "Kirish qancha turadi?",
             "en": "How much is the entrance fee?",
             "ru": "Сколько стоит вход?",
-            "uk": "Скільки коштує вхід?"
+            "uk": "Скільки коштує вхід?",
+            "vi": "Vé vào cửa bao nhiêu?"
           },
           "options": [
             "Nic, je zdarma",
@@ -503,7 +534,8 @@
             "uz": "Bolalar uchun nima tayyorlangan?",
             "en": "What is prepared for the children?",
             "ru": "Что подготовлено для детей?",
-            "uk": "Що підготовлено для дітей?"
+            "uk": "Що підготовлено для дітей?",
+            "vi": "Có gì dành cho trẻ em?"
           },
           "options": [
             "Výtvarná dílna",
@@ -522,7 +554,8 @@
         "uz": "Dori yo'riqnomasi",
         "en": "Medicine leaflet",
         "ru": "Инструкция к лекарству",
-        "uk": "Інструкція до ліків"
+        "uk": "Інструкція до ліків",
+        "vi": "Tờ hướng dẫn sử dụng thuốc"
       },
       "text": "Užívejte 1 tabletu třikrát denně po jídle. Během léčby nepijte alkohol. Lék uchovávejte mimo dosah dětí. Pokud vám ani po 5 dnech není lépe, jděte k lékaři.",
       "questions": [
@@ -533,7 +566,8 @@
             "uz": "Dori kuniga necha marta ichiladi?",
             "en": "How many times a day is the medicine taken?",
             "ru": "Сколько раз в день принимают лекарство?",
-            "uk": "Скільки разів на день приймають ліки?"
+            "uk": "Скільки разів на день приймають ліки?",
+            "vi": "Uống thuốc mấy lần một ngày?"
           },
           "options": [
             "Třikrát",
@@ -550,7 +584,8 @@
             "uz": "Dori qachon ichiladi?",
             "en": "When is the medicine taken?",
             "ru": "Когда принимают лекарство?",
-            "uk": "Коли приймають ліки?"
+            "uk": "Коли приймають ліки?",
+            "vi": "Uống thuốc khi nào?"
           },
           "options": [
             "Po jídle",
@@ -567,7 +602,8 @@
             "uz": "5 kundan keyin ham yaxshi bo'lmasa, nima qilish kerak?",
             "en": "What should you do if you don't feel better after 5 days?",
             "ru": "Что делать, если через 5 дней не лучше?",
-            "uk": "Що робити, якщо через 5 днів не краще?"
+            "uk": "Що робити, якщо через 5 днів не краще?",
+            "vi": "Bạn nên làm gì nếu sau 5 ngày vẫn không đỡ?"
           },
           "options": [
             "Jít k lékaři",
@@ -586,7 +622,8 @@
         "uz": "Rahbardan xat",
         "en": "An email from the manager",
         "ru": "Письмо от руководителя",
-        "uk": "Лист від керівника"
+        "uk": "Лист від керівника",
+        "vi": "Email từ quản lý"
       },
       "text": "Milí kolegové,\nporada se přesouvá z pondělí na úterý v 9:30. Bude v zasedací místnosti v prvním patře. Přineste si prosím zprávy o prodeji.\nPetr",
       "questions": [
@@ -597,7 +634,8 @@
             "uz": "Majlis qachon bo'ladi?",
             "en": "When will the meeting be?",
             "ru": "Когда будет совещание?",
-            "uk": "Коли буде нарада?"
+            "uk": "Коли буде нарада?",
+            "vi": "Cuộc họp diễn ra khi nào?"
           },
           "options": [
             "V úterý v 9:30",
@@ -614,7 +652,8 @@
             "uz": "Majlis qayerda bo'ladi?",
             "en": "Where will the meeting be?",
             "ru": "Где будет совещание?",
-            "uk": "Де буде нарада?"
+            "uk": "Де буде нарада?",
+            "vi": "Cuộc họp diễn ra ở đâu?"
           },
           "options": [
             "V zasedací místnosti v 1. patře",
@@ -631,7 +670,8 @@
             "uz": "Hamkasblar nima olib kelishi kerak?",
             "en": "What should the colleagues bring?",
             "ru": "Что должны принести коллеги?",
-            "uk": "Що мають принести колеги?"
+            "uk": "Що мають принести колеги?",
+            "vi": "Đồng nghiệp cần mang theo gì?"
           },
           "options": [
             "Zprávy o prodeji",
@@ -650,7 +690,8 @@
         "uz": "Chex tili kursi",
         "en": "Czech course",
         "ru": "Курс чешского",
-        "uk": "Курс чеської"
+        "uk": "Курс чеської",
+        "vi": "Khóa học tiếng Séc"
       },
       "text": "KURZ ČEŠTINY PRO CIZINCE – ÚROVEŇ A2\nZačátek: 2. října\nKdy: každé úterý a čtvrtek, 18:00–19:30\nCena: 4 900 Kč za semestr\nPřihlášky do 25. září.",
       "questions": [
@@ -661,7 +702,8 @@
             "uz": "Kurs qachon boshlanadi?",
             "en": "When does the course start?",
             "ru": "Когда начинается курс?",
-            "uk": "Коли починається курс?"
+            "uk": "Коли починається курс?",
+            "vi": "Khóa học bắt đầu khi nào?"
           },
           "options": [
             "2. října",
@@ -678,7 +720,8 @@
             "uz": "Kurs haftasiga necha marta?",
             "en": "How many times a week is the course?",
             "ru": "Сколько раз в неделю проходит курс?",
-            "uk": "Скільки разів на тиждень відбувається курс?"
+            "uk": "Скільки разів на тиждень відбувається курс?",
+            "vi": "Khóa học diễn ra mấy lần một tuần?"
           },
           "options": [
             "Dvakrát",
@@ -695,7 +738,8 @@
             "uz": "Qachongacha ro'yxatdan o'tish kerak?",
             "en": "By when must you sign up?",
             "ru": "До какого числа нужно записаться?",
-            "uk": "До якого числа треба записатися?"
+            "uk": "До якого числа треба записатися?",
+            "vi": "Bạn phải đăng ký trước khi nào?"
           },
           "options": [
             "Do 25. září",
@@ -714,7 +758,8 @@
         "uz": "Fitnes markazi",
         "en": "Fitness centre",
         "ru": "Фитнес-центр",
-        "uk": "Фітнес-центр"
+        "uk": "Фітнес-центр",
+        "vi": "Trung tâm thể hình"
       },
       "text": "FITNESS MAX – nové ceny od 1. listopadu\nJednorázový vstup: 150 Kč\nMěsíční permanentka: 990 Kč\nStudenti a senioři mají slevu 20 %.\nOtevřeno denně 6:00–22:00.",
       "questions": [
@@ -725,7 +770,8 @@
             "uz": "Bir martalik kirish qancha turadi?",
             "en": "How much is a single entry?",
             "ru": "Сколько стоит разовое посещение?",
-            "uk": "Скільки коштує разове відвідування?"
+            "uk": "Скільки коштує разове відвідування?",
+            "vi": "Một lượt vào giá bao nhiêu?"
           },
           "options": [
             "150 Kč",
@@ -742,7 +788,8 @@
             "uz": "Kimga chegirma bor?",
             "en": "Who gets a discount?",
             "ru": "У кого есть скидка?",
-            "uk": "Хто має знижку?"
+            "uk": "Хто має знижку?",
+            "vi": "Ai được giảm giá?"
           },
           "options": [
             "Studenti a senioři",
@@ -759,7 +806,8 @@
             "uz": "Fitnes qachon ochiq?",
             "en": "When is the gym open?",
             "ru": "Когда открыт фитнес?",
-            "uk": "Коли відчинений фітнес?"
+            "uk": "Коли відчинений фітнес?",
+            "vi": "Phòng tập mở cửa khi nào?"
           },
           "options": [
             "Každý den 6:00–22:00",

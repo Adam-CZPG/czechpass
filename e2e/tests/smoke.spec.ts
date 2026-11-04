@@ -11,8 +11,8 @@ async function openApp(page: Page) {
   await page.goto('/');
   // Flutter dvigateli yuklanishini kutamiz.
   await page.waitForSelector('flutter-view, flt-glass-pane', { state: 'attached', timeout: 60_000 });
-  // Birinchi ochilish: til tanlash ekrani (standart til — o'zbekcha).
-  await expect(ui(page, 'Tilni tanlang')).toBeVisible({ timeout: 60_000 });
+  // Birinchi ochilish: til tanlash ekrani (standart til — chex tili).
+  await expect(ui(page, 'Vyberte jazyk')).toBeVisible({ timeout: 60_000 });
 }
 
 async function chooseLanguage(page: Page, language: string, continueLabel: string) {

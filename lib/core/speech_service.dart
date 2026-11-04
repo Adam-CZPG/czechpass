@@ -5,16 +5,21 @@ import 'package:speech_to_text/speech_to_text.dart';
 /// Telefon (yoki kompyuter) ning o'z nutq sintezi: matn → ovoz.
 /// Internet va to'lov shart emas, lekin qurilmada chexcha ovoz bo'lishi kerak.
 ///
-/// Ilova qurilmadagi chexcha ovozlarni o'zi qidiradi va eng sifatlisini tanlaydi.
-/// Dialogda ikkita turli ovoz bo'lsa (masalan, ayol va erkak), A va B so'zlovchiga
-/// alohida ovoz beriladi.
+/// Ilova qurilmadagi chexcha ovozlarni o'zi qidiradi, sifatlisini tanlaydi va ayol/erkak
+/// ovozini ajratadi. Qurilmada faqat bitta chexcha ovoz bo'lsa (ko'p Android telefonlarida
+/// shunday), ikkinchi jins ovozi shu ovozning tembrini o'zgartirib hosil qilinadi.
 class VoiceOutput {
   final FlutterTts _tts = FlutterTts();
   bool _ready = false;
   bool _czechAvailable = true;
 
-  Map<String, String>? _voiceA;
-  Map<String, String>? _voiceB;
+  Map<String, String>? _female;
+  Map<String, String>? _male;
+  Map<String, String>? _any;
+
+  /// Ma'lum chexcha ovozlar nomlari (Microsoft, Apple va boshqalar).
+  static const _femaleNames = ['vlasta', 'zuzana', 'iveta', 'jana', 'eliska', 'eliška', 'tereza', 'female', 'zena', 'žena'];
+  static const _maleNames = ['antonin', 'antonín', 'jakub', 'tomas', 'tomáš', 'ondrej', 'ondřej', 'male', 'muz', 'muž'];
 
   bool get czechAvailable => _czechAvailable;
 
@@ -34,17 +39,12 @@ class VoiceOutput {
         voices = await _czechVoices();
       }
       _czechAvailable = voices.isNotEmpty;
-      if (voices.isNotEmpty) {
-        _voiceA = voices.first;
-        // B uchun boshqa odamning ovozini qidiramiz (bir ovozning "network/local" nusxasi emas).
-        final keyA = _personKey(_voiceA!);
-        for (final v in voices.skip(1)) {
-          if (_personKey(v) != keyA) {
-            _voiceB = v;
-            break;
-          }
-        }
+      for (final v in voices) {
+        final g = _genderOf(v);
+        if (g == 'f') _female ??= v;
+        if (g == 'm') _male ??= v;
       }
+      _any = voices.isEmpty ? null : voices.first;
     } catch (_) {
       // Ba'zi platformalar ovozlar ro'yxatini bermaydi — standart ovoz ishlatiladi.
       _czechAvailable = true;
@@ -76,18 +76,33 @@ class VoiceOutput {
     return score;
   }
 
-  static String _personKey(Map<String, String> voice) =>
-      (voice['name'] ?? '').toLowerCase().replaceAll(RegExp(r'[-_ ]?(network|local)$'), '');
+  /// "f", "m" yoki null (aniqlab bo'lmasa).
+  static String? _genderOf(Map<String, String> voice) {
+    final declared = (voice['gender'] ?? '').toLowerCase();
+    if (declared.startsWith('f')) return 'f';
+    if (declared.startsWith('m')) return 'm';
+    final name = (voice['name'] ?? '').toLowerCase();
+    if (_femaleNames.any(name.contains)) return 'f';
+    if (_maleNames.any(name.contains)) return 'm';
+    return null;
+  }
 
-  /// [speaker] — dialogdagi so'zlovchi ("A" yoki "B").
-  Future<void> say(String text, {String speaker = 'A'}) async {
+  /// [gender] — "f" (ayol) yoki "m" (erkak).
+  Future<void> say(String text, {String gender = 'f'}) async {
     await init();
-    final voice = speaker == 'B' && _voiceB != null ? _voiceB : _voiceA;
+    final exact = gender == 'm' ? _male : _female;
+    final voice = exact ?? _any;
     if (voice != null && voice['name'] != null && voice['locale'] != null) {
       await _tts.setVoice({'name': voice['name']!, 'locale': voice['locale']!});
     }
-    // Ikkinchi alohida ovoz bo'lmasa, B'ni ozgina farqlaymiz (ko'p o'zgartirilsa, robotga o'xshaydi).
-    await _tts.setPitch(speaker == 'B' && _voiceB == null ? 1.1 : 1.0);
+    // Kerakli jinsdagi ovoz yo'q bo'lsa, tembrni o'zgartiramiz. Jinsi noma'lum ovoz
+    // (masalan, Android'dagi Google ovozi) odatda ayol ovozi.
+    final voiceGender = voice == null ? 'f' : (_genderOf(voice) ?? 'f');
+    var pitch = 1.0;
+    if (exact == null && voiceGender != gender) {
+      pitch = gender == 'm' ? 0.72 : 1.25;
+    }
+    await _tts.setPitch(pitch);
     await _tts.speak(text);
   }
 

@@ -65,7 +65,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
               ),
               const SizedBox(height: 8),
               const Text(
-                'Vyberte jazyk · Choose language · Выберите язык · Оберіть мову · Tilni tanlang',
+                'Оберіть мову · Chọn ngôn ngữ · Выберите язык · Choose language · Tilni tanlang',
                 style: TextStyle(fontSize: 14, color: AppColors.muted, height: 1.5),
               ),
               const SizedBox(height: 24),

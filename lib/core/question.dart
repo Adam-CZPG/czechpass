@@ -123,12 +123,16 @@ class ListeningTask {
   const ListeningTask({
     required this.id,
     required this.title,
+    required this.speakers,
     required this.lines,
     required this.questions,
   });
 
   final String id;
   final Map<String, String> title;
+
+  /// So'zlovchi → jinsi ("f" — ayol, "m" — erkak). Matndagi grammatik jinsga mos.
+  final Map<String, String> speakers;
   final List<ScriptLine> lines;
   final List<Question> questions;
 
@@ -136,11 +140,17 @@ class ListeningTask {
 
   String get transcript => lines.map((l) => '${l.speaker}: ${l.text}').join('\n');
 
+  /// A — standart ayol, B — standart erkak (JSON'da ko'rsatilmagan bo'lsa).
+  String genderOf(String speaker) => speakers[speaker] ?? (speaker == 'B' ? 'm' : 'f');
+
   factory ListeningTask.fromJson(Map<String, dynamic> json) {
     final id = json['id'] as String;
     return ListeningTask(
       id: id,
       title: Map<String, String>.from(json['title'] as Map),
+      speakers: json['speakers'] == null
+          ? const {}
+          : Map<String, String>.from(json['speakers'] as Map),
       lines: (json['lines'] as List)
           .map((l) => ScriptLine(
                 speaker: (l as Map)['speaker'] as String,

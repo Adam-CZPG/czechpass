@@ -24,8 +24,8 @@ class AppController extends ChangeNotifier {
   /// Foydalanuvchi hali til tanlamagan bo'lsa — null.
   AppLanguage? get selectedLanguage => _language;
 
-  /// Interfeys tili (tanlanmagan bo'lsa — o'zbekcha).
-  AppLanguage get language => _language ?? AppLanguage.uz;
+  /// Interfeys tili (tanlanmagan bo'lsa — chex tili).
+  AppLanguage get language => _language ?? AppLanguage.cs;
 
   Future<void> setLanguage(AppLanguage language) async {
     _language = language;

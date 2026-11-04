@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
 import 'package:czech_pass/core/writing_checker.dart';
+import 'package:czech_pass/features/a2/section_result_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
 
@@ -24,6 +26,7 @@ class _WritingScreenState extends State<WritingScreen> {
 
   List<WritingTask> _tasks = [];
   int _taskIndex = 0;
+  final Map<int, (int, int)> _scores = {}; // topshiriq → (o'tgan tekshiruvlar, jami)
   bool _checked = false;
   bool _showModel = false;
   final Set<int> _ticked = {};
@@ -51,15 +54,41 @@ class _WritingScreenState extends State<WritingScreen> {
 
   void _check() {
     FocusScope.of(context).unfocus();
+    final results = _checker.check(_text.text, minWords: _task.minWords);
+    const passed = {WritingCheck.lengthOk, WritingCheck.greetingOk, WritingCheck.closingOk};
+    final ok = results.where(passed.contains).length;
+    _scores[_taskIndex] = (ok, results.length);
+    AppScope.read(context).recordAnswer(Exams.a2Writing, _task.id, ok == results.length);
     setState(() {
-      _results = _checker.check(_text.text, minWords: _task.minWords);
+      _results = results;
       _checked = true;
     });
   }
 
+  /// Bo'lim tugadi: barcha topshiriqlar bo'yicha natija foizini ko'rsatamiz.
+  void _finish(String section, WidgetBuilder restart) {
+    final s = S(AppScope.read(context).language.code);
+    var right = 0;
+    var total = 0;
+    for (final (r, t) in _scores.values) {
+      right += r;
+      total += t;
+    }
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => SectionResultScreen(
+          title: 'A2 · ${section == 'reading' ? s.reading : section == 'listening' ? s.listening : section == 'speaking' ? s.speaking : s.writing}',
+          right: right,
+          total: total,
+          restart: restart,
+        ),
+      ),
+    );
+  }
+
   void _next() {
     if (_isLast) {
-      Navigator.of(context).maybePop();
+      _finish('writing', (context) => const WritingScreen());
       return;
     }
     setState(() {

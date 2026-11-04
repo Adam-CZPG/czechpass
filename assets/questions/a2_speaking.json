@@ -10,14 +10,16 @@
         "uz": "O'zingizni tanishtiring",
         "en": "Introduce yourself",
         "ru": "Представьтесь",
-        "uk": "Представтеся"
+        "uk": "Представтеся",
+        "vi": "Giới thiệu bản thân"
       },
       "prompt": {
         "cs": "Představte se. Řekněte, jak se jmenujete, odkud jste a kde bydlíte.",
         "uz": "O'zingizni tanishtiring: ismingiz, qayerdan ekaningiz va qayerda yashashingizni ayting.",
         "en": "Introduce yourself: say your name, where you are from and where you live.",
         "ru": "Представьтесь: скажите, как вас зовут, откуда вы и где живёте.",
-        "uk": "Представтеся: скажіть, як вас звати, звідки ви і де живете."
+        "uk": "Представтеся: скажіть, як вас звати, звідки ви і де живете.",
+        "vi": "Hãy giới thiệu bản thân: bạn tên là gì, bạn đến từ đâu và bạn sống ở đâu."
       },
       "keywords": [
         "jmenuji se",
@@ -33,14 +35,16 @@
         "uz": "Dam olish kunlari",
         "en": "The weekend",
         "ru": "Выходные",
-        "uk": "Вихідні"
+        "uk": "Вихідні",
+        "vi": "Cuối tuần"
       },
       "prompt": {
         "cs": "Popište, co obvykle děláte o víkendu.",
         "uz": "Dam olish kunlari odatda nima qilishingizni gapirib bering.",
         "en": "Describe what you usually do at the weekend.",
         "ru": "Расскажите, что вы обычно делаете на выходных.",
-        "uk": "Розкажіть, що ви зазвичай робите на вихідних."
+        "uk": "Розкажіть, що ви зазвичай робите на вихідних.",
+        "vi": "Hãy kể bạn thường làm gì vào cuối tuần."
       },
       "keywords": [
         "o víkendu",
@@ -56,14 +60,16 @@
         "uz": "Shifokor qabulida",
         "en": "At the doctor's",
         "ru": "У врача",
-        "uk": "У лікаря"
+        "uk": "У лікаря",
+        "vi": "Tại phòng khám"
       },
       "prompt": {
         "cs": "Jste u lékaře. Řekněte, co vás bolí a od kdy.",
         "uz": "Siz shifokor qabulidasiz. Qayeringiz og'riyotganini va qachondan beri ekanini ayting.",
         "en": "You are at the doctor's. Say what hurts and since when.",
         "ru": "Вы у врача. Скажите, что у вас болит и с какого времени.",
-        "uk": "Ви в лікаря. Скажіть, що у вас болить і відколи."
+        "uk": "Ви в лікаря. Скажіть, що у вас болить і відколи.",
+        "vi": "Bạn đang ở phòng khám. Hãy nói bạn bị đau ở đâu và từ khi nào."
       },
       "keywords": [
         "dobrý den",
@@ -79,14 +85,16 @@
         "uz": "Oila",
         "en": "Family",
         "ru": "Семья",
-        "uk": "Сім'я"
+        "uk": "Сім'я",
+        "vi": "Gia đình"
       },
       "prompt": {
         "cs": "Řekněte něco o své rodině.",
         "uz": "Oilangiz haqida gapirib bering.",
         "en": "Say something about your family.",
         "ru": "Расскажите о своей семье.",
-        "uk": "Розкажіть про свою сім'ю."
+        "uk": "Розкажіть про свою сім'ю.",
+        "vi": "Hãy kể về gia đình của bạn."
       },
       "keywords": [
         "moje rodina",
@@ -102,14 +110,16 @@
         "uz": "Ish",
         "en": "Work",
         "ru": "Работа",
-        "uk": "Робота"
+        "uk": "Робота",
+        "vi": "Công việc"
       },
       "prompt": {
         "cs": "Kde pracujete a co děláte v práci?",
         "uz": "Qayerda ishlaysiz va ishda nima qilasiz?",
         "en": "Where do you work and what do you do at work?",
         "ru": "Где вы работаете и что делаете на работе?",
-        "uk": "Де ви працюєте і що робите на роботі?"
+        "uk": "Де ви працюєте і що робите на роботі?",
+        "vi": "Bạn làm việc ở đâu và làm gì ở nơi làm việc?"
       },
       "keywords": [
         "pracuji jako",
@@ -124,14 +134,16 @@
         "uz": "Uy-joy",
         "en": "Housing",
         "ru": "Жильё",
-        "uk": "Житло"
+        "uk": "Житло",
+        "vi": "Nhà ở"
       },
       "prompt": {
         "cs": "Popište svůj byt nebo dům.",
         "uz": "Kvartirangiz yoki uyingizni tasvirlab bering.",
         "en": "Describe your flat or house.",
         "ru": "Опишите свою квартиру или дом.",
-        "uk": "Опишіть свою квартиру або будинок."
+        "uk": "Опишіть свою квартиру або будинок.",
+        "vi": "Hãy mô tả căn hộ hoặc ngôi nhà của bạn."
       },
       "keywords": [
         "bydlím",
@@ -147,14 +159,16 @@
         "uz": "Do'konda",
         "en": "In a shop",
         "ru": "В магазине",
-        "uk": "У магазині"
+        "uk": "У магазині",
+        "vi": "Trong cửa hàng"
       },
       "prompt": {
         "cs": "Jste v obchodě. Chcete koupit chleba a mléko. Zeptejte se, kolik to stojí.",
         "uz": "Siz do'kondasiz. Non va sut olmoqchisiz. Narxini so'rang.",
         "en": "You are in a shop. You want to buy bread and milk. Ask how much it costs.",
         "ru": "Вы в магазине. Хотите купить хлеб и молоко. Спросите, сколько это стоит.",
-        "uk": "Ви в магазині. Хочете купити хліб і молоко. Запитайте, скільки це коштує."
+        "uk": "Ви в магазині. Хочете купити хліб і молоко. Запитайте, скільки це коштує.",
+        "vi": "Bạn đang ở cửa hàng. Bạn muốn mua bánh mì và sữa. Hãy hỏi giá."
       },
       "keywords": [
         "dobrý den",
@@ -170,14 +184,16 @@
         "uz": "Yo'l so'rash",
         "en": "Asking the way",
         "ru": "Как пройти",
-        "uk": "Як пройти"
+        "uk": "Як пройти",
+        "vi": "Hỏi đường"
       },
       "prompt": {
         "cs": "Jste ve městě. Zeptejte se, kde je hlavní nádraží.",
         "uz": "Siz shahardasiz. Markaziy vokzal qayerdaligini so'rang.",
         "en": "You are in town. Ask where the main railway station is.",
         "ru": "Вы в городе. Спросите, где главный вокзал.",
-        "uk": "Ви в місті. Запитайте, де головний вокзал."
+        "uk": "Ви в місті. Запитайте, де головний вокзал.",
+        "vi": "Bạn đang ở trong thành phố. Hãy hỏi ga tàu chính ở đâu."
       },
       "keywords": [
         "promiňte",
@@ -193,14 +209,16 @@
         "uz": "Bo'sh vaqt",
         "en": "Free time",
         "ru": "Свободное время",
-        "uk": "Вільний час"
+        "uk": "Вільний час",
+        "vi": "Thời gian rảnh"
       },
       "prompt": {
         "cs": "Co rád nebo ráda děláte ve volném čase?",
         "uz": "Bo'sh vaqtingizda nima qilishni yoqtirasiz?",
         "en": "What do you like doing in your free time?",
         "ru": "Что вы любите делать в свободное время?",
-        "uk": "Що ви любите робити у вільний час?"
+        "uk": "Що ви любите робити у вільний час?",
+        "vi": "Bạn thích làm gì vào thời gian rảnh?"
       },
       "keywords": [
         "ve volném čase",
@@ -215,14 +233,16 @@
         "uz": "Ovqat",
         "en": "Food",
         "ru": "Еда",
-        "uk": "Їжа"
+        "uk": "Їжа",
+        "vi": "Ăn uống"
       },
       "prompt": {
         "cs": "Co obvykle jíte k snídani a k obědu?",
         "uz": "Nonushta va tushlikda odatda nima yeysiz?",
         "en": "What do you usually eat for breakfast and lunch?",
         "ru": "Что вы обычно едите на завтрак и на обед?",
-        "uk": "Що ви зазвичай їсте на сніданок і на обід?"
+        "uk": "Що ви зазвичай їсте на сніданок і на обід?",
+        "vi": "Bạn thường ăn gì vào bữa sáng và bữa trưa?"
       },
       "keywords": [
         "k snídani",
@@ -237,14 +257,16 @@
         "uz": "Uzr so'rash",
         "en": "Apologising",
         "ru": "Извинение",
-        "uk": "Вибачення"
+        "uk": "Вибачення",
+        "vi": "Xin lỗi"
       },
       "prompt": {
         "cs": "Přijdete pozdě na schůzku. Zavolejte a omluvte se.",
         "uz": "Uchrashuvga kechikyapsiz. Qo'ng'iroq qilib, uzr so'rang.",
         "en": "You will be late for a meeting. Call and apologise.",
         "ru": "Вы опаздываете на встречу. Позвоните и извинитесь.",
-        "uk": "Ви запізнюєтеся на зустріч. Зателефонуйте і вибачтеся."
+        "uk": "Ви запізнюєтеся на зустріч. Зателефонуйте і вибачтеся.",
+        "vi": "Bạn sẽ đến muộn buổi hẹn. Hãy gọi điện và xin lỗi."
       },
       "keywords": [
         "omlouvám se",
@@ -260,14 +282,16 @@
         "uz": "Ta'til",
         "en": "Holiday",
         "ru": "Отпуск",
-        "uk": "Відпустка"
+        "uk": "Відпустка",
+        "vi": "Kỳ nghỉ"
       },
       "prompt": {
         "cs": "Co budete dělat o dovolené?",
         "uz": "Ta'tilda nima qilasiz?",
         "en": "What will you do on holiday?",
         "ru": "Что вы будете делать в отпуске?",
-        "uk": "Що ви робитимете у відпустці?"
+        "uk": "Що ви робитимете у відпустці?",
+        "vi": "Bạn sẽ làm gì trong kỳ nghỉ?"
       },
       "keywords": [
         "o dovolené",

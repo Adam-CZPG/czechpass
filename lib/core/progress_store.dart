@@ -7,6 +7,8 @@ class Exams {
   static const realie = 'realie';
   static const a2Reading = 'a2_reading';
   static const a2Listening = 'a2_listening';
+  static const a2Speaking = 'a2_speaking';
+  static const a2Writing = 'a2_writing';
 }
 
 /// Har bir savolga oxirgi javob to'g'ri yoki noto'g'ri bo'lganini saqlaydi.
@@ -15,7 +17,7 @@ class ProgressStore {
   ProgressStore._(this._prefs, this._data);
 
   static const _prefix = 'progress_';
-  static const _exams = [Exams.realie, Exams.a2Reading, Exams.a2Listening];
+  static const _exams = [Exams.realie, Exams.a2Reading, Exams.a2Listening, Exams.a2Speaking, Exams.a2Writing];
 
   final SharedPreferences _prefs;
 

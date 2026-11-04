@@ -8,6 +8,7 @@ import 'package:czech_pass/app/theme.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
 import 'package:czech_pass/core/speech_service.dart';
+import 'package:czech_pass/features/a2/section_result_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
 import 'package:czech_pass/widgets/question_block.dart';
@@ -32,6 +33,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
   final Map<String, List<int>> _orders = {};
   final Map<String, int> _picked = {};
   int _taskIndex = 0;
+  final Map<int, (int, int)> _scores = {}; // topshiriq → (to'g'ri, jami)
   int _playsLeft = ListeningScreen.maxPlays;
   bool _playing = false;
   bool _checked = false;
@@ -80,7 +82,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
     });
     for (final line in _task.lines) {
       if (!mounted || !_playing) break;
-      await _voice.say(line.text, speaker: line.speaker);
+      await _voice.say(line.text, gender: _task.genderOf(line.speaker));
     }
     if (mounted) setState(() => _playing = false);
   }
@@ -90,14 +92,37 @@ class _ListeningScreenState extends State<ListeningScreen> {
     for (final q in _task.questions) {
       controller.recordAnswer(Exams.a2Listening, q.id, _picked[q.id] == q.correctIndex);
     }
+    final right = _task.questions.where((q) => _picked[q.id] == q.correctIndex).length;
+    _scores[_taskIndex] = (right, _task.questions.length);
     setState(() => _checked = true);
+  }
+
+  /// Bo'lim tugadi: barcha topshiriqlar bo'yicha natija foizini ko'rsatamiz.
+  void _finish(String section, WidgetBuilder restart) {
+    final s = S(AppScope.read(context).language.code);
+    var right = 0;
+    var total = 0;
+    for (final (r, t) in _scores.values) {
+      right += r;
+      total += t;
+    }
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => SectionResultScreen(
+          title: 'A2 · ${section == 'reading' ? s.reading : section == 'listening' ? s.listening : section == 'speaking' ? s.speaking : s.writing}',
+          right: right,
+          total: total,
+          restart: restart,
+        ),
+      ),
+    );
   }
 
   Future<void> _next() async {
     await _voice.stop();
     if (!mounted) return;
     if (_isLast) {
-      Navigator.of(context).maybePop();
+      _finish('listening', (context) => const ListeningScreen());
       return;
     }
     setState(() {

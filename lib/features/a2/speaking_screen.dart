@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
 import 'package:czech_pass/core/speech_service.dart';
+import 'package:czech_pass/features/a2/section_result_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
 
@@ -25,6 +27,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
 
   List<SpeakingTask> _tasks = [];
   int _taskIndex = 0;
+  final Map<int, (int, int)> _scores = {}; // topshiriq → (topilgan iboralar, jami)
   bool _sttAvailable = true;
   bool _listening = false;
   bool _checked = false;
@@ -90,16 +93,42 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
     if (_listening) await _input.stop();
     if (!mounted) return;
     FocusScope.of(context).unfocus();
+    final answer = foldCzech(_text.text);
+    final hits = _task.keywords.where((k) => answer.contains(foldCzech(k))).length;
+    _scores[_taskIndex] = (hits, _task.keywords.length);
+    // Iboralarning kamida 2/3 qismi aytilgan bo'lsa — topshiriq bajarilgan hisoblanadi.
+    AppScope.read(context).recordAnswer(Exams.a2Speaking, _task.id, hits * 3 >= _task.keywords.length * 2);
     setState(() {
       _listening = false;
       _checked = true;
     });
   }
 
+  /// Bo'lim tugadi: barcha topshiriqlar bo'yicha natija foizini ko'rsatamiz.
+  void _finish(String section, WidgetBuilder restart) {
+    final s = S(AppScope.read(context).language.code);
+    var right = 0;
+    var total = 0;
+    for (final (r, t) in _scores.values) {
+      right += r;
+      total += t;
+    }
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => SectionResultScreen(
+          title: 'A2 · ${section == 'reading' ? s.reading : section == 'listening' ? s.listening : section == 'speaking' ? s.speaking : s.writing}',
+          right: right,
+          total: total,
+          restart: restart,
+        ),
+      ),
+    );
+  }
+
   void _next() {
     _voice.stop();
     if (_isLast) {
-      Navigator.of(context).maybePop();
+      _finish('speaking', (context) => const SpeakingScreen());
       return;
     }
     setState(() {
@@ -265,7 +294,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
                             Text(task.model, style: const TextStyle(fontSize: 15, height: 1.55)),
                             const SizedBox(height: 8),
                             TextButton.icon(
-                              onPressed: () => _voice.say(task.model),
+                              onPressed: () => _voice.say(task.model, gender: 'm'),
                               icon: const Icon(Icons.volume_up_outlined),
                               label: Text(s.listenModel),
                             ),
