@@ -28,11 +28,11 @@ class Mocks {
 /// Sinov APK'sida hamma narsa ochiq bo'lishi uchun `--dart-define=DEV_UNLOCK=true`.
 class Entitlements {
   Entitlements({
-    SharedPreferences? prefs,
+    SharedPreferences? preferences,
     Set<Tariff>? owned,
     Map<String, int>? mocksUsed,
     this.devUnlock = const bool.fromEnvironment('DEV_UNLOCK'),
-  })  : _prefs = prefs,
+  })  : _prefs = preferences,
         _owned = owned ?? <Tariff>{},
         _mocksUsed = mocksUsed ?? <String, int>{};
 
@@ -55,7 +55,7 @@ class Entitlements {
     };
     final raw = prefs.getString(_mocksKey);
     final mocks = raw == null ? <String, int>{} : Map<String, int>.from(jsonDecode(raw) as Map);
-    return Entitlements(prefs: prefs, owned: owned, mocksUsed: mocks);
+    return Entitlements(preferences: prefs, owned: owned, mocksUsed: mocks);
   }
 
   bool get residence => devUnlock || _owned.contains(Tariff.residence) || _owned.contains(Tariff.both);

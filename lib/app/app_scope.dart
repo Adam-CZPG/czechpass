@@ -17,12 +17,12 @@ class AppController extends ChangeNotifier {
     AppLanguage? initialLanguage,
     this.systemLanguage,
     Entitlements? entitlements,
-    DateTime? examDate,
-    int dailyGoal = SettingsStore.defaultGoal,
+    DateTime? initialExamDate,
+    int initialDailyGoal = SettingsStore.defaultGoal,
   })  : _language = initialLanguage,
         entitlements = entitlements ?? Entitlements(),
-        _examDate = examDate,
-        _dailyGoal = dailyGoal;
+        _examDate = initialExamDate,
+        _dailyGoal = initialDailyGoal;
 
   final SettingsStore settings;
   final ProgressStore progress;

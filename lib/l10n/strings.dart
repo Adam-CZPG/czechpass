@@ -1288,7 +1288,7 @@ class S {
         'vi': 'Thời gian còn lại: {t}',
         'ru': 'Осталось времени: {t}',
         'uk': 'Залишилося часу: {t}',
-      }).replaceAll('{t}', '$time');
+      }).replaceAll('{t}', time);
   String get mockA2Title => _t(const {
         'uz': 'A2 sinov imtihoni',
         'cs': 'Zkouška A2 nanečisto',

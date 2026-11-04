@@ -26,8 +26,8 @@ Future<void> main() async {
     // Birinchi ochilishda telefon tili (agar ilovada bo'lsa), aks holda chex tili.
     systemLanguage: AppLanguage.fromLocales(dispatcher.locales.map((l) => l.languageCode)),
     entitlements: await Entitlements.load(),
-    examDate: await settings.loadExamDate(),
-    dailyGoal: await settings.loadDailyGoal(),
+    initialExamDate: await settings.loadExamDate(),
+    initialDailyGoal: await settings.loadDailyGoal(),
   );
   runApp(CzechPassApp(controller: controller));
 }
