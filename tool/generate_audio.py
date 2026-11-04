@@ -24,8 +24,9 @@ OUT = ROOT / 'assets' / 'audio' / 'listening'
 MANIFEST = OUT / 'manifest.json'
 
 VOICES = {'f': 'cs-CZ-VlastaNeural', 'm': 'cs-CZ-AntoninNeural'}
-# A2 darajasi uchun biroz sekinroq nutq; gaplar orasida qisqa pauza.
-RATE = '-8%'
+# Har bir ovozning tabiiy tezligi har xil: Vlasta o'zi sekinroq gapiradi, shuning uchun
+# deyarli tabiiy tezlikda; Antonín A2 darajasi uchun biroz sekinlashtiriladi.
+RATES = {'f': '+4%', 'm': '-4%'}
 PAUSE = '700ms'
 FORMAT = 'audio-24khz-48kbitrate-mono-mp3'
 
@@ -37,9 +38,9 @@ def gender_of(task, speaker):
 def build_ssml(task):
     parts = []
     for line in task['lines']:
-        voice = VOICES[gender_of(task, line['speaker'])]
+        gender = gender_of(task, line['speaker'])
         parts.append(
-            f'<voice name="{voice}"><prosody rate="{RATE}">{escape(line["text"])}</prosody>'
+            f'<voice name="{VOICES[gender]}"><prosody rate="{RATES[gender]}">{escape(line["text"])}</prosody>'
             f'<break time="{PAUSE}"/></voice>'
         )
     return ('<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="cs-CZ">'

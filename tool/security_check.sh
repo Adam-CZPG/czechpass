@@ -22,7 +22,7 @@ else
 fi
 
 # 3. Faqat kerakli ruxsatlar (yangi ruxsat qo'shilsa, shu ro'yxatni ataylab yangilash kerak).
-allowed="android.permission.INTERNET android.permission.RECORD_AUDIO"
+allowed="android.permission.INTERNET android.permission.RECORD_AUDIO android.permission.POST_NOTIFICATIONS android.permission.RECEIVE_BOOT_COMPLETED"
 for perm in $(grep -o 'android.permission\.[A-Z_]*' "$manifest" | sort -u); do
   case " $allowed " in
     *" $perm "*) ok "ruxsat: $perm" ;;

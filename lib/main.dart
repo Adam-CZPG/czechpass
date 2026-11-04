@@ -28,7 +28,10 @@ Future<void> main() async {
     entitlements: await Entitlements.load(),
     initialExamDate: await settings.loadExamDate(),
     initialDailyGoal: await settings.loadDailyGoal(),
+    initialReminder: await settings.loadReminder(),
   );
+  // Ilova yangilangandan keyin ham eslatma ishlashi uchun qayta rejalashtiramiz.
+  controller.rescheduleReminder();
   runApp(CzechPassApp(controller: controller));
 }
 

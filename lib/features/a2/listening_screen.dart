@@ -9,6 +9,7 @@ import 'package:czech_pass/core/audio_clips.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
+import 'package:czech_pass/core/session_store.dart';
 import 'package:czech_pass/core/speech_service.dart';
 import 'package:czech_pass/features/a2/section_result_screen.dart';
 import 'package:czech_pass/core/tariff.dart';
@@ -62,6 +63,17 @@ class _ListeningScreenState extends State<ListeningScreen> {
     }
     _total = tasks.length;
     _tasks = controller.entitlements.limit(tasks, Tariff.residence, FreeLimits.a2TasksPerSkill);
+    // Oldingi safar to'xtatilgan joydan davom etamiz.
+    final saved = await SessionStore.load(Exams.a2Listening);
+    final savedIndex = saved?['index'];
+    if (savedIndex is int && savedIndex > 0 && savedIndex < _tasks.length) {
+      _taskIndex = savedIndex;
+      _scores.addAll(SessionStore.decodeScores(saved?['scores']));
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(S.of(context).continueWhereLeft)));
+      });
+    }
     final available = await _voice.init();
     final clips = await ListeningAudio.clips();
     // Tayyor MP3 yozuvlar bo'lsa, telefonda chexcha ovoz bo'lmasa ham tinglash ishlaydi.
@@ -123,6 +135,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
 
   /// Bo'lim tugadi: barcha topshiriqlar bo'yicha natija foizini ko'rsatamiz.
   void _finish(String section, WidgetBuilder restart) {
+    SessionStore.clear(Exams.a2Listening);
     final s = S(AppScope.read(context).language.code);
     var right = 0;
     var total = 0;
@@ -157,6 +170,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
       _playing = false;
       _playsLeft = ListeningScreen.maxPlays;
     });
+    SessionStore.save(Exams.a2Listening, {'index': _taskIndex, 'scores': SessionStore.encodeScores(_scores)});
   }
 
   @override

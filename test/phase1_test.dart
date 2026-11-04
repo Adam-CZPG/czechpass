@@ -3,10 +3,12 @@ import 'dart:math';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
+import 'package:czech_pass/core/session_store.dart';
 import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/features/a2/a2_mock_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
@@ -155,6 +157,29 @@ void main() {
       expect(const S('ru').daysLeft(12), 'До экзамена: 12 дней');
       expect(const S('uk').daysLeft(3), 'До іспиту: 3 дні');
       expect(const S('en').daysLeft(1), '1 day until your exam');
+    });
+  });
+
+  group("To'xtagan joydan davom ettirish", () {
+    test('holat saqlanadi, tiklanadi va o\'chiriladi', () async {
+      SharedPreferences.setMockInitialValues({});
+      final scores = {0: (2, 3), 1: (3, 3)};
+      await SessionStore.save('a2_reading', {'index': 2, 'scores': SessionStore.encodeScores(scores)});
+
+      final saved = await SessionStore.load('a2_reading');
+      expect(saved?['index'], 2);
+      expect(SessionStore.decodeScores(saved?['scores']), scores);
+      expect(await SessionStore.exists('a2_reading'), isTrue);
+
+      await SessionStore.clear('a2_reading');
+      expect(await SessionStore.load('a2_reading'), isNull);
+      expect(SessionStore.decodeScores(null), isEmpty);
+    });
+
+    test('eslatma vaqti formatlanadi', () {
+      expect(AppController.formatMinutes(17 * 60), '17:00');
+      expect(AppController.formatMinutes(8 * 60 + 5), '08:05');
+      expect(const S('uz').reminderAt('17:00'), 'Har kuni soat 17:00 da');
     });
   });
 }

@@ -7,6 +7,10 @@ class SettingsStore {
   static const _languageKey = 'app_language';
   static const _examDateKey = 'exam_date';
   static const _dailyGoalKey = 'daily_goal';
+  static const _reminderKey = 'reminder_minutes';
+
+  /// Eslatma vaqti standart holatda — 17:00.
+  static const defaultReminderMinutes = 17 * 60;
 
   /// Kunlik maqsad (javoblar soni) uchun tanlovlar.
   static const goalOptions = [10, 20, 30, 50];
@@ -45,5 +49,20 @@ class SettingsStore {
   Future<void> saveDailyGoal(int goal) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(_dailyGoalKey, goal);
+  }
+
+  /// Eslatma vaqti (kun boshidan daqiqalar); eslatma o'chirilgan bo'lsa — null.
+  Future<int?> loadReminder() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getInt(_reminderKey);
+  }
+
+  Future<void> saveReminder(int? minutes) async {
+    final prefs = await SharedPreferences.getInstance();
+    if (minutes == null) {
+      await prefs.remove(_reminderKey);
+    } else {
+      await prefs.setInt(_reminderKey, minutes);
+    }
   }
 }

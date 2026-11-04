@@ -1473,4 +1473,54 @@ class S {
         return 'Do zkoušky: $n ${n == 1 ? 'den' : (n >= 2 && n <= 4) ? 'dny' : 'dní'}';
     }
   }
+
+  // ── Eslatmalar va davom ettirish ──
+  String get reminderTitle => _t(const {
+        'uz': 'Kunlik eslatma',
+        'cs': 'Denní připomínka',
+        'en': 'Daily reminder',
+        'vi': 'Nhắc nhở hằng ngày',
+        'ru': 'Ежедневное напоминание',
+        'uk': 'Щоденне нагадування',
+      });
+  String reminderAt(String time) => _t(const {
+        'uz': 'Har kuni soat {t} da',
+        'cs': 'Každý den v {t}',
+        'en': 'Every day at {t}',
+        'vi': 'Mỗi ngày lúc {t}',
+        'ru': 'Каждый день в {t}',
+        'uk': 'Щодня о {t}',
+      }).replaceAll('{t}', time);
+  String reminderBody(String time) => _t(const {
+        'uz': 'Soat {t} — mashg\'ulot vaqti! Bir necha daqiqa chex tili bilan shug\'ullaning.',
+        'cs': 'Je {t} — čas na procvičování! Věnujte pár minut češtině.',
+        'en': 'It’s {t} — time to practise! Spend a few minutes on your Czech.',
+        'vi': 'Đã {t} — đến giờ luyện tập! Hãy dành vài phút cho tiếng Séc.',
+        'ru': 'Уже {t} — время заниматься! Уделите несколько минут чешскому.',
+        'uk': 'Вже {t} — час займатися! Приділіть кілька хвилин чеській.',
+      }).replaceAll('{t}', time);
+  String get reminderDenied => _t(const {
+        'uz': 'Bildirishnomalarga ruxsat berilmagan. Telefon sozlamalarida ruxsat bering.',
+        'cs': 'Oznámení nejsou povolena. Povolte je v nastavení telefonu.',
+        'en': 'Notifications are not allowed. Please enable them in your phone settings.',
+        'vi': 'Thông báo chưa được cho phép. Hãy bật trong cài đặt điện thoại.',
+        'ru': 'Уведомления не разрешены. Разрешите их в настройках телефона.',
+        'uk': 'Сповіщення не дозволені. Дозвольте їх у налаштуваннях телефона.',
+      });
+  String get reminderUnsupported => _t(const {
+        'uz': 'Eslatmalar faqat telefon ilovasida ishlaydi.',
+        'cs': 'Připomínky fungují jen v aplikaci v telefonu.',
+        'en': 'Reminders work only in the phone app.',
+        'vi': 'Nhắc nhở chỉ hoạt động trong ứng dụng trên điện thoại.',
+        'ru': 'Напоминания работают только в приложении на телефоне.',
+        'uk': 'Нагадування працюють лише в застосунку на телефоні.',
+      });
+  String get continueWhereLeft => _t(const {
+        'uz': 'To\'xtagan joydan davom etamiz',
+        'cs': 'Pokračujeme tam, kde jste skončili',
+        'en': 'Continuing where you left off',
+        'vi': 'Tiếp tục từ chỗ bạn đã dừng',
+        'ru': 'Продолжаем с того места, где вы остановились',
+        'uk': 'Продовжуємо з того місця, де ви зупинилися',
+      });
 }

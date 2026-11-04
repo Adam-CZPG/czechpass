@@ -8,6 +8,7 @@ import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
+import 'package:czech_pass/core/session_store.dart';
 import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/features/quiz/result_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
@@ -86,6 +87,29 @@ class _QuizScreenState extends State<QuizScreen> {
         _total = questions.length;
     }
 
+    // Mashq va takrorlashda oldingi safar to'xtatilgan joydan davom etamiz.
+    if (!_isExam) {
+      final saved = await SessionStore.load(_sessionKey);
+      final ids = saved?['ids'];
+      final index = saved?['index'];
+      if (ids is List && index is int && index > 0 && index < ids.length) {
+        final byId = {for (final q in questions) q.id: q};
+        final restored = [for (final id in ids) byId['$id']];
+        if (restored.every((q) => q != null)) {
+          questions = restored.whereType<Question>().toList();
+          _index = index;
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (!mounted) return;
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(S.of(context).continueWhereLeft)));
+          });
+          for (final a in saved?['answers'] as List? ?? const []) {
+            final m = a as Map;
+            _answers.add(AnswerRecord(questionId: '${m['id']}', topic: '${m['topic']}', correct: m['correct'] == true));
+          }
+        }
+      }
+    }
+
     _questions = questions;
     _orders = [
       for (final q in questions) List<int>.generate(q.options.length, (i) => i)..shuffle(_random),
@@ -109,6 +133,7 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _showResult(QuestionBank bank) {
+    if (!_isExam) SessionStore.clear(_sessionKey);
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => ResultScreen(
@@ -132,6 +157,19 @@ class _QuizScreenState extends State<QuizScreen> {
       _index++;
       _picked = null;
       _checked = false;
+    });
+    if (!_isExam) _saveSession();
+  }
+
+  String get _sessionKey => 'realie_${widget.mode.name}';
+
+  void _saveSession() {
+    SessionStore.save(_sessionKey, {
+      'ids': [for (final q in _questions) q.id],
+      'index': _index,
+      'answers': [
+        for (final a in _answers) {'id': a.questionId, 'topic': a.topic, 'correct': a.correct},
+      ],
     });
   }
 

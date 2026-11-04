@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
 import 'package:czech_pass/core/exam_rules.dart';
+import 'package:czech_pass/core/reminder_service.dart';
 import 'package:czech_pass/core/settings_store.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
@@ -35,11 +36,38 @@ class _PlanSheet extends StatelessWidget {
     if (picked != null) await controller.setExamDate(picked);
   }
 
+  Future<void> _setReminder(BuildContext context, int? minutes) async {
+    final controller = AppScope.read(context);
+    final messenger = ScaffoldMessenger.of(context);
+    final s = S.of(context);
+    if (minutes == null) {
+      await controller.disableReminder();
+      return;
+    }
+    if (!ReminderService.supported) {
+      messenger.showSnackBar(SnackBar(content: Text(s.reminderUnsupported)));
+      return;
+    }
+    final ok = await controller.enableReminder(minutes);
+    if (!ok) messenger.showSnackBar(SnackBar(content: Text(s.reminderDenied)));
+  }
+
+  Future<void> _pickTime(BuildContext context) async {
+    final controller = AppScope.read(context);
+    final current = controller.reminderMinutes ?? SettingsStore.defaultReminderMinutes;
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay(hour: current ~/ 60, minute: current % 60),
+    );
+    if (picked != null && context.mounted) await _setReminder(context, picked.hour * 60 + picked.minute);
+  }
+
   @override
   Widget build(BuildContext context) {
     final s = S.of(context);
     final controller = AppScope.of(context);
     final date = controller.examDate;
+    final reminder = controller.reminderMinutes;
     final localizations = MaterialLocalizations.of(context);
 
     return SafeArea(
@@ -87,6 +115,23 @@ class _PlanSheet extends StatelessWidget {
                   ),
               ],
             ),
+            const SizedBox(height: 14),
+            SwitchListTile(
+              contentPadding: EdgeInsets.zero,
+              title: Text(s.reminderTitle, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+              subtitle: reminder == null ? null : Text(s.reminderAt(AppController.formatMinutes(reminder))),
+              value: reminder != null,
+              onChanged: (on) => _setReminder(context, on ? SettingsStore.defaultReminderMinutes : null),
+            ),
+            if (reminder != null)
+              Align(
+                alignment: Alignment.centerLeft,
+                child: OutlinedButton.icon(
+                  onPressed: () => _pickTime(context),
+                  icon: const Icon(Icons.schedule),
+                  label: Text(AppController.formatMinutes(reminder)),
+                ),
+              ),
             const SizedBox(height: 20),
             FilledButton(onPressed: () => Navigator.of(context).maybePop(), child: Text(s.save)),
           ],
@@ -108,11 +153,38 @@ String _countdownText(S s, DateTime date) {
 class PlanCard extends StatelessWidget {
   const PlanCard({super.key});
 
+  Future<void> _setReminder(BuildContext context, int? minutes) async {
+    final controller = AppScope.read(context);
+    final messenger = ScaffoldMessenger.of(context);
+    final s = S.of(context);
+    if (minutes == null) {
+      await controller.disableReminder();
+      return;
+    }
+    if (!ReminderService.supported) {
+      messenger.showSnackBar(SnackBar(content: Text(s.reminderUnsupported)));
+      return;
+    }
+    final ok = await controller.enableReminder(minutes);
+    if (!ok) messenger.showSnackBar(SnackBar(content: Text(s.reminderDenied)));
+  }
+
+  Future<void> _pickTime(BuildContext context) async {
+    final controller = AppScope.read(context);
+    final current = controller.reminderMinutes ?? SettingsStore.defaultReminderMinutes;
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay(hour: current ~/ 60, minute: current % 60),
+    );
+    if (picked != null && context.mounted) await _setReminder(context, picked.hour * 60 + picked.minute);
+  }
+
   @override
   Widget build(BuildContext context) {
     final s = S.of(context);
     final controller = AppScope.of(context);
     final date = controller.examDate;
+    final reminder = controller.reminderMinutes;
     final today = controller.progress.todayCount();
     final goal = controller.dailyGoal;
     final streak = controller.progress.streak();
