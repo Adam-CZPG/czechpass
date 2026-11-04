@@ -15,7 +15,8 @@ export default defineConfig({
     screenshot: 'only-on-failure',
   },
   projects: [
-    { name: 'mobile-chrome', use: { ...devices['Pixel 7'] } },
+    // Telefon tili chexcha deb sinaymiz (boshqa tillar alohida testlarda).
+    { name: 'mobile-chrome', use: { ...devices['Pixel 7'], locale: 'cs-CZ' } },
   ],
   webServer: {
     command: 'npx http-server ../build/web -p 4173 -a 127.0.0.1 -s -c-1',

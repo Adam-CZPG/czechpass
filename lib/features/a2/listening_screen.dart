@@ -174,7 +174,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
                 tooltip: s.back,
                 trailing: Text(
                   '${_taskIndex + 1} / ${_tasks.length}',
-                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
                 ),
               ),
               const SizedBox(height: 16),
@@ -183,7 +183,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
                   children: [
                     Text(
                       '${s.taskN(_taskIndex + 1)} · ${task.titleFor(s.lang)}',
-                      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),
                     ),
                     const SizedBox(height: 6),
                     Text(s.listeningInstruction, style: const TextStyle(fontSize: 15, height: 1.45, fontWeight: FontWeight.w600)),
@@ -282,7 +282,7 @@ class _PlayButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final enabled = onTap != null;
     return Material(
-      color: enabled ? AppColors.ink : AppColors.border,
+      color: enabled ? AppColors.banner : AppColors.border,
       borderRadius: BorderRadius.circular(16),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -294,7 +294,7 @@ class _PlayButton extends StatelessWidget {
               Icon(
                 playing ? Icons.stop_circle_outlined : Icons.play_circle_outline,
                 size: 32,
-                color: enabled ? Colors.white : AppColors.muted,
+                color: enabled ? AppColors.onBanner : AppColors.muted,
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -303,7 +303,7 @@ class _PlayButton extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
-                    color: enabled ? Colors.white : AppColors.muted,
+                    color: enabled ? AppColors.onBanner : AppColors.muted,
                   ),
                 ),
               ),

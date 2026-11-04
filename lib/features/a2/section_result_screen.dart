@@ -35,7 +35,7 @@ class SectionResultScreen extends StatelessWidget {
         ? AppColors.success
         : ratio >= 0.5
             ? AppColors.accent
-            : const Color(0xFFD9822B);
+            : AppColors.warning;
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -70,7 +70,7 @@ class SectionResultScreen extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text('$percent%', style: const TextStyle(fontSize: 36, fontWeight: FontWeight.w800)),
-                                Text('$right / $total', style: const TextStyle(fontSize: 14, color: AppColors.muted)),
+                                Text('$right / $total', style: TextStyle(fontSize: 14, color: AppColors.muted)),
                               ],
                             ),
                           ),
@@ -84,7 +84,7 @@ class SectionResultScreen extends StatelessWidget {
                   Text(
                     s.sectionScore(percent),
                     textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 15, color: AppColors.muted),
+                    style: TextStyle(fontSize: 15, color: AppColors.muted),
                   ),
                 ],
               ),

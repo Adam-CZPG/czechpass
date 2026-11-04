@@ -177,7 +177,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
                 tooltip: s.back,
                 trailing: Text(
                   '${_taskIndex + 1} / ${_tasks.length}',
-                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
                 ),
               ),
               const SizedBox(height: 16),
@@ -186,7 +186,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
                   children: [
                     Text(
                       '${s.taskN(_taskIndex + 1)} · ${task.titleFor(s.lang)}',
-                      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),
                     ),
                     const SizedBox(height: 6),
                     Text(s.speakingInstruction, style: const TextStyle(fontSize: 15, height: 1.45, fontWeight: FontWeight.w600)),
@@ -198,7 +198,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
                           Text(task.promptCs, style: const TextStyle(fontSize: 18, height: 1.4, fontWeight: FontWeight.w800)),
                           if (translation != null) ...[
                             const SizedBox(height: 6),
-                            Text(translation, style: const TextStyle(fontSize: 14, height: 1.45, color: AppColors.muted)),
+                            Text(translation, style: TextStyle(fontSize: 14, height: 1.45, color: AppColors.muted)),
                           ],
                         ],
                       ),
@@ -224,7 +224,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
                                   child: Icon(
                                     _listening ? Icons.stop_rounded : Icons.mic_rounded,
                                     size: 40,
-                                    color: Colors.white,
+                                    color: AppColors.onAccent,
                                   ),
                                 ),
                               ),
@@ -254,7 +254,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
                       decoration: InputDecoration(
                         hintText: s.writeHere,
                         filled: true,
-                        fillColor: Colors.white,
+                        fillColor: AppColors.card,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(14)),
                       ),
                     ),
@@ -303,7 +303,7 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
                       ),
                     ],
                     const SizedBox(height: 16),
-                    Text(s.speakingPrivacy, style: const TextStyle(fontSize: 12, height: 1.5, color: AppColors.muted)),
+                    Text(s.speakingPrivacy, style: TextStyle(fontSize: 12, height: 1.5, color: AppColors.muted)),
                   ],
                 ),
               ),

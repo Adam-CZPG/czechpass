@@ -186,12 +186,12 @@ class _QuizScreenState extends State<QuizScreen> {
                               child: Text(
                                 'České reálie · ${_modeLabel(s)}',
                                 overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
+                                style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
                               ),
                             ),
                             Text(
                               '${_index + 1} / ${_questions.length}',
-                              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
+                              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
                             ),
                           ],
                         ),
@@ -225,7 +225,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     if (translation != null) ...[
                       if (_showTranslation) ...[
                         const SizedBox(height: 8),
-                        Text(translation, style: const TextStyle(fontSize: 15, height: 1.45, color: AppColors.muted)),
+                        Text(translation, style: TextStyle(fontSize: 15, height: 1.45, color: AppColors.muted)),
                       ],
                       Align(
                         alignment: Alignment.centerLeft,
@@ -310,7 +310,7 @@ class _MessageScaffold extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Spacer(),
-              const Icon(Icons.check_circle_outline, size: 56, color: AppColors.accent),
+              Icon(Icons.check_circle_outline, size: 56, color: AppColors.accent),
               const SizedBox(height: 16),
               Text(
                 title,
@@ -321,7 +321,7 @@ class _MessageScaffold extends StatelessWidget {
               Text(
                 text,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 15, height: 1.5, color: AppColors.muted),
+                style: TextStyle(fontSize: 15, height: 1.5, color: AppColors.muted),
               ),
               const Spacer(),
               FilledButton(

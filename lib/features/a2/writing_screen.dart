@@ -150,7 +150,7 @@ class _WritingScreenState extends State<WritingScreen> {
                 tooltip: s.back,
                 trailing: Text(
                   '${_taskIndex + 1} / ${_tasks.length}',
-                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
                 ),
               ),
               const SizedBox(height: 16),
@@ -159,7 +159,7 @@ class _WritingScreenState extends State<WritingScreen> {
                   children: [
                     Text(
                       '${s.taskN(_taskIndex + 1)} · ${task.titleFor(s.lang)}',
-                      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),
                     ),
                     const SizedBox(height: 8),
                     AppCard(
@@ -169,7 +169,7 @@ class _WritingScreenState extends State<WritingScreen> {
                           Text(task.promptCs, style: const TextStyle(fontSize: 17, height: 1.4, fontWeight: FontWeight.w800)),
                           if (translation != null) ...[
                             const SizedBox(height: 6),
-                            Text(translation, style: const TextStyle(fontSize: 14, height: 1.45, color: AppColors.muted)),
+                            Text(translation, style: TextStyle(fontSize: 14, height: 1.45, color: AppColors.muted)),
                           ],
                           const SizedBox(height: 12),
                           Text(s.mustInclude, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700)),
@@ -197,7 +197,7 @@ class _WritingScreenState extends State<WritingScreen> {
                       decoration: InputDecoration(
                         hintText: s.writeHere,
                         filled: true,
-                        fillColor: Colors.white,
+                        fillColor: AppColors.card,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(14)),
                       ),
                     ),
@@ -267,13 +267,13 @@ class _WritingScreenState extends State<WritingScreen> {
                           children: [
                             Row(
                               children: [
-                                const Icon(Icons.auto_awesome_outlined, size: 20, color: AppColors.muted),
+                                Icon(Icons.auto_awesome_outlined, size: 20, color: AppColors.muted),
                                 const SizedBox(width: 8),
                                 Text(s.aiCheck, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800)),
                               ],
                             ),
                             const SizedBox(height: 6),
-                            Text(s.aiSoon, style: const TextStyle(fontSize: 14, height: 1.45, color: AppColors.muted)),
+                            Text(s.aiSoon, style: TextStyle(fontSize: 14, height: 1.45, color: AppColors.muted)),
                           ],
                         ),
                       ),

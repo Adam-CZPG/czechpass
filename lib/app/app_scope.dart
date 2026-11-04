@@ -13,19 +13,26 @@ class AppController extends ChangeNotifier {
     required this.progress,
     this.repository = const QuestionRepository(),
     AppLanguage? initialLanguage,
+    this.systemLanguage,
   }) : _language = initialLanguage;
 
   final SettingsStore settings;
   final ProgressStore progress;
   final QuestionRepository repository;
 
+  /// Telefon tili, agar u ilovadagi tillardan biri bo'lsa (aks holda null).
+  final AppLanguage? systemLanguage;
+
   AppLanguage? _language;
 
   /// Foydalanuvchi hali til tanlamagan bo'lsa — null.
   AppLanguage? get selectedLanguage => _language;
 
-  /// Interfeys tili (tanlanmagan bo'lsa — chex tili).
-  AppLanguage get language => _language ?? AppLanguage.cs;
+  /// Interfeys tili: foydalanuvchi tanlagan til → telefon tili → chex tili.
+  AppLanguage get language => _language ?? systemLanguage ?? AppLanguage.cs;
+
+  /// Telefon mavzusi (yorug'/qorong'i) o'zgarganda ekranlarni qayta chizish uchun.
+  void refreshTheme() => notifyListeners();
 
   Future<void> setLanguage(AppLanguage language) async {
     _language = language;

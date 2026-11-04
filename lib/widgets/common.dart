@@ -13,11 +13,11 @@ class AppCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: AppColors.card,
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18),
-        side: const BorderSide(color: AppColors.border),
+        side: BorderSide(color: AppColors.border),
       ),
       child: InkWell(
         onTap: onTap,
@@ -85,10 +85,10 @@ class OptionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final (Color background, Color border, Color badge, Color badgeText) = switch (state) {
-      OptionState.idle => (Colors.white, AppColors.border, AppColors.surface, AppColors.ink),
-      OptionState.picked => (AppColors.accentSoft, AppColors.accent, AppColors.accent, Colors.white),
-      OptionState.correct => (AppColors.successSoft, AppColors.success, AppColors.success, Colors.white),
-      OptionState.wrong => (AppColors.errorSoft, AppColors.error, AppColors.error, Colors.white),
+      OptionState.idle => (AppColors.card, AppColors.border, AppColors.surface, AppColors.ink),
+      OptionState.picked => (AppColors.accentSoft, AppColors.accent, AppColors.accent, AppColors.onAccent),
+      OptionState.correct => (AppColors.successSoft, AppColors.success, AppColors.success, AppColors.onAccent),
+      OptionState.wrong => (AppColors.errorSoft, AppColors.error, AppColors.error, AppColors.onAccent),
     };
 
     return Semantics(
@@ -136,11 +136,11 @@ class OptionTile extends StatelessWidget {
 
 /// Ingichka progress chizig'i.
 class ProgressLine extends StatelessWidget {
-  const ProgressLine({super.key, required this.value, this.height = 8, this.color = AppColors.accent});
+  const ProgressLine({super.key, required this.value, this.height = 8, this.color});
 
   final double value;
   final double height;
-  final Color color;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -150,7 +150,7 @@ class ProgressLine extends StatelessWidget {
         value: value,
         minHeight: height,
         backgroundColor: AppColors.border,
-        color: color,
+        color: color ?? AppColors.accent,
       ),
     );
   }

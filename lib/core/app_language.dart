@@ -19,6 +19,16 @@ enum AppLanguage {
   /// Tilning o'z nomi.
   final String nativeName;
 
+  /// Telefon tillari ro'yxatidan (afzallik tartibida) ilovadagi birinchi mos tilni topadi.
+  /// Masalan, telefon tili ukraincha bo'lsa — ukrain tili; hech biri mos kelmasa — null.
+  static AppLanguage? fromLocales(Iterable<String> languageCodes) {
+    for (final code in languageCodes) {
+      final match = fromCode(code.toLowerCase());
+      if (match != null) return match;
+    }
+    return null;
+  }
+
   static AppLanguage? fromCode(String? code) {
     for (final language in values) {
       if (language.code == code) return language;

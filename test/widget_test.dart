@@ -33,6 +33,23 @@ void main() {
     expect(find.text('Qaysi imtihonga tayyorlanamiz?'), findsOneWidget);
   });
 
+  test('Telefon tili bo\'yicha standart til tanlanadi', () {
+    expect(AppLanguage.fromLocales(['uk', 'en']), AppLanguage.uk);
+    expect(AppLanguage.fromLocales(['de', 'vi']), AppLanguage.vi);
+    expect(AppLanguage.fromLocales(['de', 'fr']), isNull);
+  });
+
+  testWidgets("Telefon tili ukraincha bo'lsa, ilova ukraincha ochiladi", (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final controller = AppController(
+      settings: SettingsStore(),
+      progress: await ProgressStore.load(),
+      systemLanguage: AppLanguage.uk,
+    );
+    await tester.pumpWidget(CzechPassApp(controller: controller));
+    expect(find.text('Оберіть мову'), findsOneWidget);
+  });
+
   test('Matnlar tanlangan tilda chiqadi', () {
     expect(const S('cs').welcome, 'Vítejte');
     expect(const S('en').welcome, 'Welcome');

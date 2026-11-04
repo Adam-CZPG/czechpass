@@ -91,7 +91,7 @@ class ResultScreen extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text('$right/$total', style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w800)),
-                                Text('$percent%', style: const TextStyle(fontSize: 13, color: AppColors.muted)),
+                                Text('$percent%', style: TextStyle(fontSize: 13, color: AppColors.muted)),
                               ],
                             ),
                           ),
@@ -105,7 +105,7 @@ class ResultScreen extends StatelessWidget {
                   Text(
                     advice,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 14, height: 1.5, color: AppColors.muted),
+                    style: TextStyle(fontSize: 14, height: 1.5, color: AppColors.muted),
                   ),
                 ],
               ),
@@ -128,14 +128,14 @@ class ResultScreen extends StatelessWidget {
                         ),
                         Text(
                           '${entry.value.$1} / ${entry.value.$2}',
-                          style: const TextStyle(fontSize: 14, color: AppColors.muted),
+                          style: TextStyle(fontSize: 14, color: AppColors.muted),
                         ),
                       ],
                     ),
                     const SizedBox(height: 6),
                     ProgressLine(
                       value: entry.value.$1 / entry.value.$2,
-                      color: entry.value.$1 / entry.value.$2 < 0.7 ? const Color(0xFFD9822B) : AppColors.accent,
+                      color: entry.value.$1 / entry.value.$2 < 0.7 ? AppColors.warning : AppColors.accent,
                     ),
                   ],
                 ],

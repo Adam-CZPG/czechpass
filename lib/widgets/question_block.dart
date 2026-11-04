@@ -48,7 +48,7 @@ class QuestionBlock extends StatelessWidget {
         ),
         if (translation != null && showTranslation) ...[
           const SizedBox(height: 4),
-          Text(translation, style: const TextStyle(fontSize: 14, height: 1.4, color: AppColors.muted)),
+          Text(translation, style: TextStyle(fontSize: 14, height: 1.4, color: AppColors.muted)),
         ],
         const SizedBox(height: 10),
         for (var i = 0; i < order.length; i++) ...[

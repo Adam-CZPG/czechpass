@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
             return ListView(
               padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
               children: [
-                Text(s.welcome, style: const TextStyle(fontSize: 14, color: AppColors.muted)),
+                Text(s.welcome, style: TextStyle(fontSize: 14, color: AppColors.muted)),
                 const SizedBox(height: 4),
                 Text(
                   s.homeTitle,
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(height: 8),
                       Text(
                         '${s.mastered(percent)} · ${progress.answeredCount(Exams.realie) == 0 ? s.startPractice : s.continuePractice}',
-                        style: const TextStyle(fontSize: 13, color: AppColors.muted),
+                        style: TextStyle(fontSize: 13, color: AppColors.muted),
                       ),
                     ],
                   ),
@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () => _open(const PremiumScreen()),
                 ),
                 const SizedBox(height: 14),
-                Text(s.disclaimer, style: const TextStyle(fontSize: 12, color: AppColors.muted, height: 1.5)),
+                Text(s.disclaimer, style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.5)),
               ],
             );
           },
@@ -150,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.card,
         indicatorColor: AppColors.accentSoft,
         onDestinationSelected: (index) {
           switch (index) {
@@ -202,7 +202,7 @@ class _ExamCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.muted, letterSpacing: 0.7),
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.muted, letterSpacing: 0.7),
                 ),
               ),
               if (badge != null)
@@ -211,17 +211,17 @@ class _ExamCard extends StatelessWidget {
                   decoration: BoxDecoration(color: AppColors.successSoft, borderRadius: BorderRadius.circular(999)),
                   child: Text(
                     badge!,
-                    style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.success),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.success),
                   ),
                 )
               else if (onTap != null)
-                const Icon(Icons.chevron_right, color: AppColors.muted),
+                Icon(Icons.chevron_right, color: AppColors.muted),
             ],
           ),
           const SizedBox(height: 14),
           Text(title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800)),
           const SizedBox(height: 4),
-          Text(subtitle, style: const TextStyle(fontSize: 14, color: AppColors.muted)),
+          Text(subtitle, style: TextStyle(fontSize: 14, color: AppColors.muted)),
           const SizedBox(height: 14),
           child,
         ],
@@ -255,7 +255,7 @@ class _SkillButton extends StatelessWidget {
                 child: Text(
                   label,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.ink),
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.ink),
                 ),
               ),
             ],
@@ -283,7 +283,7 @@ class _SmallCard extends StatelessWidget {
         children: [
           Text(title, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
           const SizedBox(height: 6),
-          Text(subtitle, style: const TextStyle(fontSize: 13, color: AppColors.muted)),
+          Text(subtitle, style: TextStyle(fontSize: 13, color: AppColors.muted)),
         ],
       ),
     );
@@ -300,7 +300,7 @@ class _PremiumBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.ink,
+      color: AppColors.banner,
       borderRadius: BorderRadius.circular(16),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -313,13 +313,13 @@ class _PremiumBanner extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Colors.white)),
+                    Text(title, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppColors.onBanner)),
                     const SizedBox(height: 2),
-                    Text(subtitle, style: const TextStyle(fontSize: 13, color: Color(0xFFC9D2E0))),
+                    Text(subtitle, style: TextStyle(fontSize: 13, color: AppColors.onBannerMuted)),
                   ],
                 ),
               ),
-              const Icon(Icons.chevron_right, color: Colors.white),
+              Icon(Icons.chevron_right, color: AppColors.onBanner),
             ],
           ),
         ),

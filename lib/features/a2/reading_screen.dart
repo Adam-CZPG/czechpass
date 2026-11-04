@@ -132,7 +132,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                 tooltip: s.back,
                 trailing: Text(
                   '${_taskIndex + 1} / ${_tasks.length}',
-                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
                 ),
               ),
               const SizedBox(height: 16),
@@ -141,7 +141,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                   children: [
                     Text(
                       '${s.taskN(_taskIndex + 1)} · ${task.titleFor(s.lang)}',
-                      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),
                     ),
                     const SizedBox(height: 6),
                     Text(s.readingInstruction, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),

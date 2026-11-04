@@ -34,7 +34,7 @@ class PremiumScreen extends StatelessWidget {
               style: const TextStyle(fontSize: 30, height: 1.15, fontWeight: FontWeight.w800, letterSpacing: -0.6),
             ),
             const SizedBox(height: 10),
-            Text(s.premiumSubtitle, style: const TextStyle(fontSize: 15, height: 1.5, color: AppColors.muted)),
+            Text(s.premiumSubtitle, style: TextStyle(fontSize: 15, height: 1.5, color: AppColors.muted)),
             const SizedBox(height: 24),
             for (final (title, text) in s.premiumFeatures) ...[
               Row(
@@ -44,7 +44,7 @@ class PremiumScreen extends StatelessWidget {
                     width: 28,
                     height: 28,
                     decoration: BoxDecoration(color: AppColors.accentSoft, borderRadius: BorderRadius.circular(8)),
-                    child: const Icon(Icons.check_rounded, size: 18, color: AppColors.accent),
+                    child: Icon(Icons.check_rounded, size: 18, color: AppColors.accent),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -53,7 +53,7 @@ class PremiumScreen extends StatelessWidget {
                       children: [
                         Text(title, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
                         const SizedBox(height: 2),
-                        Text(text, style: const TextStyle(fontSize: 13, height: 1.45, color: AppColors.muted)),
+                        Text(text, style: TextStyle(fontSize: 13, height: 1.45, color: AppColors.muted)),
                       ],
                     ),
                   ),
@@ -81,7 +81,7 @@ class PremiumScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 6),
-                  Text(s.viaPlay, style: const TextStyle(fontSize: 13, color: AppColors.muted)),
+                  Text(s.viaPlay, style: TextStyle(fontSize: 13, color: AppColors.muted)),
                 ],
               ),
             ),

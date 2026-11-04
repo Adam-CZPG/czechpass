@@ -64,7 +64,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w800, height: 1.15, letterSpacing: -0.6),
               ),
               const SizedBox(height: 8),
-              const Text(
+              Text(
                 'Оберіть мову · Chọn ngôn ngữ · Выберите язык · Choose language · Tilni tanlang',
                 style: TextStyle(fontSize: 14, color: AppColors.muted, height: 1.5),
               ),
@@ -85,7 +85,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
               ),
               Text(
                 s.languageNote,
-                style: const TextStyle(fontSize: 13, color: AppColors.muted, height: 1.5),
+                style: TextStyle(fontSize: 13, color: AppColors.muted, height: 1.5),
               ),
               const SizedBox(height: 16),
               SizedBox(
@@ -117,7 +117,7 @@ class _Logo extends StatelessWidget {
             color: AppColors.accent,
             borderRadius: BorderRadius.circular(12),
           ),
-          child: const Icon(Icons.check_rounded, color: Colors.white),
+          child: Icon(Icons.check_rounded, color: AppColors.onAccent),
         ),
         const SizedBox(width: 12),
         const Text('CzechPass', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
@@ -140,7 +140,7 @@ class _LanguageTile extends StatelessWidget {
       checked: selected,
       button: true,
       child: Material(
-        color: selected ? AppColors.accentSoft : Colors.white,
+        color: selected ? AppColors.accentSoft : AppColors.card,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
@@ -174,7 +174,7 @@ class _LanguageTile extends StatelessWidget {
                       style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                     ),
                   ),
-                  if (selected) const Icon(Icons.check_circle_rounded, color: AppColors.accent),
+                  if (selected) Icon(Icons.check_circle_rounded, color: AppColors.accent),
                 ],
               ),
             ),

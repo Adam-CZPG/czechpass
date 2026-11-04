@@ -141,7 +141,7 @@ class _CourseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.ink,
+      color: AppColors.banner,
       borderRadius: BorderRadius.circular(18),
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -160,13 +160,13 @@ class _CourseCard extends StatelessWidget {
                       value: all == 0 ? 0 : done / all,
                       strokeWidth: 9,
                       strokeCap: StrokeCap.round,
-                      backgroundColor: const Color(0xFF2E3F58),
-                      color: Colors.white,
+                      backgroundColor: AppColors.bannerTrack,
+                      color: AppColors.onBanner,
                     ),
                     Center(
                       child: Text(
                         '$percent%',
-                        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: Colors.white),
+                        style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: AppColors.onBanner),
                       ),
                     ),
                   ],
@@ -180,17 +180,17 @@ class _CourseCard extends StatelessWidget {
                 children: [
                   Text(
                     s.courseTotal,
-                    style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: Colors.white),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: AppColors.onBanner),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     s.courseCompleted(percent),
-                    style: const TextStyle(fontSize: 14, color: Color(0xFFC9D2E0)),
+                    style: TextStyle(fontSize: 14, color: AppColors.onBannerMuted),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     '$done / $all',
-                    style: const TextStyle(fontSize: 13, color: Color(0xFFC9D2E0)),
+                    style: TextStyle(fontSize: 13, color: AppColors.onBannerMuted),
                   ),
                 ],
               ),
@@ -235,11 +235,11 @@ class _SectionProgress extends StatelessWidget {
           Row(
             children: [
               Expanded(child: Text(title, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800))),
-              Text('$percent%', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: AppColors.accent)),
+              Text('$percent%', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: AppColors.accent)),
             ],
           ),
           const SizedBox(height: 4),
-          Text(s.answeredOf(answeredIn(ids), total), style: const TextStyle(fontSize: 13, color: AppColors.muted)),
+          Text(s.answeredOf(answeredIn(ids), total), style: TextStyle(fontSize: 13, color: AppColors.muted)),
           const SizedBox(height: 12),
           ProgressLine(value: total == 0 ? 0 : correct / total),
           for (final (label, list) in topics) ...[
@@ -247,7 +247,7 @@ class _SectionProgress extends StatelessWidget {
             Row(
               children: [
                 Expanded(child: Text(label, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600))),
-                Text('${correctIn(list)} / ${list.length}', style: const TextStyle(fontSize: 14, color: AppColors.muted)),
+                Text('${correctIn(list)} / ${list.length}', style: TextStyle(fontSize: 14, color: AppColors.muted)),
               ],
             ),
             const SizedBox(height: 6),

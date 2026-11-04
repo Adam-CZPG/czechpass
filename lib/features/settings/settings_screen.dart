@@ -60,7 +60,7 @@ class SettingsScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => const LanguageScreen()),
                     ),
                   ),
-                  const Divider(height: 1, color: AppColors.border),
+                  Divider(height: 1, color: AppColors.border),
                   ListTile(
                     leading: const Icon(Icons.privacy_tip_outlined),
                     title: Text(s.privacyPolicy),
@@ -68,10 +68,10 @@ class SettingsScreen extends StatelessWidget {
                     // TODO: maxfiylik siyosati sahifasi tayyor bo'lgach, havolani oching.
                     onTap: () => showComingSoon(context, s.comingSoon),
                   ),
-                  const Divider(height: 1, color: AppColors.border),
+                  Divider(height: 1, color: AppColors.border),
                   ListTile(
-                    leading: const Icon(Icons.restart_alt, color: AppColors.error),
-                    title: Text(s.resetProgress, style: const TextStyle(color: AppColors.error)),
+                    leading: Icon(Icons.restart_alt, color: AppColors.error),
+                    title: Text(s.resetProgress, style: TextStyle(color: AppColors.error)),
                     onTap: () => _confirmReset(context, s),
                   ),
                 ],
@@ -84,9 +84,9 @@ class SettingsScreen extends StatelessWidget {
                 children: [
                   Text(s.about, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
                   const SizedBox(height: 8),
-                  Text(s.aboutText, style: const TextStyle(fontSize: 14, height: 1.5, color: AppColors.muted)),
+                  Text(s.aboutText, style: TextStyle(fontSize: 14, height: 1.5, color: AppColors.muted)),
                   const SizedBox(height: 12),
-                  Text('${s.version} $appVersion', style: const TextStyle(fontSize: 13, color: AppColors.muted)),
+                  Text('${s.version} $appVersion', style: TextStyle(fontSize: 13, color: AppColors.muted)),
                 ],
               ),
             ),

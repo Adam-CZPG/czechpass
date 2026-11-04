@@ -23,12 +23,14 @@ class VoiceOutput {
 
   bool get czechAvailable => _czechAvailable;
 
+  /// Android'da 0.5 — oddiy tezlik, vebda 1.0. A2 uchun biroz sekinroq.
+  static const _baseRate = kIsWeb ? 0.9 : 0.45;
+
   Future<bool> init() async {
     if (_ready) return _czechAvailable;
     await _tts.awaitSpeakCompletion(true);
     await _tts.setLanguage('cs-CZ');
-    // Android'da 0.5 — oddiy tezlik, vebda 1.0. A2 uchun biroz sekinroq.
-    await _tts.setSpeechRate(kIsWeb ? 0.9 : 0.45);
+    await _tts.setSpeechRate(_baseRate);
     await _tts.setPitch(1.0);
 
     try {
@@ -95,14 +97,22 @@ class VoiceOutput {
     if (voice != null && voice['name'] != null && voice['locale'] != null) {
       await _tts.setVoice({'name': voice['name']!, 'locale': voice['locale']!});
     }
-    // Kerakli jinsdagi ovoz yo'q bo'lsa, tembrni o'zgartiramiz. Jinsi noma'lum ovoz
-    // (masalan, Android'dagi Google ovozi) odatda ayol ovozi.
+    // Kerakli jinsdagi ovoz yo'q bo'lsa, tembr va tezlikni o'zgartiramiz. Jinsi noma'lum
+    // ovoz (masalan, Android'dagi Google ovozi) odatda ayol ovozi. Erkak ovoziga yaqinlashish
+    // uchun tembr sezilarli pasaytiriladi va nutq biroz sekinlashtiriladi.
     final voiceGender = voice == null ? 'f' : (_genderOf(voice) ?? 'f');
     var pitch = 1.0;
+    var rate = _baseRate;
     if (exact == null && voiceGender != gender) {
-      pitch = gender == 'm' ? 0.72 : 1.25;
+      if (gender == 'm') {
+        pitch = 0.55;
+        rate = _baseRate * 0.92;
+      } else {
+        pitch = 1.3;
+      }
     }
     await _tts.setPitch(pitch);
+    await _tts.setSpeechRate(rate);
     await _tts.speak(text);
   }
 

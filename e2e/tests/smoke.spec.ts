@@ -67,3 +67,31 @@ test("to'liq versiya ekrani ochiladi", async ({ page }) => {
   await ui(page, 'Unlock the full version').click();
   await expect(ui(page, 'Prepare fully for your exam')).toBeVisible();
 });
+
+test.describe('telefon tili ukraincha', () => {
+  test.use({ locale: 'uk-UA' });
+  test('ilova telefon tilida ochiladi', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('flutter-view, flt-glass-pane', { state: 'attached', timeout: 60_000 });
+    await expect(ui(page, 'Оберіть мову')).toBeVisible({ timeout: 60_000 });
+    await ui(page, 'Продовжити').click();
+    await expect(ui(page, 'Ласкаво просимо')).toBeVisible();
+  });
+});
+
+test.describe('telefon tili ilovada yo\'q (nemischa)', () => {
+  test.use({ locale: 'de-DE' });
+  test('chex tili tanlanadi', async ({ page }) => {
+    await openApp(page);
+  });
+});
+
+test.describe('qorong\'i mavzu', () => {
+  test.use({ colorScheme: 'dark' });
+  test('ilova qorong\'i rejimda ochiladi va ishlaydi', async ({ page }) => {
+    await openApp(page);
+    await chooseLanguage(page, 'English', 'Continue');
+    await expect(ui(page, 'Which exam are we preparing for?')).toBeVisible();
+    await page.screenshot({ path: 'test-results/dark-home.png' });
+  });
+});
