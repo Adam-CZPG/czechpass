@@ -677,6 +677,112 @@ class S {
         'uk': 'Завершити',
       });
 
+  // ── Tariflar va bloklar ──────────────────────────────────────
+  String get trackResidence => _t(const {
+        'uz': 'Doimiy yashash (A2)',
+        'cs': 'Trvalý pobyt (A2)',
+        'en': 'Permanent residence (A2)',
+        'ru': 'ПМЖ (A2)',
+        'uk': 'Постійне проживання (A2)',
+        'vi': 'Thường trú (A2)',
+      });
+  String get trackCitizenship => _t(const {
+        'uz': 'Fuqarolik (B1 + reálie)',
+        'cs': 'Občanství (B1 + reálie)',
+        'en': 'Citizenship (B1 + reálie)',
+        'ru': 'Гражданство (B1 + reálie)',
+        'uk': 'Громадянство (B1 + reálie)',
+        'vi': 'Quốc tịch (B1 + reálie)',
+      });
+  String get trackBoth => _t(const {
+        'uz': 'Ikkalasi birga',
+        'cs': 'Obojí dohromady',
+        'en': 'Both together',
+        'ru': 'Оба вместе',
+        'uk': 'Обидва разом',
+        'vi': 'Cả hai',
+      });
+  String get residenceNote => _t(const {
+        'uz': 'Doimiy yashash uchun faqat A2 darajasidagi chex tili imtihoni kerak.',
+        'cs': 'Pro trvalý pobyt stačí zkouška z češtiny na úrovni A2.',
+        'en': 'For permanent residence you only need the Czech exam at level A2.',
+        'ru': 'Для ПМЖ нужен только экзамен по чешскому языку уровня A2.',
+        'uk': 'Для постійного проживання потрібен лише іспит з чеської мови рівня A2.',
+        'vi': 'Để xin thường trú, bạn chỉ cần thi tiếng Séc trình độ A2.',
+      });
+  String get citizenshipNote => _t(const {
+        'uz': 'Fuqarolik uchun B1 darajasidagi chex tili imtihoni va České reálie testi kerak.',
+        'cs': 'Pro občanství potřebujete zkoušku z češtiny na úrovni B1 a test z českých reálií.',
+        'en': 'For citizenship you need the Czech exam at level B1 and the české reálie test.',
+        'ru': 'Для гражданства нужны экзамен по чешскому языку уровня B1 и тест по české reálie.',
+        'uk': 'Для громадянства потрібні іспит з чеської мови рівня B1 і тест з české reálie.',
+        'vi': 'Để xin quốc tịch, bạn cần thi tiếng Séc trình độ B1 và bài kiểm tra české reálie.',
+      });
+  String get czechB1 => _t(const {
+        'uz': 'Chex tili B1',
+        'cs': 'Čeština B1',
+        'en': 'Czech B1',
+        'ru': 'Чешский язык B1',
+        'uk': 'Чеська мова B1',
+        'vi': 'Tiếng Séc B1',
+      });
+  String get b1Subtitle => _t(const {
+        'uz': 'Fuqarolik uchun til imtihoni',
+        'cs': 'Jazyková zkouška pro občanství',
+        'en': 'Language exam for citizenship',
+        'ru': 'Языковой экзамен для гражданства',
+        'uk': 'Мовний іспит для громадянства',
+        'vi': 'Kỳ thi ngôn ngữ để xin quốc tịch',
+      });
+  String get includesA2 => _t(const {
+        'uz': "A2 bo'yicha barcha topshiriqlar: o'qish, tinglash, yozish, gapirish",
+        'cs': 'Všechny úlohy A2: čtení, poslech, psaní, mluvení',
+        'en': 'All A2 tasks: reading, listening, writing, speaking',
+        'ru': 'Все задания A2: чтение, аудирование, письмо, говорение',
+        'uk': 'Усі завдання A2: читання, аудіювання, письмо, говоріння',
+        'vi': 'Tất cả bài tập A2: đọc, nghe, viết, nói',
+      });
+  String get includesCitizenship => _t(const {
+        'uz': "Barcha České reálie savollari va cheksiz sinov imtihonlari; B1 tayyorlovi qo'shilganda u ham ichida bo'ladi",
+        'cs': 'Všechny otázky z českých reálií a neomezené zkoušky nanečisto; až přidáme přípravu na B1, bude také součástí',
+        'en': 'All české reálie questions and unlimited mock exams; B1 preparation will be included once it is added',
+        'ru': 'Все вопросы по české reálie и неограниченные пробные экзамены; подготовка к B1 войдёт сюда, когда появится',
+        'uk': "Усі питання з české reálie та необмежені пробні іспити; підготовка до B1 увійде сюди, коли з'явиться",
+        'vi': 'Tất cả câu hỏi české reálie và thi thử không giới hạn; phần ôn B1 cũng sẽ có khi được bổ sung',
+      });
+  String get includesBoth => _t(const {
+        'uz': 'Ikkala tarif: A2 va fuqarolik',
+        'cs': 'Oba tarify: A2 i občanství',
+        'en': 'Both plans: A2 and citizenship',
+        'ru': 'Оба тарифа: A2 и гражданство',
+        'uk': 'Обидва тарифи: A2 і громадянство',
+        'vi': 'Cả hai gói: A2 và quốc tịch',
+      });
+  String savePrice(String price) => _t(const {
+        'uz': 'Tejash: {p}',
+        'cs': 'Ušetříte {p}',
+        'en': 'Save {p}',
+        'ru': 'Экономия {p}',
+        'uk': 'Економія {p}',
+        'vi': 'Tiết kiệm {p}',
+      }).replaceAll('{p}', price);
+  String get chooseTariff => _t(const {
+        'uz': 'Tarifni tanlang',
+        'cs': 'Vyberte tarif',
+        'en': 'Choose a plan',
+        'ru': 'Выберите тариф',
+        'uk': 'Оберіть тариф',
+        'vi': 'Chọn gói',
+      });
+  String unlockFrom(String price) => _t(const {
+        'uz': '{p} dan boshlab',
+        'cs': 'od {p}',
+        'en': 'from {p}',
+        'ru': 'от {p}',
+        'uk': 'від {p}',
+        'vi': 'từ {p}',
+      }).replaceAll('{p}', price);
+
   // ── Bo'lim va kurs natijasi ──────────────────────────────────
   String sectionScore(int percent) => _t(const {
         'uz': "Bo'lim natijasi: {p}%",

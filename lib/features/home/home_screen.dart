@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
 import 'package:czech_pass/core/progress_store.dart';
-import 'package:czech_pass/core/question.dart';
+import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/features/a2/listening_screen.dart';
 import 'package:czech_pass/features/a2/reading_screen.dart';
 import 'package:czech_pass/features/a2/speaking_screen.dart';
@@ -15,6 +15,16 @@ import 'package:czech_pass/features/settings/settings_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
 
+/// Bo'limlardagi savol va topshiriqlar soni (progress foizi uchun).
+class _Totals {
+  const _Totals({required this.realie, required this.a2});
+
+  final int realie;
+
+  /// A2: imtihon turi → savol/topshiriq soni.
+  final Map<String, int> a2;
+}
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -23,12 +33,28 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Future<QuestionBank>? _bank;
+  Future<_Totals>? _totals;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _bank ??= AppScope.read(context).repository.loadRealie();
+    final repo = AppScope.read(context).repository;
+    _totals ??= () async {
+      final realie = await repo.loadRealie();
+      final reading = await repo.loadA2Reading();
+      final listening = await repo.loadA2Listening();
+      final speaking = await repo.loadA2Speaking();
+      final writing = await repo.loadA2Writing();
+      return _Totals(
+        realie: realie.questions.length,
+        a2: {
+          Exams.a2Reading: reading.fold(0, (n, t) => n + t.questions.length),
+          Exams.a2Listening: listening.fold(0, (n, t) => n + t.questions.length),
+          Exams.a2Speaking: speaking.length,
+          Exams.a2Writing: writing.length,
+        },
+      );
+    }();
   }
 
   void _open(Widget screen) {
@@ -43,109 +69,48 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: FutureBuilder<QuestionBank>(
-          future: _bank,
-          builder: (context, snapshot) {
-            final total = snapshot.data?.questions.length ?? 0;
-            final mastered = progress.correctCount(Exams.realie);
-            final percent = total == 0 ? 0 : (mastered * 100 / total).round().clamp(0, 100);
-            final mistakes = progress.mistakes(Exams.realie).length;
-
-            return ListView(
-              padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
-              children: [
-                Text(s.welcome, style: TextStyle(fontSize: 14, color: AppColors.muted)),
-                const SizedBox(height: 4),
-                Text(
-                  s.homeTitle,
-                  style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w800, letterSpacing: -0.5, height: 1.2),
-                ),
-                const SizedBox(height: 18),
-                _ExamCard(
-                  label: s.forCitizenship,
-                  title: 'České reálie',
-                  subtitle: s.realieSubtitle,
-                  onTap: () => _open(const QuizScreen(mode: QuizMode.practice)),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ProgressLine(value: percent / 100),
-                      const SizedBox(height: 8),
-                      Text(
-                        '${s.mastered(percent)} · ${progress.answeredCount(Exams.realie) == 0 ? s.startPractice : s.continuePractice}',
-                        style: TextStyle(fontSize: 13, color: AppColors.muted),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 14),
-                _ExamCard(
-                  label: s.forResidence,
-                  title: s.a2Title,
-                  subtitle: s.a2Subtitle,
-                  badge: s.newFormat,
-                  child: GridView.count(
-                    crossAxisCount: 2,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    mainAxisSpacing: 8,
-                    crossAxisSpacing: 8,
-                    childAspectRatio: 3.2,
-                    children: [
-                      _SkillButton(
-                        icon: Icons.menu_book_outlined,
-                        label: s.reading,
-                        onTap: () => _open(const ReadingScreen()),
-                      ),
-                      _SkillButton(
-                        icon: Icons.headphones_outlined,
-                        label: s.listening,
-                        onTap: () => _open(const ListeningScreen()),
-                      ),
-                      _SkillButton(
-                        icon: Icons.edit_outlined,
-                        label: s.writing,
-                        onTap: () => _open(const WritingScreen()),
-                      ),
-                      _SkillButton(
-                        icon: Icons.chat_bubble_outline,
-                        label: s.speaking,
-                        onTap: () => _open(const SpeakingScreen()),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 14),
-                Row(
+        bottom: false,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Qotirilgan sarlavha: ro'yxat aylantirilganda ham joyida turadi.
+            Material(
+              color: AppColors.background,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: _SmallCard(
-                        title: s.mockExam,
-                        subtitle: s.mockExamSub,
-                        onTap: () => _open(const QuizScreen(mode: QuizMode.exam)),
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    Expanded(
-                      child: _SmallCard(
-                        title: s.myMistakes,
-                        subtitle: s.toReview(mistakes),
-                        onTap: () => _open(const QuizScreen(mode: QuizMode.mistakes)),
-                      ),
+                    Text(s.welcome, style: TextStyle(fontSize: 14, color: AppColors.muted)),
+                    const SizedBox(height: 4),
+                    Text(
+                      s.homeTitle,
+                      style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w800, letterSpacing: -0.5, height: 1.2),
                     ),
                   ],
                 ),
-                const SizedBox(height: 14),
-                _PremiumBanner(
-                  title: s.unlockFull,
-                  subtitle: s.oneTimePayment,
-                  onTap: () => _open(const PremiumScreen()),
-                ),
-                const SizedBox(height: 14),
-                Text(s.disclaimer, style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.5)),
-              ],
-            );
-          },
+              ),
+            ),
+            Divider(height: 1, color: AppColors.border),
+            Expanded(
+              child: FutureBuilder<_Totals>(
+                future: _totals,
+                builder: (context, snapshot) {
+                  final totals = snapshot.data;
+                  return ListView(
+                    padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+                    children: [
+                      _residenceBlock(s, progress, totals),
+                      const SizedBox(height: 22),
+                      _citizenshipBlock(s, progress, totals),
+                      const SizedBox(height: 18),
+                      Text(s.disclaimer, style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.5)),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: NavigationBar(
@@ -155,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onDestinationSelected: (index) {
           switch (index) {
             case 1:
-              _open(const QuizScreen(mode: QuizMode.practice));
+              _open(const ReadingScreen());
             case 2:
               _open(const ProgressScreen());
             case 3:
@@ -171,60 +136,195 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+  /// 1-blok: Doimiy yashash — faqat A2.
+  Widget _residenceBlock(S s, ProgressStore progress, _Totals? totals) {
+    var done = 0;
+    var all = 0;
+    if (totals != null) {
+      totals.a2.forEach((exam, count) {
+        all += count;
+        done += progress.correctCount(exam);
+      });
+    }
+    final percent = all == 0 ? 0 : (done * 100 / all).round().clamp(0, 100);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _BlockHeader(label: s.forResidence, note: s.residenceNote),
+        const SizedBox(height: 10),
+        AppCard(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(child: Text(s.a2Title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800))),
+                  _Badge(text: s.newFormat),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Text(s.a2Subtitle, style: TextStyle(fontSize: 14, color: AppColors.muted)),
+              const SizedBox(height: 14),
+              GridView.count(
+                crossAxisCount: 2,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                mainAxisSpacing: 8,
+                crossAxisSpacing: 8,
+                childAspectRatio: 3.2,
+                children: [
+                  _SkillButton(icon: Icons.menu_book_outlined, label: s.reading, onTap: () => _open(const ReadingScreen())),
+                  _SkillButton(icon: Icons.headphones_outlined, label: s.listening, onTap: () => _open(const ListeningScreen())),
+                  _SkillButton(icon: Icons.edit_outlined, label: s.writing, onTap: () => _open(const WritingScreen())),
+                  _SkillButton(icon: Icons.chat_bubble_outline, label: s.speaking, onTap: () => _open(const SpeakingScreen())),
+                ],
+              ),
+              const SizedBox(height: 14),
+              ProgressLine(value: percent / 100),
+              const SizedBox(height: 8),
+              Text(s.mastered(percent), style: TextStyle(fontSize: 13, color: AppColors.muted)),
+            ],
+          ),
+        ),
+        const SizedBox(height: 10),
+        _UnlockBanner(
+          title: s.trackResidence,
+          subtitle: s.unlockFrom(Prices.of(Tariff.residence)),
+          onTap: () => _open(const PremiumScreen(initial: Tariff.residence)),
+        ),
+      ],
+    );
+  }
+
+  /// 2-blok: Fuqarolik — B1 til imtihoni va České reálie.
+  Widget _citizenshipBlock(S s, ProgressStore progress, _Totals? totals) {
+    final total = totals?.realie ?? 0;
+    final mastered = progress.correctCount(Exams.realie);
+    final percent = total == 0 ? 0 : (mastered * 100 / total).round().clamp(0, 100);
+    final mistakes = progress.mistakes(Exams.realie).length;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _BlockHeader(label: s.forCitizenship, note: s.citizenshipNote),
+        const SizedBox(height: 10),
+        AppCard(
+          onTap: () => showComingSoon(context, s.comingSoon),
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(s.czechB1, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800)),
+                    const SizedBox(height: 4),
+                    Text(s.b1Subtitle, style: TextStyle(fontSize: 14, color: AppColors.muted)),
+                  ],
+                ),
+              ),
+              _Badge(text: s.comingSoon, muted: true),
+            ],
+          ),
+        ),
+        const SizedBox(height: 10),
+        AppCard(
+          onTap: () => _open(const QuizScreen(mode: QuizMode.practice)),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  const Expanded(child: Text('České reálie', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800))),
+                  Icon(Icons.chevron_right, color: AppColors.muted),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Text(s.realieSubtitle, style: TextStyle(fontSize: 14, color: AppColors.muted)),
+              const SizedBox(height: 14),
+              ProgressLine(value: percent / 100),
+              const SizedBox(height: 8),
+              Text(
+                '${s.mastered(percent)} · ${progress.answeredCount(Exams.realie) == 0 ? s.startPractice : s.continuePractice}',
+                style: TextStyle(fontSize: 13, color: AppColors.muted),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            Expanded(
+              child: _SmallCard(
+                title: s.mockExam,
+                subtitle: s.mockExamSub,
+                onTap: () => _open(const QuizScreen(mode: QuizMode.exam)),
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _SmallCard(
+                title: s.myMistakes,
+                subtitle: s.toReview(mistakes),
+                onTap: () => _open(const QuizScreen(mode: QuizMode.mistakes)),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        _UnlockBanner(
+          title: s.trackCitizenship,
+          subtitle: s.unlockFrom(Prices.of(Tariff.citizenship)),
+          onTap: () => _open(const PremiumScreen(initial: Tariff.citizenship)),
+        ),
+      ],
+    );
+  }
 }
 
-class _ExamCard extends StatelessWidget {
-  const _ExamCard({
-    required this.label,
-    required this.title,
-    required this.subtitle,
-    required this.child,
-    this.badge,
-    this.onTap,
-  });
+class _BlockHeader extends StatelessWidget {
+  const _BlockHeader({required this.label, required this.note});
 
   final String label;
-  final String title;
-  final String subtitle;
-  final String? badge;
-  final Widget child;
-  final VoidCallback? onTap;
+  final String note;
 
   @override
   Widget build(BuildContext context) {
-    return AppCard(
-      onTap: onTap,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Expanded(
-                child: Text(
-                  label,
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.muted, letterSpacing: 0.7),
-                ),
-              ),
-              if (badge != null)
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  decoration: BoxDecoration(color: AppColors.successSoft, borderRadius: BorderRadius.circular(999)),
-                  child: Text(
-                    badge!,
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.success),
-                  ),
-                )
-              else if (onTap != null)
-                Icon(Icons.chevron_right, color: AppColors.muted),
-            ],
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Semantics(
+          header: true,
+          child: Text(
+            label,
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.accent, letterSpacing: 0.8),
           ),
-          const SizedBox(height: 14),
-          Text(title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800)),
-          const SizedBox(height: 4),
-          Text(subtitle, style: TextStyle(fontSize: 14, color: AppColors.muted)),
-          const SizedBox(height: 14),
-          child,
-        ],
+        ),
+        const SizedBox(height: 4),
+        Text(note, style: TextStyle(fontSize: 13, height: 1.45, color: AppColors.muted)),
+      ],
+    );
+  }
+}
+
+class _Badge extends StatelessWidget {
+  const _Badge({required this.text, this.muted = false});
+
+  final String text;
+  final bool muted;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: muted ? AppColors.surface : AppColors.successSoft,
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: muted ? AppColors.muted : AppColors.success),
       ),
     );
   }
@@ -290,8 +390,8 @@ class _SmallCard extends StatelessWidget {
   }
 }
 
-class _PremiumBanner extends StatelessWidget {
-  const _PremiumBanner({required this.title, required this.subtitle, required this.onTap});
+class _UnlockBanner extends StatelessWidget {
+  const _UnlockBanner({required this.title, required this.subtitle, required this.onTap});
 
   final String title;
   final String subtitle;
@@ -309,6 +409,8 @@ class _PremiumBanner extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Row(
             children: [
+              Icon(Icons.lock_open_outlined, color: AppColors.onBanner),
+              const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -61,11 +61,15 @@ test('sozlamalar ochiladi', async ({ page }) => {
   await expect(ui(page, 'About the app')).toBeVisible();
 });
 
-test("to'liq versiya ekrani ochiladi", async ({ page }) => {
+test("tariflar ekrani ochiladi", async ({ page }) => {
   await openApp(page);
   await chooseLanguage(page, 'English', 'Continue');
-  await ui(page, 'Unlock the full version').click();
+  await ui(page, 'Permanent residence (A2)').click();
   await expect(ui(page, 'Prepare fully for your exam')).toBeVisible();
+  await expect(ui(page, 'Choose a plan')).toBeVisible();
+  // Uchta alohida tarif: A2, fuqarolik va ikkalasi birga.
+  await expect(ui(page, 'Citizenship (B1 + reálie)')).toBeVisible();
+  await expect(ui(page, 'Both together')).toBeVisible();
 });
 
 test.describe('telefon tili ukraincha', () => {
@@ -94,4 +98,19 @@ test.describe('qorong\'i mavzu', () => {
     await expect(ui(page, 'Which exam are we preparing for?')).toBeVisible();
     await page.screenshot({ path: 'test-results/dark-home.png' });
   });
+});
+
+test('bosh sahifada avval doimiy yashash (A2), keyin fuqarolik bloki', async ({ page }) => {
+  await openApp(page);
+  await chooseLanguage(page, 'English', 'Continue');
+  const residence = ui(page, 'FOR PERMANENT RESIDENCE');
+  const citizenship = ui(page, 'FOR CITIZENSHIP');
+  await expect(residence).toBeVisible();
+  await expect(ui(page, 'Czech A2')).toBeVisible();
+  const r = await residence.boundingBox();
+  await citizenship.scrollIntoViewIfNeeded();
+  const c = await citizenship.boundingBox();
+  // Sarlavha qotirilgan: aylantirishdan keyin ham ko'rinadi.
+  await expect(ui(page, 'Which exam are we preparing for?')).toBeVisible();
+  expect(r && c).toBeTruthy();
 });
