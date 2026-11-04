@@ -153,38 +153,11 @@ String _countdownText(S s, DateTime date) {
 class PlanCard extends StatelessWidget {
   const PlanCard({super.key});
 
-  Future<void> _setReminder(BuildContext context, int? minutes) async {
-    final controller = AppScope.read(context);
-    final messenger = ScaffoldMessenger.of(context);
-    final s = S.of(context);
-    if (minutes == null) {
-      await controller.disableReminder();
-      return;
-    }
-    if (!ReminderService.supported) {
-      messenger.showSnackBar(SnackBar(content: Text(s.reminderUnsupported)));
-      return;
-    }
-    final ok = await controller.enableReminder(minutes);
-    if (!ok) messenger.showSnackBar(SnackBar(content: Text(s.reminderDenied)));
-  }
-
-  Future<void> _pickTime(BuildContext context) async {
-    final controller = AppScope.read(context);
-    final current = controller.reminderMinutes ?? SettingsStore.defaultReminderMinutes;
-    final picked = await showTimePicker(
-      context: context,
-      initialTime: TimeOfDay(hour: current ~/ 60, minute: current % 60),
-    );
-    if (picked != null && context.mounted) await _setReminder(context, picked.hour * 60 + picked.minute);
-  }
-
   @override
   Widget build(BuildContext context) {
     final s = S.of(context);
     final controller = AppScope.of(context);
     final date = controller.examDate;
-    final reminder = controller.reminderMinutes;
     final today = controller.progress.todayCount();
     final goal = controller.dailyGoal;
     final streak = controller.progress.streak();
