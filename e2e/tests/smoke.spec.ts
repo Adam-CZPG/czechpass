@@ -27,7 +27,7 @@ test('birinchi ochilishda til tanlanadi va bosh sahifa chiqadi', async ({ page }
   await expect(ui(page, 'Choose your language')).toBeVisible();
   await ui(page, 'Continue').click();
   await expect(ui(page, 'Which exam are we preparing for?')).toBeVisible();
-  await expect(ui(page, 'České reálie')).toBeVisible();
+  await expect(ui(page, /^České reálie$/)).toBeVisible();
 });
 
 test('chex tilidagi interfeys', async ({ page }) => {
@@ -48,7 +48,8 @@ test('tanlangan til qayta ochilganda saqlanib qoladi', async ({ page }) => {
 test('České reálie testi ochiladi', async ({ page }) => {
   await openApp(page);
   await chooseLanguage(page, 'English', 'Continue');
-  await ui(page, 'České reálie').click();
+  // Aniq karta nomi: "české reálie" fuqarolik blokining izohida ham uchraydi.
+  await ui(page, /^České reálie$/).click();
   await expect(ui(page, /^Check$/)).toBeVisible();
   await expect(ui(page, /1 \/ \d+/)).toBeVisible();
 });
