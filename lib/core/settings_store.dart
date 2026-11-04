@@ -5,6 +5,12 @@ import 'package:czech_pass/core/app_language.dart';
 /// Foydalanuvchi sozlamalarini telefonda saqlaydi.
 class SettingsStore {
   static const _languageKey = 'app_language';
+  static const _examDateKey = 'exam_date';
+  static const _dailyGoalKey = 'daily_goal';
+
+  /// Kunlik maqsad (javoblar soni) uchun tanlovlar.
+  static const goalOptions = [10, 20, 30, 50];
+  static const defaultGoal = 20;
 
   Future<AppLanguage?> loadLanguage() async {
     final prefs = await SharedPreferences.getInstance();
@@ -14,5 +20,30 @@ class SettingsStore {
   Future<void> saveLanguage(AppLanguage language) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_languageKey, language.code);
+  }
+
+  Future<DateTime?> loadExamDate() async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(_examDateKey);
+    return raw == null ? null : DateTime.tryParse(raw);
+  }
+
+  Future<void> saveExamDate(DateTime? date) async {
+    final prefs = await SharedPreferences.getInstance();
+    if (date == null) {
+      await prefs.remove(_examDateKey);
+    } else {
+      await prefs.setString(_examDateKey, DateTime(date.year, date.month, date.day).toIso8601String());
+    }
+  }
+
+  Future<int> loadDailyGoal() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getInt(_dailyGoalKey) ?? defaultGoal;
+  }
+
+  Future<void> saveDailyGoal(int goal) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_dailyGoalKey, goal);
   }
 }

@@ -1063,4 +1063,414 @@ class S {
         'ru': 'Исправление грамматики с помощью ИИ появится в следующей версии.',
         'uk': 'Виправлення граматики за допомогою ШІ з\'явиться в наступній версії.',
       });
+
+  // ── 1-bosqich: qulflar, takrorlash, reja, sinov imtihonlari ──
+  String freeVersionNote(int shown, int total) => _t(const {
+        'uz': 'Bepul versiya: {t} tadan {n} tasi. Qolganini to\'liq versiyada ochasiz.',
+        'cs': 'Bezplatná verze: {n} z {t}. Zbytek odemknete v plné verzi.',
+        'en': 'Free version: {n} of {t}. Unlock the rest in the full version.',
+        'vi': 'Bản miễn phí: {n}/{t}. Mở khóa phần còn lại trong bản đầy đủ.',
+        'ru': 'Бесплатная версия: {n} из {t}. Остальное откроете в полной версии.',
+        'uk': 'Безкоштовна версія: {n} з {t}. Решту відкриєте в повній версії.',
+      }).replaceAll('{n}', '$shown').replaceAll('{t}', '$total');
+  String get unlockButton => _t(const {
+        'uz': 'To\'liq versiyani ochish',
+        'cs': 'Odemknout plnou verzi',
+        'en': 'Unlock the full version',
+        'vi': 'Mở khóa bản đầy đủ',
+        'ru': 'Открыть полную версию',
+        'uk': 'Відкрити повну версію',
+      });
+  String get freeEndTitle => _t(const {
+        'uz': 'Bepul qism tugadi',
+        'cs': 'Bezplatná část je hotová',
+        'en': 'You have finished the free part',
+        'vi': 'Bạn đã hoàn thành phần miễn phí',
+        'ru': 'Бесплатная часть пройдена',
+        'uk': 'Безкоштовну частину завершено',
+      });
+  String get mockLockedTitle => _t(const {
+        'uz': 'Bepul sinov imtihonidan foydalanildi',
+        'cs': 'Bezplatná zkouška nanečisto je vyčerpána',
+        'en': 'Your free mock exam has been used',
+        'vi': 'Bạn đã dùng lượt thi thử miễn phí',
+        'ru': 'Бесплатный пробный экзамен использован',
+        'uk': 'Безкоштовний пробний іспит використано',
+      });
+  String get mockLockedText => _t(const {
+        'uz': 'To\'liq versiyada sinov imtihonlarini cheksiz topshirishingiz mumkin.',
+        'cs': 'V plné verzi můžete skládat zkoušky nanečisto bez omezení.',
+        'en': 'With the full version you can take unlimited mock exams.',
+        'vi': 'Với bản đầy đủ, bạn có thể thi thử không giới hạn.',
+        'ru': 'В полной версии вы можете сдавать пробные экзамены без ограничений.',
+        'uk': 'У повній версії ви можете складати пробні іспити без обмежень.',
+      });
+  String get freeMockNote => _t(const {
+        'uz': 'Bepul versiyada 1 ta sinov imtihoni bor.',
+        'cs': 'Bezplatná verze obsahuje 1 zkoušku nanečisto.',
+        'en': 'The free version includes 1 mock exam.',
+        'vi': 'Bản miễn phí có 1 lượt thi thử.',
+        'ru': 'Бесплатная версия включает 1 пробный экзамен.',
+        'uk': 'Безкоштовна версія містить 1 пробний іспит.',
+      });
+  String get reviewTitle => _t(const {
+        'uz': 'Takrorlash',
+        'cs': 'Opakování',
+        'en': 'Review',
+        'vi': 'Ôn tập',
+        'ru': 'Повторение',
+        'uk': 'Повторення',
+      });
+  String get noReviewTitle => _t(const {
+        'uz': 'Bugun takrorlash uchun savol qolmadi',
+        'cs': 'Pro dnešek je vše zopakováno',
+        'en': 'Nothing left to review today',
+        'vi': 'Hôm nay không còn gì để ôn',
+        'ru': 'На сегодня всё повторено',
+        'uk': 'На сьогодні все повторено',
+      });
+  String get noReviewText => _t(const {
+        'uz': 'Xato qilgan savollaringiz va takrorlash vaqti kelgan savollar shu yerda o\'zi paydo bo\'ladi.',
+        'cs': 'Otázky, ve kterých jste chybovali, a otázky, které je čas zopakovat, se zde objeví samy.',
+        'en': 'Questions you got wrong, and those due for repetition, will appear here automatically.',
+        'vi': 'Các câu bạn trả lời sai và các câu đến lúc ôn lại sẽ tự động xuất hiện ở đây.',
+        'ru': 'Вопросы, в которых вы ошиблись, и те, которые пора повторить, появятся здесь автоматически.',
+        'uk': 'Питання, у яких ви помилилися, і ті, які час повторити, з’являться тут автоматично.',
+      });
+  String get examInfoTitle => _t(const {
+        'uz': 'Imtihonlar haqida',
+        'cs': 'O zkouškách',
+        'en': 'About the exams',
+        'vi': 'Thông tin kỳ thi',
+        'ru': 'Об экзаменах',
+        'uk': 'Про іспити',
+      });
+  String get examInfoSubtitle => _t(const {
+        'uz': 'To\'lov, vaqt, ballar va ro\'yxatdan o\'tish',
+        'cs': 'Poplatky, časy, body a registrace',
+        'en': 'Fees, timing, points and registration',
+        'vi': 'Lệ phí, thời gian, điểm và đăng ký',
+        'ru': 'Стоимость, время, баллы и регистрация',
+        'uk': 'Оплата, час, бали та реєстрація',
+      });
+  String get officialSite => _t(const {
+        'uz': 'Rasmiy sayt',
+        'cs': 'Oficiální stránky',
+        'en': 'Official website',
+        'vi': 'Trang web chính thức',
+        'ru': 'Официальный сайт',
+        'uk': 'Офіційний сайт',
+      });
+  String get dataAsOf => _t(const {
+        'uz': 'Ma\'lumotlar 2026-yil noyabr holatiga. Ro\'yxatdan o\'tishdan oldin rasmiy saytda tekshiring.',
+        'cs': 'Údaje platí k listopadu 2026. Před registrací je ověřte na oficiálních stránkách.',
+        'en': 'Information as of November 2026. Please check the official website before registering.',
+        'vi': 'Thông tin tính đến tháng 11/2026. Vui lòng kiểm tra trên trang web chính thức trước khi đăng ký.',
+        'ru': 'Данные по состоянию на ноябрь 2026 года. Перед регистрацией проверьте их на официальном сайте.',
+        'uk': 'Дані станом на листопад 2026 року. Перед реєстрацією перевірте їх на офіційному сайті.',
+      });
+  String get linkError => _t(const {
+        'uz': 'Havolani ochib bo\'lmadi',
+        'cs': 'Odkaz se nepodařilo otevřít',
+        'en': 'Could not open the link',
+        'vi': 'Không mở được liên kết',
+        'ru': 'Не удалось открыть ссылку',
+        'uk': 'Не вдалося відкрити посилання',
+      });
+  String get examDate => _t(const {
+        'uz': 'Imtihon sanasi',
+        'cs': 'Datum zkoušky',
+        'en': 'Exam date',
+        'vi': 'Ngày thi',
+        'ru': 'Дата экзамена',
+        'uk': 'Дата іспиту',
+      });
+  String get setExamDate => _t(const {
+        'uz': 'Imtihon sanasini belgilang',
+        'cs': 'Nastavte datum zkoušky',
+        'en': 'Set your exam date',
+        'vi': 'Đặt ngày thi của bạn',
+        'ru': 'Укажите дату экзамена',
+        'uk': 'Вкажіть дату іспиту',
+      });
+  String get examToday => _t(const {
+        'uz': 'Imtihon bugun. Omad tilaymiz!',
+        'cs': 'Zkouška je dnes. Hodně štěstí!',
+        'en': 'Your exam is today. Good luck!',
+        'vi': 'Hôm nay là ngày thi. Chúc bạn may mắn!',
+        'ru': 'Экзамен сегодня. Удачи!',
+        'uk': 'Іспит сьогодні. Успіхів!',
+      });
+  String get examDatePassed => _t(const {
+        'uz': 'Imtihon sanasi o\'tib ketdi. Yangisini belgilang.',
+        'cs': 'Datum zkoušky již uplynulo. Nastavte nové.',
+        'en': 'Your exam date has passed. Set a new one.',
+        'vi': 'Ngày thi đã qua. Hãy đặt ngày mới.',
+        'ru': 'Дата экзамена уже прошла. Укажите новую.',
+        'uk': 'Дата іспиту вже минула. Вкажіть нову.',
+      });
+  String get dailyGoal => _t(const {
+        'uz': 'Kunlik maqsad',
+        'cs': 'Denní cíl',
+        'en': 'Daily goal',
+        'vi': 'Mục tiêu hằng ngày',
+        'ru': 'Дневная цель',
+        'uk': 'Щоденна мета',
+      });
+  String todayProgress(int done, int goal) => _t(const {
+        'uz': 'Bugun: {d} / {g} javob',
+        'cs': 'Dnes: {d} / {g} odpovědí',
+        'en': 'Today: {d} / {g} answers',
+        'vi': 'Hôm nay: {d} / {g} câu trả lời',
+        'ru': 'Сегодня: {d} / {g} ответов',
+        'uk': 'Сьогодні: {d} / {g} відповідей',
+      }).replaceAll('{d}', '$done').replaceAll('{g}', '$goal');
+  String get goalReached => _t(const {
+        'uz': 'Bugungi maqsad bajarildi!',
+        'cs': 'Dnešní cíl splněn!',
+        'en': 'Today’s goal reached!',
+        'vi': 'Đã đạt mục tiêu hôm nay!',
+        'ru': 'Цель на сегодня выполнена!',
+        'uk': 'Сьогоднішню мету виконано!',
+      });
+  String streakDays(int n) => _t(const {
+        'uz': 'Ketma-ket kunlar: {n}',
+        'cs': 'Dny v řadě: {n}',
+        'en': 'Day streak: {n}',
+        'vi': 'Chuỗi ngày: {n}',
+        'ru': 'Дней подряд: {n}',
+        'uk': 'Днів поспіль: {n}',
+      }).replaceAll('{n}', '$n');
+  String answersPerDay(int n) => _t(const {
+        'uz': 'Kuniga {n} ta javob',
+        'cs': '{n} odpovědí denně',
+        'en': '{n} answers a day',
+        'vi': '{n} câu mỗi ngày',
+        'ru': '{n} ответов в день',
+        'uk': '{n} відповідей на день',
+      }).replaceAll('{n}', '$n');
+  String get save => _t(const {
+        'uz': 'Saqlash',
+        'cs': 'Uložit',
+        'en': 'Save',
+        'vi': 'Lưu',
+        'ru': 'Сохранить',
+        'uk': 'Зберегти',
+      });
+  String get clearDate => _t(const {
+        'uz': 'Sanani o\'chirish',
+        'cs': 'Smazat datum',
+        'en': 'Remove date',
+        'vi': 'Xóa ngày',
+        'ru': 'Удалить дату',
+        'uk': 'Видалити дату',
+      });
+  String get planTitle => _t(const {
+        'uz': 'Mening rejam',
+        'cs': 'Můj plán',
+        'en': 'My plan',
+        'vi': 'Kế hoạch của tôi',
+        'ru': 'Мой план',
+        'uk': 'Мій план',
+      });
+  String get timeUp => _t(const {
+        'uz': 'Vaqt tugadi',
+        'cs': 'Čas vypršel',
+        'en': 'Time is up',
+        'vi': 'Hết giờ',
+        'ru': 'Время вышло',
+        'uk': 'Час вичерпано',
+      });
+  String timeLeft(String time) => _t(const {
+        'uz': 'Qolgan vaqt: {t}',
+        'cs': 'Zbývající čas: {t}',
+        'en': 'Time left: {t}',
+        'vi': 'Thời gian còn lại: {t}',
+        'ru': 'Осталось времени: {t}',
+        'uk': 'Залишилося часу: {t}',
+      }).replaceAll('{t}', '$time');
+  String get mockA2Title => _t(const {
+        'uz': 'A2 sinov imtihoni',
+        'cs': 'Zkouška A2 nanečisto',
+        'en': 'A2 mock exam',
+        'vi': 'Thi thử A2',
+        'ru': 'Пробный экзамен A2',
+        'uk': 'Пробний іспит A2',
+      });
+  String get mockA2Sub => _t(const {
+        'uz': 'To\'liq imtihon: vaqt bilan 4 qism',
+        'cs': 'Celá zkouška: 4 části s časovým limitem',
+        'en': 'Full exam: 4 timed parts',
+        'vi': 'Bài thi đầy đủ: 4 phần có giới hạn thời gian',
+        'ru': 'Полный экзамен: 4 части с ограничением времени',
+        'uk': 'Повний іспит: 4 частини з обмеженням часу',
+      });
+  String minutesShort(int n) => _t(const {
+        'uz': '{n} daq',
+        'cs': '{n} min',
+        'en': '{n} min',
+        'vi': '{n} phút',
+        'ru': '{n} мин',
+        'uk': '{n} хв',
+      }).replaceAll('{n}', '$n');
+  String pointsOf(int got, int max) => _t(const {
+        'uz': '{p} / {m} ball',
+        'cs': '{p} / {m} b.',
+        'en': '{p} / {m} pts',
+        'vi': '{p} / {m} điểm',
+        'ru': '{p} / {m} б.',
+        'uk': '{p} / {m} б.',
+      }).replaceAll('{p}', '$got').replaceAll('{m}', '$max');
+  String maxPoints(int n) => _t(const {
+        'uz': '{n} ball',
+        'cs': '{n} b.',
+        'en': '{n} pts',
+        'vi': '{n} điểm',
+        'ru': '{n} б.',
+        'uk': '{n} б.',
+      }).replaceAll('{n}', '$n');
+  String get startExam => _t(const {
+        'uz': 'Imtihonni boshlash',
+        'cs': 'Začít zkoušku',
+        'en': 'Start the exam',
+        'vi': 'Bắt đầu thi',
+        'ru': 'Начать экзамен',
+        'uk': 'Почати іспит',
+      });
+  String get nextPart => _t(const {
+        'uz': 'Keyingi qism',
+        'cs': 'Další část',
+        'en': 'Next part',
+        'vi': 'Phần tiếp theo',
+        'ru': 'Следующая часть',
+        'uk': 'Наступна частина',
+      });
+  String get finishExam => _t(const {
+        'uz': 'Imtihonni yakunlash',
+        'cs': 'Ukončit zkoušku',
+        'en': 'Finish the exam',
+        'vi': 'Kết thúc bài thi',
+        'ru': 'Завершить экзамен',
+        'uk': 'Завершити іспит',
+      });
+  String get writtenPart => _t(const {
+        'uz': 'Yozma qism (o\'qish, yozish, tinglash)',
+        'cs': 'Písemná část (čtení, psaní, poslech)',
+        'en': 'Written part (reading, writing, listening)',
+        'vi': 'Phần viết (đọc, viết, nghe)',
+        'ru': 'Письменная часть (чтение, письмо, аудирование)',
+        'uk': 'Письмова частина (читання, письмо, аудіювання)',
+      });
+  String get oralPart => _t(const {
+        'uz': 'Og\'zaki qism',
+        'cs': 'Ústní část',
+        'en': 'Oral part',
+        'vi': 'Phần nói',
+        'ru': 'Устная часть',
+        'uk': 'Усна частина',
+      });
+  String passNeed(int n) => _t(const {
+        'uz': 'O\'tish uchun kamida {n} ball kerak',
+        'cs': 'K úspěchu je třeba alespoň {n} b.',
+        'en': 'You need at least {n} pts to pass',
+        'vi': 'Cần ít nhất {n} điểm để đạt',
+        'ru': 'Для успеха нужно не менее {n} б.',
+        'uk': 'Для успіху потрібно щонайменше {n} б.',
+      }).replaceAll('{n}', '$n');
+  String get mockPassed => _t(const {
+        'uz': 'Ehtimol, imtihondan o\'tgan bo\'lardingiz',
+        'cs': 'Zkoušku byste pravděpodobně složili',
+        'en': 'You would probably pass',
+        'vi': 'Có thể bạn sẽ đạt',
+        'ru': 'Вероятно, вы сдали бы экзамен',
+        'uk': 'Імовірно, ви склали б іспит',
+      });
+  String get mockFailed => _t(const {
+        'uz': 'Hozircha imtihondan o\'tolmas edingiz',
+        'cs': 'Zatím byste zkoušku nesložili',
+        'en': 'You would not pass yet',
+        'vi': 'Hiện tại bạn chưa đạt',
+        'ru': 'Пока вы бы не сдали экзамен',
+        'uk': 'Поки що ви б не склали іспит',
+      });
+  String get estimateNote => _t(const {
+        'uz': 'Bu taxminiy natija. Haqiqiy imtihonda yozish va gapirishni imtihonchilar baholaydi.',
+        'cs': 'Jde o orientační výsledek. Psaní a mluvení u skutečné zkoušky hodnotí zkoušející.',
+        'en': 'This is an estimate. In the real exam, writing and speaking are marked by examiners.',
+        'vi': 'Đây là kết quả ước tính. Trong kỳ thi thật, phần viết và nói do giám khảo chấm.',
+        'ru': 'Это ориентировочный результат. На настоящем экзамене письмо и устную часть оценивают экзаменаторы.',
+        'uk': 'Це орієнтовний результат. На справжньому іспиті письмо й усне мовлення оцінюють екзаменатори.',
+      });
+  String get failRule => _t(const {
+        'uz': 'O\'tolmasangiz, butun imtihon qayta topshiriladi.',
+        'cs': 'Při neúspěchu se opakuje celá zkouška.',
+        'en': 'If you fail, the whole exam must be retaken.',
+        'vi': 'Nếu không đạt, bạn phải thi lại toàn bộ.',
+        'ru': 'При неудаче весь экзамен сдаётся заново.',
+        'uk': 'У разі невдачі іспит складають повністю знову.',
+      });
+  String realiePassRule(int pass, int total) => _t(const {
+        'uz': 'O\'tish uchun {t} tadan kamida {p} ta to\'g\'ri javob kerak.',
+        'cs': 'K úspěchu je třeba alespoň {p} správných odpovědí z {t}.',
+        'en': 'You need at least {p} correct answers out of {t} to pass.',
+        'vi': 'Cần ít nhất {p}/{t} câu đúng để đạt.',
+        'ru': 'Для успеха нужно не менее {p} правильных ответов из {t}.',
+        'uk': 'Для успіху потрібно щонайменше {p} правильних відповідей із {t}.',
+      }).replaceAll('{p}', '$pass').replaceAll('{t}', '$total');
+  String get realiePassed => _t(const {
+        'uz': 'Testdan o\'tgan bo\'lardingiz',
+        'cs': 'Test byste složili',
+        'en': 'You would pass the test',
+        'vi': 'Bạn sẽ đạt bài thi',
+        'ru': 'Вы сдали бы тест',
+        'uk': 'Ви склали б тест',
+      });
+  String get realieFailed => _t(const {
+        'uz': 'Hozircha testdan o\'tolmas edingiz',
+        'cs': 'Test byste zatím nesložili',
+        'en': 'You would not pass the test yet',
+        'vi': 'Bạn chưa đạt bài thi',
+        'ru': 'Пока вы бы не сдали тест',
+        'uk': 'Поки що ви не склали б тест',
+      });
+  String get mockIntro => _t(const {
+        'uz': 'Imtihon haqiqiysidek o\'tadi: izohsiz va vaqt bilan. Natijani oxirida ko\'rasiz.',
+        'cs': 'Zkouška probíhá jako skutečná: bez nápovědy a s časovým limitem. Výsledek uvidíte na konci.',
+        'en': 'The exam runs like the real one: no hints and a time limit. You will see your result at the end.',
+        'vi': 'Bài thi diễn ra như thật: không gợi ý, có giới hạn thời gian. Bạn sẽ thấy kết quả ở cuối.',
+        'ru': 'Экзамен проходит как настоящий: без подсказок и с ограничением времени. Результат вы увидите в конце.',
+        'uk': 'Іспит проходить як справжній: без підказок і з обмеженням часу. Результат побачите в кінці.',
+      });
+  String get realieMockSub => _t(const {
+        'uz': '30 savol · 30 daqiqa',
+        'cs': '30 otázek · 30 minut',
+        'en': '30 questions · 30 minutes',
+        'vi': '30 câu hỏi · 30 phút',
+        'ru': '30 вопросов · 30 минут',
+        'uk': '30 питань · 30 хвилин',
+      });
+
+  /// Imtihongacha qolgan kunlar (chex, rus va ukrain tillarida ko'plik shakllari bilan).
+  String daysLeft(int n) {
+    final mod10 = n % 10;
+    final mod100 = n % 100;
+    final few = mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14);
+    final one = mod10 == 1 && mod100 != 11;
+    switch (lang) {
+      case 'cs':
+        return 'Do zkoušky: $n ${n == 1 ? 'den' : (n >= 2 && n <= 4) ? 'dny' : 'dní'}';
+      case 'en':
+        return '$n ${n == 1 ? 'day' : 'days'} until your exam';
+      case 'uz':
+        return 'Imtihongacha $n kun qoldi';
+      case 'vi':
+        return 'Còn $n ngày đến kỳ thi';
+      case 'ru':
+        return 'До экзамена: $n ${one ? 'день' : few ? 'дня' : 'дней'}';
+      case 'uk':
+        return 'До іспиту: $n ${one ? 'день' : few ? 'дні' : 'днів'}';
+      default:
+        return 'Do zkoušky: $n ${n == 1 ? 'den' : (n >= 2 && n <= 4) ? 'dny' : 'dní'}';
+    }
+  }
 }

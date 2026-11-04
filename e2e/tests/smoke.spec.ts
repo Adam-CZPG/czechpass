@@ -77,7 +77,7 @@ test('sozlamalar ochiladi', async ({ page }) => {
 test("tariflar ekrani ochiladi", async ({ page }) => {
   await openApp(page);
   await chooseLanguage(page, 'English', 'Continue');
-  await ui(page, 'Permanent residence (A2)').click();
+  await (await scrollTo(page, 'Permanent residence (A2)')).click();
   await expect(ui(page, 'Prepare fully for your exam')).toBeVisible();
   await expect(ui(page, 'Choose a plan')).toBeVisible();
   // Uchta alohida tarif: A2, fuqarolik va ikkalasi birga.
@@ -116,12 +116,37 @@ test.describe('qorong\'i mavzu', () => {
 test('bosh sahifada avval doimiy yashash (A2), keyin fuqarolik bloki', async ({ page }) => {
   await openApp(page);
   await chooseLanguage(page, 'English', 'Continue');
-  const residence = ui(page, 'FOR PERMANENT RESIDENCE');
+  const residence = await scrollTo(page, 'FOR PERMANENT RESIDENCE');
   await expect(residence).toBeVisible();
-  await expect(ui(page, 'Czech A2')).toBeVisible();
+  await expect(await scrollTo(page, 'Czech A2')).toBeVisible();
   const r = await residence.boundingBox();
   const c = await (await scrollTo(page, 'FOR CITIZENSHIP')).boundingBox();
   // Sarlavha qotirilgan: aylantirishdan keyin ham ko'rinadi.
   await expect(ui(page, 'Which exam are we preparing for?')).toBeVisible();
   expect(r && c).toBeTruthy();
+});
+
+test('reja kartasi: imtihon sanasi va kunlik maqsad', async ({ page }) => {
+  await openApp(page);
+  await chooseLanguage(page, 'English', 'Continue');
+  await ui(page, 'Set your exam date').click();
+  await expect(ui(page, 'My plan')).toBeVisible();
+  await expect(ui(page, 'Daily goal')).toBeVisible();
+  await expect(ui(page, '20 answers a day')).toBeVisible();
+});
+
+test('imtihonlar haqida ma\'lumot ochiladi', async ({ page }) => {
+  await openApp(page);
+  await chooseLanguage(page, 'English', 'Continue');
+  await (await scrollTo(page, /^About the exams/)).click();
+  await expect(ui(page, /Czech A2 — for permanent residence/)).toBeVisible();
+  await expect(ui(page, 'Official website')).toBeVisible();
+});
+
+test('A2 sinov imtihoni: kirish ekrani', async ({ page }) => {
+  await openApp(page);
+  await chooseLanguage(page, 'English', 'Continue');
+  await (await scrollTo(page, /^A2 mock exam/)).click();
+  await expect(ui(page, 'Start the exam')).toBeVisible();
+  await expect(await scrollTo(page, 'The free version includes 1 mock exam.')).toBeVisible();
 });

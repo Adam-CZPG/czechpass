@@ -1,10 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
 import 'package:czech_pass/core/app_language.dart';
+import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/settings_store.dart';
 import 'package:czech_pass/features/home/home_screen.dart';
@@ -23,6 +25,9 @@ Future<void> main() async {
     initialLanguage: await settings.loadLanguage(),
     // Birinchi ochilishda telefon tili (agar ilovada bo'lsa), aks holda chex tili.
     systemLanguage: AppLanguage.fromLocales(dispatcher.locales.map((l) => l.languageCode)),
+    entitlements: await Entitlements.load(),
+    examDate: await settings.loadExamDate(),
+    dailyGoal: await settings.loadDailyGoal(),
   );
   runApp(CzechPassApp(controller: controller));
 }
@@ -74,6 +79,10 @@ class _CzechPassAppState extends State<CzechPassApp> with WidgetsBindingObserver
         theme: buildTheme(Brightness.light),
         darkTheme: buildTheme(Brightness.dark),
         themeMode: AppColors.dark ? ThemeMode.dark : ThemeMode.light,
+        // Tizim oynalari (masalan, sana tanlash) ham ilova tilida chiqadi.
+        locale: Locale(controller.language.code),
+        supportedLocales: [for (final l in AppLanguage.values) Locale(l.code)],
+        localizationsDelegates: GlobalMaterialLocalizations.delegates,
         // Til hali tanlanmagan bo'lsa — til tanlash ekrani, aks holda bosh sahifa.
         home: controller.selectedLanguage == null
             ? const LanguageScreen(isOnboarding: true)

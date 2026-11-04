@@ -8,9 +8,14 @@
         <intent>
             <action android:name="android.intent.action.TTS_SERVICE" />
         </intent>
+        <!-- Rasmiy imtihon saytlarini brauzerda ochish (url_launcher). -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
     </queries>
     <application
-        android:label="czech_pass"
+        android:label="CzechPass"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

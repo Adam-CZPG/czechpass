@@ -4,10 +4,13 @@ import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/tariff.dart';
+import 'package:czech_pass/features/a2/a2_mock_screen.dart';
 import 'package:czech_pass/features/a2/listening_screen.dart';
 import 'package:czech_pass/features/a2/reading_screen.dart';
 import 'package:czech_pass/features/a2/speaking_screen.dart';
 import 'package:czech_pass/features/a2/writing_screen.dart';
+import 'package:czech_pass/features/goal/plan_sheet.dart';
+import 'package:czech_pass/features/info/exam_info_screen.dart';
 import 'package:czech_pass/features/premium/premium_screen.dart';
 import 'package:czech_pass/features/progress/progress_screen.dart';
 import 'package:czech_pass/features/quiz/quiz_screen.dart';
@@ -64,7 +67,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final s = S.of(context);
-    final progress = AppScope.of(context).progress;
+    final controller = AppScope.of(context);
+    final progress = controller.progress;
+    final entitlements = controller.entitlements;
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -100,9 +105,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   return ListView(
                     padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
                     children: [
-                      _residenceBlock(s, progress, totals),
+                      const PlanCard(),
                       const SizedBox(height: 22),
-                      _citizenshipBlock(s, progress, totals),
+                      _residenceBlock(s, progress, totals, unlocked: entitlements.residence),
+                      const SizedBox(height: 22),
+                      _citizenshipBlock(s, progress, totals, unlocked: entitlements.citizenship),
+                      const SizedBox(height: 22),
+                      AppCard(
+                        onTap: () => _open(const ExamInfoScreen()),
+                        child: Row(
+                          children: [
+                            Icon(Icons.info_outline, color: AppColors.accent),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(s.examInfoTitle, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
+                                  const SizedBox(height: 2),
+                                  Text(s.examInfoSubtitle, style: TextStyle(fontSize: 13, color: AppColors.muted)),
+                                ],
+                              ),
+                            ),
+                            Icon(Icons.chevron_right, color: AppColors.muted),
+                          ],
+                        ),
+                      ),
                       const SizedBox(height: 18),
                       Text(s.disclaimer, style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.5)),
                     ],
@@ -138,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   /// 1-blok: Doimiy yashash — faqat A2.
-  Widget _residenceBlock(S s, ProgressStore progress, _Totals? totals) {
+  Widget _residenceBlock(S s, ProgressStore progress, _Totals? totals, {required bool unlocked}) {
     var done = 0;
     var all = 0;
     if (totals != null) {
@@ -189,21 +217,43 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         const SizedBox(height: 10),
-        _UnlockBanner(
-          title: s.trackResidence,
-          subtitle: s.unlockFrom(Prices.of(Tariff.residence)),
-          onTap: () => _open(const PremiumScreen(initial: Tariff.residence)),
+        Row(
+          children: [
+            Expanded(
+              child: _SmallCard(
+                title: s.mockA2Title,
+                subtitle: s.mockA2Sub,
+                onTap: () => _open(const A2MockScreen()),
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _SmallCard(
+                title: s.examInfoTitle,
+                subtitle: s.examInfoSubtitle,
+                onTap: () => _open(const ExamInfoScreen(focus: 'a2')),
+              ),
+            ),
+          ],
         ),
+        if (!unlocked) ...[
+          const SizedBox(height: 10),
+          _UnlockBanner(
+            title: s.trackResidence,
+            subtitle: s.unlockFrom(Prices.of(Tariff.residence)),
+            onTap: () => _open(const PremiumScreen(initial: Tariff.residence)),
+          ),
+        ],
       ],
     );
   }
 
   /// 2-blok: Fuqarolik — B1 til imtihoni va České reálie.
-  Widget _citizenshipBlock(S s, ProgressStore progress, _Totals? totals) {
+  Widget _citizenshipBlock(S s, ProgressStore progress, _Totals? totals, {required bool unlocked}) {
     final total = totals?.realie ?? 0;
     final mastered = progress.correctCount(Exams.realie);
     final percent = total == 0 ? 0 : (mastered * 100 / total).round().clamp(0, 100);
-    final mistakes = progress.mistakes(Exams.realie).length;
+    final due = progress.dueForReview(Exams.realie).length;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -258,26 +308,28 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: _SmallCard(
                 title: s.mockExam,
-                subtitle: s.mockExamSub,
+                subtitle: s.realieMockSub,
                 onTap: () => _open(const QuizScreen(mode: QuizMode.exam)),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: _SmallCard(
-                title: s.myMistakes,
-                subtitle: s.toReview(mistakes),
+                title: s.reviewTitle,
+                subtitle: s.toReview(due),
                 onTap: () => _open(const QuizScreen(mode: QuizMode.mistakes)),
               ),
             ),
           ],
         ),
-        const SizedBox(height: 10),
-        _UnlockBanner(
-          title: s.trackCitizenship,
-          subtitle: s.unlockFrom(Prices.of(Tariff.citizenship)),
-          onTap: () => _open(const PremiumScreen(initial: Tariff.citizenship)),
-        ),
+        if (!unlocked) ...[
+          const SizedBox(height: 10),
+          _UnlockBanner(
+            title: s.trackCitizenship,
+            subtitle: s.unlockFrom(Prices.of(Tariff.citizenship)),
+            onTap: () => _open(const PremiumScreen(initial: Tariff.citizenship)),
+          ),
+        ],
       ],
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/question.dart';
 import 'package:czech_pass/features/quiz/quiz_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
@@ -111,6 +112,14 @@ class ResultScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 14),
+            if (mode == QuizMode.exam) ...[
+              _PassCard(
+                passed: right >= RealieRules.passFor(total),
+                title: right >= RealieRules.passFor(total) ? s.realiePassed : s.realieFailed,
+                text: s.realiePassRule(RealieRules.passFor(total), total),
+              ),
+              const SizedBox(height: 14),
+            ],
             AppCard(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -174,6 +183,53 @@ class ResultScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// Sinov imtihoni natijasi: o'tdi yoki o'tmadi.
+class _PassCard extends StatelessWidget {
+  const _PassCard({required this.passed, required this.title, required this.text});
+
+  final bool passed;
+  final String title;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: passed ? AppColors.successSoft : AppColors.errorSoft,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            passed ? Icons.verified_outlined : Icons.info_outline,
+            color: passed ? AppColors.success : AppColors.error,
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800,
+                    color: passed ? AppColors.success : AppColors.error,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(text, style: const TextStyle(fontSize: 14, height: 1.45)),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

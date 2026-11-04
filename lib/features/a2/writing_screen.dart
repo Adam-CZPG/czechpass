@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
 import 'package:czech_pass/core/writing_checker.dart';
 import 'package:czech_pass/features/a2/section_result_screen.dart';
+import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
+import 'package:czech_pass/widgets/locks.dart';
 import 'package:czech_pass/widgets/no_paste.dart';
 
 /// A2 yozish: foydalanuvchi chexcha matn yozadi, ilova uzunlik, salomlashuv,
@@ -26,6 +29,7 @@ class _WritingScreenState extends State<WritingScreen> {
   final _checker = const WritingChecker();
 
   List<WritingTask> _tasks = [];
+  int _total = 0; // bazadagi barcha topshiriqlar (bepul versiyada _tasks qisqaroq)
   int _taskIndex = 0;
   final Map<int, (int, int)> _scores = {}; // topshiriq → (o'tgan tekshiruvlar, jami)
   bool _checked = false;
@@ -40,7 +44,10 @@ class _WritingScreenState extends State<WritingScreen> {
   }
 
   Future<List<WritingTask>> _load() async {
-    _tasks = await AppScope.read(context).repository.loadA2Writing();
+    final controller = AppScope.read(context);
+    final tasks = await controller.repository.loadA2Writing();
+    _total = tasks.length;
+    _tasks = controller.entitlements.limit(tasks, Tariff.residence, FreeLimits.a2TasksPerSkill);
     return _tasks;
   }
 
@@ -82,6 +89,7 @@ class _WritingScreenState extends State<WritingScreen> {
           right: right,
           total: total,
           restart: restart,
+          moreLocked: _tasks.length < _total ? Tariff.residence : null,
         ),
       ),
     );
@@ -158,6 +166,10 @@ class _WritingScreenState extends State<WritingScreen> {
               Expanded(
                 child: ListView(
                   children: [
+                    if (_tasks.length < _total) ...[
+                      FreeLimitBanner(shown: _tasks.length, total: _total, tariff: Tariff.residence),
+                      const SizedBox(height: 14),
+                    ],
                     Text(
                       '${s.taskN(_taskIndex + 1)} · ${task.titleFor(s.lang)}',
                       style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),

@@ -4,15 +4,20 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/entitlements.dart';
+import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
+import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/features/quiz/result_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
+import 'package:czech_pass/widgets/countdown.dart';
+import 'package:czech_pass/widgets/locks.dart';
 
 /// practice — har javobdan keyin izoh;
 /// exam — haqiqiy test kabi, izohsiz, natija oxirida;
-/// mistakes — faqat oldin xato qilingan savollar.
+/// mistakes — takrorlash: xato javoblar va takrorlash vaqti kelgan savollar (spaced repetition).
 enum QuizMode { practice, exam, mistakes }
 
 class QuizScreen extends StatefulWidget {
@@ -21,7 +26,7 @@ class QuizScreen extends StatefulWidget {
   final QuizMode mode;
 
   /// Sinov imtihonidagi savollar soni (bazada kamroq bo'lsa — hammasi).
-  static const examLength = 30;
+  static const examLength = RealieRules.questions;
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -40,6 +45,12 @@ class _QuizScreenState extends State<QuizScreen> {
   bool _showTranslation = true;
   final List<AnswerRecord> _answers = [];
 
+  /// Bepul versiyada ko'rsatilmaydigan savollar ham bor bo'lsa — bazadagi jami savollar soni.
+  int _total = 0;
+
+  /// Bepul sinov imtihoni ishlatib bo'lingan.
+  bool _locked = false;
+
   bool get _isExam => widget.mode == QuizMode.exam;
 
   @override
@@ -50,16 +61,31 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Future<QuestionBank> _load() async {
     final controller = AppScope.read(context);
+    final entitlements = controller.entitlements;
     final bank = await controller.repository.loadRealie();
     var questions = [...bank.questions];
-    if (widget.mode == QuizMode.mistakes) {
-      final wrong = controller.progress.mistakes(Exams.realie);
-      questions = questions.where((q) => wrong.contains(q.id)).toList();
+    _total = questions.length;
+
+    switch (widget.mode) {
+      case QuizMode.practice:
+        if (!entitlements.citizenship) {
+          questions = RealieRules.freeSubset(questions, FreeLimits.realiePerTopic);
+        }
+        questions.shuffle(_random);
+      case QuizMode.mistakes:
+        final due = controller.progress.dueForReview(Exams.realie);
+        questions = questions.where((q) => due.contains(q.id)).toList()..shuffle(_random);
+        _total = questions.length;
+      case QuizMode.exam:
+        if (!entitlements.canStartMock(Mocks.realie, Tariff.citizenship)) {
+          _locked = true;
+          return bank;
+        }
+        await controller.useMock(Mocks.realie, Tariff.citizenship);
+        questions = RealieRules.pickExam(questions, _random);
+        _total = questions.length;
     }
-    questions.shuffle(_random);
-    if (_isExam && questions.length > QuizScreen.examLength) {
-      questions = questions.sublist(0, QuizScreen.examLength);
-    }
+
     _questions = questions;
     _orders = [
       for (final q in questions) List<int>.generate(q.options.length, (i) => i)..shuffle(_random),
@@ -82,20 +108,24 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() => _checked = true);
   }
 
+  void _showResult(QuestionBank bank) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => ResultScreen(
+          answers: List.unmodifiable(_answers),
+          bank: bank,
+          mode: widget.mode,
+        ),
+      ),
+    );
+  }
+
   void _next(QuestionBank bank) {
     // Sinov imtihonida javob "Keyingi" bosilganda saqlanadi (izoh ko'rsatilmaydi).
     if (_isExam) _saveAnswer();
 
     if (_isLast) {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => ResultScreen(
-            answers: List.unmodifiable(_answers),
-            bank: bank,
-            mode: widget.mode,
-          ),
-        ),
-      );
+      _showResult(bank);
       return;
     }
     setState(() {
@@ -105,10 +135,24 @@ class _QuizScreenState extends State<QuizScreen> {
     });
   }
 
+  /// Vaqt tugadi: tanlangan javob saqlanadi, javob berilmagan savollar xato hisoblanadi.
+  void _timeUp(QuestionBank bank) {
+    if (!mounted) return;
+    if (_picked != null) _saveAnswer();
+    final answered = _answers.map((a) => a.questionId).toSet();
+    for (final q in _questions) {
+      if (!answered.contains(q.id)) {
+        _answers.add(AnswerRecord(questionId: q.id, topic: q.topic, correct: false));
+      }
+    }
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(S.of(context).timeUp)));
+    _showResult(bank);
+  }
+
   String _modeLabel(S s) => switch (widget.mode) {
         QuizMode.practice => s.navPractice,
         QuizMode.exam => s.mockExam,
-        QuizMode.mistakes => s.modeMistakes,
+        QuizMode.mistakes => s.reviewTitle,
       };
 
   @override
@@ -127,10 +171,13 @@ class _QuizScreenState extends State<QuizScreen> {
         if (!snapshot.hasData) {
           return const Scaffold(body: Center(child: CircularProgressIndicator()));
         }
+        if (_locked) {
+          return LockedScreen(title: s.mockLockedTitle, text: s.mockLockedText, tariff: Tariff.citizenship);
+        }
         if (_questions.isEmpty) {
           return _MessageScaffold(
-            title: s.noMistakesTitle,
-            text: s.noMistakesText,
+            title: s.noReviewTitle,
+            text: s.noReviewText,
             closeLabel: s.back,
           );
         }
@@ -189,6 +236,13 @@ class _QuizScreenState extends State<QuizScreen> {
                                 style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
                               ),
                             ),
+                            if (_isExam) ...[
+                              Countdown(
+                                duration: const Duration(minutes: RealieRules.minutes),
+                                onFinished: () => _timeUp(bank),
+                              ),
+                              const SizedBox(width: 8),
+                            ],
                             Text(
                               '${_index + 1} / ${_questions.length}',
                               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.muted),
@@ -206,6 +260,10 @@ class _QuizScreenState extends State<QuizScreen> {
               Expanded(
                 child: ListView(
                   children: [
+                    if (widget.mode == QuizMode.practice && _questions.length < _total) ...[
+                      FreeLimitBanner(shown: _questions.length, total: _total, tariff: Tariff.citizenship),
+                      const SizedBox(height: 14),
+                    ],
                     Align(
                       alignment: Alignment.centerLeft,
                       child: Container(

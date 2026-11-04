@@ -1,9 +1,11 @@
 import 'package:flutter/widgets.dart';
 
 import 'package:czech_pass/core/app_language.dart';
+import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question_repository.dart';
 import 'package:czech_pass/core/settings_store.dart';
+import 'package:czech_pass/core/tariff.dart';
 
 /// Ilovaning umumiy holati: til, progress va savollar manbasi.
 /// O'zgarganda (til almashsa, javob saqlansa) ekranlar avtomatik yangilanadi.
@@ -14,11 +16,29 @@ class AppController extends ChangeNotifier {
     this.repository = const QuestionRepository(),
     AppLanguage? initialLanguage,
     this.systemLanguage,
-  }) : _language = initialLanguage;
+    Entitlements? entitlements,
+    DateTime? examDate,
+    int dailyGoal = SettingsStore.defaultGoal,
+  })  : _language = initialLanguage,
+        entitlements = entitlements ?? Entitlements(),
+        _examDate = examDate,
+        _dailyGoal = dailyGoal;
 
   final SettingsStore settings;
   final ProgressStore progress;
   final QuestionRepository repository;
+
+  /// Sotib olingan tariflar va bepul urinishlar.
+  final Entitlements entitlements;
+
+  DateTime? _examDate;
+  int _dailyGoal;
+
+  /// Foydalanuvchi belgilagan imtihon sanasi (belgilanmagan bo'lsa — null).
+  DateTime? get examDate => _examDate;
+
+  /// Kunlik maqsad: bir kunda beriladigan javoblar soni.
+  int get dailyGoal => _dailyGoal;
 
   /// Telefon tili, agar u ilovadagi tillardan biri bo'lsa (aks holda null).
   final AppLanguage? systemLanguage;
@@ -38,6 +58,24 @@ class AppController extends ChangeNotifier {
     _language = language;
     notifyListeners();
     await settings.saveLanguage(language);
+  }
+
+  Future<void> setExamDate(DateTime? date) async {
+    _examDate = date;
+    notifyListeners();
+    await settings.saveExamDate(date);
+  }
+
+  Future<void> setDailyGoal(int goal) async {
+    _dailyGoal = goal;
+    notifyListeners();
+    await settings.saveDailyGoal(goal);
+  }
+
+  /// Bepul sinov imtihoni urinishini hisobga oladi.
+  Future<void> useMock(String mock, Tariff tariff) async {
+    await entitlements.useMock(mock, tariff);
+    notifyListeners();
   }
 
   Future<void> recordAnswer(String exam, String questionId, bool correct) async {

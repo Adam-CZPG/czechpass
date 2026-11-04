@@ -4,11 +4,14 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
 import 'package:czech_pass/features/a2/section_result_screen.dart';
+import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
+import 'package:czech_pass/widgets/locks.dart';
 import 'package:czech_pass/widgets/question_block.dart';
 
 /// A2 o'qish: chexcha matn va unga oid savollar.
@@ -25,6 +28,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
   final _random = Random();
 
   List<ReadingTask> _tasks = [];
+  int _total = 0; // bazadagi barcha topshiriqlar (bepul versiyada _tasks qisqaroq)
   final Map<String, List<int>> _orders = {}; // savol id → variantlar tartibi
   final Map<String, int> _picked = {}; // savol id → tanlangan asl variant
   int _taskIndex = 0;
@@ -39,13 +43,15 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   Future<List<ReadingTask>> _load() async {
-    final tasks = await AppScope.read(context).repository.loadA2Reading();
+    final controller = AppScope.read(context);
+    final tasks = await controller.repository.loadA2Reading();
     for (final task in tasks) {
       for (final q in task.questions) {
         _orders[q.id] = List<int>.generate(q.options.length, (i) => i)..shuffle(_random);
       }
     }
-    _tasks = tasks;
+    _total = tasks.length;
+    _tasks = controller.entitlements.limit(tasks, Tariff.residence, FreeLimits.a2TasksPerSkill);
     return tasks;
   }
 
@@ -79,6 +85,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
           right: right,
           total: total,
           restart: restart,
+          moreLocked: _tasks.length < _total ? Tariff.residence : null,
         ),
       ),
     );
@@ -139,6 +146,10 @@ class _ReadingScreenState extends State<ReadingScreen> {
               Expanded(
                 child: ListView(
                   children: [
+                    if (_tasks.length < _total) ...[
+                      FreeLimitBanner(shown: _tasks.length, total: _total, tariff: Tariff.residence),
+                      const SizedBox(height: 14),
+                    ],
                     Text(
                       '${s.taskN(_taskIndex + 1)} · ${task.titleFor(s.lang)}',
                       style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.muted),

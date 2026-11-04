@@ -1,0 +1,335 @@
+{
+ "asOf": "2026-11",
+ "exams": [
+  {
+   "id": "a2",
+   "title": {
+    "uz": "Chex tili A2 — doimiy yashash uchun",
+    "cs": "Čeština A2 — pro trvalý pobyt",
+    "en": "Czech A2 — for permanent residence",
+    "vi": "Tiếng Séc A2 — để xin thường trú",
+    "ru": "Чешский A2 — для ПМЖ",
+    "uk": "Чеська A2 — для постійного проживання"
+   },
+   "url": "https://cestina-pro-cizince.cz/trvaly-pobyt/",
+   "facts": [
+    {
+     "label": {
+      "uz": "To'lov",
+      "cs": "Poplatek",
+      "en": "Fee",
+      "vi": "Lệ phí",
+      "ru": "Стоимость",
+      "uk": "Вартість"
+     },
+     "value": {
+      "uz": "3 200 Kč",
+      "cs": "3 200 Kč",
+      "en": "CZK 3,200",
+      "vi": "3.200 Kč",
+      "ru": "3 200 крон",
+      "uk": "3 200 крон"
+     }
+    },
+    {
+     "label": {
+      "uz": "Qismlar",
+      "cs": "Části zkoušky",
+      "en": "Parts",
+      "vi": "Các phần thi",
+      "ru": "Части экзамена",
+      "uk": "Частини іспиту"
+     },
+     "value": {
+      "uz": "O'qish — 40 daq, 25 ball\nYozish — 25 daq, 20 ball\nTinglash — taxminan 40 daq, 25 ball\nGapirish — 15 daq, 40 ball",
+      "cs": "Čtení — 40 min, 25 b.\nPsaní — 25 min, 20 b.\nPoslech — cca 40 min, 25 b.\nMluvení — 15 min, 40 b.",
+      "en": "Reading — 40 min, 25 pts\nWriting — 25 min, 20 pts\nListening — approx. 40 min, 25 pts\nSpeaking — 15 min, 40 pts",
+      "vi": "Đọc — 40 phút, 25 điểm\nViết — 25 phút, 20 điểm\nNghe — khoảng 40 phút, 25 điểm\nNói — 15 phút, 40 điểm",
+      "ru": "Чтение — 40 мин, 25 б.\nПисьмо — 25 мин, 20 б.\nАудирование — около 40 мин, 25 б.\nУстная часть — 15 мин, 40 б.",
+      "uk": "Читання — 40 хв, 25 б.\nПисьмо — 25 хв, 20 б.\nАудіювання — близько 40 хв, 25 б.\nУсна частина — 15 хв, 40 б."
+     }
+    },
+    {
+     "label": {
+      "uz": "O'tish sharti",
+      "cs": "Podmínky úspěchu",
+      "en": "Pass mark",
+      "vi": "Điều kiện đạt",
+      "ru": "Условия сдачи",
+      "uk": "Умови складання"
+     },
+     "value": {
+      "uz": "Yozma qism (o'qish + yozish + tinglash): 70 balldan kamida 42 (60 %).\nOg'zaki qism: 40 balldan kamida 24 (60 %).",
+      "cs": "Písemná část (čtení + psaní + poslech): alespoň 42 ze 70 b. (60 %).\nÚstní část: alespoň 24 ze 40 b. (60 %).",
+      "en": "Written part (reading + writing + listening): at least 42 of 70 pts (60%).\nOral part: at least 24 of 40 pts (60%).",
+      "vi": "Phần viết (đọc + viết + nghe): ít nhất 42/70 điểm (60%).\nPhần nói: ít nhất 24/40 điểm (60%).",
+      "ru": "Письменная часть (чтение + письмо + аудирование): не менее 42 из 70 б. (60 %).\nУстная часть: не менее 24 из 40 б. (60 %).",
+      "uk": "Письмова частина (читання + письмо + аудіювання): щонайменше 42 із 70 б. (60 %).\nУсна частина: щонайменше 24 із 40 б. (60 %)."
+     }
+    },
+    {
+     "label": {
+      "uz": "Qayta topshirish",
+      "cs": "Opakování",
+      "en": "Retakes",
+      "vi": "Thi lại",
+      "ru": "Пересдача",
+      "uk": "Перескладання"
+     },
+     "value": {
+      "uz": "O'tolmasangiz, butun imtihon qayta topshiriladi.",
+      "cs": "Při neúspěchu se opakuje celá zkouška.",
+      "en": "If you fail, the whole exam must be retaken.",
+      "vi": "Nếu không đạt, bạn phải thi lại toàn bộ.",
+      "ru": "При неудаче весь экзамен сдаётся заново.",
+      "uk": "У разі невдачі іспит складають повністю знову."
+     }
+    },
+    {
+     "label": {
+      "uz": "Sanalar",
+      "cs": "Termíny",
+      "en": "Dates",
+      "vi": "Lịch thi",
+      "ru": "Даты",
+      "uk": "Дати"
+     },
+     "value": {
+      "uz": "Oyiga 3 marta, chorshanba yoki shanba kuni soat 9:00 da.",
+      "cs": "Třikrát měsíčně, ve středu nebo v sobotu od 9:00.",
+      "en": "Three times a month, on Wednesday or Saturday at 9:00.",
+      "vi": "3 lần mỗi tháng, vào thứ Tư hoặc thứ Bảy lúc 9:00.",
+      "ru": "Три раза в месяц, в среду или субботу в 9:00.",
+      "uk": "Тричі на місяць, у середу або суботу о 9:00."
+     }
+    },
+    {
+     "label": {
+      "uz": "Ro'yxatdan o'tish",
+      "cs": "Přihláška",
+      "en": "Registration",
+      "vi": "Đăng ký",
+      "ru": "Регистрация",
+      "uk": "Реєстрація"
+     },
+     "value": {
+      "uz": "Onlayn yoki tanlangan maktablarda. Sana elektron pochta orqali keladi, so'ng maktabda shaxsan tasdiqlab, imzolaysiz.",
+      "cs": "Online nebo na vybraných školách. Termín přijde e-mailem, poté ho osobně potvrdíte a podepíšete ve škole.",
+      "en": "Online or at selected schools. The date arrives by email; you then confirm and sign in person at the school.",
+      "vi": "Đăng ký trực tuyến hoặc tại các trường được chọn. Ngày thi được gửi qua email, sau đó bạn xác nhận và ký trực tiếp tại trường.",
+      "ru": "Онлайн или в выбранных школах. Дата приходит по электронной почте, затем вы лично подтверждаете и подписываете заявку в школе.",
+      "uk": "Онлайн або у вибраних школах. Дата надходить електронною поштою, потім ви особисто підтверджуєте й підписуєте заявку в школі."
+     }
+    },
+    {
+     "label": {
+      "uz": "Kim topshirmaydi",
+      "cs": "Kdo zkoušku skládat nemusí",
+      "en": "Who is exempt",
+      "vi": "Ai được miễn",
+      "ru": "Кто освобождён",
+      "uk": "Хто звільнений"
+     },
+     "value": {
+      "uz": "YeI/YeIH fuqarolari; 15 yoshgacha yoki 60 yoshdan katta shaxslar; so'nggi 20 yilda Chexiyada chex tilida kamida 1 o'quv yili o'qiganlar; A2 yoki undan yuqori rasmiy sertifikati borlar; nogironligi sababli topshira olmaydiganlar.",
+      "cs": "Občané EU/EHP; osoby mladší 15 let nebo starší 60 let; kdo v posledních 20 letech studoval v Česku v češtině alespoň 1 školní rok; držitelé uznaného certifikátu A2 nebo vyšší úrovně; osoby, které zkoušku nemohou složit kvůli postižení.",
+      "en": "EU/EEA citizens; people under 15 or over 60; anyone who studied in Czech at a Czech school for at least 1 school year in the last 20 years; holders of a recognised A2 or higher certificate; people who cannot take the exam due to a disability.",
+      "vi": "Công dân EU/EEA; người dưới 15 tuổi hoặc trên 60 tuổi; người đã học bằng tiếng Séc tại trường ở Séc ít nhất 1 năm học trong 20 năm qua; người có chứng chỉ A2 trở lên được công nhận; người không thể thi do khuyết tật.",
+      "ru": "Граждане ЕС/ЕЭЗ; лица младше 15 или старше 60 лет; те, кто за последние 20 лет учился в Чехии на чешском языке не менее 1 учебного года; обладатели признанного сертификата A2 или выше; лица, которые не могут сдать экзамен из-за инвалидности.",
+      "uk": "Громадяни ЄС/ЄЕЗ; особи, молодші за 15 або старші за 60 років; ті, хто за останні 20 років навчався в Чехії чеською мовою щонайменше 1 навчальний рік; власники визнаного сертифіката A2 або вище; особи, які не можуть скласти іспит через інвалідність."
+     }
+    },
+    {
+     "label": {
+      "uz": "Sertifikat",
+      "cs": "Osvědčení",
+      "en": "Certificate",
+      "vi": "Chứng chỉ",
+      "ru": "Сертификат",
+      "uk": "Сертифікат"
+     },
+     "value": {
+      "uz": "30 kun ichida maktabdan olib ketasiz yoki pochta orqali yuboriladi.",
+      "cs": "Vyzvednete si ho ve škole do 30 dnů, nebo vám bude zasláno poštou.",
+      "en": "Collect it at the school within 30 days, or it will be sent by post.",
+      "vi": "Nhận tại trường trong vòng 30 ngày hoặc được gửi qua bưu điện.",
+      "ru": "Его можно забрать в школе в течение 30 дней или получить по почте.",
+      "uk": "Його можна забрати в школі протягом 30 днів або отримати поштою."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "title": {
+    "uz": "Chex tili B1 — fuqarolik uchun",
+    "cs": "Čeština B1 — pro občanství",
+    "en": "Czech B1 — for citizenship",
+    "vi": "Tiếng Séc B1 — để xin quốc tịch",
+    "ru": "Чешский B1 — для гражданства",
+    "uk": "Чеська B1 — для громадянства"
+   },
+   "url": "https://cestina-pro-cizince.cz/obcanstvi/",
+   "facts": [
+    {
+     "label": {
+      "uz": "To'lov",
+      "cs": "Poplatek",
+      "en": "Fee",
+      "vi": "Lệ phí",
+      "ru": "Стоимость",
+      "uk": "Вартість"
+     },
+     "value": {
+      "uz": "3 700 Kč",
+      "cs": "3 700 Kč",
+      "en": "CZK 3,700",
+      "vi": "3.700 Kč",
+      "ru": "3 700 крон",
+      "uk": "3 700 крон"
+     }
+    },
+    {
+     "label": {
+      "uz": "Qismlar",
+      "cs": "Části zkoušky",
+      "en": "Parts",
+      "vi": "Các phần thi",
+      "ru": "Части экзамена",
+      "uk": "Частини іспиту"
+     },
+     "value": {
+      "uz": "O'qish — 50 daq\nTinglash — 30–35 daq\nYozish — 60 daq\nGapirish — 15–18 daq",
+      "cs": "Čtení — 50 min\nPoslech — 30–35 min\nPsaní — 60 min\nMluvení — 15–18 min",
+      "en": "Reading — 50 min\nListening — 30–35 min\nWriting — 60 min\nSpeaking — 15–18 min",
+      "vi": "Đọc — 50 phút\nNghe — 30–35 phút\nViết — 60 phút\nNói — 15–18 phút",
+      "ru": "Чтение — 50 мин\nАудирование — 30–35 мин\nПисьмо — 60 мин\nУстная часть — 15–18 мин",
+      "uk": "Читання — 50 хв\nАудіювання — 30–35 хв\nПисьмо — 60 хв\nУсна частина — 15–18 хв"
+     }
+    },
+    {
+     "label": {
+      "uz": "O'tish sharti",
+      "cs": "Podmínky úspěchu",
+      "en": "Pass mark",
+      "vi": "Điều kiện đạt",
+      "ru": "Условия сдачи",
+      "uk": "Умови складання"
+     },
+     "value": {
+      "uz": "Har bir qismda kamida 60 % (batafsil shartlar rasmiy saytda).",
+      "cs": "V každé části alespoň 60 % (podrobné podmínky najdete na oficiálních stránkách).",
+      "en": "At least 60% in each part (see the official website for details).",
+      "vi": "Ít nhất 60% ở mỗi phần (chi tiết xem trên trang web chính thức).",
+      "ru": "Не менее 60 % в каждой части (подробности на официальном сайте).",
+      "uk": "Щонайменше 60 % у кожній частині (подробиці на офіційному сайті)."
+     }
+    },
+    {
+     "label": {
+      "uz": "Qayta topshirish",
+      "cs": "Opakování",
+      "en": "Retakes",
+      "vi": "Thi lại",
+      "ru": "Пересдача",
+      "uk": "Перескладання"
+     },
+     "value": {
+      "uz": "Urinishlar soni cheklanmagan.",
+      "cs": "Počet pokusů není omezen.",
+      "en": "There is no limit on the number of attempts.",
+      "vi": "Không giới hạn số lần thi.",
+      "ru": "Количество попыток не ограничено.",
+      "uk": "Кількість спроб не обмежена."
+     }
+    }
+   ]
+  },
+  {
+   "id": "realie",
+   "title": {
+    "uz": "České reálie — fuqarolik uchun",
+    "cs": "České reálie — pro občanství",
+    "en": "České reálie — for citizenship",
+    "vi": "České reálie — để xin quốc tịch",
+    "ru": "České reálie — для гражданства",
+    "uk": "České reálie — для громадянства"
+   },
+   "url": "https://cestina-pro-cizince.cz/obcanstvi/",
+   "facts": [
+    {
+     "label": {
+      "uz": "To'lov",
+      "cs": "Poplatek",
+      "en": "Fee",
+      "vi": "Lệ phí",
+      "ru": "Стоимость",
+      "uk": "Вартість"
+     },
+     "value": {
+      "uz": "2 000 Kč — tasdiqlash xati kelganidan keyin 7 kun ichida to'lanadi.",
+      "cs": "2 000 Kč — uhradíte do 7 dnů od potvrzovacího e-mailu.",
+      "en": "CZK 2,000 — pay within 7 days of the confirmation email.",
+      "vi": "2.000 Kč — thanh toán trong vòng 7 ngày kể từ email xác nhận.",
+      "ru": "2 000 крон — оплата в течение 7 дней после письма с подтверждением.",
+      "uk": "2 000 крон — оплата протягом 7 днів після листа з підтвердженням."
+     }
+    },
+    {
+     "label": {
+      "uz": "Format",
+      "cs": "Forma",
+      "en": "Format",
+      "vi": "Hình thức",
+      "ru": "Формат",
+      "uk": "Формат"
+     },
+     "value": {
+      "uz": "30 savol, 30 daqiqa, qog'ozda, har bir savolda 4 ta variant.",
+      "cs": "30 otázek, 30 minut, písemně na papíře, u každé otázky 4 možnosti.",
+      "en": "30 questions, 30 minutes, on paper, 4 options per question.",
+      "vi": "30 câu hỏi, 30 phút, làm trên giấy, mỗi câu có 4 phương án.",
+      "ru": "30 вопросов, 30 минут, на бумаге, 4 варианта в каждом вопросе.",
+      "uk": "30 питань, 30 хвилин, на папері, 4 варіанти в кожному питанні."
+     }
+    },
+    {
+     "label": {
+      "uz": "Qismlar",
+      "cs": "Části zkoušky",
+      "en": "Parts",
+      "vi": "Các phần thi",
+      "ru": "Части экзамена",
+      "uk": "Частини іспиту"
+     },
+     "value": {
+      "uz": "16 — fuqarolik asoslari va davlat\n7 — geografiya\n7 — tarix va madaniyat",
+      "cs": "16 — občanský základ a stát\n7 — zeměpis\n7 — dějiny a kultura",
+      "en": "16 — civics and the state\n7 — geography\n7 — history and culture",
+      "vi": "16 — kiến thức công dân và nhà nước\n7 — địa lý\n7 — lịch sử và văn hóa",
+      "ru": "16 — основы гражданственности и государство\n7 — география\n7 — история и культура",
+      "uk": "16 — основи громадянства й держава\n7 — географія\n7 — історія та культура"
+     }
+    },
+    {
+     "label": {
+      "uz": "O'tish sharti",
+      "cs": "Podmínky úspěchu",
+      "en": "Pass mark",
+      "vi": "Điều kiện đạt",
+      "ru": "Условия сдачи",
+      "uk": "Умови складання"
+     },
+     "value": {
+      "uz": "30 tadan kamida 18 ta to'g'ri javob.",
+      "cs": "Alespoň 18 správných odpovědí z 30.",
+      "en": "At least 18 correct answers out of 30.",
+      "vi": "Ít nhất 18/30 câu đúng.",
+      "ru": "Не менее 18 правильных ответов из 30.",
+      "uk": "Щонайменше 18 правильних відповідей із 30."
+     }
+    }
+   ]
+  }
+ ]
+}

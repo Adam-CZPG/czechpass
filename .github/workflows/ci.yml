@@ -105,9 +105,18 @@ jobs:
       - run: flutter pub get
       # Hozircha sinov kaliti bilan imzolanadi. Google Play uchun keyin o'z kalitimiz
       # GitHub Secrets orqali qo'shiladi va AAB yig'iladi.
-      - run: flutter build apk --release
+      # Ikki variant: "full" — sinov uchun barcha bo'limlar ochiq (DEV_UNLOCK), "free" — foydalanuvchi ko'radigan bepul versiya.
+      - name: APK (full, sinov uchun)
+        run: |
+          flutter build apk --release --dart-define=DEV_UNLOCK=true
+          mkdir -p dist
+          cp build/app/outputs/flutter-apk/app-release.apk dist/czechpass-full.apk
+      - name: APK (free)
+        run: |
+          flutter build apk --release
+          cp build/app/outputs/flutter-apk/app-release.apk dist/czechpass-free.apk
       - uses: actions/upload-artifact@v7
         with:
           name: czechpass-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: dist/*.apk
           retention-days: 14

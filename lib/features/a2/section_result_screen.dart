@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
+import 'package:czech_pass/widgets/locks.dart';
 
 /// A2 bo'limi (o'qish, tinglash, gapirish, yozish) tugaganda ko'rsatiladigan natija.
 class SectionResultScreen extends StatelessWidget {
@@ -12,6 +14,7 @@ class SectionResultScreen extends StatelessWidget {
     required this.right,
     required this.total,
     required this.restart,
+    this.moreLocked,
   });
 
   final String title;
@@ -20,6 +23,9 @@ class SectionResultScreen extends StatelessWidget {
 
   /// "Qayta urinish" bosilganda ochiladigan ekran.
   final WidgetBuilder restart;
+
+  /// Bepul versiyada qolgan topshiriqlar yopiq bo'lsa — ochish uchun tarif.
+  final Tariff? moreLocked;
 
   @override
   Widget build(BuildContext context) {
@@ -89,6 +95,24 @@ class SectionResultScreen extends StatelessWidget {
                 ],
               ),
             ),
+            if (moreLocked != null) ...[
+              const SizedBox(height: 16),
+              AppCard(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(s.freeEndTitle, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800)),
+                    const SizedBox(height: 6),
+                    Text(s.premiumSubtitle, style: TextStyle(fontSize: 14, height: 1.45, color: AppColors.muted)),
+                    const SizedBox(height: 12),
+                    FilledButton.tonal(
+                      onPressed: () => openPremium(context, moreLocked!),
+                      child: Text(s.unlockButton),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ],
         ),
       ),
