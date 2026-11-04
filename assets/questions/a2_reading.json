@@ -1,0 +1,775 @@
+{
+  "version": 1,
+  "exam": "a2_reading",
+  "source": "own",
+  "tasks": [
+    {
+      "id": "own-a2r-001",
+      "title": {
+        "cs": "Oznámení u lékaře",
+        "uz": "Shifokor e'loni",
+        "en": "A notice at the doctor's",
+        "ru": "Объявление у врача",
+        "uk": "Оголошення в лікаря"
+      },
+      "text": "OZNÁMENÍ\n\nOrdinace MUDr. Jany Novákové bude od 4. do 15. srpna zavřená.\n\nV naléhavých případech vás ošetří MUDr. Petr Svoboda, Lipová 12, Brno.\nOrdinační hodiny: pondělí až pátek 7:30–12:00.\n\nRecepty si můžete objednat e-mailem: ordinace@example.cz",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kdy je ordinace MUDr. Novákové zavřená?",
+            "uz": "MUDr. Novákova qabulxonasi qachon yopiq?",
+            "en": "When is Dr Nováková's surgery closed?",
+            "ru": "Когда кабинет доктора Новаковой закрыт?",
+            "uk": "Коли кабінет лікарки Новакової зачинений?"
+          },
+          "options": [
+            "Od 4. do 15. srpna",
+            "Celý srpen",
+            "Každé pondělí",
+            "Od 15. srpna"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kde ordinuje MUDr. Svoboda?",
+            "uz": "MUDr. Svoboda qayerda qabul qiladi?",
+            "en": "Where does Dr Svoboda see patients?",
+            "ru": "Где принимает доктор Свобода?",
+            "uk": "Де приймає лікар Свобода?"
+          },
+          "options": [
+            "Lipová 12, Brno",
+            "V nemocnici",
+            "U MUDr. Novákové",
+            "Online"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Jak si můžete objednat recept?",
+            "uz": "Retseptga qanday buyurtma berish mumkin?",
+            "en": "How can you order a prescription?",
+            "ru": "Как можно заказать рецепт?",
+            "uk": "Як можна замовити рецепт?"
+          },
+          "options": [
+            "E-mailem",
+            "Telefonem",
+            "Osobně v sobotu",
+            "Poštou"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-002",
+      "title": {
+        "cs": "E-mail od kamarádky",
+        "uz": "Dugonadan xat",
+        "en": "An email from a friend",
+        "ru": "Письмо от подруги",
+        "uk": "Лист від подруги"
+      },
+      "text": "Ahoj Leno,\n\nv sobotu jedeme s Tomášem na výlet do Kutné Hory. Odjíždíme vlakem v 8:15 z hlavního nádraží. Chceš jet s námi? Lístek stojí asi 150 Kč. Vezmi si pohodlné boty, budeme hodně chodit. Večer se vrátíme kolem sedmé.\n\nNapiš mi prosím do čtvrtka.\n\nMarie",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kam jede Marie v sobotu?",
+            "uz": "Marie shanba kuni qayerga boradi?",
+            "en": "Where is Marie going on Saturday?",
+            "ru": "Куда Мария едет в субботу?",
+            "uk": "Куди Марія їде в суботу?"
+          },
+          "options": [
+            "Do Kutné Hory",
+            "Do Prahy",
+            "K Tomášovi domů",
+            "Na nádraží pro Lenu"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Čím pojedou?",
+            "uz": "Ular nima bilan boradi?",
+            "en": "How will they travel?",
+            "ru": "На чём они поедут?",
+            "uk": "Чим вони поїдуть?"
+          },
+          "options": [
+            "Vlakem",
+            "Autem",
+            "Autobusem",
+            "Na kole"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Do kdy má Lena odpovědět?",
+            "uz": "Lena qachongacha javob berishi kerak?",
+            "en": "By when should Lena reply?",
+            "ru": "До какого дня Лена должна ответить?",
+            "uk": "До якого дня Лена має відповісти?"
+          },
+          "options": [
+            "Do čtvrtka",
+            "Do soboty",
+            "Do večera",
+            "Do pátku"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-003",
+      "title": {
+        "cs": "SMS od kamarádky",
+        "uz": "Dugonadan SMS",
+        "en": "A text from a friend",
+        "ru": "СМС от подруги",
+        "uk": "СМС від подруги"
+      },
+      "text": "Ahoj, jsem ve vlaku, ale vlak má zpoždění. Přijedu až v 18:30, ne v 17:00. Počkej na mě prosím u pokladen. Jana",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Proč Jana přijede později?",
+            "uz": "Nega Jana kechroq keladi?",
+            "en": "Why will Jana arrive later?",
+            "ru": "Почему Яна приедет позже?",
+            "uk": "Чому Яна приїде пізніше?"
+          },
+          "options": [
+            "Vlak má zpoždění",
+            "Je nemocná",
+            "Zaspala",
+            "Nemá jízdenku"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "V kolik Jana přijede?",
+            "uz": "Jana soat nechada keladi?",
+            "en": "What time will Jana arrive?",
+            "ru": "Во сколько приедет Яна?",
+            "uk": "О котрій приїде Яна?"
+          },
+          "options": [
+            "V 18:30",
+            "V 17:00",
+            "V 17:30",
+            "V 8:30"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kde má kamarád čekat?",
+            "uz": "Do'sti qayerda kutishi kerak?",
+            "en": "Where should the friend wait?",
+            "ru": "Где должен ждать друг?",
+            "uk": "Де має чекати друг?"
+          },
+          "options": [
+            "U pokladen",
+            "Doma",
+            "Na nástupišti",
+            "V kavárně"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-004",
+      "title": {
+        "cs": "Inzerát",
+        "uz": "E'lon",
+        "en": "An advert",
+        "ru": "Объявление",
+        "uk": "Оголошення"
+      },
+      "text": "PRODÁM dětské kolo, modré, 3 roky staré, ve velmi dobrém stavu. Cena 1 500 Kč.\nVolejte po 17. hodině na číslo 777 123 456.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Co se prodává?",
+            "uz": "Nima sotilyapti?",
+            "en": "What is for sale?",
+            "ru": "Что продаётся?",
+            "uk": "Що продається?"
+          },
+          "options": [
+            "Dětské kolo",
+            "Auto",
+            "Dětská postel",
+            "Kočárek"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kolik to stojí?",
+            "uz": "U qancha turadi?",
+            "en": "How much does it cost?",
+            "ru": "Сколько это стоит?",
+            "uk": "Скільки це коштує?"
+          },
+          "options": [
+            "1 500 Kč",
+            "15 000 Kč",
+            "500 Kč",
+            "3 000 Kč"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kdy můžete volat?",
+            "uz": "Qachon qo'ng'iroq qilish mumkin?",
+            "en": "When can you call?",
+            "ru": "Когда можно звонить?",
+            "uk": "Коли можна телефонувати?"
+          },
+          "options": [
+            "Po 17. hodině",
+            "Jen ráno",
+            "Jen o víkendu",
+            "Před 17. hodinou"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-005",
+      "title": {
+        "cs": "Otevírací doba knihovny",
+        "uz": "Kutubxona ish vaqti",
+        "en": "Library opening hours",
+        "ru": "Часы работы библиотеки",
+        "uk": "Години роботи бібліотеки"
+      },
+      "text": "MĚSTSKÁ KNIHOVNA\nPo–Čt: 9:00–18:00\nPá: 9:00–14:00\nSo: 9:00–12:00\nNe: zavřeno\n\nKnihy můžete vrátit i do schránky u vchodu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kdy je knihovna zavřená?",
+            "uz": "Kutubxona qachon yopiq?",
+            "en": "When is the library closed?",
+            "ru": "Когда библиотека закрыта?",
+            "uk": "Коли бібліотека зачинена?"
+          },
+          "options": [
+            "V neděli",
+            "V pátek",
+            "V sobotu",
+            "V pondělí"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Do kolika je knihovna otevřená v pátek?",
+            "uz": "Juma kuni kutubxona soat nechagacha ochiq?",
+            "en": "Until what time is the library open on Friday?",
+            "ru": "До скольки библиотека открыта в пятницу?",
+            "uk": "До котрої бібліотека відчинена в п'ятницю?"
+          },
+          "options": [
+            "Do 14:00",
+            "Do 18:00",
+            "Do 12:00",
+            "Do 9:00"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Jak můžete vrátit knihy, když je zavřeno?",
+            "uz": "Yopiq bo'lsa, kitoblarni qanday qaytarish mumkin?",
+            "en": "How can you return books when it is closed?",
+            "ru": "Как вернуть книги, когда закрыто?",
+            "uk": "Як повернути книжки, коли зачинено?"
+          },
+          "options": [
+            "Do schránky u vchodu",
+            "Poštou",
+            "Sousedovi",
+            "Nejde to"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-006",
+      "title": {
+        "cs": "Polední menu",
+        "uz": "Tushlik menyusi",
+        "en": "Lunch menu",
+        "ru": "Обеденное меню",
+        "uk": "Обіднє меню"
+      },
+      "text": "POLEDNÍ MENU (11:00–14:00)\nPolévka: hovězí vývar – 45 Kč\n1. Svíčková na smetaně, knedlík – 165 Kč\n2. Kuřecí řízek, brambory – 150 Kč\n3. Zeleninové rizoto – 135 Kč (vegetariánské)",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Které jídlo je bez masa?",
+            "uz": "Qaysi taom go'shtsiz?",
+            "en": "Which dish is meat-free?",
+            "ru": "Какое блюдо без мяса?",
+            "uk": "Яка страва без м'яса?"
+          },
+          "options": [
+            "Zeleninové rizoto",
+            "Svíčková",
+            "Kuřecí řízek",
+            "Hovězí vývar"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kolik stojí svíčková?",
+            "uz": "Svíčková qancha turadi?",
+            "en": "How much is the svíčková?",
+            "ru": "Сколько стоит свичкова?",
+            "uk": "Скільки коштує свічкова?"
+          },
+          "options": [
+            "165 Kč",
+            "150 Kč",
+            "135 Kč",
+            "45 Kč"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Do kolika platí polední menu?",
+            "uz": "Tushlik menyusi soat nechagacha amal qiladi?",
+            "en": "Until what time is the lunch menu served?",
+            "ru": "До скольки действует обеденное меню?",
+            "uk": "До котрої діє обіднє меню?"
+          },
+          "options": [
+            "Do 14:00",
+            "Do 11:00",
+            "Do 16:00",
+            "Celý den"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-007",
+      "title": {
+        "cs": "Zpráva od správce domu",
+        "uz": "Uy boshqaruvchisidan xabar",
+        "en": "A message from the building manager",
+        "ru": "Сообщение от управляющего домом",
+        "uk": "Повідомлення від керівника будинку"
+      },
+      "text": "Vážení nájemníci,\nve čtvrtek 10. března od 8 do 12 hodin nepoteče v domě teplá voda. Opravujeme kotel.\nDěkujeme za pochopení.\nJan Dvořák, správce domu",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Co nebude ve čtvrtek dopoledne?",
+            "uz": "Payshanba kuni ertalab nima bo'lmaydi?",
+            "en": "What will not be available on Thursday morning?",
+            "ru": "Чего не будет в четверг утром?",
+            "uk": "Чого не буде в четвер уранці?"
+          },
+          "options": [
+            "Teplá voda",
+            "Elektřina",
+            "Internet",
+            "Výtah"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Proč?",
+            "uz": "Nega?",
+            "en": "Why?",
+            "ru": "Почему?",
+            "uk": "Чому?"
+          },
+          "options": [
+            "Opravují kotel",
+            "Malují chodbu",
+            "Je státní svátek",
+            "Mění okna"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kdo zprávu napsal?",
+            "uz": "Xabarni kim yozgan?",
+            "en": "Who wrote the message?",
+            "ru": "Кто написал сообщение?",
+            "uk": "Хто написав повідомлення?"
+          },
+          "options": [
+            "Správce domu",
+            "Soused",
+            "Starosta",
+            "Instalatér"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-008",
+      "title": {
+        "cs": "Den otevřených dveří",
+        "uz": "Ochiq eshiklar kuni",
+        "en": "Open day",
+        "ru": "День открытых дверей",
+        "uk": "День відкритих дверей"
+      },
+      "text": "Základní škola Komenského zve rodiče a děti na den otevřených dveří.\nKdy: sobota 15. dubna, 9:00–13:00\nProhlídka tříd a setkání s učiteli. Pro děti je připravena výtvarná dílna.\nVstup zdarma.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kdy je den otevřených dveří?",
+            "uz": "Ochiq eshiklar kuni qachon?",
+            "en": "When is the open day?",
+            "ru": "Когда день открытых дверей?",
+            "uk": "Коли день відкритих дверей?"
+          },
+          "options": [
+            "V sobotu 15. dubna",
+            "V neděli 15. dubna",
+            "V pátek 13. dubna",
+            "V sobotu 13. dubna"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kolik stojí vstup?",
+            "uz": "Kirish qancha turadi?",
+            "en": "How much is the entrance fee?",
+            "ru": "Сколько стоит вход?",
+            "uk": "Скільки коштує вхід?"
+          },
+          "options": [
+            "Nic, je zdarma",
+            "50 Kč",
+            "100 Kč",
+            "15 Kč"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Co je připraveno pro děti?",
+            "uz": "Bolalar uchun nima tayyorlangan?",
+            "en": "What is prepared for the children?",
+            "ru": "Что подготовлено для детей?",
+            "uk": "Що підготовлено для дітей?"
+          },
+          "options": [
+            "Výtvarná dílna",
+            "Kino",
+            "Oběd",
+            "Výlet"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-009",
+      "title": {
+        "cs": "Příbalový leták",
+        "uz": "Dori yo'riqnomasi",
+        "en": "Medicine leaflet",
+        "ru": "Инструкция к лекарству",
+        "uk": "Інструкція до ліків"
+      },
+      "text": "Užívejte 1 tabletu třikrát denně po jídle. Během léčby nepijte alkohol. Lék uchovávejte mimo dosah dětí. Pokud vám ani po 5 dnech není lépe, jděte k lékaři.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kolikrát denně se lék užívá?",
+            "uz": "Dori kuniga necha marta ichiladi?",
+            "en": "How many times a day is the medicine taken?",
+            "ru": "Сколько раз в день принимают лекарство?",
+            "uk": "Скільки разів на день приймають ліки?"
+          },
+          "options": [
+            "Třikrát",
+            "Jednou",
+            "Pětkrát",
+            "Dvakrát"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kdy se lék užívá?",
+            "uz": "Dori qachon ichiladi?",
+            "en": "When is the medicine taken?",
+            "ru": "Когда принимают лекарство?",
+            "uk": "Коли приймають ліки?"
+          },
+          "options": [
+            "Po jídle",
+            "Před jídlem",
+            "Jen v noci",
+            "Na lačno"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Co máte udělat, když vám po 5 dnech není lépe?",
+            "uz": "5 kundan keyin ham yaxshi bo'lmasa, nima qilish kerak?",
+            "en": "What should you do if you don't feel better after 5 days?",
+            "ru": "Что делать, если через 5 дней не лучше?",
+            "uk": "Що робити, якщо через 5 днів не краще?"
+          },
+          "options": [
+            "Jít k lékaři",
+            "Vzít víc tablet",
+            "Pít víc vody",
+            "Nic"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-010",
+      "title": {
+        "cs": "E-mail od vedoucího",
+        "uz": "Rahbardan xat",
+        "en": "An email from the manager",
+        "ru": "Письмо от руководителя",
+        "uk": "Лист від керівника"
+      },
+      "text": "Milí kolegové,\nporada se přesouvá z pondělí na úterý v 9:30. Bude v zasedací místnosti v prvním patře. Přineste si prosím zprávy o prodeji.\nPetr",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kdy bude porada?",
+            "uz": "Majlis qachon bo'ladi?",
+            "en": "When will the meeting be?",
+            "ru": "Когда будет совещание?",
+            "uk": "Коли буде нарада?"
+          },
+          "options": [
+            "V úterý v 9:30",
+            "V pondělí v 9:30",
+            "V úterý v 1:00",
+            "Ve středu v 9:30"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kde bude porada?",
+            "uz": "Majlis qayerda bo'ladi?",
+            "en": "Where will the meeting be?",
+            "ru": "Где будет совещание?",
+            "uk": "Де буде нарада?"
+          },
+          "options": [
+            "V zasedací místnosti v 1. patře",
+            "V kanceláři vedoucího",
+            "V přízemí",
+            "Online"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Co si mají kolegové přinést?",
+            "uz": "Hamkasblar nima olib kelishi kerak?",
+            "en": "What should the colleagues bring?",
+            "ru": "Что должны принести коллеги?",
+            "uk": "Що мають принести колеги?"
+          },
+          "options": [
+            "Zprávy o prodeji",
+            "Oběd",
+            "Notebook",
+            "Nic"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-011",
+      "title": {
+        "cs": "Kurz češtiny",
+        "uz": "Chex tili kursi",
+        "en": "Czech course",
+        "ru": "Курс чешского",
+        "uk": "Курс чеської"
+      },
+      "text": "KURZ ČEŠTINY PRO CIZINCE – ÚROVEŇ A2\nZačátek: 2. října\nKdy: každé úterý a čtvrtek, 18:00–19:30\nCena: 4 900 Kč za semestr\nPřihlášky do 25. září.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kdy kurz začíná?",
+            "uz": "Kurs qachon boshlanadi?",
+            "en": "When does the course start?",
+            "ru": "Когда начинается курс?",
+            "uk": "Коли починається курс?"
+          },
+          "options": [
+            "2. října",
+            "25. září",
+            "1. září",
+            "2. září"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kolikrát týdně je kurz?",
+            "uz": "Kurs haftasiga necha marta?",
+            "en": "How many times a week is the course?",
+            "ru": "Сколько раз в неделю проходит курс?",
+            "uk": "Скільки разів на тиждень відбувається курс?"
+          },
+          "options": [
+            "Dvakrát",
+            "Jednou",
+            "Třikrát",
+            "Každý den"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Do kdy se musíte přihlásit?",
+            "uz": "Qachongacha ro'yxatdan o'tish kerak?",
+            "en": "By when must you sign up?",
+            "ru": "До какого числа нужно записаться?",
+            "uk": "До якого числа треба записатися?"
+          },
+          "options": [
+            "Do 25. září",
+            "Do 2. října",
+            "Do konce roku",
+            "Kdykoliv"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2r-012",
+      "title": {
+        "cs": "Fitness centrum",
+        "uz": "Fitnes markazi",
+        "en": "Fitness centre",
+        "ru": "Фитнес-центр",
+        "uk": "Фітнес-центр"
+      },
+      "text": "FITNESS MAX – nové ceny od 1. listopadu\nJednorázový vstup: 150 Kč\nMěsíční permanentka: 990 Kč\nStudenti a senioři mají slevu 20 %.\nOtevřeno denně 6:00–22:00.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kolik stojí jeden vstup?",
+            "uz": "Bir martalik kirish qancha turadi?",
+            "en": "How much is a single entry?",
+            "ru": "Сколько стоит разовое посещение?",
+            "uk": "Скільки коштує разове відвідування?"
+          },
+          "options": [
+            "150 Kč",
+            "990 Kč",
+            "20 Kč",
+            "220 Kč"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kdo má slevu?",
+            "uz": "Kimga chegirma bor?",
+            "en": "Who gets a discount?",
+            "ru": "У кого есть скидка?",
+            "uk": "Хто має знижку?"
+          },
+          "options": [
+            "Studenti a senioři",
+            "Děti",
+            "Všichni zákazníci",
+            "Nikdo"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kdy je fitness otevřené?",
+            "uz": "Fitnes qachon ochiq?",
+            "en": "When is the gym open?",
+            "ru": "Когда открыт фитнес?",
+            "uk": "Коли відчинений фітнес?"
+          },
+          "options": [
+            "Každý den 6:00–22:00",
+            "Jen ve všední dny",
+            "Každý den do 20:00",
+            "Jen o víkendu"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

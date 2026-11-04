@@ -1,0 +1,13 @@
+{
+  "name": "czechpass-e2e",
+  "private": true,
+  "description": "CzechPass: Playwright bilan Flutter web versiyasini sinash",
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "http-server": "^14.1.1"
+  }
+}

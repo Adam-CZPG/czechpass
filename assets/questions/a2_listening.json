@@ -1,0 +1,939 @@
+{
+  "version": 1,
+  "exam": "a2_listening",
+  "source": "own",
+  "tasks": [
+    {
+      "id": "own-a2l-001",
+      "title": {
+        "cs": "Hlášení na nádraží",
+        "uz": "Vokzaldagi e'lon",
+        "en": "Station announcement",
+        "ru": "Объявление на вокзале",
+        "uk": "Оголошення на вокзалі"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Vážení cestující, vlak do Olomouce odjede dnes z druhé koleje."
+        },
+        {
+          "speaker": "A",
+          "text": "Vlak má zpoždění asi dvacet minut. Děkujeme za pochopení."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kam jede vlak?",
+            "uz": "Poyezd qayerga boradi?",
+            "en": "Where is the train going?",
+            "ru": "Куда идёт поезд?",
+            "uk": "Куди їде поїзд?"
+          },
+          "options": [
+            "Do Olomouce",
+            "Do Brna",
+            "Do Prahy",
+            "Do Ostravy"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Ze které koleje vlak odjede?",
+            "uz": "Poyezd qaysi yo'ldan jo'naydi?",
+            "en": "Which track does the train leave from?",
+            "ru": "С какого пути отправится поезд?",
+            "uk": "З якої колії відправиться поїзд?"
+          },
+          "options": [
+            "Z druhé",
+            "Z první",
+            "Ze třetí",
+            "Z páté"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Jak velké má vlak zpoždění?",
+            "uz": "Poyezd qancha kechikadi?",
+            "en": "How late is the train?",
+            "ru": "На сколько опаздывает поезд?",
+            "uk": "На скільки запізнюється поїзд?"
+          },
+          "options": [
+            "Asi 20 minut",
+            "Asi 2 hodiny",
+            "Asi 10 minut",
+            "Nemá zpoždění"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-002",
+      "title": {
+        "cs": "V obchodě s obuví",
+        "uz": "Poyabzal do'konida",
+        "en": "In a shoe shop",
+        "ru": "В обувном магазине",
+        "uk": "У взуттєвому магазині"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Dobrý den, prosím vás, kolik stojí tyhle boty?"
+        },
+        {
+          "speaker": "B",
+          "text": "Dobrý den. Stojí devět set devadesát korun. Jakou velikost potřebujete?"
+        },
+        {
+          "speaker": "A",
+          "text": "Čtyřicet dva."
+        },
+        {
+          "speaker": "B",
+          "text": "Bohužel máme jen čtyřicet a čtyřicet jedna. Ale v pátek dostaneme nové."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kolik stojí boty?",
+            "uz": "Poyabzal qancha turadi?",
+            "en": "How much are the shoes?",
+            "ru": "Сколько стоят ботинки?",
+            "uk": "Скільки коштують черевики?"
+          },
+          "options": [
+            "990 Kč",
+            "900 Kč",
+            "1 990 Kč",
+            "99 Kč"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Jakou velikost zákazník potřebuje?",
+            "uz": "Xaridorga qaysi o'lcham kerak?",
+            "en": "What size does the customer need?",
+            "ru": "Какой размер нужен покупателю?",
+            "uk": "Який розмір потрібен покупцеві?"
+          },
+          "options": [
+            "42",
+            "40",
+            "41",
+            "43"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kdy budou v obchodě nové boty?",
+            "uz": "Do'konga yangi poyabzal qachon keladi?",
+            "en": "When will the shop have new shoes?",
+            "ru": "Когда в магазине будут новые ботинки?",
+            "uk": "Коли в магазині будуть нові черевики?"
+          },
+          "options": [
+            "V pátek",
+            "Zítra",
+            "V pondělí",
+            "Za měsíc"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-003",
+      "title": {
+        "cs": "Objednání k lékaři",
+        "uz": "Shifokor qabuliga yozilish",
+        "en": "Booking a doctor's appointment",
+        "ru": "Запись к врачу",
+        "uk": "Запис до лікаря"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Dobrý den, chtěl bych se objednat k paní doktorce Malé."
+        },
+        {
+          "speaker": "B",
+          "text": "Dobrý den. Můžete přijít ve středu v deset hodin?"
+        },
+        {
+          "speaker": "A",
+          "text": "Ve středu bohužel pracuji. Nešlo by to ve čtvrtek?"
+        },
+        {
+          "speaker": "B",
+          "text": "Ve čtvrtek ve dvě odpoledne. Nezapomeňte si vzít kartičku pojišťovny."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kdy pacient nemůže přijít?",
+            "uz": "Bemor qachon kela olmaydi?",
+            "en": "When can't the patient come?",
+            "ru": "Когда пациент не может прийти?",
+            "uk": "Коли пацієнт не може прийти?"
+          },
+          "options": [
+            "Ve středu",
+            "Ve čtvrtek",
+            "V pondělí",
+            "V pátek"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kdy má pacient termín?",
+            "uz": "Bemorning qabuli qachon?",
+            "en": "When is the patient's appointment?",
+            "ru": "Когда у пациента приём?",
+            "uk": "Коли в пацієнта прийом?"
+          },
+          "options": [
+            "Ve čtvrtek ve 14:00",
+            "Ve středu v 10:00",
+            "Ve čtvrtek v 10:00",
+            "Ve středu ve 14:00"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Co si má pacient vzít?",
+            "uz": "Bemor nima olib kelishi kerak?",
+            "en": "What should the patient bring?",
+            "ru": "Что пациент должен взять с собой?",
+            "uk": "Що пацієнт має взяти з собою?"
+          },
+          "options": [
+            "Kartičku pojišťovny",
+            "Pas",
+            "Recept",
+            "Peníze"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-004",
+      "title": {
+        "cs": "Hlášení v supermarketu",
+        "uz": "Supermarketdagi e'lon",
+        "en": "Supermarket announcement",
+        "ru": "Объявление в супермаркете",
+        "uk": "Оголошення в супермаркеті"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Vážení zákazníci, dnes máme slevu třicet procent na všechno ovoce a zeleninu."
+        },
+        {
+          "speaker": "A",
+          "text": "Upozorňujeme, že dnes výjimečně zavíráme už v osm hodin večer. Děkujeme za nákup."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Na co je dnes sleva?",
+            "uz": "Bugun nimaga chegirma bor?",
+            "en": "What is on sale today?",
+            "ru": "На что сегодня скидка?",
+            "uk": "На що сьогодні знижка?"
+          },
+          "options": [
+            "Na ovoce a zeleninu",
+            "Na maso",
+            "Na pečivo",
+            "Na všechno zboží"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Jak velká je sleva?",
+            "uz": "Chegirma qancha?",
+            "en": "How big is the discount?",
+            "ru": "Какая скидка?",
+            "uk": "Яка знижка?"
+          },
+          "options": [
+            "30 %",
+            "13 %",
+            "50 %",
+            "20 %"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "V kolik dnes obchod zavírá?",
+            "uz": "Do'kon bugun soat nechada yopiladi?",
+            "en": "What time does the shop close today?",
+            "ru": "Во сколько магазин сегодня закрывается?",
+            "uk": "О котрій магазин сьогодні зачиняється?"
+          },
+          "options": [
+            "Ve 20:00",
+            "V 18:00",
+            "Ve 22:00",
+            "V 8:00"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-005",
+      "title": {
+        "cs": "Na úřadě",
+        "uz": "Idorada",
+        "en": "At the office",
+        "ru": "В учреждении",
+        "uk": "В установі"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Dobrý den, potřebuji prodloužit povolení k pobytu."
+        },
+        {
+          "speaker": "B",
+          "text": "Dobrý den. Máte vyplněnou žádost a fotografii?"
+        },
+        {
+          "speaker": "A",
+          "text": "Žádost mám, ale fotografii nemám."
+        },
+        {
+          "speaker": "B",
+          "text": "Fotografii si můžete udělat v automatu ve druhém patře."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Co muž potřebuje?",
+            "uz": "Erkakka nima kerak?",
+            "en": "What does the man need?",
+            "ru": "Что нужно мужчине?",
+            "uk": "Що потрібно чоловікові?"
+          },
+          "options": [
+            "Prodloužit povolení k pobytu",
+            "Nový pas",
+            "Řidičský průkaz",
+            "Nový byt"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Co mu chybí?",
+            "uz": "Unda nima yetishmaydi?",
+            "en": "What is he missing?",
+            "ru": "Чего ему не хватает?",
+            "uk": "Чого йому бракує?"
+          },
+          "options": [
+            "Fotografie",
+            "Žádost",
+            "Pas",
+            "Peníze"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kde si může fotografii udělat?",
+            "uz": "Suratni qayerda tushishi mumkin?",
+            "en": "Where can he get a photo taken?",
+            "ru": "Где он может сделать фотографию?",
+            "uk": "Де він може зробити фото?"
+          },
+          "options": [
+            "Ve druhém patře",
+            "V přízemí",
+            "Na poště",
+            "Doma"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-006",
+      "title": {
+        "cs": "Schůzka s kamarádem",
+        "uz": "Do'st bilan uchrashuv",
+        "en": "Meeting a friend",
+        "ru": "Встреча с другом",
+        "uk": "Зустріч із другом"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Ahoj Pavle, máš dnes odpoledne čas?"
+        },
+        {
+          "speaker": "B",
+          "text": "Dnes ne, musím do práce. Ale zítra mám volno."
+        },
+        {
+          "speaker": "A",
+          "text": "Tak zítra ve tři v kavárně u nádraží?"
+        },
+        {
+          "speaker": "B",
+          "text": "Dobře, budu tam."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Proč Pavel dnes nemá čas?",
+            "uz": "Nega Pavelning bugun vaqti yo'q?",
+            "en": "Why doesn't Pavel have time today?",
+            "ru": "Почему у Павла сегодня нет времени?",
+            "uk": "Чому Павел сьогодні не має часу?"
+          },
+          "options": [
+            "Musí do práce",
+            "Je nemocný",
+            "Má návštěvu",
+            "Jede na výlet"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kdy se setkají?",
+            "uz": "Ular qachon uchrashadi?",
+            "en": "When will they meet?",
+            "ru": "Когда они встретятся?",
+            "uk": "Коли вони зустрінуться?"
+          },
+          "options": [
+            "Zítra ve tři",
+            "Dnes ve tři",
+            "Zítra v devět",
+            "V sobotu"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kde se setkají?",
+            "uz": "Ular qayerda uchrashadi?",
+            "en": "Where will they meet?",
+            "ru": "Где они встретятся?",
+            "uk": "Де вони зустрінуться?"
+          },
+          "options": [
+            "V kavárně u nádraží",
+            "V restauraci",
+            "Doma",
+            "V parku"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-007",
+      "title": {
+        "cs": "Předpověď počasí",
+        "uz": "Ob-havo ma'lumoti",
+        "en": "Weather forecast",
+        "ru": "Прогноз погоды",
+        "uk": "Прогноз погоди"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "A teď předpověď počasí na zítřek. Ráno bude zataženo a bude pršet."
+        },
+        {
+          "speaker": "A",
+          "text": "Odpoledne se vyjasní. Teploty budou od deseti do patnácti stupňů."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Jaké bude zítra ráno počasí?",
+            "uz": "Ertaga ertalab ob-havo qanday bo'ladi?",
+            "en": "What will the weather be like tomorrow morning?",
+            "ru": "Какая погода будет завтра утром?",
+            "uk": "Яка погода буде завтра вранці?"
+          },
+          "options": [
+            "Bude pršet",
+            "Bude svítit slunce",
+            "Bude sněžit",
+            "Bude velké horko"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kdy se vyjasní?",
+            "uz": "Havo qachon ochiladi?",
+            "en": "When will it clear up?",
+            "ru": "Когда прояснится?",
+            "uk": "Коли проясниться?"
+          },
+          "options": [
+            "Odpoledne",
+            "Ráno",
+            "V noci",
+            "Až pozítří"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Jaká bude nejvyšší teplota?",
+            "uz": "Eng yuqori harorat qancha bo'ladi?",
+            "en": "What will the highest temperature be?",
+            "ru": "Какой будет самая высокая температура?",
+            "uk": "Якою буде найвища температура?"
+          },
+          "options": [
+            "15 stupňů",
+            "10 stupňů",
+            "5 stupňů",
+            "20 stupňů"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-008",
+      "title": {
+        "cs": "V restauraci",
+        "uz": "Restoranda",
+        "en": "At a restaurant",
+        "ru": "В ресторане",
+        "uk": "У ресторані"
+      },
+      "lines": [
+        {
+          "speaker": "B",
+          "text": "Dobrý den, co si dáte?"
+        },
+        {
+          "speaker": "A",
+          "text": "Dám si kuřecí polévku a jednu malou minerálku."
+        },
+        {
+          "speaker": "B",
+          "text": "Kuřecí polévka už bohužel není. Máme jen gulášovou."
+        },
+        {
+          "speaker": "A",
+          "text": "Tak gulášovou, prosím."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Jakou polévku host nejdřív chtěl?",
+            "uz": "Mehmon avval qaysi sho'rvani xohlagan?",
+            "en": "Which soup did the guest want first?",
+            "ru": "Какой суп гость хотел сначала?",
+            "uk": "Який суп гість хотів спочатку?"
+          },
+          "options": [
+            "Kuřecí",
+            "Gulášovou",
+            "Zeleninovou",
+            "Rybí"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Jakou polévku host dostane?",
+            "uz": "Mehmonga qaysi sho'rva beriladi?",
+            "en": "Which soup will the guest get?",
+            "ru": "Какой суп получит гость?",
+            "uk": "Який суп отримає гість?"
+          },
+          "options": [
+            "Gulášovou",
+            "Kuřecí",
+            "Žádnou",
+            "Zeleninovou"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Co si host dá k pití?",
+            "uz": "Mehmon nima ichadi?",
+            "en": "What will the guest drink?",
+            "ru": "Что гость будет пить?",
+            "uk": "Що гість питиме?"
+          },
+          "options": [
+            "Minerálku",
+            "Pivo",
+            "Kávu",
+            "Džus"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-009",
+      "title": {
+        "cs": "Hlášení o dopravě",
+        "uz": "Transport haqida e'lon",
+        "en": "Public transport announcement",
+        "ru": "Объявление о транспорте",
+        "uk": "Оголошення про транспорт"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Upozorňujeme cestující, že od pondělí do pátku nejezdí tramvaj číslo devět."
+        },
+        {
+          "speaker": "A",
+          "text": "Místo tramvaje jezdí autobus X9 ze zastávky Anděl."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Co nejezdí?",
+            "uz": "Nima qatnamaydi?",
+            "en": "What is not running?",
+            "ru": "Что не ходит?",
+            "uk": "Що не курсує?"
+          },
+          "options": [
+            "Tramvaj číslo 9",
+            "Autobus číslo 9",
+            "Metro",
+            "Vlak"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kdy nejezdí?",
+            "uz": "Qachon qatnamaydi?",
+            "en": "When is it not running?",
+            "ru": "Когда не ходит?",
+            "uk": "Коли не курсує?"
+          },
+          "options": [
+            "Od pondělí do pátku",
+            "O víkendu",
+            "Jen v pondělí",
+            "Celý měsíc"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Odkud jede náhradní autobus?",
+            "uz": "O'rniga qatnaydigan avtobus qayerdan jo'naydi?",
+            "en": "Where does the replacement bus leave from?",
+            "ru": "Откуда отправляется замещающий автобус?",
+            "uk": "Звідки відправляється замісний автобус?"
+          },
+          "options": [
+            "Ze zastávky Anděl",
+            "Z hlavního nádraží",
+            "Z letiště",
+            "Z Náměstí Míru"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-010",
+      "title": {
+        "cs": "Telefonát ze školky",
+        "uz": "Bog'chadan qo'ng'iroq",
+        "en": "A call from the nursery",
+        "ru": "Звонок из детского сада",
+        "uk": "Дзвінок із дитсадка"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Dobrý den, tady mateřská škola Sluníčko. Váš syn má teplotu. Můžete si pro něj přijít?"
+        },
+        {
+          "speaker": "B",
+          "text": "Dobrý den. Ano, hned vyrazím. Budu tam za půl hodiny."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kdo volá?",
+            "uz": "Kim qo'ng'iroq qilyapti?",
+            "en": "Who is calling?",
+            "ru": "Кто звонит?",
+            "uk": "Хто телефонує?"
+          },
+          "options": [
+            "Mateřská škola",
+            "Lékař",
+            "Šéf",
+            "Soused"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Co je synovi?",
+            "uz": "O'g'ilga nima bo'lgan?",
+            "en": "What is wrong with the son?",
+            "ru": "Что с сыном?",
+            "uk": "Що із сином?"
+          },
+          "options": [
+            "Má teplotu",
+            "Bolí ho noha",
+            "Je smutný",
+            "Ztratil bundu"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kdy tam rodič bude?",
+            "uz": "Ota-ona u yerga qachon yetib boradi?",
+            "en": "When will the parent be there?",
+            "ru": "Когда родитель будет там?",
+            "uk": "Коли батько чи мати будуть там?"
+          },
+          "options": [
+            "Za půl hodiny",
+            "Za hodinu",
+            "Večer",
+            "Zítra ráno"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-011",
+      "title": {
+        "cs": "Byt k pronájmu",
+        "uz": "Ijaraga kvartira",
+        "en": "A flat to rent",
+        "ru": "Квартира в аренду",
+        "uk": "Квартира в оренду"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Dobrý den, volám kvůli bytu v Lipové ulici. Je ještě volný?"
+        },
+        {
+          "speaker": "B",
+          "text": "Ano, je. Je to dva plus jedna. Nájem je dvanáct tisíc korun měsíčně a k tomu energie."
+        },
+        {
+          "speaker": "A",
+          "text": "Můžu se na byt podívat v sobotu?"
+        },
+        {
+          "speaker": "B",
+          "text": "Ano, v sobotu dopoledne, třeba v deset."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Jak velký je byt?",
+            "uz": "Kvartira qanday?",
+            "en": "How big is the flat?",
+            "ru": "Какая это квартира?",
+            "uk": "Яка це квартира?"
+          },
+          "options": [
+            "2+1",
+            "1+1",
+            "3+1",
+            "4+kk"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kolik se platí za nájem?",
+            "uz": "Ijara uchun qancha to'lanadi?",
+            "en": "How much is the rent?",
+            "ru": "Сколько стоит аренда?",
+            "uk": "Скільки коштує оренда?"
+          },
+          "options": [
+            "12 000 Kč a energie zvlášť",
+            "12 000 Kč včetně energií",
+            "2 000 Kč",
+            "20 000 Kč"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Kdy si byt prohlédne?",
+            "uz": "U kvartirani qachon ko'radi?",
+            "en": "When will he view the flat?",
+            "ru": "Когда он посмотрит квартиру?",
+            "uk": "Коли він подивиться квартиру?"
+          },
+          "options": [
+            "V sobotu v deset",
+            "V neděli v deset",
+            "V sobotu odpoledne",
+            "Dnes večer"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "own-a2l-012",
+      "title": {
+        "cs": "Na poště",
+        "uz": "Pochtada",
+        "en": "At the post office",
+        "ru": "На почте",
+        "uk": "На пошті"
+      },
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Dobrý den, chtěla bych poslat tento balík do Polska."
+        },
+        {
+          "speaker": "B",
+          "text": "Dobrý den. Bude to stát tři sta dvacet korun. Balík dojde za tři až pět dní."
+        },
+        {
+          "speaker": "A",
+          "text": "Dobře. Můžu platit kartou?"
+        },
+        {
+          "speaker": "B",
+          "text": "Ano, samozřejmě."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": {
+            "cs": "Kam žena posílá balík?",
+            "uz": "Ayol posilkani qayerga yuboryapti?",
+            "en": "Where is the woman sending the parcel?",
+            "ru": "Куда женщина отправляет посылку?",
+            "uk": "Куди жінка надсилає посилку?"
+          },
+          "options": [
+            "Do Polska",
+            "Na Slovensko",
+            "Do Německa",
+            "Do Rakouska"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q2",
+          "question": {
+            "cs": "Kolik to stojí?",
+            "uz": "Bu qancha turadi?",
+            "en": "How much does it cost?",
+            "ru": "Сколько это стоит?",
+            "uk": "Скільки це коштує?"
+          },
+          "options": [
+            "320 Kč",
+            "230 Kč",
+            "300 Kč",
+            "120 Kč"
+          ],
+          "correct": 0
+        },
+        {
+          "id": "q3",
+          "question": {
+            "cs": "Jak žena zaplatí?",
+            "uz": "Ayol qanday to'laydi?",
+            "en": "How will the woman pay?",
+            "ru": "Как женщина заплатит?",
+            "uk": "Як жінка заплатить?"
+          },
+          "options": [
+            "Kartou",
+            "Hotově",
+            "Šekem",
+            "Převodem z účtu"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

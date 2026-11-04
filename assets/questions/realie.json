@@ -1,0 +1,987 @@
+{
+  "version": 1,
+  "exam": "realie",
+  "source": "own",
+  "topics": {
+    "geografie": {
+      "cs": "Zeměpis",
+      "uz": "Geografiya",
+      "en": "Geography",
+      "ru": "География",
+      "uk": "Географія"
+    },
+    "historie": {
+      "cs": "Dějiny",
+      "uz": "Tarix",
+      "en": "History",
+      "ru": "История",
+      "uk": "Історія"
+    },
+    "stat": {
+      "cs": "Stát a politika",
+      "uz": "Davlat tuzilishi",
+      "en": "State and politics",
+      "ru": "Государство и политика",
+      "uk": "Держава і політика"
+    },
+    "kultura": {
+      "cs": "Kultura",
+      "uz": "Madaniyat",
+      "en": "Culture",
+      "ru": "Культура",
+      "uk": "Культура"
+    }
+  },
+  "questions": [
+    {
+      "id": "own-geo-001",
+      "topic": "geografie",
+      "question": {
+        "cs": "Jak se jmenuje nejvyšší hora České republiky?",
+        "uz": "Chexiyaning eng baland tog'i qanday ataladi?",
+        "en": "What is the name of the highest mountain in the Czech Republic?",
+        "ru": "Как называется самая высокая гора Чешской Республики?",
+        "uk": "Як називається найвища гора Чеської Республіки?"
+      },
+      "options": [
+        "Sněžka",
+        "Praděd",
+        "Lysá hora",
+        "Klínovec"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Sněžka (1 603 m) leží v Krkonoších.",
+        "uz": "Sněžka (1 603 m) Krkonoše tog'larida joylashgan.",
+        "en": "Sněžka (1,603 m) is in the Krkonoše mountains.",
+        "ru": "Снежка (1603 м) находится в Крконоше.",
+        "uk": "Снєжка (1603 м) розташована в Крконоше."
+      }
+    },
+    {
+      "id": "own-geo-002",
+      "topic": "geografie",
+      "question": {
+        "cs": "Která řeka protéká Prahou?",
+        "uz": "Praga orqali qaysi daryo oqib o'tadi?",
+        "en": "Which river flows through Prague?",
+        "ru": "Какая река протекает через Прагу?",
+        "uk": "Яка річка протікає через Прагу?"
+      },
+      "options": [
+        "Vltava",
+        "Morava",
+        "Odra",
+        "Dyje"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Prahou protéká Vltava, nejdelší řeka v Česku.",
+        "uz": "Praga orqali Vltava oqadi. U Chexiyadagi eng uzun daryo.",
+        "en": "The Vltava flows through Prague. It is the longest river in Czechia.",
+        "ru": "Через Прагу протекает Влтава — самая длинная река Чехии.",
+        "uk": "Через Прагу протікає Влтава — найдовша річка Чехії."
+      }
+    },
+    {
+      "id": "own-geo-003",
+      "topic": "geografie",
+      "question": {
+        "cs": "Které město je sídlem Jihomoravského kraje?",
+        "uz": "Janubiy Moraviya viloyatining markazi qaysi shahar?",
+        "en": "Which city is the seat of the South Moravian Region?",
+        "ru": "Какой город является центром Южноморавского края?",
+        "uk": "Яке місто є центром Південноморавського краю?"
+      },
+      "options": [
+        "Brno",
+        "Olomouc",
+        "Zlín",
+        "Jihlava"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Brno je druhé největší město ČR a sídlo Jihomoravského kraje.",
+        "uz": "Brno Chexiyaning ikkinchi eng katta shahri va Janubiy Moraviya viloyati markazi.",
+        "en": "Brno is the second-largest city in Czechia and the seat of the South Moravian Region.",
+        "ru": "Брно — второй по величине город Чехии и центр Южноморавского края.",
+        "uk": "Брно — друге за величиною місто Чехії та центр Південноморавського краю."
+      }
+    },
+    {
+      "id": "own-his-001",
+      "topic": "historie",
+      "question": {
+        "cs": "Kdy vzniklo samostatné Československo?",
+        "uz": "Mustaqil Chexoslovakiya qachon tashkil topgan?",
+        "en": "When was independent Czechoslovakia founded?",
+        "ru": "Когда была образована независимая Чехословакия?",
+        "uk": "Коли утворилася незалежна Чехословаччина?"
+      },
+      "options": [
+        "28. října 1918",
+        "1. ledna 1993",
+        "17. listopadu 1989",
+        "9. května 1945"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Samostatné Československo vzniklo 28. října 1918. Tento den je dnes státním svátkem.",
+        "uz": "Mustaqil Chexoslovakiya 1918-yil 28-oktabrda tashkil topgan. Bu kun hozir davlat bayrami.",
+        "en": "Independent Czechoslovakia was founded on 28 October 1918. The day is now a public holiday.",
+        "ru": "Независимая Чехословакия образована 28 октября 1918 года. Сегодня это государственный праздник.",
+        "uk": "Незалежна Чехословаччина утворилася 28 жовтня 1918 року. Сьогодні це державне свято."
+      }
+    },
+    {
+      "id": "own-his-002",
+      "topic": "historie",
+      "question": {
+        "cs": "Kdy vznikla samostatná Česká republika?",
+        "uz": "Mustaqil Chexiya Respublikasi qachon tashkil topgan?",
+        "en": "When did the independent Czech Republic come into being?",
+        "ru": "Когда возникла самостоятельная Чешская Республика?",
+        "uk": "Коли виникла самостійна Чеська Республіка?"
+      },
+      "options": [
+        "1. ledna 1993",
+        "28. října 1918",
+        "17. listopadu 1989",
+        "1. května 2004"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Po rozdělení Československa vznikla 1. ledna 1993 Česká republika.",
+        "uz": "Chexoslovakiya bo'lingach, 1993-yil 1-yanvarda Chexiya Respublikasi tashkil topdi.",
+        "en": "After Czechoslovakia split, the Czech Republic came into being on 1 January 1993.",
+        "ru": "После разделения Чехословакии 1 января 1993 года возникла Чешская Республика.",
+        "uk": "Після розділу Чехословаччини 1 січня 1993 року виникла Чеська Республіка."
+      }
+    },
+    {
+      "id": "own-sta-001",
+      "topic": "stat",
+      "question": {
+        "cs": "Kdo volí prezidenta České republiky?",
+        "uz": "Chexiya prezidentini kim saylaydi?",
+        "en": "Who elects the President of the Czech Republic?",
+        "ru": "Кто избирает президента Чешской Республики?",
+        "uk": "Хто обирає президента Чеської Республіки?"
+      },
+      "options": [
+        "Občané v přímé volbě",
+        "Poslanecká sněmovna",
+        "Vláda",
+        "Ústavní soud"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Od roku 2013 volí prezidenta přímo občané.",
+        "uz": "2013-yildan beri prezidentni fuqarolar to'g'ridan-to'g'ri saylaydi.",
+        "en": "Since 2013 the president has been elected directly by citizens.",
+        "ru": "С 2013 года президента избирают граждане прямым голосованием.",
+        "uk": "З 2013 року президента обирають громадяни шляхом прямих виборів."
+      }
+    },
+    {
+      "id": "own-sta-002",
+      "topic": "stat",
+      "question": {
+        "cs": "Na jak dlouho jsou voleni poslanci?",
+        "uz": "Deputatlar necha yilga saylanadi?",
+        "en": "For how long are deputies elected?",
+        "ru": "На какой срок избираются депутаты?",
+        "uk": "На який термін обирають депутатів?"
+      },
+      "options": [
+        "4 roky",
+        "6 let",
+        "5 let",
+        "2 roky"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Volební období Poslanecké sněmovny jsou 4 roky.",
+        "uz": "Deputatlar palatasining vakolat muddati 4 yil.",
+        "en": "The term of the Chamber of Deputies is 4 years.",
+        "ru": "Срок полномочий Палаты депутатов — 4 года.",
+        "uk": "Термін повноважень Палати депутатів — 4 роки."
+      }
+    },
+    {
+      "id": "own-kul-001",
+      "topic": "kultura",
+      "question": {
+        "cs": "Kdo složil cyklus symfonických básní Má vlast?",
+        "uz": "Má vlast simfonik poemalar turkumini kim yozgan?",
+        "en": "Who composed the cycle of symphonic poems Má vlast?",
+        "ru": "Кто написал цикл симфонических поэм «Моя родина»?",
+        "uk": "Хто написав цикл симфонічних поем «Моя батьківщина»?"
+      },
+      "options": [
+        "Bedřich Smetana",
+        "Antonín Dvořák",
+        "Leoš Janáček",
+        "Bohuslav Martinů"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Cyklus Má vlast složil Bedřich Smetana. Jeho součástí je i Vltava.",
+        "uz": "Má vlast turkumini Bedřich Smetana yaratgan. Unga mashhur Vltava asari ham kiradi.",
+        "en": "Bedřich Smetana composed Má vlast. It includes the famous piece Vltava.",
+        "ru": "Цикл «Моя родина» написал Бедржих Сметана. В него входит и «Влтава».",
+        "uk": "Цикл «Моя батьківщина» написав Бедржих Сметана. До нього входить і «Влтава»."
+      }
+    },
+    {
+      "id": "own-geo-004",
+      "topic": "geografie",
+      "question": {
+        "cs": "Které město je hlavním městem České republiky?",
+        "uz": "Chexiya Respublikasining poytaxti qaysi shahar?",
+        "en": "Which city is the capital of the Czech Republic?",
+        "ru": "Какой город является столицей Чешской Республики?",
+        "uk": "Яке місто є столицею Чеської Республіки?"
+      },
+      "options": [
+        "Praha",
+        "Brno",
+        "Ostrava",
+        "Plzeň"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Hlavním městem České republiky je Praha.",
+        "uz": "Chexiya Respublikasining poytaxti Praga.",
+        "en": "The capital of the Czech Republic is Prague.",
+        "ru": "Столица Чешской Республики — Прага.",
+        "uk": "Столиця Чеської Республіки — Прага."
+      }
+    },
+    {
+      "id": "own-geo-005",
+      "topic": "geografie",
+      "question": {
+        "cs": "Kolik krajů má Česká republika (včetně Prahy)?",
+        "uz": "Chexiyada nechta viloyat bor (Praga bilan birga)?",
+        "en": "How many regions does the Czech Republic have (including Prague)?",
+        "ru": "Сколько краёв в Чешской Республике (включая Прагу)?",
+        "uk": "Скільки країв у Чеській Республіці (разом із Прагою)?"
+      },
+      "options": [
+        "14",
+        "13",
+        "8",
+        "10"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Česká republika má 14 krajů. Jedním z nich je hlavní město Praha.",
+        "uz": "Chexiyada 14 ta viloyat bor, ulardan biri poytaxt Praga.",
+        "en": "The Czech Republic has 14 regions; one of them is the capital, Prague.",
+        "ru": "В Чехии 14 краёв, один из них — столица Прага.",
+        "uk": "У Чехії 14 країв, один із них — столиця Прага."
+      }
+    },
+    {
+      "id": "own-geo-006",
+      "topic": "geografie",
+      "question": {
+        "cs": "Se kterým státem Česká republika nesousedí?",
+        "uz": "Chexiya qaysi davlat bilan chegaradosh emas?",
+        "en": "Which country does not border the Czech Republic?",
+        "ru": "С какой страной Чехия не граничит?",
+        "uk": "З якою країною Чехія не межує?"
+      },
+      "options": [
+        "S Maďarskem",
+        "S Polskem",
+        "S Rakouskem",
+        "Se Slovenskem"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Česká republika sousedí s Německem, Polskem, Slovenskem a Rakouskem.",
+        "uz": "Chexiya Germaniya, Polsha, Slovakiya va Avstriya bilan chegaradosh.",
+        "en": "The Czech Republic borders Germany, Poland, Slovakia and Austria.",
+        "ru": "Чехия граничит с Германией, Польшей, Словакией и Австрией.",
+        "uk": "Чехія межує з Німеччиною, Польщею, Словаччиною та Австрією."
+      }
+    },
+    {
+      "id": "own-geo-007",
+      "topic": "geografie",
+      "question": {
+        "cs": "Která řeka protéká Brnem?",
+        "uz": "Brno orqali qaysi daryo oqadi?",
+        "en": "Which river flows through Brno?",
+        "ru": "Какая река протекает через Брно?",
+        "uk": "Яка річка протікає через Брно?"
+      },
+      "options": [
+        "Svratka",
+        "Vltava",
+        "Labe",
+        "Ohře"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Brnem protékají řeky Svratka a Svitava.",
+        "uz": "Brno orqali Svratka va Svitava daryolari oqadi.",
+        "en": "The Svratka and Svitava rivers flow through Brno.",
+        "ru": "Через Брно протекают реки Свратка и Свитава.",
+        "uk": "Через Брно протікають річки Свратка і Світава."
+      }
+    },
+    {
+      "id": "own-geo-008",
+      "topic": "geografie",
+      "question": {
+        "cs": "Jak se jmenuje největší rybník v České republice?",
+        "uz": "Chexiyadagi eng katta hovuz (rybník) qanday ataladi?",
+        "en": "What is the name of the largest fishpond in the Czech Republic?",
+        "ru": "Как называется самый большой пруд в Чехии?",
+        "uk": "Як називається найбільший ставок у Чехії?"
+      },
+      "options": [
+        "Rožmberk",
+        "Lipno",
+        "Máchovo jezero",
+        "Velké Dářko"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Největším rybníkem v Česku je Rožmberk v jižních Čechách.",
+        "uz": "Chexiyadagi eng katta hovuz — Janubiy Chexiyadagi Rožmberk.",
+        "en": "The largest fishpond in Czechia is Rožmberk in South Bohemia.",
+        "ru": "Самый большой пруд Чехии — Рожмберк в Южной Чехии.",
+        "uk": "Найбільший ставок Чехії — Рожмберк у Південній Чехії."
+      }
+    },
+    {
+      "id": "own-geo-009",
+      "topic": "geografie",
+      "question": {
+        "cs": "Které město je známé svými lázněmi?",
+        "uz": "Qaysi shahar shifobaxsh kurortlari bilan mashhur?",
+        "en": "Which town is famous for its spas?",
+        "ru": "Какой город известен своими курортами?",
+        "uk": "Яке місто відоме своїми курортами?"
+      },
+      "options": [
+        "Karlovy Vary",
+        "Kladno",
+        "Most",
+        "Ostrava"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Karlovy Vary jsou nejznámější české lázeňské město.",
+        "uz": "Karlovy Vary — Chexiyaning eng mashhur kurort shahri.",
+        "en": "Karlovy Vary is the best-known Czech spa town.",
+        "ru": "Карловы Вары — самый известный курортный город Чехии.",
+        "uk": "Карлові Вари — найвідоміше курортне місто Чехії."
+      }
+    },
+    {
+      "id": "own-his-003",
+      "topic": "historie",
+      "question": {
+        "cs": "Kdo byl prvním prezidentem Československa?",
+        "uz": "Chexoslovakiyaning birinchi prezidenti kim bo'lgan?",
+        "en": "Who was the first president of Czechoslovakia?",
+        "ru": "Кто был первым президентом Чехословакии?",
+        "uk": "Хто був першим президентом Чехословаччини?"
+      },
+      "options": [
+        "Tomáš Garrigue Masaryk",
+        "Edvard Beneš",
+        "Václav Havel",
+        "Ludvík Svoboda"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Prvním prezidentem Československa byl Tomáš Garrigue Masaryk.",
+        "uz": "Chexoslovakiyaning birinchi prezidenti Tomáš Garrigue Masaryk bo'lgan.",
+        "en": "The first president of Czechoslovakia was Tomáš Garrigue Masaryk.",
+        "ru": "Первым президентом Чехословакии был Томаш Гарриг Масарик.",
+        "uk": "Першим президентом Чехословаччини був Томаш Гарріг Масарик."
+      }
+    },
+    {
+      "id": "own-his-004",
+      "topic": "historie",
+      "question": {
+        "cs": "Kdo byl prvním prezidentem samostatné České republiky?",
+        "uz": "Mustaqil Chexiya Respublikasining birinchi prezidenti kim bo'lgan?",
+        "en": "Who was the first president of the independent Czech Republic?",
+        "ru": "Кто был первым президентом самостоятельной Чешской Республики?",
+        "uk": "Хто був першим президентом самостійної Чеської Республіки?"
+      },
+      "options": [
+        "Václav Havel",
+        "Václav Klaus",
+        "Miloš Zeman",
+        "Tomáš Garrigue Masaryk"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Prvním prezidentem České republiky byl od roku 1993 Václav Havel.",
+        "uz": "1993-yildan Chexiya Respublikasining birinchi prezidenti Václav Havel bo'lgan.",
+        "en": "From 1993 the first president of the Czech Republic was Václav Havel.",
+        "ru": "С 1993 года первым президентом Чешской Республики был Вацлав Гавел.",
+        "uk": "З 1993 року першим президентом Чеської Республіки був Вацлав Гавел."
+      }
+    },
+    {
+      "id": "own-his-005",
+      "topic": "historie",
+      "question": {
+        "cs": "Kdy začala sametová revoluce?",
+        "uz": "«Baxmal inqilob» qachon boshlangan?",
+        "en": "When did the Velvet Revolution begin?",
+        "ru": "Когда началась «бархатная революция»?",
+        "uk": "Коли почалася «оксамитова революція»?"
+      },
+      "options": [
+        "17. listopadu 1989",
+        "28. října 1918",
+        "21. srpna 1968",
+        "1. ledna 1993"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Sametová revoluce začala 17. listopadu 1989 a vedla k pádu komunistického režimu.",
+        "uz": "Baxmal inqilob 1989-yil 17-noyabrda boshlanib, kommunistik tuzumning qulashiga olib kelgan.",
+        "en": "The Velvet Revolution began on 17 November 1989 and led to the fall of the communist regime.",
+        "ru": "Бархатная революция началась 17 ноября 1989 года и привела к падению коммунистического режима.",
+        "uk": "Оксамитова революція почалася 17 листопада 1989 року й призвела до падіння комуністичного режиму."
+      }
+    },
+    {
+      "id": "own-his-006",
+      "topic": "historie",
+      "question": {
+        "cs": "Kdy vstoupila Česká republika do Evropské unie?",
+        "uz": "Chexiya Yevropa Ittifoqiga qachon kirgan?",
+        "en": "When did the Czech Republic join the European Union?",
+        "ru": "Когда Чехия вступила в Европейский союз?",
+        "uk": "Коли Чехія вступила до Європейського Союзу?"
+      },
+      "options": [
+        "1. května 2004",
+        "1. ledna 1993",
+        "12. března 1999",
+        "1. ledna 2009"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Česká republika je členem Evropské unie od 1. května 2004.",
+        "uz": "Chexiya 2004-yil 1-maydan Yevropa Ittifoqi a'zosi.",
+        "en": "The Czech Republic has been an EU member since 1 May 2004.",
+        "ru": "Чехия — член Евросоюза с 1 мая 2004 года.",
+        "uk": "Чехія — член Євросоюзу з 1 травня 2004 року."
+      }
+    },
+    {
+      "id": "own-his-007",
+      "topic": "historie",
+      "question": {
+        "cs": "Ve kterém roce vstoupila Česká republika do NATO?",
+        "uz": "Chexiya NATOga qaysi yili kirgan?",
+        "en": "In which year did the Czech Republic join NATO?",
+        "ru": "В каком году Чехия вступила в НАТО?",
+        "uk": "У якому році Чехія вступила до НАТО?"
+      },
+      "options": [
+        "1999",
+        "2004",
+        "1993",
+        "1989"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Česká republika vstoupila do NATO 12. března 1999.",
+        "uz": "Chexiya NATOga 1999-yil 12-martda kirgan.",
+        "en": "The Czech Republic joined NATO on 12 March 1999.",
+        "ru": "Чехия вступила в НАТО 12 марта 1999 года.",
+        "uk": "Чехія вступила до НАТО 12 березня 1999 року."
+      }
+    },
+    {
+      "id": "own-his-008",
+      "topic": "historie",
+      "question": {
+        "cs": "Který panovník založil v roce 1348 univerzitu v Praze?",
+        "uz": "1348-yilda Pragada universitetni qaysi hukmdor asos solgan?",
+        "en": "Which ruler founded the university in Prague in 1348?",
+        "ru": "Какой правитель основал университет в Праге в 1348 году?",
+        "uk": "Який правитель заснував університет у Празі 1348 року?"
+      },
+      "options": [
+        "Karel IV.",
+        "Rudolf II.",
+        "Josef II.",
+        "Václav II."
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Karel IV. založil v roce 1348 Karlovu univerzitu, nejstarší univerzitu ve střední Evropě.",
+        "uz": "Karel IV. 1348-yilda Markaziy Yevropadagi eng qadimgi universitet — Karl universitetiga asos solgan.",
+        "en": "Charles IV founded Charles University in 1348, the oldest university in Central Europe.",
+        "ru": "Карл IV в 1348 году основал Карлов университет — старейший в Центральной Европе.",
+        "uk": "Карл IV 1348 року заснував Карлів університет — найстаріший у Центральній Європі."
+      }
+    },
+    {
+      "id": "own-his-009",
+      "topic": "historie",
+      "question": {
+        "cs": "Kdy obsadila vojska Varšavské smlouvy Československo?",
+        "uz": "Varshava shartnomasi qo'shinlari Chexoslovakiyani qachon bosib olgan?",
+        "en": "When did Warsaw Pact troops occupy Czechoslovakia?",
+        "ru": "Когда войска Варшавского договора оккупировали Чехословакию?",
+        "uk": "Коли війська Варшавського договору окупували Чехословаччину?"
+      },
+      "options": [
+        "V srpnu 1968",
+        "V únoru 1948",
+        "V září 1938",
+        "V listopadu 1989"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Vojska Varšavské smlouvy obsadila Československo 21. srpna 1968 a ukončila Pražské jaro.",
+        "uz": "Varshava shartnomasi qo'shinlari 1968-yil 21-avgustda Chexoslovakiyani bosib olib, «Praga bahori»ga barham bergan.",
+        "en": "Warsaw Pact troops occupied Czechoslovakia on 21 August 1968, ending the Prague Spring.",
+        "ru": "Войска Варшавского договора оккупировали Чехословакию 21 августа 1968 года, положив конец Пражской весне.",
+        "uk": "Війська Варшавського договору окупували Чехословаччину 21 серпня 1968 року, поклавши край Празькій весні."
+      }
+    },
+    {
+      "id": "own-his-010",
+      "topic": "historie",
+      "question": {
+        "cs": "Kdo byl Jan Hus?",
+        "uz": "Jan Hus kim bo'lgan?",
+        "en": "Who was Jan Hus?",
+        "ru": "Кем был Ян Гус?",
+        "uk": "Ким був Ян Гус?"
+      },
+      "options": [
+        "Kazatel a církevní reformátor",
+        "Český král",
+        "Hudební skladatel",
+        "Malíř"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Jan Hus byl kazatel a církevní reformátor. V roce 1415 byl upálen v Kostnici.",
+        "uz": "Jan Hus voiz va cherkov islohotchisi bo'lgan. 1415-yilda Konstans shahrida gulxanda yoqib yuborilgan.",
+        "en": "Jan Hus was a preacher and church reformer. He was burned at the stake in Constance in 1415.",
+        "ru": "Ян Гус — проповедник и церковный реформатор. В 1415 году сожжён в Констанце.",
+        "uk": "Ян Гус — проповідник і церковний реформатор. 1415 року спалений у Констанці."
+      }
+    },
+    {
+      "id": "own-sta-003",
+      "topic": "stat",
+      "question": {
+        "cs": "Kolik poslanců má Poslanecká sněmovna?",
+        "uz": "Deputatlar palatasida nechta deputat bor?",
+        "en": "How many deputies does the Chamber of Deputies have?",
+        "ru": "Сколько депутатов в Палате депутатов?",
+        "uk": "Скільки депутатів у Палаті депутатів?"
+      },
+      "options": [
+        "200",
+        "81",
+        "150",
+        "100"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Poslanecká sněmovna má 200 poslanců.",
+        "uz": "Deputatlar palatasida 200 ta deputat bor.",
+        "en": "The Chamber of Deputies has 200 deputies.",
+        "ru": "В Палате депутатов 200 депутатов.",
+        "uk": "У Палаті депутатів 200 депутатів."
+      }
+    },
+    {
+      "id": "own-sta-004",
+      "topic": "stat",
+      "question": {
+        "cs": "Kolik senátorů má Senát?",
+        "uz": "Senatda nechta senator bor?",
+        "en": "How many senators does the Senate have?",
+        "ru": "Сколько сенаторов в Сенате?",
+        "uk": "Скільки сенаторів у Сенаті?"
+      },
+      "options": [
+        "81",
+        "200",
+        "100",
+        "50"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Senát má 81 senátorů.",
+        "uz": "Senatda 81 ta senator bor.",
+        "en": "The Senate has 81 senators.",
+        "ru": "В Сенате 81 сенатор.",
+        "uk": "У Сенаті 81 сенатор."
+      }
+    },
+    {
+      "id": "own-sta-005",
+      "topic": "stat",
+      "question": {
+        "cs": "Na jak dlouho jsou voleni senátoři?",
+        "uz": "Senatorlar necha yilga saylanadi?",
+        "en": "For how long are senators elected?",
+        "ru": "На какой срок избираются сенаторы?",
+        "uk": "На який термін обирають сенаторів?"
+      },
+      "options": [
+        "6 let",
+        "4 roky",
+        "5 let",
+        "2 roky"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Senátoři jsou voleni na 6 let. Každé 2 roky se volí třetina Senátu.",
+        "uz": "Senatorlar 6 yilga saylanadi. Har 2 yilda Senatning uchdan biri qayta saylanadi.",
+        "en": "Senators are elected for 6 years; a third of the Senate is elected every 2 years.",
+        "ru": "Сенаторов избирают на 6 лет; каждые 2 года переизбирается треть Сената.",
+        "uk": "Сенаторів обирають на 6 років; кожні 2 роки переобирається третина Сенату."
+      }
+    },
+    {
+      "id": "own-sta-006",
+      "topic": "stat",
+      "question": {
+        "cs": "Na jak dlouho je volen prezident republiky?",
+        "uz": "Respublika prezidenti necha yilga saylanadi?",
+        "en": "For how long is the President of the Republic elected?",
+        "ru": "На какой срок избирается президент республики?",
+        "uk": "На який термін обирають президента республіки?"
+      },
+      "options": [
+        "5 let",
+        "4 roky",
+        "6 let",
+        "7 let"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Prezident je volen na 5 let.",
+        "uz": "Prezident 5 yilga saylanadi.",
+        "en": "The president is elected for 5 years.",
+        "ru": "Президента избирают на 5 лет.",
+        "uk": "Президента обирають на 5 років."
+      }
+    },
+    {
+      "id": "own-sta-007",
+      "topic": "stat",
+      "question": {
+        "cs": "Kde sídlí Ústavní soud České republiky?",
+        "uz": "Chexiya Konstitutsiyaviy sudi qayerda joylashgan?",
+        "en": "Where is the Constitutional Court of the Czech Republic based?",
+        "ru": "Где находится Конституционный суд Чешской Республики?",
+        "uk": "Де розташований Конституційний суд Чеської Республіки?"
+      },
+      "options": [
+        "V Brně",
+        "V Praze",
+        "V Olomouci",
+        "V Plzni"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Ústavní soud sídlí v Brně.",
+        "uz": "Konstitutsiyaviy sud Brno shahrida joylashgan.",
+        "en": "The Constitutional Court is based in Brno.",
+        "ru": "Конституционный суд находится в Брно.",
+        "uk": "Конституційний суд розташований у Брно."
+      }
+    },
+    {
+      "id": "own-sta-008",
+      "topic": "stat",
+      "question": {
+        "cs": "Jaká je měna České republiky?",
+        "uz": "Chexiyaning pul birligi qanday?",
+        "en": "What is the currency of the Czech Republic?",
+        "ru": "Какая валюта в Чешской Республике?",
+        "uk": "Яка валюта в Чеській Республіці?"
+      },
+      "options": [
+        "Česká koruna",
+        "Euro",
+        "Zlotý",
+        "Forint"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Měnou České republiky je česká koruna (Kč).",
+        "uz": "Chexiyaning pul birligi — chex kronasi (Kč).",
+        "en": "The currency of the Czech Republic is the Czech crown (Kč).",
+        "ru": "Валюта Чехии — чешская крона (Kč).",
+        "uk": "Валюта Чехії — чеська крона (Kč)."
+      }
+    },
+    {
+      "id": "own-sta-009",
+      "topic": "stat",
+      "question": {
+        "cs": "Od kolika let mohou občané volit do Poslanecké sněmovny?",
+        "uz": "Fuqarolar Deputatlar palatasi saylovida necha yoshdan ovoz bera oladi?",
+        "en": "From what age can citizens vote in elections to the Chamber of Deputies?",
+        "ru": "С какого возраста граждане могут голосовать на выборах в Палату депутатов?",
+        "uk": "З якого віку громадяни можуть голосувати на виборах до Палати депутатів?"
+      },
+      "options": [
+        "Od 18 let",
+        "Od 15 let",
+        "Od 21 let",
+        "Od 16 let"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Volit mohou občané, kteří dosáhli věku 18 let.",
+        "uz": "18 yoshga to'lgan fuqarolar ovoz bera oladi.",
+        "en": "Citizens who have reached the age of 18 can vote.",
+        "ru": "Голосовать могут граждане, достигшие 18 лет.",
+        "uk": "Голосувати можуть громадяни, яким виповнилося 18 років."
+      }
+    },
+    {
+      "id": "own-sta-010",
+      "topic": "stat",
+      "question": {
+        "cs": "Jaké barvy má česká státní vlajka?",
+        "uz": "Chexiya davlat bayrog'i qanday ranglardan iborat?",
+        "en": "What colours is the Czech national flag?",
+        "ru": "Какие цвета у государственного флага Чехии?",
+        "uk": "Які кольори має державний прапор Чехії?"
+      },
+      "options": [
+        "Bílou, červenou a modrou",
+        "Bílou a červenou",
+        "Červenou, žlutou a modrou",
+        "Modrou a žlutou"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Česká vlajka je bílá, červená a modrá (modrý klín).",
+        "uz": "Chexiya bayrog'i oq, qizil va ko'k rangda (ko'k uchburchak bilan).",
+        "en": "The Czech flag is white, red and blue (with a blue wedge).",
+        "ru": "Флаг Чехии бело-красный с синим клином.",
+        "uk": "Прапор Чехії біло-червоний із синім клином."
+      }
+    },
+    {
+      "id": "own-sta-011",
+      "topic": "stat",
+      "question": {
+        "cs": "Jak se jmenuje česká státní hymna?",
+        "uz": "Chexiya davlat madhiyasi qanday ataladi?",
+        "en": "What is the name of the Czech national anthem?",
+        "ru": "Как называется государственный гимн Чехии?",
+        "uk": "Як називається державний гімн Чехії?"
+      },
+      "options": [
+        "Kde domov můj",
+        "Má vlast",
+        "Óda na radost",
+        "Ach synku, synku"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Českou státní hymnou je píseň Kde domov můj.",
+        "uz": "Chexiya davlat madhiyasi — «Kde domov můj» qo'shig'i.",
+        "en": "The Czech national anthem is the song Kde domov můj.",
+        "ru": "Государственный гимн Чехии — песня «Kde domov můj».",
+        "uk": "Державний гімн Чехії — пісня «Kde domov můj»."
+      }
+    },
+    {
+      "id": "own-kul-002",
+      "topic": "kultura",
+      "question": {
+        "cs": "Kdo napsal knihu Babička?",
+        "uz": "«Babička» (Buvijon) kitobini kim yozgan?",
+        "en": "Who wrote the book Babička (The Grandmother)?",
+        "ru": "Кто написал книгу «Бабушка» (Babička)?",
+        "uk": "Хто написав книжку «Бабуся» (Babička)?"
+      },
+      "options": [
+        "Božena Němcová",
+        "Karel Čapek",
+        "Jan Neruda",
+        "Franz Kafka"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Babičku napsala Božena Němcová.",
+        "uz": "«Babička» asarini Božena Němcová yozgan.",
+        "en": "Babička was written by Božena Němcová.",
+        "ru": "«Бабушку» написала Божена Немцова.",
+        "uk": "«Бабусю» написала Божена Немцова."
+      }
+    },
+    {
+      "id": "own-kul-003",
+      "topic": "kultura",
+      "question": {
+        "cs": "Kdo složil Symfonii č. 9 Z Nového světa?",
+        "uz": "«Yangi dunyodan» 9-simfoniyasini kim yaratgan?",
+        "en": "Who composed Symphony No. 9 From the New World?",
+        "ru": "Кто написал Симфонию № 9 «Из Нового Света»?",
+        "uk": "Хто написав Симфонію № 9 «З Нового світу»?"
+      },
+      "options": [
+        "Antonín Dvořák",
+        "Bedřich Smetana",
+        "Leoš Janáček",
+        "Bohuslav Martinů"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Symfonii Z Nového světa složil Antonín Dvořák.",
+        "uz": "«Yangi dunyodan» simfoniyasini Antonín Dvořák yaratgan.",
+        "en": "Antonín Dvořák composed the New World Symphony.",
+        "ru": "Симфонию «Из Нового Света» написал Антонин Дворжак.",
+        "uk": "Симфонію «З Нового світу» написав Антонін Дворжак."
+      }
+    },
+    {
+      "id": "own-kul-004",
+      "topic": "kultura",
+      "question": {
+        "cs": "Kdo napsal divadelní hru R.U.R., ve které se poprvé objevilo slovo robot?",
+        "uz": "«Robot» so'zi ilk bor uchragan R.U.R. pyesasini kim yozgan?",
+        "en": "Who wrote the play R.U.R., in which the word robot first appeared?",
+        "ru": "Кто написал пьесу R.U.R., в которой впервые появилось слово «робот»?",
+        "uk": "Хто написав п'єсу R.U.R., у якій уперше з'явилося слово «робот»?"
+      },
+      "options": [
+        "Karel Čapek",
+        "Jaroslav Hašek",
+        "Václav Havel",
+        "Bohumil Hrabal"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Hru R.U.R. napsal Karel Čapek. Slovo robot vymyslel jeho bratr Josef.",
+        "uz": "R.U.R. pyesasini Karel Čapek yozgan. «Robot» so'zini uning akasi Josef o'ylab topgan.",
+        "en": "Karel Čapek wrote R.U.R.; the word robot was coined by his brother Josef.",
+        "ru": "Пьесу R.U.R. написал Карел Чапек; слово «робот» придумал его брат Йозеф.",
+        "uk": "П'єсу R.U.R. написав Карел Чапек; слово «робот» вигадав його брат Йозеф."
+      }
+    },
+    {
+      "id": "own-kul-005",
+      "topic": "kultura",
+      "question": {
+        "cs": "Kdo je autorem románu Osudy dobrého vojáka Švejka?",
+        "uz": "«Yaxshi askar Shveykning sarguzashtlari» romanining muallifi kim?",
+        "en": "Who is the author of the novel The Good Soldier Švejk?",
+        "ru": "Кто автор романа «Похождения бравого солдата Швейка»?",
+        "uk": "Хто автор роману «Пригоди бравого вояка Швейка»?"
+      },
+      "options": [
+        "Jaroslav Hašek",
+        "Karel Čapek",
+        "Milan Kundera",
+        "Alois Jirásek"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Román o vojákovi Švejkovi napsal Jaroslav Hašek.",
+        "uz": "Askar Shveyk haqidagi romanni Jaroslav Hašek yozgan.",
+        "en": "The novel about the soldier Švejk was written by Jaroslav Hašek.",
+        "ru": "Роман о солдате Швейке написал Ярослав Гашек.",
+        "uk": "Роман про вояка Швейка написав Ярослав Гашек."
+      }
+    },
+    {
+      "id": "own-kul-006",
+      "topic": "kultura",
+      "question": {
+        "cs": "Jak se v Česku jmenuje 24. prosinec?",
+        "uz": "Chexiyada 24-dekabr qanday ataladi?",
+        "en": "What is 24 December called in Czechia?",
+        "ru": "Как в Чехии называется 24 декабря?",
+        "uk": "Як у Чехії називається 24 грудня?"
+      },
+      "options": [
+        "Štědrý den",
+        "Velikonoce",
+        "Den české státnosti",
+        "Svátek práce"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "24. prosinec je Štědrý den. Večer se rozdávají vánoční dárky.",
+        "uz": "24-dekabr — Štědrý den (Rojdestvo arafasi). Kechqurun sovg'alar beriladi.",
+        "en": "24 December is Štědrý den (Christmas Eve); presents are given in the evening.",
+        "ru": "24 декабря — Щедрый день (Сочельник); вечером дарят подарки.",
+        "uk": "24 грудня — Щедрий день (Святвечір); увечері дарують подарунки."
+      }
+    },
+    {
+      "id": "own-kul-007",
+      "topic": "kultura",
+      "question": {
+        "cs": "Co se v Česku tradičně jí na Štědrý večer?",
+        "uz": "Chexiyada Rojdestvo arafasi kechasi an'anaviy ravishda nima yeyiladi?",
+        "en": "What is traditionally eaten in Czechia on Christmas Eve?",
+        "ru": "Что традиционно едят в Чехии в сочельник?",
+        "uk": "Що традиційно їдять у Чехії на Святвечір?"
+      },
+      "options": [
+        "Kapr s bramborovým salátem",
+        "Svíčková na smetaně",
+        "Guláš s knedlíkem",
+        "Vepřo knedlo zelo"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Na Štědrý večer se tradičně jí smažený kapr s bramborovým salátem.",
+        "uz": "Rojdestvo arafasi an'anaviy taomi — qovurilgan karp baliq va kartoshka salati.",
+        "en": "The traditional Christmas Eve dinner is fried carp with potato salad.",
+        "ru": "Традиционное блюдо сочельника — жареный карп с картофельным салатом.",
+        "uk": "Традиційна страва Святвечора — смажений короп із картопляним салатом."
+      }
+    },
+    {
+      "id": "own-kul-008",
+      "topic": "kultura",
+      "question": {
+        "cs": "Kdy se slaví Den české státnosti (svátek svatého Václava)?",
+        "uz": "Chex davlatchiligi kuni (Avliyo Vatslav kuni) qachon nishonlanadi?",
+        "en": "When is Czech Statehood Day (St Wenceslas Day) celebrated?",
+        "ru": "Когда отмечается День чешской государственности (день святого Вацлава)?",
+        "uk": "Коли відзначають День чеської державності (день святого Вацлава)?"
+      },
+      "options": [
+        "28. září",
+        "28. října",
+        "17. listopadu",
+        "1. května"
+      ],
+      "correct": 0,
+      "explanation": {
+        "cs": "Den české státnosti se slaví 28. září, v den svatého Václava.",
+        "uz": "Chex davlatchiligi kuni 28-sentabrda, Avliyo Vatslav kunida nishonlanadi.",
+        "en": "Czech Statehood Day is on 28 September, St Wenceslas Day.",
+        "ru": "День чешской государственности отмечается 28 сентября, в день святого Вацлава.",
+        "uk": "День чеської державності відзначають 28 вересня, у день святого Вацлава."
+      }
+    }
+  ]
+}
