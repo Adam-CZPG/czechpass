@@ -1,5 +1,34 @@
 {
- "voices": {},
- "clips": [],
- "hashes": {}
+ "voices": {
+  "f": "cs-CZ-VlastaNeural",
+  "m": "cs-CZ-AntoninNeural"
+ },
+ "clips": [
+  "own-a2l-001",
+  "own-a2l-002",
+  "own-a2l-003",
+  "own-a2l-004",
+  "own-a2l-005",
+  "own-a2l-006",
+  "own-a2l-007",
+  "own-a2l-008",
+  "own-a2l-009",
+  "own-a2l-010",
+  "own-a2l-011",
+  "own-a2l-012"
+ ],
+ "hashes": {
+  "own-a2l-001": "a570f19e0b52027b44c2802805d193cd12d2c765ec45126fc8063da89ce22141",
+  "own-a2l-002": "8e8dbd3ae0606a7e238815d153dc96f62f9d4884fbe78540890965f52974cf54",
+  "own-a2l-003": "26036d02f647d8e86ba6227d0b1515d952d69ec294d237ebe87aa8d2a2c5a746",
+  "own-a2l-004": "ff8df79c91a44f91f51169faa5eb596bda4bead98042ec356b4ca31a4bdfe2b8",
+  "own-a2l-005": "46124b058f6460c00ab5f707c96de24f40c06b0638dce1a7af89179cb885236a",
+  "own-a2l-006": "52b21343e13d48b6cacbcb9ef64e8413ad31726f020cc631e93f4306f857200b",
+  "own-a2l-007": "bae9ad244daf2ea4518290aefd3f73e883527793af97bbd1df3ceb4ade915079",
+  "own-a2l-008": "a838c7d1b7f437c75185d794e5294f2363bfa7c9faeb951bb2269a1108324770",
+  "own-a2l-009": "921e36fe81b9b3f279b1606e92d1298504ff2a14f69dfa08bd51dca06bd87a4b",
+  "own-a2l-010": "59dbc53c02f8da63752cd001018a5385c938736bc4fa2b498d679fb7649fc565",
+  "own-a2l-011": "9b2d95a66a7c8aaf866c430a4b7a9516640c24ba50697aefb3e6e7e5245742cf",
+  "own-a2l-012": "108c8448f2328ca6d1c278d2f3e7c524963becf57259ddd09093a0ba5b8a4191"
+ }
 }
