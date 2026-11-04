@@ -7,6 +7,18 @@ function ui(page: Page, text: string | RegExp): Locator {
   return page.getByText(text).or(page.getByLabel(text)).first();
 }
 
+// Flutter faqat ekranda ko'rinadigan elementlarni chiqaradi: kerak bo'lsa pastga aylantiramiz.
+async function scrollTo(page: Page, text: string | RegExp): Promise<Locator> {
+  const target = ui(page, text);
+  for (let i = 0; i < 10; i++) {
+    if (await target.isVisible().catch(() => false)) return target;
+    await page.mouse.move(200, 500);
+    await page.mouse.wheel(0, 350);
+    await page.waitForTimeout(300);
+  }
+  return target;
+}
+
 async function openApp(page: Page) {
   await page.goto('/');
   // Flutter dvigateli yuklanishini kutamiz.
@@ -27,7 +39,7 @@ test('birinchi ochilishda til tanlanadi va bosh sahifa chiqadi', async ({ page }
   await expect(ui(page, 'Choose your language')).toBeVisible();
   await ui(page, 'Continue').click();
   await expect(ui(page, 'Which exam are we preparing for?')).toBeVisible();
-  await expect(ui(page, /^České reálie$/)).toBeVisible();
+  await expect(await scrollTo(page, /^České reálie/)).toBeVisible();
 });
 
 test('chex tilidagi interfeys', async ({ page }) => {
@@ -48,8 +60,8 @@ test('tanlangan til qayta ochilganda saqlanib qoladi', async ({ page }) => {
 test('České reálie testi ochiladi', async ({ page }) => {
   await openApp(page);
   await chooseLanguage(page, 'English', 'Continue');
-  // Aniq karta nomi: "české reálie" fuqarolik blokining izohida ham uchraydi.
-  await ui(page, /^České reálie$/).click();
+  // Karta nomi bilan boshlanadigan element ("české reálie" izohda ham uchraydi).
+  await (await scrollTo(page, /^České reálie/)).click();
   await expect(ui(page, /^Check$/)).toBeVisible();
   await expect(ui(page, /1 \/ \d+/)).toBeVisible();
 });
@@ -105,12 +117,10 @@ test('bosh sahifada avval doimiy yashash (A2), keyin fuqarolik bloki', async ({ 
   await openApp(page);
   await chooseLanguage(page, 'English', 'Continue');
   const residence = ui(page, 'FOR PERMANENT RESIDENCE');
-  const citizenship = ui(page, 'FOR CITIZENSHIP');
   await expect(residence).toBeVisible();
   await expect(ui(page, 'Czech A2')).toBeVisible();
   const r = await residence.boundingBox();
-  await citizenship.scrollIntoViewIfNeeded();
-  const c = await citizenship.boundingBox();
+  const c = await (await scrollTo(page, 'FOR CITIZENSHIP')).boundingBox();
   // Sarlavha qotirilgan: aylantirishdan keyin ham ko'rinadi.
   await expect(ui(page, 'Which exam are we preparing for?')).toBeVisible();
   expect(r && c).toBeTruthy();
