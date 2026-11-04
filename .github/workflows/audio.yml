@@ -1,0 +1,50 @@
+name: Audio (Azure TTS)
+
+# Tinglash dialoglari o'zgarganda (yoki qo'lda ishga tushirilganda) MP3 fayllarni yaratib,
+# repoga qo'shadi. Kalit faqat GitHub Secrets'da turadi.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - assets/questions/a2_listening.json
+      - tool/generate_audio.py
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: audio
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: MP3 yaratish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Azure TTS
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+        run: python tool/generate_audio.py
+      - name: O'zgarishlarni saqlash
+        run: |
+          git add assets/audio/listening
+          if git diff --cached --quiet; then
+            echo "Yangi audio yo'q"
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "audio: tinglash dialoglari MP3 (Azure TTS)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          # GITHUB_TOKEN bilan qilingan push CI'ni o'zi ishga tushirmaydi — APK yangi audio bilan
+          # yig'ilishi uchun CI'ni qo'lda chaqiramiz.
+          gh workflow run ci.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}

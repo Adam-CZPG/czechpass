@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/audio_clips.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/progress_store.dart';
@@ -67,6 +68,7 @@ class _A2MockScreenState extends State<A2MockScreen> {
   Future<void>? _future;
   final _random = Random();
   final _voice = VoiceOutput();
+  final _audio = ListeningAudio();
   final _input = VoiceInput();
   final _checker = const WritingChecker();
 
@@ -126,6 +128,7 @@ class _A2MockScreenState extends State<A2MockScreen> {
   @override
   void dispose() {
     _voice.stop();
+    _audio.dispose();
     _input.stop();
     for (final c in _texts.values) {
       c.dispose();
@@ -140,6 +143,7 @@ class _A2MockScreenState extends State<A2MockScreen> {
 
   Future<void> _stopAudio() async {
     await _voice.stop();
+    await _audio.stop();
     await _input.stop();
     if (mounted) {
       setState(() {
@@ -214,18 +218,31 @@ class _A2MockScreenState extends State<A2MockScreen> {
   Future<void> _play(ListeningTask task) async {
     if (_playingTask == task.id) {
       await _voice.stop();
+      await _audio.stop();
       if (mounted) setState(() => _playingTask = null);
       return;
     }
     if ((_playsLeft[task.id] ?? 0) <= 0) return;
     await _voice.stop();
+    await _audio.stop();
     setState(() {
       _playingTask = task.id;
       _playsLeft[task.id] = (_playsLeft[task.id] ?? 0) - 1;
     });
-    for (final line in task.lines) {
-      if (!mounted || _playingTask != task.id) break;
-      await _voice.say(line.text, gender: task.genderOf(line.speaker));
+    var played = false;
+    if (await ListeningAudio.has(task.id)) {
+      try {
+        await _audio.play(task.id);
+        played = true;
+      } catch (_) {
+        // Yozuvni o'ynab bo'lmasa — telefonning nutq sintezi.
+      }
+    }
+    if (!played) {
+      for (final line in task.lines) {
+        if (!mounted || _playingTask != task.id) break;
+        await _voice.say(line.text, gender: task.genderOf(line.speaker));
+      }
     }
     if (mounted && _playingTask == task.id) setState(() => _playingTask = null);
   }

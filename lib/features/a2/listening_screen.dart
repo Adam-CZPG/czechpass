@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/audio_clips.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
@@ -31,6 +32,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
   Future<List<ListeningTask>>? _future;
   final _random = Random();
   final _voice = VoiceOutput();
+  final _audio = ListeningAudio();
 
   List<ListeningTask> _tasks = [];
   int _total = 0; // bazadagi barcha topshiriqlar (bepul versiyada _tasks qisqaroq)
@@ -61,13 +63,16 @@ class _ListeningScreenState extends State<ListeningScreen> {
     _total = tasks.length;
     _tasks = controller.entitlements.limit(tasks, Tariff.residence, FreeLimits.a2TasksPerSkill);
     final available = await _voice.init();
-    if (mounted) setState(() => _czechVoice = available);
+    final clips = await ListeningAudio.clips();
+    // Tayyor MP3 yozuvlar bo'lsa, telefonda chexcha ovoz bo'lmasa ham tinglash ishlaydi.
+    if (mounted) setState(() => _czechVoice = available || clips.isNotEmpty);
     return tasks;
   }
 
   @override
   void dispose() {
     _voice.stop();
+    _audio.dispose();
     super.dispose();
   }
 
@@ -78,6 +83,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
   Future<void> _togglePlay() async {
     if (_playing) {
       await _voice.stop();
+      await _audio.stop();
       if (mounted) setState(() => _playing = false);
       return;
     }
@@ -86,9 +92,21 @@ class _ListeningScreenState extends State<ListeningScreen> {
       _playing = true;
       if (!_checked) _playsLeft--;
     });
-    for (final line in _task.lines) {
-      if (!mounted || !_playing) break;
-      await _voice.say(line.text, gender: _task.genderOf(line.speaker));
+    final task = _task;
+    var played = false;
+    if (await ListeningAudio.has(task.id)) {
+      try {
+        await _audio.play(task.id);
+        played = true;
+      } catch (_) {
+        // Yozuvni o'ynab bo'lmasa — telefonning nutq sintezi.
+      }
+    }
+    if (!played) {
+      for (final line in task.lines) {
+        if (!mounted || !_playing) break;
+        await _voice.say(line.text, gender: task.genderOf(line.speaker));
+      }
     }
     if (mounted) setState(() => _playing = false);
   }
@@ -127,6 +145,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
 
   Future<void> _next() async {
     await _voice.stop();
+    await _audio.stop();
     if (!mounted) return;
     if (_isLast) {
       _finish('listening', (context) => const ListeningScreen());
