@@ -22,7 +22,7 @@ jobs:
     name: Analyze va unit testlar
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
@@ -41,7 +41,7 @@ jobs:
     name: Xavfsizlik tekshiruvlari
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # git tarixi ham tekshiriladi
       # Butun git tarixini tekshiramiz (gitleaks-action birinchi push'da diapazonni noto'g'ri hisoblaydi).
@@ -59,7 +59,7 @@ jobs:
     needs: analyze-and-test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
@@ -92,7 +92,7 @@ jobs:
     needs: [analyze-and-test, security]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
