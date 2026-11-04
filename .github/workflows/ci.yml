@@ -31,7 +31,7 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test --coverage
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: coverage
           path: coverage/lcov.info
@@ -80,7 +80,7 @@ jobs:
       - name: Playwright testlari
         working-directory: e2e
         run: npx playwright test
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: playwright-report
@@ -106,7 +106,7 @@ jobs:
       # Hozircha sinov kaliti bilan imzolanadi. Google Play uchun keyin o'z kalitimiz
       # GitHub Secrets orqali qo'shiladi va AAB yig'iladi.
       - run: flutter build apk --release
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: czechpass-apk
           path: build/app/outputs/flutter-apk/app-release.apk
