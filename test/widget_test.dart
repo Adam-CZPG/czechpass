@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -9,6 +10,7 @@ import 'package:czech_pass/core/speech_service.dart';
 import 'package:czech_pass/core/writing_checker.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/main.dart';
+import 'package:czech_pass/widgets/no_paste.dart';
 
 void main() {
   testWidgets("Til tanlanmagan bo'lsa, til tanlash ekrani chiqadi", (tester) async {
@@ -96,5 +98,19 @@ void main() {
 
     await reloaded.clear();
     expect(reloaded.answeredCount(Exams.realie), 0);
+  });
+
+  test("Yozishda nusxa qo'yish bloklanadi, oddiy yozish ishlaydi", () {
+    var blocked = 0;
+    final formatter = NoPasteFormatter(onBlocked: () => blocked++);
+    const before = TextEditingValue(text: 'Dobrý den');
+    const typed = TextEditingValue(text: 'Dobrý den,');
+    final pasted = TextEditingValue(text: 'Dobrý den, ${'omlouvám se, ale dnes nepřijdu do práce. ' * 2}');
+    const deleted = TextEditingValue(text: '');
+
+    expect(formatter.formatEditUpdate(before, typed), typed);
+    expect(formatter.formatEditUpdate(before, pasted), before);
+    expect(formatter.formatEditUpdate(before, deleted), deleted);
+    expect(blocked, 1);
   });
 }

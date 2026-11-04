@@ -1023,6 +1023,14 @@ class S {
         'ru': 'Почти нет диакритики (á, č, ě, ř, š, ž…). На экзамене она важна.',
         'uk': 'Майже немає діакритики (á, č, ě, ř, š, ž…). На іспиті вона важлива.',
       });
+  String get pasteBlocked => _t(const {
+        'uz': "Bu yerda matnni nusxa qilib qo'yib bo'lmaydi. Uni o'zingiz yozing, imtihonda ham qo'lda yoziladi.",
+        'cs': 'Vkládání textu tu není možné. Napište text sami, stejně jako u zkoušky.',
+        'en': "Pasting isn't allowed here. Type the text yourself, just like in the exam.",
+        'vi': 'Không thể dán văn bản ở đây. Hãy tự gõ, giống như trong kỳ thi.',
+        'ru': 'Вставлять текст здесь нельзя. Напишите текст сами, как на экзамене.',
+        'uk': 'Вставляти текст тут не можна. Напишіть текст самі, як на іспиті.',
+      });
   String get selfCheckPoints => _t(const {
         'uz': "Har bir bandni o'zingiz tekshiring:",
         'cs': 'Zkontrolujte sami každý bod:',

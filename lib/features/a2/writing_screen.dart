@@ -8,6 +8,7 @@ import 'package:czech_pass/core/writing_checker.dart';
 import 'package:czech_pass/features/a2/section_result_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
+import 'package:czech_pass/widgets/no_paste.dart';
 
 /// A2 yozish: foydalanuvchi chexcha matn yozadi, ilova uzunlik, salomlashuv,
 /// xayrlashuv va chex harflarini tekshiradi; bandlarni foydalanuvchi o'zi belgilaydi.
@@ -188,11 +189,12 @@ class _WritingScreenState extends State<WritingScreen> {
                       ),
                     ),
                     const SizedBox(height: 14),
-                    TextField(
+                    // Imtihondagidek faqat qo'lda yoziladi: nusxa qo'yish bloklangan.
+                    ManualTextField(
                       controller: _text,
                       minLines: 8,
                       maxLines: 16,
-                      keyboardType: TextInputType.multiline,
+                      onPasteBlocked: () => showComingSoon(context, s.pasteBlocked),
                       onChanged: (_) => setState(() => _checked = false),
                       decoration: InputDecoration(
                         hintText: s.writeHere,
