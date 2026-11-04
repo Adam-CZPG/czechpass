@@ -12,8 +12,8 @@ class AppController extends ChangeNotifier {
     required this.settings,
     required this.progress,
     this.repository = const QuestionRepository(),
-    AppLanguage? language,
-  }) : _language = language;
+    AppLanguage? initialLanguage,
+  }) : _language = initialLanguage;
 
   final SettingsStore settings;
   final ProgressStore progress;

@@ -26,7 +26,7 @@ void main() {
     final controller = AppController(
       settings: SettingsStore(),
       progress: await ProgressStore.load(),
-      language: AppLanguage.uz,
+      initialLanguage: AppLanguage.uz,
     );
     await tester.pumpWidget(CzechPassApp(controller: controller));
 

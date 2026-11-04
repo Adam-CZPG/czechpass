@@ -59,7 +59,7 @@ class ScreenHeader extends StatelessWidget {
             style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
           ),
         ),
-        if (trailing != null) trailing!,
+        ?trailing,
       ],
     );
   }

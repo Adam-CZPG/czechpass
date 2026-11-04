@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
@@ -17,7 +18,7 @@ Future<void> main() async {
   final controller = AppController(
     settings: settings,
     progress: await ProgressStore.load(),
-    language: await settings.loadLanguage(),
+    initialLanguage: await settings.loadLanguage(),
   );
   runApp(CzechPassApp(controller: controller));
 }

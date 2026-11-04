@@ -231,16 +231,14 @@ class _ExamCard extends StatelessWidget {
 }
 
 class _SkillButton extends StatelessWidget {
-  const _SkillButton({required this.icon, required this.label, required this.onTap, this.soon = false});
+  const _SkillButton({required this.icon, required this.label, required this.onTap});
 
   final IconData icon;
   final String label;
   final VoidCallback onTap;
-  final bool soon;
 
   @override
   Widget build(BuildContext context) {
-    final color = soon ? AppColors.muted : AppColors.ink;
     return Material(
       color: AppColors.surface,
       borderRadius: BorderRadius.circular(12),
@@ -251,13 +249,13 @@ class _SkillButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Row(
             children: [
-              Icon(icon, size: 18, color: color),
+              Icon(icon, size: 18, color: AppColors.ink),
               const SizedBox(width: 8),
               Flexible(
                 child: Text(
                   label,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: color),
+                  style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.ink),
                 ),
               ),
             ],

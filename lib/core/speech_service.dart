@@ -120,10 +120,13 @@ class VoiceInput {
   Future<void> start(void Function(String words) onWords) async {
     await _stt.listen(
       onResult: (result) => onWords(result.recognizedWords),
-      localeId: 'cs_CZ',
-      listenFor: const Duration(seconds: 60),
-      pauseFor: const Duration(seconds: 5),
-      listenOptions: SpeechListenOptions(partialResults: true, listenMode: ListenMode.dictation),
+      listenOptions: SpeechListenOptions(
+        localeId: 'cs_CZ',
+        listenFor: const Duration(seconds: 60),
+        pauseFor: const Duration(seconds: 5),
+        partialResults: true,
+        listenMode: ListenMode.dictation,
+      ),
     );
   }
 
