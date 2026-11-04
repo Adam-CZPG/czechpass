@@ -10,8 +10,11 @@ function ui(page: Page, text: string | RegExp): Locator {
 // Flutter faqat ekranda ko'rinadigan elementlarni chiqaradi: kerak bo'lsa pastga aylantiramiz.
 async function scrollTo(page: Page, text: string | RegExp): Promise<Locator> {
   const target = ui(page, text);
-  for (let i = 0; i < 10; i++) {
-    if (await target.isVisible().catch(() => false)) return target;
+  const height = page.viewportSize()?.height ?? 800;
+  for (let i = 0; i < 12; i++) {
+    // Element pastki navigatsiya paneli ostida qolmasligi kerak (aks holda bosish panelga tushadi).
+    const box = await target.boundingBox().catch(() => null);
+    if (box && box.y > 0 && box.y + Math.min(box.height, 60) < height - 120) return target;
     await page.mouse.move(200, 500);
     await page.mouse.wheel(0, 350);
     await page.waitForTimeout(300);
