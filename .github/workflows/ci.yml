@@ -130,7 +130,12 @@ jobs:
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
         run: |
           # Har bir yig'ish raqami oldingisidan katta: yangi APK eskisining ustidan o'rnatiladi.
-          flutter build apk --release --dart-define=DEV_UNLOCK=true --build-number=${{ github.run_number }}
+          # Gradle ba'zan paketlarni yuklashda tarmoq xatosi beradi — 3 martagacha qayta urinamiz.
+          for i in 1 2 3; do
+            flutter build apk --release --dart-define=DEV_UNLOCK=true --build-number=${{ github.run_number }} && break
+            [ "$i" = 3 ] && exit 1
+            echo "::warning::APK yig'ish muvaffaqiyatsiz ($i), qayta urinilmoqda"; sleep 30
+          done
           mkdir -p dist
           cp build/app/outputs/flutter-apk/app-release.apk dist/czechpass-full.apk
       - name: APK (free)
@@ -138,7 +143,11 @@ jobs:
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
         run: |
-          flutter build apk --release --build-number=${{ github.run_number }}
+          for i in 1 2 3; do
+            flutter build apk --release --build-number=${{ github.run_number }} && break
+            [ "$i" = 3 ] && exit 1
+            echo "::warning::APK yig'ish muvaffaqiyatsiz ($i), qayta urinilmoqda"; sleep 30
+          done
           cp build/app/outputs/flutter-apk/app-release.apk dist/czechpass-free.apk
       - uses: actions/upload-artifact@v7
         with:
