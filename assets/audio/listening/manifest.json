@@ -15,11 +15,24 @@
   "own-a2l-009",
   "own-a2l-010",
   "own-a2l-011",
-  "own-a2l-012"
+  "own-a2l-012",
+  "own-a2l-013",
+  "own-a2l-014",
+  "own-a2l-015",
+  "own-a2l-016",
+  "own-a2l-017",
+  "own-a2l-018",
+  "own-a2l-019",
+  "own-a2l-020",
+  "own-a2l-021",
+  "own-a2l-022",
+  "own-a2l-023",
+  "own-a2l-024",
+  "own-a2l-025"
  ],
  "hashes": {
   "own-a2l-001": "a026bc816db48adc475585056b146cf60abb62257ce45750c70af4329b05a0cc",
-  "own-a2l-002": "b6a2c49c2ed9235ecb3ee29ce857c1aa94a4104de7ebcc4f7566b2ee22ec68f9",
+  "own-a2l-002": "2e92d488d6badce1311cfe5914e4e683abaadf5a5c496b5da6fb4e1f675d1d92",
   "own-a2l-003": "c193fa2ddbbe8bfe5967e76cec87c1056446650ff44d9fbdaa2252284121d388",
   "own-a2l-004": "6137e6aa9792bf077ce86a69452dfa394042ea3b612f3c935ee21ad6bd3a9081",
   "own-a2l-005": "09e2d6708d910815d4e21a1d034a406e38c66e572830582b4af2b692ad0d4047",
@@ -29,6 +42,19 @@
   "own-a2l-009": "a438b75504a2bb556566f7c9e3e1addb642cb35e264bd0d57a9f51c75bf998f7",
   "own-a2l-010": "c3ffa5c07cadd3c335aacd9dfcbed116f0dc4ccbc6255baec05cf35a9ec6900f",
   "own-a2l-011": "26321d031cbdf401b69fd297dd26bc9f0c9ee2b53fa0c9ae7b9328259fb2becb",
-  "own-a2l-012": "cc3f2e7e0e3ae5823b51ea650a873b21c17e7ddd49fe746aa629de617809bf28"
+  "own-a2l-012": "cc3f2e7e0e3ae5823b51ea650a873b21c17e7ddd49fe746aa629de617809bf28",
+  "own-a2l-013": "faf7bf26dd1fac56f4a23608c62ca77a75b5322046ba7cb84cc60c548b35b92b",
+  "own-a2l-014": "ca17444ecc7bd413dd73d2b96cd3588b7216ae9ab5afebb3737ee9f3dc3491cf",
+  "own-a2l-015": "686f378473045b39d4d91f0ad120a94b3a8b9ad76a0f25a6c66c950bc6e8b6f0",
+  "own-a2l-016": "8d8fba91dd311028caa0ff6850f199a444af6e77f681e9bd9be8d218a5be213e",
+  "own-a2l-017": "64a30e302e84f0d0d8649e86a7c5fe6027dc739b5f2afdd6c894ee407a92fe5b",
+  "own-a2l-018": "816e07b104946e3916fe0e860aeb095998c8b26f1aa88d590a15f393ab4b3cc8",
+  "own-a2l-019": "ca50bef7624d0732e72a01e1346827ce4383fc6af15279d99e49aeb7c0a8f456",
+  "own-a2l-020": "2e592d7c347b51d4265d2e990356e58596e1f99f4842a7d5234abcf35da1ed4e",
+  "own-a2l-021": "883b2f7369a4185ed12c78180d7853a32b6e4fd195549f3c2f7efeed95f3f3fd",
+  "own-a2l-022": "af0af4d0874c27ff002d58bfec34d97a7d646e00e1a4479cdbcc4896d0462559",
+  "own-a2l-023": "e7b68699686ac3da59e3538fe8e31af9cfa377c0f72fdc10bc722418e38c00eb",
+  "own-a2l-024": "33b0a14754f3eccff7596039db28bf9dfdebfb7d6af5d62b6296e1213142c62e",
+  "own-a2l-025": "6401cda9cfeab9084bc05142dcf066cf2a4cfb39271efa4ce336abd8f4e9ab31"
  }
 }
