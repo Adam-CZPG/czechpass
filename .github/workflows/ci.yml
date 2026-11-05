@@ -23,6 +23,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      # Savollar fayllari tuzilmasi va yozish namunalarini tekshirish (tool/content → assets/questions).
+      - name: Kontent tekshiruvi
+        run: |
+          python3 tool/build_realie.py
+          python3 tool/build_a2.py
+          git diff --exit-code assets/questions
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}

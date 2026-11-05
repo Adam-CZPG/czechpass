@@ -1,304 +1,629 @@
 {
-  "version": 1,
-  "exam": "a2_speaking",
-  "source": "own",
-  "tasks": [
-    {
-      "id": "own-a2s-001",
-      "title": {
-        "cs": "Představte se",
-        "uz": "O'zingizni tanishtiring",
-        "en": "Introduce yourself",
-        "ru": "Представьтесь",
-        "uk": "Представтеся",
-        "vi": "Giới thiệu bản thân"
-      },
-      "prompt": {
-        "cs": "Představte se. Řekněte, jak se jmenujete, odkud jste a kde bydlíte.",
-        "uz": "O'zingizni tanishtiring: ismingiz, qayerdan ekaningiz va qayerda yashashingizni ayting.",
-        "en": "Introduce yourself: say your name, where you are from and where you live.",
-        "ru": "Представьтесь: скажите, как вас зовут, откуда вы и где живёте.",
-        "uk": "Представтеся: скажіть, як вас звати, звідки ви і де живете.",
-        "vi": "Hãy giới thiệu bản thân: bạn tên là gì, bạn đến từ đâu và bạn sống ở đâu."
-      },
-      "keywords": [
-        "jmenuji se",
-        "jsem z",
-        "bydlím"
-      ],
-      "model": "Dobrý den, jmenuji se Aziz. Jsem z Uzbekistánu. Bydlím v Praze už tři roky."
-    },
-    {
-      "id": "own-a2s-002",
-      "title": {
-        "cs": "Víkend",
-        "uz": "Dam olish kunlari",
-        "en": "The weekend",
-        "ru": "Выходные",
-        "uk": "Вихідні",
-        "vi": "Cuối tuần"
-      },
-      "prompt": {
-        "cs": "Popište, co obvykle děláte o víkendu.",
-        "uz": "Dam olish kunlari odatda nima qilishingizni gapirib bering.",
-        "en": "Describe what you usually do at the weekend.",
-        "ru": "Расскажите, что вы обычно делаете на выходных.",
-        "uk": "Розкажіть, що ви зазвичай робите на вихідних.",
-        "vi": "Hãy kể bạn thường làm gì vào cuối tuần."
-      },
-      "keywords": [
-        "o víkendu",
-        "v sobotu",
-        "v neděli"
-      ],
-      "model": "O víkendu mám volno. V sobotu nakupuji a uklízím. V neděli chodím s rodinou na procházku do parku."
-    },
-    {
-      "id": "own-a2s-003",
-      "title": {
-        "cs": "U lékaře",
-        "uz": "Shifokor qabulida",
-        "en": "At the doctor's",
-        "ru": "У врача",
-        "uk": "У лікаря",
-        "vi": "Tại phòng khám"
-      },
-      "prompt": {
-        "cs": "Jste u lékaře. Řekněte, co vás bolí a od kdy.",
-        "uz": "Siz shifokor qabulidasiz. Qayeringiz og'riyotganini va qachondan beri ekanini ayting.",
-        "en": "You are at the doctor's. Say what hurts and since when.",
-        "ru": "Вы у врача. Скажите, что у вас болит и с какого времени.",
-        "uk": "Ви в лікаря. Скажіть, що у вас болить і відколи.",
-        "vi": "Bạn đang ở phòng khám. Hãy nói bạn bị đau ở đâu và từ khi nào."
-      },
-      "keywords": [
-        "dobrý den",
-        "bolí mě",
-        "od včera"
-      ],
-      "model": "Dobrý den, bolí mě hlava a v krku. Od včera mám teplotu."
-    },
-    {
-      "id": "own-a2s-004",
-      "title": {
-        "cs": "Rodina",
-        "uz": "Oila",
-        "en": "Family",
-        "ru": "Семья",
-        "uk": "Сім'я",
-        "vi": "Gia đình"
-      },
-      "prompt": {
-        "cs": "Řekněte něco o své rodině.",
-        "uz": "Oilangiz haqida gapirib bering.",
-        "en": "Say something about your family.",
-        "ru": "Расскажите о своей семье.",
-        "uk": "Розкажіть про свою сім'ю.",
-        "vi": "Hãy kể về gia đình của bạn."
-      },
-      "keywords": [
-        "moje rodina",
-        "mám",
-        "bydlí"
-      ],
-      "model": "Moje rodina není velká. Mám manželku a dvě děti. Moji rodiče bydlí v Uzbekistánu."
-    },
-    {
-      "id": "own-a2s-005",
-      "title": {
-        "cs": "Práce",
-        "uz": "Ish",
-        "en": "Work",
-        "ru": "Работа",
-        "uk": "Робота",
-        "vi": "Công việc"
-      },
-      "prompt": {
-        "cs": "Kde pracujete a co děláte v práci?",
-        "uz": "Qayerda ishlaysiz va ishda nima qilasiz?",
-        "en": "Where do you work and what do you do at work?",
-        "ru": "Где вы работаете и что делаете на работе?",
-        "uk": "Де ви працюєте і що робите на роботі?",
-        "vi": "Bạn làm việc ở đâu và làm gì ở nơi làm việc?"
-      },
-      "keywords": [
-        "pracuji jako",
-        "v práci"
-      ],
-      "model": "Pracuji jako řidič v jedné firmě v Brně. V práci jezdím s dodávkou a rozvážím zboží."
-    },
-    {
-      "id": "own-a2s-006",
-      "title": {
-        "cs": "Bydlení",
-        "uz": "Uy-joy",
-        "en": "Housing",
-        "ru": "Жильё",
-        "uk": "Житло",
-        "vi": "Nhà ở"
-      },
-      "prompt": {
-        "cs": "Popište svůj byt nebo dům.",
-        "uz": "Kvartirangiz yoki uyingizni tasvirlab bering.",
-        "en": "Describe your flat or house.",
-        "ru": "Опишите свою квартиру или дом.",
-        "uk": "Опишіть свою квартиру або будинок.",
-        "vi": "Hãy mô tả căn hộ hoặc ngôi nhà của bạn."
-      },
-      "keywords": [
-        "bydlím",
-        "pokoj",
-        "kuchyň"
-      ],
-      "model": "Bydlím v bytě dva plus jedna. Mám obývací pokoj, ložnici a malou kuchyň. Byt je ve třetím patře."
-    },
-    {
-      "id": "own-a2s-007",
-      "title": {
-        "cs": "V obchodě",
-        "uz": "Do'konda",
-        "en": "In a shop",
-        "ru": "В магазине",
-        "uk": "У магазині",
-        "vi": "Trong cửa hàng"
-      },
-      "prompt": {
-        "cs": "Jste v obchodě. Chcete koupit chleba a mléko. Zeptejte se, kolik to stojí.",
-        "uz": "Siz do'kondasiz. Non va sut olmoqchisiz. Narxini so'rang.",
-        "en": "You are in a shop. You want to buy bread and milk. Ask how much it costs.",
-        "ru": "Вы в магазине. Хотите купить хлеб и молоко. Спросите, сколько это стоит.",
-        "uk": "Ви в магазині. Хочете купити хліб і молоко. Запитайте, скільки це коштує.",
-        "vi": "Bạn đang ở cửa hàng. Bạn muốn mua bánh mì và sữa. Hãy hỏi giá."
-      },
-      "keywords": [
-        "dobrý den",
-        "prosím",
-        "kolik"
-      ],
-      "model": "Dobrý den, prosím jeden chleba a jedno mléko. Kolik to stojí?"
-    },
-    {
-      "id": "own-a2s-008",
-      "title": {
-        "cs": "Cesta",
-        "uz": "Yo'l so'rash",
-        "en": "Asking the way",
-        "ru": "Как пройти",
-        "uk": "Як пройти",
-        "vi": "Hỏi đường"
-      },
-      "prompt": {
-        "cs": "Jste ve městě. Zeptejte se, kde je hlavní nádraží.",
-        "uz": "Siz shahardasiz. Markaziy vokzal qayerdaligini so'rang.",
-        "en": "You are in town. Ask where the main railway station is.",
-        "ru": "Вы в городе. Спросите, где главный вокзал.",
-        "uk": "Ви в місті. Запитайте, де головний вокзал.",
-        "vi": "Bạn đang ở trong thành phố. Hãy hỏi ga tàu chính ở đâu."
-      },
-      "keywords": [
-        "promiňte",
-        "kde je",
-        "nádraží"
-      ],
-      "model": "Promiňte, prosím vás, kde je hlavní nádraží? Je to daleko?"
-    },
-    {
-      "id": "own-a2s-009",
-      "title": {
-        "cs": "Volný čas",
-        "uz": "Bo'sh vaqt",
-        "en": "Free time",
-        "ru": "Свободное время",
-        "uk": "Вільний час",
-        "vi": "Thời gian rảnh"
-      },
-      "prompt": {
-        "cs": "Co rád nebo ráda děláte ve volném čase?",
-        "uz": "Bo'sh vaqtingizda nima qilishni yoqtirasiz?",
-        "en": "What do you like doing in your free time?",
-        "ru": "Что вы любите делать в свободное время?",
-        "uk": "Що ви любите робити у вільний час?",
-        "vi": "Bạn thích làm gì vào thời gian rảnh?"
-      },
-      "keywords": [
-        "ve volném čase",
-        "rád"
-      ],
-      "model": "Ve volném čase rád sportuji. Hraji fotbal a chodím plavat. Taky rád čtu knihy."
-    },
-    {
-      "id": "own-a2s-010",
-      "title": {
-        "cs": "Jídlo",
-        "uz": "Ovqat",
-        "en": "Food",
-        "ru": "Еда",
-        "uk": "Їжа",
-        "vi": "Ăn uống"
-      },
-      "prompt": {
-        "cs": "Co obvykle jíte k snídani a k obědu?",
-        "uz": "Nonushta va tushlikda odatda nima yeysiz?",
-        "en": "What do you usually eat for breakfast and lunch?",
-        "ru": "Что вы обычно едите на завтрак и на обед?",
-        "uk": "Що ви зазвичай їсте на сніданок і на обід?",
-        "vi": "Bạn thường ăn gì vào bữa sáng và bữa trưa?"
-      },
-      "keywords": [
-        "k snídani",
-        "k obědu"
-      ],
-      "model": "K snídani jím chleba s máslem a piju čaj. K obědu mám obvykle polévku a maso s rýží."
-    },
-    {
-      "id": "own-a2s-011",
-      "title": {
-        "cs": "Omluva",
-        "uz": "Uzr so'rash",
-        "en": "Apologising",
-        "ru": "Извинение",
-        "uk": "Вибачення",
-        "vi": "Xin lỗi"
-      },
-      "prompt": {
-        "cs": "Přijdete pozdě na schůzku. Zavolejte a omluvte se.",
-        "uz": "Uchrashuvga kechikyapsiz. Qo'ng'iroq qilib, uzr so'rang.",
-        "en": "You will be late for a meeting. Call and apologise.",
-        "ru": "Вы опаздываете на встречу. Позвоните и извинитесь.",
-        "uk": "Ви запізнюєтеся на зустріч. Зателефонуйте і вибачтеся.",
-        "vi": "Bạn sẽ đến muộn buổi hẹn. Hãy gọi điện và xin lỗi."
-      },
-      "keywords": [
-        "omlouvám se",
-        "přijdu",
-        "později"
-      ],
-      "model": "Dobrý den, tady Aziz. Omlouvám se, přijdu asi o deset minut později. Jedu autobusem a je zácpa."
-    },
-    {
-      "id": "own-a2s-012",
-      "title": {
-        "cs": "Dovolená",
-        "uz": "Ta'til",
-        "en": "Holiday",
-        "ru": "Отпуск",
-        "uk": "Відпустка",
-        "vi": "Kỳ nghỉ"
-      },
-      "prompt": {
-        "cs": "Co budete dělat o dovolené?",
-        "uz": "Ta'tilda nima qilasiz?",
-        "en": "What will you do on holiday?",
-        "ru": "Что вы будете делать в отпуске?",
-        "uk": "Що ви робитимете у відпустці?",
-        "vi": "Bạn sẽ làm gì trong kỳ nghỉ?"
-      },
-      "keywords": [
-        "o dovolené",
-        "pojedu",
-        "budeme"
-      ],
-      "model": "O dovolené pojedu s rodinou k moři. Budeme se koupat a odpočívat. Potom navštívím rodiče."
-    }
-  ]
+ "version": 1,
+ "exam": "a2_speaking",
+ "source": "own",
+ "tasks": [
+  {
+   "id": "own-a2s-001",
+   "title": {
+    "cs": "Představte se",
+    "uz": "O'zingizni tanishtiring",
+    "en": "Introduce yourself",
+    "ru": "Представьтесь",
+    "uk": "Представтеся",
+    "vi": "Giới thiệu bản thân"
+   },
+   "prompt": {
+    "cs": "Představte se. Řekněte, jak se jmenujete, odkud jste a kde bydlíte.",
+    "uz": "O'zingizni tanishtiring: ismingiz, qayerdan ekaningiz va qayerda yashashingizni ayting.",
+    "en": "Introduce yourself: say your name, where you are from and where you live.",
+    "ru": "Представьтесь: скажите, как вас зовут, откуда вы и где живёте.",
+    "uk": "Представтеся: скажіть, як вас звати, звідки ви і де живете.",
+    "vi": "Hãy giới thiệu bản thân: bạn tên là gì, bạn đến từ đâu và bạn sống ở đâu."
+   },
+   "keywords": [
+    "jmenuji se",
+    "jsem z",
+    "bydlím"
+   ],
+   "model": "Dobrý den, jmenuji se Aziz. Jsem z Uzbekistánu. Bydlím v Praze už tři roky."
+  },
+  {
+   "id": "own-a2s-002",
+   "title": {
+    "cs": "Víkend",
+    "uz": "Dam olish kunlari",
+    "en": "The weekend",
+    "ru": "Выходные",
+    "uk": "Вихідні",
+    "vi": "Cuối tuần"
+   },
+   "prompt": {
+    "cs": "Popište, co obvykle děláte o víkendu.",
+    "uz": "Dam olish kunlari odatda nima qilishingizni gapirib bering.",
+    "en": "Describe what you usually do at the weekend.",
+    "ru": "Расскажите, что вы обычно делаете на выходных.",
+    "uk": "Розкажіть, що ви зазвичай робите на вихідних.",
+    "vi": "Hãy kể bạn thường làm gì vào cuối tuần."
+   },
+   "keywords": [
+    "o víkendu",
+    "v sobotu",
+    "v neděli"
+   ],
+   "model": "O víkendu mám volno. V sobotu nakupuji a uklízím. V neděli chodím s rodinou na procházku do parku."
+  },
+  {
+   "id": "own-a2s-003",
+   "title": {
+    "cs": "U lékaře",
+    "uz": "Shifokor qabulida",
+    "en": "At the doctor's",
+    "ru": "У врача",
+    "uk": "У лікаря",
+    "vi": "Tại phòng khám"
+   },
+   "prompt": {
+    "cs": "Jste u lékaře. Řekněte, co vás bolí a od kdy.",
+    "uz": "Siz shifokor qabulidasiz. Qayeringiz og'riyotganini va qachondan beri ekanini ayting.",
+    "en": "You are at the doctor's. Say what hurts and since when.",
+    "ru": "Вы у врача. Скажите, что у вас болит и с какого времени.",
+    "uk": "Ви в лікаря. Скажіть, що у вас болить і відколи.",
+    "vi": "Bạn đang ở phòng khám. Hãy nói bạn bị đau ở đâu và từ khi nào."
+   },
+   "keywords": [
+    "dobrý den",
+    "bolí mě",
+    "od včera"
+   ],
+   "model": "Dobrý den, bolí mě hlava a v krku. Od včera mám teplotu."
+  },
+  {
+   "id": "own-a2s-004",
+   "title": {
+    "cs": "Rodina",
+    "uz": "Oila",
+    "en": "Family",
+    "ru": "Семья",
+    "uk": "Сім'я",
+    "vi": "Gia đình"
+   },
+   "prompt": {
+    "cs": "Řekněte něco o své rodině.",
+    "uz": "Oilangiz haqida gapirib bering.",
+    "en": "Say something about your family.",
+    "ru": "Расскажите о своей семье.",
+    "uk": "Розкажіть про свою сім'ю.",
+    "vi": "Hãy kể về gia đình của bạn."
+   },
+   "keywords": [
+    "moje rodina",
+    "mám",
+    "bydlí"
+   ],
+   "model": "Moje rodina není velká. Mám manželku a dvě děti. Moji rodiče bydlí v Uzbekistánu."
+  },
+  {
+   "id": "own-a2s-005",
+   "title": {
+    "cs": "Práce",
+    "uz": "Ish",
+    "en": "Work",
+    "ru": "Работа",
+    "uk": "Робота",
+    "vi": "Công việc"
+   },
+   "prompt": {
+    "cs": "Kde pracujete a co děláte v práci?",
+    "uz": "Qayerda ishlaysiz va ishda nima qilasiz?",
+    "en": "Where do you work and what do you do at work?",
+    "ru": "Где вы работаете и что делаете на работе?",
+    "uk": "Де ви працюєте і що робите на роботі?",
+    "vi": "Bạn làm việc ở đâu và làm gì ở nơi làm việc?"
+   },
+   "keywords": [
+    "pracuji jako",
+    "v práci"
+   ],
+   "model": "Pracuji jako řidič v jedné firmě v Brně. V práci jezdím s dodávkou a rozvážím zboží."
+  },
+  {
+   "id": "own-a2s-006",
+   "title": {
+    "cs": "Bydlení",
+    "uz": "Uy-joy",
+    "en": "Housing",
+    "ru": "Жильё",
+    "uk": "Житло",
+    "vi": "Nhà ở"
+   },
+   "prompt": {
+    "cs": "Popište svůj byt nebo dům.",
+    "uz": "Kvartirangiz yoki uyingizni tasvirlab bering.",
+    "en": "Describe your flat or house.",
+    "ru": "Опишите свою квартиру или дом.",
+    "uk": "Опишіть свою квартиру або будинок.",
+    "vi": "Hãy mô tả căn hộ hoặc ngôi nhà của bạn."
+   },
+   "keywords": [
+    "bydlím",
+    "pokoj",
+    "kuchyň"
+   ],
+   "model": "Bydlím v bytě dva plus jedna. Mám obývací pokoj, ložnici a malou kuchyň. Byt je ve třetím patře."
+  },
+  {
+   "id": "own-a2s-007",
+   "title": {
+    "cs": "V obchodě",
+    "uz": "Do'konda",
+    "en": "In a shop",
+    "ru": "В магазине",
+    "uk": "У магазині",
+    "vi": "Trong cửa hàng"
+   },
+   "prompt": {
+    "cs": "Jste v obchodě. Chcete koupit chleba a mléko. Zeptejte se, kolik to stojí.",
+    "uz": "Siz do'kondasiz. Non va sut olmoqchisiz. Narxini so'rang.",
+    "en": "You are in a shop. You want to buy bread and milk. Ask how much it costs.",
+    "ru": "Вы в магазине. Хотите купить хлеб и молоко. Спросите, сколько это стоит.",
+    "uk": "Ви в магазині. Хочете купити хліб і молоко. Запитайте, скільки це коштує.",
+    "vi": "Bạn đang ở cửa hàng. Bạn muốn mua bánh mì và sữa. Hãy hỏi giá."
+   },
+   "keywords": [
+    "dobrý den",
+    "prosím",
+    "kolik"
+   ],
+   "model": "Dobrý den, prosím jeden chleba a jedno mléko. Kolik to stojí?"
+  },
+  {
+   "id": "own-a2s-008",
+   "title": {
+    "cs": "Cesta",
+    "uz": "Yo'l so'rash",
+    "en": "Asking the way",
+    "ru": "Как пройти",
+    "uk": "Як пройти",
+    "vi": "Hỏi đường"
+   },
+   "prompt": {
+    "cs": "Jste ve městě. Zeptejte se, kde je hlavní nádraží.",
+    "uz": "Siz shahardasiz. Markaziy vokzal qayerdaligini so'rang.",
+    "en": "You are in town. Ask where the main railway station is.",
+    "ru": "Вы в городе. Спросите, где главный вокзал.",
+    "uk": "Ви в місті. Запитайте, де головний вокзал.",
+    "vi": "Bạn đang ở trong thành phố. Hãy hỏi ga tàu chính ở đâu."
+   },
+   "keywords": [
+    "promiňte",
+    "kde je",
+    "nádraží"
+   ],
+   "model": "Promiňte, prosím vás, kde je hlavní nádraží? Je to daleko?"
+  },
+  {
+   "id": "own-a2s-009",
+   "title": {
+    "cs": "Volný čas",
+    "uz": "Bo'sh vaqt",
+    "en": "Free time",
+    "ru": "Свободное время",
+    "uk": "Вільний час",
+    "vi": "Thời gian rảnh"
+   },
+   "prompt": {
+    "cs": "Co rád nebo ráda děláte ve volném čase?",
+    "uz": "Bo'sh vaqtingizda nima qilishni yoqtirasiz?",
+    "en": "What do you like doing in your free time?",
+    "ru": "Что вы любите делать в свободное время?",
+    "uk": "Що ви любите робити у вільний час?",
+    "vi": "Bạn thích làm gì vào thời gian rảnh?"
+   },
+   "keywords": [
+    "ve volném čase",
+    "rád"
+   ],
+   "model": "Ve volném čase rád sportuji. Hraji fotbal a chodím plavat. Taky rád čtu knihy."
+  },
+  {
+   "id": "own-a2s-010",
+   "title": {
+    "cs": "Jídlo",
+    "uz": "Ovqat",
+    "en": "Food",
+    "ru": "Еда",
+    "uk": "Їжа",
+    "vi": "Ăn uống"
+   },
+   "prompt": {
+    "cs": "Co obvykle jíte k snídani a k obědu?",
+    "uz": "Nonushta va tushlikda odatda nima yeysiz?",
+    "en": "What do you usually eat for breakfast and lunch?",
+    "ru": "Что вы обычно едите на завтрак и на обед?",
+    "uk": "Що ви зазвичай їсте на сніданок і на обід?",
+    "vi": "Bạn thường ăn gì vào bữa sáng và bữa trưa?"
+   },
+   "keywords": [
+    "k snídani",
+    "k obědu"
+   ],
+   "model": "K snídani jím chleba s máslem a piju čaj. K obědu mám obvykle polévku a maso s rýží."
+  },
+  {
+   "id": "own-a2s-011",
+   "title": {
+    "cs": "Omluva",
+    "uz": "Uzr so'rash",
+    "en": "Apologising",
+    "ru": "Извинение",
+    "uk": "Вибачення",
+    "vi": "Xin lỗi"
+   },
+   "prompt": {
+    "cs": "Přijdete pozdě na schůzku. Zavolejte a omluvte se.",
+    "uz": "Uchrashuvga kechikyapsiz. Qo'ng'iroq qilib, uzr so'rang.",
+    "en": "You will be late for a meeting. Call and apologise.",
+    "ru": "Вы опаздываете на встречу. Позвоните и извинитесь.",
+    "uk": "Ви запізнюєтеся на зустріч. Зателефонуйте і вибачтеся.",
+    "vi": "Bạn sẽ đến muộn buổi hẹn. Hãy gọi điện và xin lỗi."
+   },
+   "keywords": [
+    "omlouvám se",
+    "přijdu",
+    "později"
+   ],
+   "model": "Dobrý den, tady Aziz. Omlouvám se, přijdu asi o deset minut později. Jedu autobusem a je zácpa."
+  },
+  {
+   "id": "own-a2s-012",
+   "title": {
+    "cs": "Dovolená",
+    "uz": "Ta'til",
+    "en": "Holiday",
+    "ru": "Отпуск",
+    "uk": "Відпустка",
+    "vi": "Kỳ nghỉ"
+   },
+   "prompt": {
+    "cs": "Co budete dělat o dovolené?",
+    "uz": "Ta'tilda nima qilasiz?",
+    "en": "What will you do on holiday?",
+    "ru": "Что вы будете делать в отпуске?",
+    "uk": "Що ви робитимете у відпустці?",
+    "vi": "Bạn sẽ làm gì trong kỳ nghỉ?"
+   },
+   "keywords": [
+    "o dovolené",
+    "pojedu",
+    "budeme"
+   ],
+   "model": "O dovolené pojedu s rodinou k moři. Budeme se koupat a odpočívat. Potom navštívím rodiče."
+  },
+  {
+   "id": "own-a2s-013",
+   "title": {
+    "cs": "Cesta do práce",
+    "uz": "Ishga yo'l",
+    "en": "Getting to work",
+    "ru": "Дорога на работу",
+    "uk": "Дорога на роботу",
+    "vi": "Đi làm"
+   },
+   "prompt": {
+    "cs": "Řekněte, jak jezdíte do práce nebo do školy a jak dlouho cesta trvá.",
+    "uz": "Ishga yoki o'qishga qanday borishingiz va yo'l qancha vaqt olishini ayting.",
+    "en": "Say how you get to work or school and how long the journey takes.",
+    "ru": "Расскажите, как вы добираетесь на работу или в школу и сколько времени занимает дорога.",
+    "uk": "Розкажіть, як ви добираєтеся на роботу чи до школи і скільки часу триває дорога.",
+    "vi": "Hãy nói bạn đi làm hoặc đi học bằng gì và mất bao lâu."
+   },
+   "keywords": [
+    "jezdím",
+    "trvá",
+    "minut"
+   ],
+   "model": "Do práce jezdím tramvají. Cesta trvá asi dvacet minut. Když je hezky, jezdím na kole."
+  },
+  {
+   "id": "own-a2s-014",
+   "title": {
+    "cs": "Nakupování",
+    "uz": "Xarid qilish",
+    "en": "Shopping",
+    "ru": "Покупки",
+    "uk": "Покупки",
+    "vi": "Mua sắm"
+   },
+   "prompt": {
+    "cs": "Kde obvykle nakupujete jídlo a jak často?",
+    "uz": "Oziq-ovqatni odatda qayerdan va qanchalik tez-tez sotib olasiz?",
+    "en": "Where do you usually buy food and how often?",
+    "ru": "Где вы обычно покупаете продукты и как часто?",
+    "uk": "Де ви зазвичай купуєте продукти і як часто?",
+    "vi": "Bạn thường mua thực phẩm ở đâu và bao lâu một lần?"
+   },
+   "keywords": [
+    "nakupuji",
+    "v supermarketu",
+    "týdně"
+   ],
+   "model": "Jídlo nakupuji v supermarketu blízko domu. Velký nákup dělám jednou týdně, v sobotu. Pečivo kupuji každý den."
+  },
+  {
+   "id": "own-a2s-015",
+   "title": {
+    "cs": "Na poště",
+    "uz": "Pochtada",
+    "en": "At the post office",
+    "ru": "На почте",
+    "uk": "На пошті",
+    "vi": "Ở bưu điện"
+   },
+   "prompt": {
+    "cs": "Jste na poště. Chcete poslat dopis doporučeně do Brna. Zeptejte se, kolik to stojí a kdy dopis dojde.",
+    "uz": "Siz pochtadasiz. Brnoga buyurtma xat yubormoqchisiz. Qancha turishi va xat qachon yetib borishini so'rang.",
+    "en": "You are at the post office. You want to send a registered letter to Brno. Ask how much it costs and when it will arrive.",
+    "ru": "Вы на почте. Хотите отправить заказное письмо в Брно. Спросите, сколько это стоит и когда письмо дойдёт.",
+    "uk": "Ви на пошті. Хочете надіслати рекомендований лист до Брно. Запитайте, скільки це коштує і коли лист дійде.",
+    "vi": "Bạn ở bưu điện, muốn gửi thư bảo đảm đến Brno. Hãy hỏi giá bao nhiêu và khi nào thư đến."
+   },
+   "keywords": [
+    "doporučeně",
+    "kolik to stojí",
+    "kdy"
+   ],
+   "model": "Dobrý den, chtěl bych poslat tento dopis doporučeně do Brna. Kolik to stojí? A kdy tam dopis dojde?"
+  },
+  {
+   "id": "own-a2s-016",
+   "title": {
+    "cs": "Dítě je nemocné",
+    "uz": "Bola kasal",
+    "en": "Your child is ill",
+    "ru": "Ребёнок заболел",
+    "uk": "Дитина захворіла",
+    "vi": "Con bị ốm"
+   },
+   "prompt": {
+    "cs": "Vaše dítě je nemocné. Zavolejte do školy a řekněte, že dnes nepřijde a co mu je.",
+    "uz": "Farzandingiz kasal. Maktabga qo'ng'iroq qiling va bugun kelmasligini hamda nima bo'lganini ayting.",
+    "en": "Your child is ill. Call the school and say that he or she will not come today and what is wrong.",
+    "ru": "Ваш ребёнок заболел. Позвоните в школу и скажите, что он сегодня не придёт, и что с ним.",
+    "uk": "Ваша дитина захворіла. Зателефонуйте до школи й скажіть, що вона сьогодні не прийде, і що з нею.",
+    "vi": "Con bạn bị ốm. Hãy gọi đến trường, nói rằng hôm nay cháu không đi học và cháu bị gì."
+   },
+   "keywords": [
+    "dobrý den",
+    "nepřijde",
+    "nemocn"
+   ],
+   "model": "Dobrý den, tady Aziz Karimov, tatínek Davida ze třídy 2. A. David je nemocný, má horečku a kašel. Dnes ani zítra do školy nepřijde. Děkuji."
+  },
+  {
+   "id": "own-a2s-017",
+   "title": {
+    "cs": "Zdraví",
+    "uz": "Sog'liq",
+    "en": "Health",
+    "ru": "Здоровье",
+    "uk": "Здоров’я",
+    "vi": "Sức khỏe"
+   },
+   "prompt": {
+    "cs": "Co děláte pro své zdraví?",
+    "uz": "Sog'lig'ingiz uchun nima qilasiz?",
+    "en": "What do you do for your health?",
+    "ru": "Что вы делаете для своего здоровья?",
+    "uk": "Що ви робите для свого здоров’я?",
+    "vi": "Bạn làm gì để giữ sức khỏe?"
+   },
+   "keywords": [
+    "plavat",
+    "zelenin",
+    "spát"
+   ],
+   "model": "Pro své zdraví chodím dvakrát týdně plavat. Jím hodně ovoce a zeleniny a snažím se spát osm hodin."
+  },
+  {
+   "id": "own-a2s-018",
+   "title": {
+    "cs": "Svátky",
+    "uz": "Bayramlar",
+    "en": "Holidays",
+    "ru": "Праздники",
+    "uk": "Свята",
+    "vi": "Ngày lễ"
+   },
+   "prompt": {
+    "cs": "Který svátek máte nejraději a jak ho slavíte?",
+    "uz": "Qaysi bayramni eng yaxshi ko'rasiz va uni qanday nishonlaysiz?",
+    "en": "Which holiday do you like best and how do you celebrate it?",
+    "ru": "Какой праздник вы любите больше всего и как его отмечаете?",
+    "uk": "Яке свято ви любите найбільше і як його святкуєте?",
+    "vi": "Bạn thích ngày lễ nào nhất và bạn đón lễ thế nào?"
+   },
+   "keywords": [
+    "nejraději",
+    "slavíme",
+    "rodin"
+   ],
+   "model": "Nejraději mám Nový rok. Slavíme ho s celou rodinou. Vaříme dobré jídlo, dáváme si dárky a díváme se na ohňostroj."
+  },
+  {
+   "id": "own-a2s-019",
+   "title": {
+    "cs": "U zubaře",
+    "uz": "Tish shifokorida",
+    "en": "At the dentist",
+    "ru": "У стоматолога",
+    "uk": "У стоматолога",
+    "vi": "Ở nha sĩ"
+   },
+   "prompt": {
+    "cs": "Zavolejte k zubaři. Bolí vás zub. Objednejte se co nejdříve.",
+    "uz": "Tish shifokoriga qo'ng'iroq qiling. Tishingiz og'riyapti. Iloji boricha tezroq yoziling.",
+    "en": "Call the dentist. You have toothache. Make an appointment as soon as possible.",
+    "ru": "Позвоните стоматологу. У вас болит зуб. Запишитесь как можно скорее.",
+    "uk": "Зателефонуйте стоматологу. У вас болить зуб. Запишіться якнайшвидше.",
+    "vi": "Hãy gọi nha sĩ. Bạn bị đau răng. Hãy đặt lịch sớm nhất có thể."
+   },
+   "keywords": [
+    "bolí mě zub",
+    "objednat",
+    "kdy"
+   ],
+   "model": "Dobrý den, bolí mě zub už od včerejška. Chtěla bych se objednat co nejdříve. Kdy můžu přijít?"
+  },
+  {
+   "id": "own-a2s-020",
+   "title": {
+    "cs": "Moje město",
+    "uz": "Mening shahrim",
+    "en": "My town",
+    "ru": "Мой город",
+    "uk": "Моє місто",
+    "vi": "Thành phố của tôi"
+   },
+   "prompt": {
+    "cs": "Popište město, kde bydlíte. Co se vám tam líbí?",
+    "uz": "Yashayotgan shahringizni tasvirlab bering. U yerda sizga nima yoqadi?",
+    "en": "Describe the town where you live. What do you like there?",
+    "ru": "Опишите город, в котором живёте. Что вам там нравится?",
+    "uk": "Опишіть місто, у якому живете. Що вам там подобається?",
+    "vi": "Hãy mô tả thành phố bạn đang sống. Bạn thích gì ở đó?"
+   },
+   "keywords": [
+    "bydlím",
+    "líbí se mi",
+    "park"
+   ],
+   "model": "Bydlím v Olomouci. Je to krásné staré město. Líbí se mi náměstí a velký park u řeky. Není tam moc aut."
+  },
+  {
+   "id": "own-a2s-021",
+   "title": {
+    "cs": "V restauraci",
+    "uz": "Restoranda",
+    "en": "At a restaurant",
+    "ru": "В ресторане",
+    "uk": "У ресторані",
+    "vi": "Ở nhà hàng"
+   },
+   "prompt": {
+    "cs": "Jste v restauraci. Objednejte si jídlo a pití a zeptejte se, jestli můžete platit kartou.",
+    "uz": "Siz restorandasiz. Ovqat va ichimlik buyurtma qiling va karta bilan to'lash mumkinligini so'rang.",
+    "en": "You are at a restaurant. Order food and a drink and ask whether you can pay by card.",
+    "ru": "Вы в ресторане. Закажите еду и напиток и спросите, можно ли заплатить картой.",
+    "uk": "Ви в ресторані. Замовте їжу й напій і запитайте, чи можна заплатити карткою.",
+    "vi": "Bạn ở nhà hàng. Hãy gọi món, đồ uống và hỏi có thể trả bằng thẻ không."
+   },
+   "keywords": [
+    "dám si",
+    "prosím",
+    "kartou"
+   ],
+   "model": "Dobrý den, dám si kuřecí řízek s bramborem a jednu malou vodu, prosím. Můžu potom platit kartou?"
+  },
+  {
+   "id": "own-a2s-022",
+   "title": {
+    "cs": "Na úřadě",
+    "uz": "Davlat idorasida",
+    "en": "At the office",
+    "ru": "В учреждении",
+    "uk": "В установі",
+    "vi": "Ở cơ quan hành chính"
+   },
+   "prompt": {
+    "cs": "Jste na úřadě. Zeptejte se, jaké dokumenty potřebujete k žádosti a kolik zaplatíte.",
+    "uz": "Siz davlat idorasidasiz. Ariza uchun qanday hujjatlar kerakligini va qancha to'lashingizni so'rang.",
+    "en": "You are at a government office. Ask which documents you need for the application and how much you will pay.",
+    "ru": "Вы в учреждении. Спросите, какие документы нужны для заявления и сколько нужно заплатить.",
+    "uk": "Ви в установі. Запитайте, які документи потрібні для заяви і скільки треба заплатити.",
+    "vi": "Bạn ở cơ quan hành chính. Hãy hỏi cần giấy tờ gì cho đơn và phải trả bao nhiêu."
+   },
+   "keywords": [
+    "dokumenty",
+    "potřebuji",
+    "kolik"
+   ],
+   "model": "Dobrý den, jaké dokumenty potřebuji k této žádosti? Potřebuji fotografii? A kolik zaplatím?"
+  },
+  {
+   "id": "own-a2s-023",
+   "title": {
+    "cs": "Poslední narozeniny",
+    "uz": "Oxirgi tug'ilgan kun",
+    "en": "Your last birthday",
+    "ru": "Последний день рождения",
+    "uk": "Останній день народження",
+    "vi": "Sinh nhật vừa rồi"
+   },
+   "prompt": {
+    "cs": "Řekněte, jak jste slavil nebo slavila své poslední narozeniny.",
+    "uz": "So'nggi tug'ilgan kuningizni qanday nishonlaganingizni ayting.",
+    "en": "Say how you celebrated your last birthday.",
+    "ru": "Расскажите, как вы отмечали свой последний день рождения.",
+    "uk": "Розкажіть, як ви святкували свій останній день народження.",
+    "vi": "Hãy kể bạn đã đón sinh nhật vừa rồi thế nào."
+   },
+   "keywords": [
+    "slavil",
+    "dostal",
+    "byl"
+   ],
+   "model": "Své poslední narozeniny jsem slavil doma s rodinou a kamarády. Manželka upekla dort a dostal jsem nové hodinky. Byl to krásný večer."
+  },
+  {
+   "id": "own-a2s-024",
+   "title": {
+    "cs": "Ztracená peněženka",
+    "uz": "Yo'qolgan hamyon",
+    "en": "A lost wallet",
+    "ru": "Потерянный кошелёк",
+    "uk": "Загублений гаманець",
+    "vi": "Mất ví"
+   },
+   "prompt": {
+    "cs": "Ztratil nebo ztratila jste peněženku. Jste na policii. Řekněte, kde a kdy se to stalo a co v ní bylo.",
+    "uz": "Hamyoningizni yo'qotdingiz. Siz politsiyadasiz. Qayerda va qachon bo'lganini hamda ichida nima borligini ayting.",
+    "en": "You have lost your wallet. You are at the police station. Say where and when it happened and what was in it.",
+    "ru": "Вы потеряли кошелёк. Вы в полиции. Скажите, где и когда это случилось и что в нём было.",
+    "uk": "Ви загубили гаманець. Ви в поліції. Скажіть, де і коли це сталося і що в ньому було.",
+    "vi": "Bạn bị mất ví và đang ở đồn cảnh sát. Hãy nói mất ở đâu, khi nào và trong ví có gì."
+   },
+   "keywords": [
+    "ztratil",
+    "včera",
+    "byl"
+   ],
+   "model": "Dobrý den, včera večer jsem ztratila peněženku v tramvaji číslo dvacet dva. Byla v ní kreditní karta, občanský průkaz a asi pět set korun."
+  },
+  {
+   "id": "own-a2s-025",
+   "title": {
+    "cs": "Pozvání souseda",
+    "uz": "Qo'shnini taklif qilish",
+    "en": "Inviting a neighbour",
+    "ru": "Приглашение соседа",
+    "uk": "Запрошення сусіда",
+    "vi": "Mời hàng xóm"
+   },
+   "prompt": {
+    "cs": "Pozvěte souseda nebo sousedku na kávu. Řekněte kdy a kde.",
+    "uz": "Qo'shningizni qahvaga taklif qiling. Qachon va qayerda ekanini ayting.",
+    "en": "Invite your neighbour for a coffee. Say when and where.",
+    "ru": "Пригласите соседа или соседку на кофе. Скажите, когда и где.",
+    "uk": "Запросіть сусіда чи сусідку на каву. Скажіть, коли і де.",
+    "vi": "Hãy mời hàng xóm đi uống cà phê. Nói khi nào và ở đâu."
+   },
+   "keywords": [
+    "čas",
+    "kávu",
+    "v sobotu"
+   ],
+   "model": "Dobrý den, paní Svobodová, máte v sobotu odpoledne čas? Chtěla bych vás pozvat na kávu k nám domů. Třeba ve tři hodiny?"
+  }
+ ]
 }

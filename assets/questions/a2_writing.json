@@ -1,477 +1,1182 @@
 {
-  "version": 1,
-  "exam": "a2_writing",
-  "source": "own",
-  "tasks": [
+ "version": 1,
+ "exam": "a2_writing",
+ "source": "own",
+ "tasks": [
+  {
+   "id": "own-a2w-001",
+   "title": {
+    "cs": "Pozvánka na narozeniny",
+    "uz": "Tug'ilgan kunga taklif",
+    "en": "Birthday invitation",
+    "ru": "Приглашение на день рождения",
+    "uk": "Запрошення на день народження",
+    "vi": "Thư mời sinh nhật"
+   },
+   "prompt": {
+    "cs": "Napište e-mail kamarádovi nebo kamarádce. Pozvěte ho nebo ji na svoje narozeniny.",
+    "uz": "Do'stingizga xat yozing va uni tug'ilgan kuningizga taklif qiling.",
+    "en": "Write an email to a friend and invite them to your birthday party.",
+    "ru": "Напишите письмо другу или подруге и пригласите на свой день рождения.",
+    "uk": "Напишіть листа другові чи подрузі та запросіть на свій день народження.",
+    "vi": "Hãy viết email cho một người bạn và mời bạn ấy đến dự sinh nhật của bạn."
+   },
+   "points": [
     {
-      "id": "own-a2w-001",
-      "title": {
-        "cs": "Pozvánka na narozeniny",
-        "uz": "Tug'ilgan kunga taklif",
-        "en": "Birthday invitation",
-        "ru": "Приглашение на день рождения",
-        "uk": "Запрошення на день народження",
-        "vi": "Thư mời sinh nhật"
-      },
-      "prompt": {
-        "cs": "Napište e-mail kamarádovi nebo kamarádce. Pozvěte ho nebo ji na svoje narozeniny.",
-        "uz": "Do'stingizga xat yozing va uni tug'ilgan kuningizga taklif qiling.",
-        "en": "Write an email to a friend and invite them to your birthday party.",
-        "ru": "Напишите письмо другу или подруге и пригласите на свой день рождения.",
-        "uk": "Напишіть листа другові чи подрузі та запросіть на свій день народження.",
-        "vi": "Hãy viết email cho một người bạn và mời bạn ấy đến dự sinh nhật của bạn."
-      },
-      "points": [
-        {
-          "cs": "Kdy oslava bude",
-          "uz": "Bayram qachon bo'lishi",
-          "en": "When the party is",
-          "ru": "Когда будет праздник",
-          "uk": "Коли буде свято",
-          "vi": "Bữa tiệc diễn ra khi nào"
-        },
-        {
-          "cs": "Kde oslava bude",
-          "uz": "Bayram qayerda bo'lishi",
-          "en": "Where the party is",
-          "ru": "Где будет праздник",
-          "uk": "Де буде свято",
-          "vi": "Bữa tiệc diễn ra ở đâu"
-        },
-        {
-          "cs": "Co má kamarád přinést",
-          "uz": "Do'stingiz nima olib kelishi",
-          "en": "What your friend should bring",
-          "ru": "Что другу нужно принести",
-          "uk": "Що другові треба принести",
-          "vi": "Bạn của bạn nên mang theo gì"
-        }
-      ],
-      "minWords": 35,
-      "model": "Ahoj Petro,\n\nv sobotu 12. dubna slavím narozeniny a chci tě pozvat. Oslava bude v sedm hodin večer u mě doma, Krátká 5, Brno. Budeme grilovat a tančit. Prosím, přines nějaký salát a dobrou náladu. Napiš mi, jestli přijdeš.\n\nMěj se,\nAziz"
+     "cs": "Kdy oslava bude",
+     "uz": "Bayram qachon bo'lishi",
+     "en": "When the party is",
+     "ru": "Когда будет праздник",
+     "uk": "Коли буде свято",
+     "vi": "Bữa tiệc diễn ra khi nào"
     },
     {
-      "id": "own-a2w-002",
-      "title": {
-        "cs": "Omluva do práce",
-        "uz": "Ishxonaga uzr",
-        "en": "Apology to work",
-        "ru": "Извинение на работу",
-        "uk": "Вибачення на роботу",
-        "vi": "Xin nghỉ làm"
-      },
-      "prompt": {
-        "cs": "Jste nemocný nebo nemocná. Napište zprávu vedoucímu, že nepřijdete do práce.",
-        "uz": "Siz kasalsiz. Rahbaringizga ishga bormasligingiz haqida xabar yozing.",
-        "en": "You are ill. Write a message to your manager saying you won't come to work.",
-        "ru": "Вы заболели. Напишите руководителю, что не придёте на работу.",
-        "uk": "Ви захворіли. Напишіть керівникові, що не прийдете на роботу.",
-        "vi": "Bạn bị ốm. Hãy viết tin nhắn cho quản lý rằng bạn sẽ không đi làm."
-      },
-      "points": [
-        {
-          "cs": "Proč nepřijdete",
-          "uz": "Nega bormasligingiz",
-          "en": "Why you won't come",
-          "ru": "Почему вы не придёте",
-          "uk": "Чому ви не прийдете",
-          "vi": "Tại sao bạn không đi làm"
-        },
-        {
-          "cs": "Jak dlouho budete doma",
-          "uz": "Qancha vaqt uyda bo'lishingiz",
-          "en": "How long you will stay at home",
-          "ru": "Как долго вы будете дома",
-          "uk": "Як довго ви будете вдома",
-          "vi": "Bạn sẽ ở nhà bao lâu"
-        },
-        {
-          "cs": "Omluva",
-          "uz": "Uzr so'rash",
-          "en": "An apology",
-          "ru": "Извинение",
-          "uk": "Вибачення",
-          "vi": "Lời xin lỗi"
-        }
-      ],
-      "minWords": 25,
-      "model": "Dobrý den, pane Nováku,\n\nomlouvám se, ale dnes nepřijdu do práce. Jsem nemocný, mám horečku a bolí mě v krku. Lékař mi napsal neschopenku do pátku. V pondělí už budu v práci.\n\nS pozdravem\nAziz Karimov"
+     "cs": "Kde oslava bude",
+     "uz": "Bayram qayerda bo'lishi",
+     "en": "Where the party is",
+     "ru": "Где будет праздник",
+     "uk": "Де буде свято",
+     "vi": "Bữa tiệc diễn ra ở đâu"
     },
     {
-      "id": "own-a2w-003",
-      "title": {
-        "cs": "Pohlednice z dovolené",
-        "uz": "Ta'tildan otkritka",
-        "en": "A holiday postcard",
-        "ru": "Открытка из отпуска",
-        "uk": "Листівка з відпустки",
-        "vi": "Bưu thiếp từ kỳ nghỉ"
-      },
-      "prompt": {
-        "cs": "Napište kamarádovi pohlednici z dovolené.",
-        "uz": "Do'stingizga ta'tildan otkritka yozing.",
-        "en": "Write a postcard to a friend from your holiday.",
-        "ru": "Напишите другу открытку из отпуска.",
-        "uk": "Напишіть другові листівку з відпустки.",
-        "vi": "Hãy viết bưu thiếp cho một người bạn từ nơi bạn đi nghỉ."
-      },
-      "points": [
-        {
-          "cs": "Kde jste",
-          "uz": "Qayerdasiz",
-          "en": "Where you are",
-          "ru": "Где вы",
-          "uk": "Де ви",
-          "vi": "Bạn đang ở đâu"
-        },
-        {
-          "cs": "Jaké je počasí",
-          "uz": "Ob-havo qanday",
-          "en": "What the weather is like",
-          "ru": "Какая погода",
-          "uk": "Яка погода",
-          "vi": "Thời tiết thế nào"
-        },
-        {
-          "cs": "Co tam děláte",
-          "uz": "U yerda nima qilyapsiz",
-          "en": "What you do there",
-          "ru": "Что вы там делаете",
-          "uk": "Що ви там робите",
-          "vi": "Bạn làm gì ở đó"
-        }
-      ],
-      "minWords": 30,
-      "model": "Ahoj Martine,\n\nzdravím tě z Krkonoš. Jsme tady s rodinou už pět dní. Počasí je krásné, svítí slunce a je teplo. Každý den chodíme na výlety do hor a večer hrajeme karty. V neděli jedeme domů.\n\nMěj se,\nAziz"
-    },
-    {
-      "id": "own-a2w-004",
-      "title": {
-        "cs": "Odpověď na inzerát",
-        "uz": "E'longa javob",
-        "en": "Replying to an advert",
-        "ru": "Ответ на объявление",
-        "uk": "Відповідь на оголошення",
-        "vi": "Trả lời tin rao vặt"
-      },
-      "prompt": {
-        "cs": "Napište e-mail majiteli bytu, který jste viděl nebo viděla v inzerátu.",
-        "uz": "E'londa ko'rgan kvartira egasiga xat yozing.",
-        "en": "Write an email to the owner of a flat you saw in an advert.",
-        "ru": "Напишите письмо владельцу квартиры, которую вы увидели в объявлении.",
-        "uk": "Напишіть листа власникові квартири, яку ви побачили в оголошенні.",
-        "vi": "Hãy viết email cho chủ căn hộ mà bạn đã thấy trong tin rao vặt."
-      },
-      "points": [
-        {
-          "cs": "Proč píšete",
-          "uz": "Nega yozyapsiz",
-          "en": "Why you are writing",
-          "ru": "Почему вы пишете",
-          "uk": "Чому ви пишете",
-          "vi": "Tại sao bạn viết thư"
-        },
-        {
-          "cs": "Na co se ptáte",
-          "uz": "Nimani so'rayapsiz",
-          "en": "What you want to ask",
-          "ru": "О чём вы спрашиваете",
-          "uk": "Про що ви питаєте",
-          "vi": "Bạn muốn hỏi điều gì"
-        },
-        {
-          "cs": "Kdy si můžete byt prohlédnout",
-          "uz": "Kvartirani qachon ko'ra olasiz",
-          "en": "When you can view the flat",
-          "ru": "Когда вы можете посмотреть квартиру",
-          "uk": "Коли ви можете подивитися квартиру",
-          "vi": "Khi nào bạn có thể xem căn hộ"
-        }
-      ],
-      "minWords": 30,
-      "model": "Dobrý den,\n\nčetl jsem váš inzerát na byt v Lipové ulici. Byt mě velmi zajímá. Chtěl bych se zeptat, kolik stojí energie a jestli můžu mít v bytě psa. Prohlédnout si ho můžu v sobotu dopoledne.\n\nS pozdravem\nAziz Karimov"
-    },
-    {
-      "id": "own-a2w-005",
-      "title": {
-        "cs": "Omluva do školy",
-        "uz": "Maktabga uzr",
-        "en": "A note to school",
-        "ru": "Записка в школу",
-        "uk": "Записка до школи",
-        "vi": "Giấy xin phép gửi nhà trường"
-      },
-      "prompt": {
-        "cs": "Napište paní učitelce, že vaše dítě nepřijde do školy.",
-        "uz": "O'qituvchiga farzandingiz maktabga bormasligi haqida yozing.",
-        "en": "Write to the teacher that your child will not come to school.",
-        "ru": "Напишите учительнице, что ваш ребёнок не придёт в школу.",
-        "uk": "Напишіть учительці, що ваша дитина не прийде до школи.",
-        "vi": "Hãy viết cho cô giáo rằng con bạn sẽ không đến trường."
-      },
-      "points": [
-        {
-          "cs": "Kdo nepřijde",
-          "uz": "Kim kelmaydi",
-          "en": "Who won't come",
-          "ru": "Кто не придёт",
-          "uk": "Хто не прийде",
-          "vi": "Ai sẽ không đến"
-        },
-        {
-          "cs": "Proč",
-          "uz": "Nega",
-          "en": "Why",
-          "ru": "Почему",
-          "uk": "Чому",
-          "vi": "Tại sao"
-        },
-        {
-          "cs": "Kdy přijde zpět",
-          "uz": "Qachon qaytib keladi",
-          "en": "When the child will be back",
-          "ru": "Когда вернётся",
-          "uk": "Коли повернеться",
-          "vi": "Khi nào con sẽ đi học lại"
-        }
-      ],
-      "minWords": 25,
-      "model": "Dobrý den, paní učitelko,\n\nomlouvám svého syna Davida, dnes a zítra nepřijde do školy. Je nemocný, má chřipku a teplotu. Ve čtvrtek už bude ve škole.\n\nDěkuji a s pozdravem\nNodira Karimová"
-    },
-    {
-      "id": "own-a2w-006",
-      "title": {
-        "cs": "Reklamace v e-shopu",
-        "uz": "Internet-do'konga shikoyat",
-        "en": "A complaint to an online shop",
-        "ru": "Жалоба в интернет-магазин",
-        "uk": "Скарга в інтернет-магазин",
-        "vi": "Khiếu nại với cửa hàng trực tuyến"
-      },
-      "prompt": {
-        "cs": "Koupil nebo koupila jste v e-shopu boty, ale jsou malé. Napište e-mail obchodu.",
-        "uz": "Internet-do'kondan poyabzal oldingiz, lekin u kichik. Do'konga xat yozing.",
-        "en": "You bought shoes online, but they are too small. Write an email to the shop.",
-        "ru": "Вы купили в интернет-магазине обувь, но она мала. Напишите письмо магазину.",
-        "uk": "Ви купили в інтернет-магазині взуття, але воно замале. Напишіть листа магазину.",
-        "vi": "Bạn đã mua giày trên mạng nhưng giày bị nhỏ. Hãy viết email cho cửa hàng."
-      },
-      "points": [
-        {
-          "cs": "Co jste koupil(a)",
-          "uz": "Nima sotib oldingiz",
-          "en": "What you bought",
-          "ru": "Что вы купили",
-          "uk": "Що ви купили",
-          "vi": "Bạn đã mua gì"
-        },
-        {
-          "cs": "Jaký je problém",
-          "uz": "Muammo nimada",
-          "en": "What the problem is",
-          "ru": "В чём проблема",
-          "uk": "У чому проблема",
-          "vi": "Vấn đề là gì"
-        },
-        {
-          "cs": "Co chcete (výměnu nebo peníze)",
-          "uz": "Nimani xohlaysiz (almashtirish yoki pulni)",
-          "en": "What you want (exchange or refund)",
-          "ru": "Чего вы хотите (обмен или деньги)",
-          "uk": "Чого ви хочете (обмін чи гроші)",
-          "vi": "Bạn muốn gì (đổi hàng hay hoàn tiền)"
-        }
-      ],
-      "minWords": 30,
-      "model": "Dobrý den,\n\nminulý týden jsem u vás koupil černé boty, objednávka číslo 2045. Boty jsou bohužel malé. Mám velikost 43, ne 42. Chtěl bych je vyměnit za větší. Můžete mi napsat, jak to mám udělat?\n\nS pozdravem\nAziz Karimov"
-    },
-    {
-      "id": "own-a2w-007",
-      "title": {
-        "cs": "Vzkaz sousedce",
-        "uz": "Qo'shniga xat",
-        "en": "A note to a neighbour",
-        "ru": "Записка соседке",
-        "uk": "Записка сусідці",
-        "vi": "Lời nhắn gửi hàng xóm"
-      },
-      "prompt": {
-        "cs": "Odjíždíte na týden. Napište sousedce vzkaz.",
-        "uz": "Bir haftaga ketyapsiz. Qo'shningizga xat qoldiring.",
-        "en": "You are going away for a week. Write a note to your neighbour.",
-        "ru": "Вы уезжаете на неделю. Напишите записку соседке.",
-        "uk": "Ви їдете на тиждень. Напишіть записку сусідці.",
-        "vi": "Bạn đi vắng một tuần. Hãy viết lời nhắn cho bà hàng xóm."
-      },
-      "points": [
-        {
-          "cs": "Kdy odjíždíte",
-          "uz": "Qachon ketyapsiz",
-          "en": "When you are leaving",
-          "ru": "Когда вы уезжаете",
-          "uk": "Коли ви їдете",
-          "vi": "Khi nào bạn đi"
-        },
-        {
-          "cs": "O co ji prosíte",
-          "uz": "Undan nimani so'rayapsiz",
-          "en": "What you are asking her to do",
-          "ru": "О чём вы её просите",
-          "uk": "Про що ви її просите",
-          "vi": "Bạn nhờ bà ấy việc gì"
-        },
-        {
-          "cs": "Poděkování",
-          "uz": "Minnatdorchilik",
-          "en": "Thanks",
-          "ru": "Благодарность",
-          "uk": "Подяка",
-          "vi": "Lời cảm ơn"
-        }
-      ],
-      "minWords": 25,
-      "model": "Dobrý den, paní Horáková,\n\nod pondělí do neděle budeme na dovolené. Mohla byste nám prosím vybírat poštu a zalévat květiny? Klíč vám dáme v neděli večer. Moc děkujeme.\n\nS pozdravem\nKarimovi"
-    },
-    {
-      "id": "own-a2w-008",
-      "title": {
-        "cs": "Pozvání na výlet",
-        "uz": "Sayohatga taklif",
-        "en": "An invitation to a trip",
-        "ru": "Приглашение на экскурсию",
-        "uk": "Запрошення на екскурсію",
-        "vi": "Lời mời đi chơi"
-      },
-      "prompt": {
-        "cs": "Napište kamarádce a pozvěte ji na výlet.",
-        "uz": "Dugonangizga yozib, uni sayohatga taklif qiling.",
-        "en": "Write to a friend and invite her on a trip.",
-        "ru": "Напишите подруге и пригласите её на экскурсию.",
-        "uk": "Напишіть подрузі та запросіть її на екскурсію.",
-        "vi": "Hãy viết cho một người bạn và mời cô ấy đi chơi xa."
-      },
-      "points": [
-        {
-          "cs": "Kam pojedete",
-          "uz": "Qayerga borasiz",
-          "en": "Where you will go",
-          "ru": "Куда вы поедете",
-          "uk": "Куди ви поїдете",
-          "vi": "Bạn sẽ đi đâu"
-        },
-        {
-          "cs": "Kdy a čím pojedete",
-          "uz": "Qachon va nima bilan borasiz",
-          "en": "When and how you will travel",
-          "ru": "Когда и на чём поедете",
-          "uk": "Коли і чим поїдете",
-          "vi": "Khi nào và đi bằng gì"
-        },
-        {
-          "cs": "Co si má vzít",
-          "uz": "U nima olishi kerak",
-          "en": "What she should bring",
-          "ru": "Что ей взять с собой",
-          "uk": "Що їй узяти з собою",
-          "vi": "Cô ấy nên mang theo gì"
-        }
-      ],
-      "minWords": 30,
-      "model": "Ahoj Evo,\n\nv neděli jedeme s dětmi na výlet na hrad Karlštejn. Pojedeme vlakem v devět hodin ráno z hlavního nádraží. Chceš jet s námi? Vezmi si pohodlné boty a něco k jídlu.\n\nNapiš mi,\nahoj Nodira"
-    },
-    {
-      "id": "own-a2w-009",
-      "title": {
-        "cs": "Přihláška do kurzu",
-        "uz": "Kursga yozilish",
-        "en": "Signing up for a course",
-        "ru": "Запись на курс",
-        "uk": "Запис на курс",
-        "vi": "Đăng ký khóa học"
-      },
-      "prompt": {
-        "cs": "Chcete chodit do kurzu češtiny. Napište e-mail jazykové škole.",
-        "uz": "Chex tili kursiga qatnamoqchisiz. Til maktabiga xat yozing.",
-        "en": "You want to attend a Czech course. Write an email to the language school.",
-        "ru": "Вы хотите ходить на курс чешского. Напишите письмо языковой школе.",
-        "uk": "Ви хочете ходити на курс чеської. Напишіть листа мовній школі.",
-        "vi": "Bạn muốn học một khóa tiếng Séc. Hãy viết email cho trường ngôn ngữ."
-      },
-      "points": [
-        {
-          "cs": "Jaký kurz chcete",
-          "uz": "Qanday kurs xohlaysiz",
-          "en": "Which course you want",
-          "ru": "Какой курс вы хотите",
-          "uk": "Який курс ви хочете",
-          "vi": "Bạn muốn học khóa nào"
-        },
-        {
-          "cs": "Kdy máte čas",
-          "uz": "Qachon vaqtingiz bor",
-          "en": "When you have time",
-          "ru": "Когда у вас есть время",
-          "uk": "Коли у вас є час",
-          "vi": "Khi nào bạn có thời gian"
-        },
-        {
-          "cs": "Na co se ptáte",
-          "uz": "Nimani so'rayapsiz",
-          "en": "What you want to ask",
-          "ru": "О чём вы спрашиваете",
-          "uk": "Про що ви питаєте",
-          "vi": "Bạn muốn hỏi điều gì"
-        }
-      ],
-      "minWords": 30,
-      "model": "Dobrý den,\n\nchtěl bych se přihlásit do kurzu češtiny pro cizince na úrovni A2. Pracuji do pěti hodin, proto můžu chodit jen večer. Kolik kurz stojí a kdy začíná?\n\nDěkuji a s pozdravem\nAziz Karimov"
-    },
-    {
-      "id": "own-a2w-010",
-      "title": {
-        "cs": "Můj běžný den",
-        "uz": "Mening oddiy kunim",
-        "en": "My typical day",
-        "ru": "Мой обычный день",
-        "uk": "Мій звичайний день",
-        "vi": "Một ngày bình thường của tôi"
-      },
-      "prompt": {
-        "cs": "Napište kamarádovi, jak vypadá váš běžný den.",
-        "uz": "Do'stingizga oddiy kuningiz qanday o'tishini yozing.",
-        "en": "Write to a friend about your typical day.",
-        "ru": "Напишите другу, как проходит ваш обычный день.",
-        "uk": "Напишіть другові, як минає ваш звичайний день.",
-        "vi": "Hãy viết cho một người bạn về một ngày bình thường của bạn."
-      },
-      "points": [
-        {
-          "cs": "Kdy vstáváte",
-          "uz": "Qachon turasiz",
-          "en": "When you get up",
-          "ru": "Когда вы встаёте",
-          "uk": "Коли ви встаєте",
-          "vi": "Bạn thức dậy lúc nào"
-        },
-        {
-          "cs": "Co děláte v práci nebo ve škole",
-          "uz": "Ishda yoki maktabda nima qilasiz",
-          "en": "What you do at work or school",
-          "ru": "Что вы делаете на работе или в школе",
-          "uk": "Що ви робите на роботі чи в школі",
-          "vi": "Bạn làm gì ở nơi làm việc hoặc ở trường"
-        },
-        {
-          "cs": "Co děláte večer",
-          "uz": "Kechqurun nima qilasiz",
-          "en": "What you do in the evening",
-          "ru": "Что вы делаете вечером",
-          "uk": "Що ви робите ввечері",
-          "vi": "Bạn làm gì vào buổi tối"
-        }
-      ],
-      "minWords": 35,
-      "model": "Ahoj Tomáši,\n\nptáš se, jak se mám. Můj den je docela normální. Vstávám v šest hodin a v sedm jedu do práce. Pracuji ve skladu do tří odpoledne. Večer vařím, dívám se na televizi nebo se učím česky.\n\nMěj se,\nAziz"
+     "cs": "Co má kamarád přinést",
+     "uz": "Do'stingiz nima olib kelishi",
+     "en": "What your friend should bring",
+     "ru": "Что другу нужно принести",
+     "uk": "Що другові треба принести",
+     "vi": "Bạn của bạn nên mang theo gì"
     }
-  ]
+   ],
+   "minWords": 35,
+   "model": "Ahoj Petro,\n\nv sobotu 12. dubna slavím narozeniny a chci tě pozvat. Oslava bude v sedm hodin večer u mě doma, Krátká 5, Brno. Budeme grilovat a tančit. Prosím, přines nějaký salát a dobrou náladu. Napiš mi, jestli přijdeš.\n\nMěj se,\nAziz"
+  },
+  {
+   "id": "own-a2w-002",
+   "title": {
+    "cs": "Omluva do práce",
+    "uz": "Ishxonaga uzr",
+    "en": "Apology to work",
+    "ru": "Извинение на работу",
+    "uk": "Вибачення на роботу",
+    "vi": "Xin nghỉ làm"
+   },
+   "prompt": {
+    "cs": "Jste nemocný nebo nemocná. Napište zprávu vedoucímu, že nepřijdete do práce.",
+    "uz": "Siz kasalsiz. Rahbaringizga ishga bormasligingiz haqida xabar yozing.",
+    "en": "You are ill. Write a message to your manager saying you won't come to work.",
+    "ru": "Вы заболели. Напишите руководителю, что не придёте на работу.",
+    "uk": "Ви захворіли. Напишіть керівникові, що не прийдете на роботу.",
+    "vi": "Bạn bị ốm. Hãy viết tin nhắn cho quản lý rằng bạn sẽ không đi làm."
+   },
+   "points": [
+    {
+     "cs": "Proč nepřijdete",
+     "uz": "Nega bormasligingiz",
+     "en": "Why you won't come",
+     "ru": "Почему вы не придёте",
+     "uk": "Чому ви не прийдете",
+     "vi": "Tại sao bạn không đi làm"
+    },
+    {
+     "cs": "Jak dlouho budete doma",
+     "uz": "Qancha vaqt uyda bo'lishingiz",
+     "en": "How long you will stay at home",
+     "ru": "Как долго вы будете дома",
+     "uk": "Як довго ви будете вдома",
+     "vi": "Bạn sẽ ở nhà bao lâu"
+    },
+    {
+     "cs": "Omluva",
+     "uz": "Uzr so'rash",
+     "en": "An apology",
+     "ru": "Извинение",
+     "uk": "Вибачення",
+     "vi": "Lời xin lỗi"
+    }
+   ],
+   "minWords": 25,
+   "model": "Dobrý den, pane Nováku,\n\nomlouvám se, ale dnes nepřijdu do práce. Jsem nemocný, mám horečku a bolí mě v krku. Lékař mi napsal neschopenku do pátku. V pondělí už budu v práci.\n\nS pozdravem\nAziz Karimov"
+  },
+  {
+   "id": "own-a2w-003",
+   "title": {
+    "cs": "Poděkování za dárek",
+    "uz": "Sovg'a uchun minnatdorchilik",
+    "en": "Thank you for a present",
+    "ru": "Благодарность за подарок",
+    "uk": "Подяка за подарунок",
+    "vi": "Cảm ơn vì món quà"
+   },
+   "prompt": {
+    "cs": "Teta vám poslala dárek k narozeninám. Napište jí e-mail a poděkujte.",
+    "uz": "Xolangiz tug'ilgan kuningizga sovg'a yubordi. Unga xat yozib, minnatdorchilik bildiring.",
+    "en": "Your aunt sent you a birthday present. Write her an e-mail to say thank you.",
+    "ru": "Тётя прислала вам подарок на день рождения. Напишите ей письмо и поблагодарите.",
+    "uk": "Тітка надіслала вам подарунок на день народження. Напишіть їй листа й подякуйте.",
+    "vi": "Dì của bạn gửi quà sinh nhật. Hãy viết e-mail cảm ơn dì."
+   },
+   "points": [
+    {
+     "cs": "Za co děkujete",
+     "uz": "Nima uchun minnatdorsiz",
+     "en": "What you are thanking her for",
+     "ru": "За что вы благодарите",
+     "uk": "За що ви дякуєте",
+     "vi": "Bạn cảm ơn vì điều gì"
+    },
+    {
+     "cs": "Jak jste slavil nebo slavila narozeniny",
+     "uz": "Tug'ilgan kunni qanday nishonladingiz",
+     "en": "How you celebrated your birthday",
+     "ru": "Как вы отметили день рождения",
+     "uk": "Як ви відсвяткували день народження",
+     "vi": "Bạn đã đón sinh nhật thế nào"
+    },
+    {
+     "cs": "Kdy se uvidíte",
+     "uz": "Qachon ko'rishasiz",
+     "en": "When you will see each other",
+     "ru": "Когда вы увидитесь",
+     "uk": "Коли ви побачитеся",
+     "vi": "Khi nào hai người gặp nhau"
+    }
+   ],
+   "minWords": 30,
+   "model": "Milá teto,\n\nmoc děkuji za krásný šátek k narozeninám. Hned jsem si ho vzala. Narozeniny jsem slavila v sobotu s rodinou v restauraci a bylo to moc hezké. Přijedu za tebou na Velikonoce.\n\nS pozdravem\nLeyla"
+  },
+  {
+   "id": "own-a2w-004",
+   "title": {
+    "cs": "Odpověď na inzerát",
+    "uz": "E'longa javob",
+    "en": "Replying to an advert",
+    "ru": "Ответ на объявление",
+    "uk": "Відповідь на оголошення",
+    "vi": "Trả lời tin rao vặt"
+   },
+   "prompt": {
+    "cs": "Napište e-mail majiteli bytu, který jste viděl nebo viděla v inzerátu.",
+    "uz": "E'londa ko'rgan kvartira egasiga xat yozing.",
+    "en": "Write an email to the owner of a flat you saw in an advert.",
+    "ru": "Напишите письмо владельцу квартиры, которую вы увидели в объявлении.",
+    "uk": "Напишіть листа власникові квартири, яку ви побачили в оголошенні.",
+    "vi": "Hãy viết email cho chủ căn hộ mà bạn đã thấy trong tin rao vặt."
+   },
+   "points": [
+    {
+     "cs": "Proč píšete",
+     "uz": "Nega yozyapsiz",
+     "en": "Why you are writing",
+     "ru": "Почему вы пишете",
+     "uk": "Чому ви пишете",
+     "vi": "Tại sao bạn viết thư"
+    },
+    {
+     "cs": "Na co se ptáte",
+     "uz": "Nimani so'rayapsiz",
+     "en": "What you want to ask",
+     "ru": "О чём вы спрашиваете",
+     "uk": "Про що ви питаєте",
+     "vi": "Bạn muốn hỏi điều gì"
+    },
+    {
+     "cs": "Kdy si můžete byt prohlédnout",
+     "uz": "Kvartirani qachon ko'ra olasiz",
+     "en": "When you can view the flat",
+     "ru": "Когда вы можете посмотреть квартиру",
+     "uk": "Коли ви можете подивитися квартиру",
+     "vi": "Khi nào bạn có thể xem căn hộ"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den,\n\nčetl jsem váš inzerát na byt v Lipové ulici. Byt mě velmi zajímá. Chtěl bych se zeptat, kolik stojí energie a jestli můžu mít v bytě psa. Prohlédnout si ho můžu v sobotu dopoledne.\n\nS pozdravem\nAziz Karimov"
+  },
+  {
+   "id": "own-a2w-005",
+   "title": {
+    "cs": "Omluva do školy",
+    "uz": "Maktabga uzr",
+    "en": "A note to school",
+    "ru": "Записка в школу",
+    "uk": "Записка до школи",
+    "vi": "Giấy xin phép gửi nhà trường"
+   },
+   "prompt": {
+    "cs": "Napište paní učitelce, že vaše dítě nepřijde do školy.",
+    "uz": "O'qituvchiga farzandingiz maktabga bormasligi haqida yozing.",
+    "en": "Write to the teacher that your child will not come to school.",
+    "ru": "Напишите учительнице, что ваш ребёнок не придёт в школу.",
+    "uk": "Напишіть учительці, що ваша дитина не прийде до школи.",
+    "vi": "Hãy viết cho cô giáo rằng con bạn sẽ không đến trường."
+   },
+   "points": [
+    {
+     "cs": "Kdo nepřijde",
+     "uz": "Kim kelmaydi",
+     "en": "Who won't come",
+     "ru": "Кто не придёт",
+     "uk": "Хто не прийде",
+     "vi": "Ai sẽ không đến"
+    },
+    {
+     "cs": "Proč",
+     "uz": "Nega",
+     "en": "Why",
+     "ru": "Почему",
+     "uk": "Чому",
+     "vi": "Tại sao"
+    },
+    {
+     "cs": "Kdy přijde zpět",
+     "uz": "Qachon qaytib keladi",
+     "en": "When the child will be back",
+     "ru": "Когда вернётся",
+     "uk": "Коли повернеться",
+     "vi": "Khi nào con sẽ đi học lại"
+    }
+   ],
+   "minWords": 25,
+   "model": "Dobrý den, paní učitelko,\n\nomlouvám svého syna Davida, dnes a zítra nepřijde do školy. Je nemocný, má chřipku a teplotu. Ve čtvrtek už bude ve škole.\n\nDěkuji a s pozdravem\nNodira Karimová"
+  },
+  {
+   "id": "own-a2w-006",
+   "title": {
+    "cs": "Reklamace v e-shopu",
+    "uz": "Internet-do'konga shikoyat",
+    "en": "A complaint to an online shop",
+    "ru": "Жалоба в интернет-магазин",
+    "uk": "Скарга в інтернет-магазин",
+    "vi": "Khiếu nại với cửa hàng trực tuyến"
+   },
+   "prompt": {
+    "cs": "Koupil nebo koupila jste v e-shopu boty, ale jsou malé. Napište e-mail obchodu.",
+    "uz": "Internet-do'kondan poyabzal oldingiz, lekin u kichik. Do'konga xat yozing.",
+    "en": "You bought shoes online, but they are too small. Write an email to the shop.",
+    "ru": "Вы купили в интернет-магазине обувь, но она мала. Напишите письмо магазину.",
+    "uk": "Ви купили в інтернет-магазині взуття, але воно замале. Напишіть листа магазину.",
+    "vi": "Bạn đã mua giày trên mạng nhưng giày bị nhỏ. Hãy viết email cho cửa hàng."
+   },
+   "points": [
+    {
+     "cs": "Co jste koupil(a)",
+     "uz": "Nima sotib oldingiz",
+     "en": "What you bought",
+     "ru": "Что вы купили",
+     "uk": "Що ви купили",
+     "vi": "Bạn đã mua gì"
+    },
+    {
+     "cs": "Jaký je problém",
+     "uz": "Muammo nimada",
+     "en": "What the problem is",
+     "ru": "В чём проблема",
+     "uk": "У чому проблема",
+     "vi": "Vấn đề là gì"
+    },
+    {
+     "cs": "Co chcete (výměnu nebo peníze)",
+     "uz": "Nimani xohlaysiz (almashtirish yoki pulni)",
+     "en": "What you want (exchange or refund)",
+     "ru": "Чего вы хотите (обмен или деньги)",
+     "uk": "Чого ви хочете (обмін чи гроші)",
+     "vi": "Bạn muốn gì (đổi hàng hay hoàn tiền)"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den,\n\nminulý týden jsem u vás koupil černé boty, objednávka číslo 2045. Boty jsou bohužel malé. Mám velikost 43, ne 42. Chtěl bych je vyměnit za větší. Můžete mi napsat, jak to mám udělat?\n\nS pozdravem\nAziz Karimov"
+  },
+  {
+   "id": "own-a2w-007",
+   "title": {
+    "cs": "Vzkaz sousedce",
+    "uz": "Qo'shniga xat",
+    "en": "A note to a neighbour",
+    "ru": "Записка соседке",
+    "uk": "Записка сусідці",
+    "vi": "Lời nhắn gửi hàng xóm"
+   },
+   "prompt": {
+    "cs": "Odjíždíte na týden. Napište sousedce vzkaz.",
+    "uz": "Bir haftaga ketyapsiz. Qo'shningizga xat qoldiring.",
+    "en": "You are going away for a week. Write a note to your neighbour.",
+    "ru": "Вы уезжаете на неделю. Напишите записку соседке.",
+    "uk": "Ви їдете на тиждень. Напишіть записку сусідці.",
+    "vi": "Bạn đi vắng một tuần. Hãy viết lời nhắn cho bà hàng xóm."
+   },
+   "points": [
+    {
+     "cs": "Kdy odjíždíte",
+     "uz": "Qachon ketyapsiz",
+     "en": "When you are leaving",
+     "ru": "Когда вы уезжаете",
+     "uk": "Коли ви їдете",
+     "vi": "Khi nào bạn đi"
+    },
+    {
+     "cs": "O co ji prosíte",
+     "uz": "Undan nimani so'rayapsiz",
+     "en": "What you are asking her to do",
+     "ru": "О чём вы её просите",
+     "uk": "Про що ви її просите",
+     "vi": "Bạn nhờ bà ấy việc gì"
+    },
+    {
+     "cs": "Poděkování",
+     "uz": "Minnatdorchilik",
+     "en": "Thanks",
+     "ru": "Благодарность",
+     "uk": "Подяка",
+     "vi": "Lời cảm ơn"
+    }
+   ],
+   "minWords": 25,
+   "model": "Dobrý den, paní Horáková,\n\nod pondělí do neděle budeme na dovolené. Mohla byste nám prosím vybírat poštu a zalévat květiny? Klíč vám dáme v neděli večer. Moc děkujeme.\n\nS pozdravem\nKarimovi"
+  },
+  {
+   "id": "own-a2w-008",
+   "title": {
+    "cs": "Pozvání na výlet",
+    "uz": "Sayohatga taklif",
+    "en": "An invitation to a trip",
+    "ru": "Приглашение на экскурсию",
+    "uk": "Запрошення на екскурсію",
+    "vi": "Lời mời đi chơi"
+   },
+   "prompt": {
+    "cs": "Napište kamarádce a pozvěte ji na výlet.",
+    "uz": "Dugonangizga yozib, uni sayohatga taklif qiling.",
+    "en": "Write to a friend and invite her on a trip.",
+    "ru": "Напишите подруге и пригласите её на экскурсию.",
+    "uk": "Напишіть подрузі та запросіть її на екскурсію.",
+    "vi": "Hãy viết cho một người bạn và mời cô ấy đi chơi xa."
+   },
+   "points": [
+    {
+     "cs": "Kam pojedete",
+     "uz": "Qayerga borasiz",
+     "en": "Where you will go",
+     "ru": "Куда вы поедете",
+     "uk": "Куди ви поїдете",
+     "vi": "Bạn sẽ đi đâu"
+    },
+    {
+     "cs": "Kdy a čím pojedete",
+     "uz": "Qachon va nima bilan borasiz",
+     "en": "When and how you will travel",
+     "ru": "Когда и на чём поедете",
+     "uk": "Коли і чим поїдете",
+     "vi": "Khi nào và đi bằng gì"
+    },
+    {
+     "cs": "Co si má vzít",
+     "uz": "U nima olishi kerak",
+     "en": "What she should bring",
+     "ru": "Что ей взять с собой",
+     "uk": "Що їй узяти з собою",
+     "vi": "Cô ấy nên mang theo gì"
+    }
+   ],
+   "minWords": 30,
+   "model": "Ahoj Evo,\n\nv neděli jedeme s dětmi na výlet na hrad Karlštejn. Pojedeme vlakem v devět hodin ráno z hlavního nádraží. Chceš jet s námi? Vezmi si pohodlné boty a něco k jídlu.\n\nNapiš mi,\nahoj Nodira"
+  },
+  {
+   "id": "own-a2w-009",
+   "title": {
+    "cs": "Změna termínu u zubaře",
+    "uz": "Tish shifokorida vaqtni o'zgartirish",
+    "en": "Changing a dental appointment",
+    "ru": "Перенос визита к стоматологу",
+    "uk": "Перенесення візиту до стоматолога",
+    "vi": "Đổi lịch hẹn nha sĩ"
+   },
+   "prompt": {
+    "cs": "Máte v pondělí termín u zubaře, ale nemůžete přijít. Napište e-mail do ordinace.",
+    "uz": "Dushanba kuni tish shifokoriga yozilgansiz, lekin bora olmaysiz. Klinikaga xat yozing.",
+    "en": "You have a dental appointment on Monday but cannot come. Write an e-mail to the surgery.",
+    "ru": "У вас в понедельник визит к стоматологу, но вы не можете прийти. Напишите письмо в клинику.",
+    "uk": "У вас у понеділок візит до стоматолога, але ви не можете прийти. Напишіть листа до клініки.",
+    "vi": "Bạn có hẹn nha sĩ vào thứ Hai nhưng không đến được. Hãy viết e-mail cho phòng khám."
+   },
+   "points": [
+    {
+     "cs": "Proč nemůžete přijít",
+     "uz": "Nega kela olmaysiz",
+     "en": "Why you cannot come",
+     "ru": "Почему вы не можете прийти",
+     "uk": "Чому ви не можете прийти",
+     "vi": "Vì sao bạn không đến được"
+    },
+    {
+     "cs": "Kdy můžete přijít",
+     "uz": "Qachon kela olasiz",
+     "en": "When you can come",
+     "ru": "Когда вы можете прийти",
+     "uk": "Коли ви можете прийти",
+     "vi": "Khi nào bạn có thể đến"
+    },
+    {
+     "cs": "Poproste o odpověď",
+     "uz": "Javob berishlarini so'rang",
+     "en": "Ask for a reply",
+     "ru": "Попросите ответить",
+     "uk": "Попросіть відповісти",
+     "vi": "Đề nghị trả lời"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den,\n\nmám objednanou kontrolu v pondělí 14. října v 9 hodin. Bohužel nemohu přijít, protože musím jet na služební cestu. Mohl bych přijít ve středu nebo ve čtvrtek odpoledne? Prosím o odpověď e-mailem.\n\nS pozdravem\nAziz Karimov"
+  },
+  {
+   "id": "own-a2w-010",
+   "title": {
+    "cs": "Můj běžný den",
+    "uz": "Mening oddiy kunim",
+    "en": "My typical day",
+    "ru": "Мой обычный день",
+    "uk": "Мій звичайний день",
+    "vi": "Một ngày bình thường của tôi"
+   },
+   "prompt": {
+    "cs": "Napište kamarádovi, jak vypadá váš běžný den.",
+    "uz": "Do'stingizga oddiy kuningiz qanday o'tishini yozing.",
+    "en": "Write to a friend about your typical day.",
+    "ru": "Напишите другу, как проходит ваш обычный день.",
+    "uk": "Напишіть другові, як минає ваш звичайний день.",
+    "vi": "Hãy viết cho một người bạn về một ngày bình thường của bạn."
+   },
+   "points": [
+    {
+     "cs": "Kdy vstáváte",
+     "uz": "Qachon turasiz",
+     "en": "When you get up",
+     "ru": "Когда вы встаёте",
+     "uk": "Коли ви встаєте",
+     "vi": "Bạn thức dậy lúc nào"
+    },
+    {
+     "cs": "Co děláte v práci nebo ve škole",
+     "uz": "Ishda yoki maktabda nima qilasiz",
+     "en": "What you do at work or school",
+     "ru": "Что вы делаете на работе или в школе",
+     "uk": "Що ви робите на роботі чи в школі",
+     "vi": "Bạn làm gì ở nơi làm việc hoặc ở trường"
+    },
+    {
+     "cs": "Co děláte večer",
+     "uz": "Kechqurun nima qilasiz",
+     "en": "What you do in the evening",
+     "ru": "Что вы делаете вечером",
+     "uk": "Що ви робите ввечері",
+     "vi": "Bạn làm gì vào buổi tối"
+    }
+   ],
+   "minWords": 35,
+   "model": "Ahoj Tomáši,\n\nptáš se, jak se mám. Můj den je docela normální. Vstávám v šest hodin a v sedm jedu do práce. Pracuji ve skladu do tří odpoledne. Večer vařím, dívám se na televizi nebo se učím česky.\n\nMěj se,\nAziz"
+  },
+  {
+   "id": "own-a2w-011",
+   "title": {
+    "cs": "Vzkaz sousedovi",
+    "uz": "Qo'shniga xat",
+    "en": "A note to a neighbour",
+    "ru": "Записка соседу",
+    "uk": "Записка сусідові",
+    "vi": "Lời nhắn cho hàng xóm"
+   },
+   "prompt": {
+    "cs": "Soused často večer hraje hlasitou hudbu. Napište mu slušný vzkaz.",
+    "uz": "Qo'shningiz kechqurunlari tez-tez baland musiqa qo'yadi. Unga xushmuomala xat yozing.",
+    "en": "Your neighbour often plays loud music in the evening. Write him a polite note.",
+    "ru": "Сосед часто вечером громко слушает музыку. Напишите ему вежливую записку.",
+    "uk": "Сусід часто ввечері гучно слухає музику. Напишіть йому ввічливу записку.",
+    "vi": "Hàng xóm thường mở nhạc to vào buổi tối. Hãy viết cho anh ấy một lời nhắn lịch sự."
+   },
+   "points": [
+    {
+     "cs": "Kdo jste",
+     "uz": "Siz kimsiz",
+     "en": "Who you are",
+     "ru": "Кто вы",
+     "uk": "Хто ви",
+     "vi": "Bạn là ai"
+    },
+    {
+     "cs": "Jaký je problém",
+     "uz": "Muammo nima",
+     "en": "What the problem is",
+     "ru": "В чём проблема",
+     "uk": "У чому проблема",
+     "vi": "Vấn đề là gì"
+    },
+    {
+     "cs": "Co navrhujete",
+     "uz": "Nimani taklif qilasiz",
+     "en": "What you suggest",
+     "ru": "Что вы предлагаете",
+     "uk": "Що ви пропонуєте",
+     "vi": "Bạn đề nghị gì"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den,\n\njsem vaše sousedka z bytu č. 7. Večer po desáté hodině je u vás často slyšet hlasitá hudba a moje malé děti nemohou spát. Mohl byste prosím po desáté hodině hudbu ztlumit? Moc děkuji za pochopení.\n\nS pozdravem\nAnna Petrenko"
+  },
+  {
+   "id": "own-a2w-012",
+   "title": {
+    "cs": "Ztracené klíče",
+    "uz": "Yo'qolgan kalitlar",
+    "en": "Lost keys",
+    "ru": "Потерянные ключи",
+    "uk": "Загублені ключі",
+    "vi": "Mất chìa khóa"
+   },
+   "prompt": {
+    "cs": "Ztratil nebo ztratila jste klíče od bytu. Napište e-mail správci domu.",
+    "uz": "Kvartira kalitlarini yo'qotdingiz. Uy boshqaruvchisiga xat yozing.",
+    "en": "You have lost the keys to your flat. Write an e-mail to the building manager.",
+    "ru": "Вы потеряли ключи от квартиры. Напишите письмо управляющему домом.",
+    "uk": "Ви загубили ключі від квартири. Напишіть листа управителю будинку.",
+    "vi": "Bạn làm mất chìa khóa căn hộ. Hãy viết e-mail cho người quản lý tòa nhà."
+   },
+   "points": [
+    {
+     "cs": "Co se stalo",
+     "uz": "Nima bo'ldi",
+     "en": "What happened",
+     "ru": "Что случилось",
+     "uk": "Що сталося",
+     "vi": "Chuyện gì đã xảy ra"
+    },
+    {
+     "cs": "Které klíče potřebujete",
+     "uz": "Qaysi kalitlar kerak",
+     "en": "Which keys you need",
+     "ru": "Какие ключи вам нужны",
+     "uk": "Які ключі вам потрібні",
+     "vi": "Bạn cần chìa khóa nào"
+    },
+    {
+     "cs": "Kdy si je můžete vyzvednout",
+     "uz": "Ularni qachon olishingiz mumkin",
+     "en": "When you can collect them",
+     "ru": "Когда вы можете их забрать",
+     "uk": "Коли ви можете їх забрати",
+     "vi": "Khi nào bạn có thể lấy"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den, pane Dvořáku,\n\nvčera jsem ztratil klíče od bytu č. 12 a od vchodu. Potřebuji prosím nové klíče. Můžu si je vyzvednout zítra po 17. hodině? Zaplatím je samozřejmě.\n\nDěkuji\nOleh Kovalenko"
+  },
+  {
+   "id": "own-a2w-013",
+   "title": {
+    "cs": "Rozlučka v práci",
+    "uz": "Ishdagi xayrlashuv",
+    "en": "A farewell at work",
+    "ru": "Прощание на работе",
+    "uk": "Прощання на роботі",
+    "vi": "Tiệc chia tay ở công ty"
+   },
+   "prompt": {
+    "cs": "Odcházíte z práce. Pozvěte kolegy na rozlučku.",
+    "uz": "Ishdan ketyapsiz. Hamkasblaringizni xayrlashuv kechasiga taklif qiling.",
+    "en": "You are leaving your job. Invite your colleagues to a farewell.",
+    "ru": "Вы уходите с работы. Пригласите коллег на прощание.",
+    "uk": "Ви йдете з роботи. Запросіть колег на прощання.",
+    "vi": "Bạn sắp nghỉ việc. Hãy mời đồng nghiệp đến buổi chia tay."
+   },
+   "points": [
+    {
+     "cs": "Proč odcházíte",
+     "uz": "Nega ketyapsiz",
+     "en": "Why you are leaving",
+     "ru": "Почему вы уходите",
+     "uk": "Чому ви йдете",
+     "vi": "Vì sao bạn nghỉ việc"
+    },
+    {
+     "cs": "Kdy a kde bude rozlučka",
+     "uz": "Xayrlashuv qachon va qayerda",
+     "en": "When and where the farewell will be",
+     "ru": "Когда и где будет прощание",
+     "uk": "Коли й де буде прощання",
+     "vi": "Buổi chia tay khi nào và ở đâu"
+    },
+    {
+     "cs": "Poděkujte kolegům",
+     "uz": "Hamkasblarga rahmat ayting",
+     "en": "Thank your colleagues",
+     "ru": "Поблагодарите коллег",
+     "uk": "Подякуйте колегам",
+     "vi": "Cảm ơn đồng nghiệp"
+    }
+   ],
+   "minWords": 30,
+   "model": "Milí kolegové,\n\nod března budu pracovat v Brně, protože se tam stěhujeme s rodinou. Zvu vás na malou rozlučku v pátek 28. února ve 14 hodin v kuchyňce. Moc vám děkuji za pomoc a za krásné tři roky.\n\nS pozdravem\nNguyen Thi Lan"
+  },
+  {
+   "id": "own-a2w-014",
+   "title": {
+    "cs": "Žádost o dovolenou",
+    "uz": "Ta'til so'rash",
+    "en": "Asking for leave",
+    "ru": "Просьба об отпуске",
+    "uk": "Прохання про відпустку",
+    "vi": "Xin nghỉ phép"
+   },
+   "prompt": {
+    "cs": "Napište e-mail vedoucímu a požádejte o dovolenou.",
+    "uz": "Rahbaringizga xat yozib, ta'til so'rang.",
+    "en": "Write an e-mail to your manager asking for leave.",
+    "ru": "Напишите письмо начальнику и попросите отпуск.",
+    "uk": "Напишіть листа керівникові й попросіть відпустку.",
+    "vi": "Hãy viết e-mail cho quản lý để xin nghỉ phép."
+   },
+   "points": [
+    {
+     "cs": "Kdy chcete dovolenou",
+     "uz": "Qachon ta'til olmoqchisiz",
+     "en": "When you want leave",
+     "ru": "Когда вы хотите отпуск",
+     "uk": "Коли ви хочете відпустку",
+     "vi": "Bạn muốn nghỉ khi nào"
+    },
+    {
+     "cs": "Proč",
+     "uz": "Nega",
+     "en": "Why",
+     "ru": "Почему",
+     "uk": "Чому",
+     "vi": "Vì sao"
+    },
+    {
+     "cs": "Kdo vás zastoupí",
+     "uz": "Sizni kim almashtiradi",
+     "en": "Who will cover for you",
+     "ru": "Кто вас заменит",
+     "uk": "Хто вас замінить",
+     "vi": "Ai sẽ làm thay bạn"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den, pane Horák,\n\nchtěla bych si vzít dovolenou od 3. do 7. srpna. Jedu s rodinou na svatbu sestry. Za mě bude pracovat kolegyně Jana, už jsme se domluvily.\n\nDěkuji\nOlena Bondar"
+  },
+  {
+   "id": "own-a2w-015",
+   "title": {
+    "cs": "Inzerát: prodám pohovku",
+    "uz": "E'lon: divan sotaman",
+    "en": "Ad: sofa for sale",
+    "ru": "Объявление: продам диван",
+    "uk": "Оголошення: продам диван",
+    "vi": "Rao vặt: bán ghế sofa"
+   },
+   "prompt": {
+    "cs": "Stěhujete se a chcete prodat pohovku. Napište krátký inzerát a e-mail kamarádce, jestli ji nechce.",
+    "uz": "Ko'chyapsiz va divan sotmoqchisiz. Dugonangizga uni olishni xohlaydimi deb xat yozing.",
+    "en": "You are moving and want to sell your sofa. Write an e-mail to a friend asking whether she wants it.",
+    "ru": "Вы переезжаете и хотите продать диван. Напишите подруге, не хочет ли она его купить.",
+    "uk": "Ви переїжджаєте й хочете продати диван. Напишіть подрузі, чи не хоче вона його купити.",
+    "vi": "Bạn chuyển nhà và muốn bán ghế sofa. Hãy viết e-mail hỏi bạn mình có muốn mua không."
+   },
+   "points": [
+    {
+     "cs": "Jaká je pohovka",
+     "uz": "Divan qanday",
+     "en": "What the sofa is like",
+     "ru": "Какой диван",
+     "uk": "Який диван",
+     "vi": "Ghế sofa thế nào"
+    },
+    {
+     "cs": "Kolik stojí",
+     "uz": "Qancha turadi",
+     "en": "How much it costs",
+     "ru": "Сколько стоит",
+     "uk": "Скільки коштує",
+     "vi": "Giá bao nhiêu"
+    },
+    {
+     "cs": "Kdy si ji může prohlédnout",
+     "uz": "Uni qachon ko'rishi mumkin",
+     "en": "When she can see it",
+     "ru": "Когда можно посмотреть",
+     "uk": "Коли можна подивитися",
+     "vi": "Khi nào có thể đến xem"
+    }
+   ],
+   "minWords": 30,
+   "model": "Ahoj Petro,\n\nstěhujeme se a prodávám naši šedou pohovku. Je dva roky stará, velká a pohodlná, pro tři lidi. Chci za ni 3 000 Kč. Můžeš se na ni přijít podívat v sobotu dopoledne. Nechceš ji?\n\nMěj se\nMarta"
+  },
+  {
+   "id": "own-a2w-016",
+   "title": {
+    "cs": "Omluva kamarádce",
+    "uz": "Dugonadan uzr so'rash",
+    "en": "Apologising to a friend",
+    "ru": "Извинение перед подругой",
+    "uk": "Вибачення перед подругою",
+    "vi": "Xin lỗi bạn"
+   },
+   "prompt": {
+    "cs": "Kamarádka vás pozvala na večeři, ale nemůžete přijít. Napište jí zprávu.",
+    "uz": "Dugonangiz sizni kechki ovqatga taklif qildi, lekin bora olmaysiz. Unga xabar yozing.",
+    "en": "A friend invited you to dinner, but you cannot come. Write her a message.",
+    "ru": "Подруга пригласила вас на ужин, но вы не можете прийти. Напишите ей сообщение.",
+    "uk": "Подруга запросила вас на вечерю, але ви не можете прийти. Напишіть їй повідомлення.",
+    "vi": "Bạn của bạn mời ăn tối nhưng bạn không đến được. Hãy nhắn tin cho cô ấy."
+   },
+   "points": [
+    {
+     "cs": "Poděkujte za pozvání",
+     "uz": "Taklif uchun rahmat ayting",
+     "en": "Thank her for the invitation",
+     "ru": "Поблагодарите за приглашение",
+     "uk": "Подякуйте за запрошення",
+     "vi": "Cảm ơn lời mời"
+    },
+    {
+     "cs": "Proč nemůžete přijít",
+     "uz": "Nega kela olmaysiz",
+     "en": "Why you cannot come",
+     "ru": "Почему вы не можете прийти",
+     "uk": "Чому ви не можете прийти",
+     "vi": "Vì sao bạn không đến được"
+    },
+    {
+     "cs": "Navrhněte jiný termín",
+     "uz": "Boshqa vaqt taklif qiling",
+     "en": "Suggest another date",
+     "ru": "Предложите другое время",
+     "uk": "Запропонуйте інший час",
+     "vi": "Đề nghị ngày khác"
+    }
+   ],
+   "minWords": 30,
+   "model": "Ahoj Kláro,\n\nmoc děkuji za pozvání na večeři v pátek. Bohužel nemůžu přijít, protože mám v pátek odpoledne směnu v práci až do deseti. Nechceš se sejít příští sobotu? Můžeme jít spolu do kavárny.\n\nMěj se hezky\nAigerim"
+  },
+  {
+   "id": "own-a2w-017",
+   "title": {
+    "cs": "Prodloužení výpůjčky",
+    "uz": "Kitob muddatini uzaytirish",
+    "en": "Renewing a library loan",
+    "ru": "Продление книги в библиотеке",
+    "uk": "Продовження книжки в бібліотеці",
+    "vi": "Gia hạn mượn sách"
+   },
+   "prompt": {
+    "cs": "Máte doma knihy z knihovny a nestihnete je vrátit včas. Napište e-mail do knihovny.",
+    "uz": "Uyingizda kutubxona kitoblari bor va ularni o'z vaqtida qaytara olmaysiz. Kutubxonaga xat yozing.",
+    "en": "You have library books at home and won't return them on time. Write an e-mail to the library.",
+    "ru": "У вас дома книги из библиотеки, и вы не успеете вернуть их вовремя. Напишите в библиотеку.",
+    "uk": "У вас удома книжки з бібліотеки, і ви не встигнете повернути їх вчасно. Напишіть до бібліотеки.",
+    "vi": "Bạn có sách mượn thư viện nhưng không kịp trả đúng hạn. Hãy viết e-mail cho thư viện."
+   },
+   "points": [
+    {
+     "cs": "Které knihy máte",
+     "uz": "Qaysi kitoblar sizda",
+     "en": "Which books you have",
+     "ru": "Какие книги у вас",
+     "uk": "Які книжки у вас",
+     "vi": "Bạn đang mượn sách nào"
+    },
+    {
+     "cs": "Proč je nemůžete vrátit",
+     "uz": "Nega qaytara olmaysiz",
+     "en": "Why you can't return them",
+     "ru": "Почему не можете вернуть",
+     "uk": "Чому не можете повернути",
+     "vi": "Vì sao bạn không thể trả"
+    },
+    {
+     "cs": "Do kdy je chcete mít",
+     "uz": "Qachongacha kerak",
+     "en": "Until when you want them",
+     "ru": "До какого числа они нужны",
+     "uk": "До якого числа вони потрібні",
+     "vi": "Bạn muốn mượn đến khi nào"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den,\n\nmám půjčené dvě knihy, učebnici češtiny a kuchařku. Mám je vrátit v pondělí, ale jsem nemocný a nemohu přijít. Můžete mi prosím výpůjčku prodloužit o dva týdny?\n\nDěkuji\nBahodir Rahimov, číslo průkazu 10457"
+  },
+  {
+   "id": "own-a2w-018",
+   "title": {
+    "cs": "Vzkaz pro chůvu",
+    "uz": "Enaga uchun xat",
+    "en": "A note for the babysitter",
+    "ru": "Записка для няни",
+    "uk": "Записка для няні",
+    "vi": "Lời nhắn cho người trông trẻ"
+   },
+   "prompt": {
+    "cs": "Večer jdete do divadla. Napište vzkaz chůvě, která bude hlídat vaše dítě.",
+    "uz": "Kechqurun teatrga borasiz. Farzandingizga qaraydigan enagaga xat yozing.",
+    "en": "You are going to the theatre tonight. Write a note to the babysitter who will look after your child.",
+    "ru": "Вечером вы идёте в театр. Напишите записку няне, которая будет сидеть с ребёнком.",
+    "uk": "Увечері ви йдете до театру. Напишіть записку няні, яка доглядатиме дитину.",
+    "vi": "Tối nay bạn đi xem kịch. Hãy viết lời nhắn cho người trông con."
+   },
+   "points": [
+    {
+     "cs": "Co dítě bude jíst",
+     "uz": "Bola nima yeydi",
+     "en": "What the child will eat",
+     "ru": "Что ребёнок будет есть",
+     "uk": "Що дитина їстиме",
+     "vi": "Bé sẽ ăn gì"
+    },
+    {
+     "cs": "Kdy jde spát",
+     "uz": "Qachon uxlaydi",
+     "en": "When the child goes to bed",
+     "ru": "Когда ложится спать",
+     "uk": "Коли лягає спати",
+     "vi": "Khi nào bé đi ngủ"
+    },
+    {
+     "cs": "Kdy se vrátíte a vaše telefonní číslo",
+     "uz": "Qachon qaytasiz va telefon raqamingiz",
+     "en": "When you will be back and your phone number",
+     "ru": "Когда вернётесь и ваш номер телефона",
+     "uk": "Коли повернетеся і ваш номер телефону",
+     "vi": "Khi nào bạn về và số điện thoại"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý večer, Lucie,\n\nvečeře je v lednici, stačí ji ohřát. Ema může mít po večeři jogurt. Spát jde v osm hodin, ráda poslouchá pohádku. Vrátíme se asi v jedenáct. Kdyby něco, volejte mi na číslo 602 000 000.\n\nDěkuji\nIrina"
+  },
+  {
+   "id": "own-a2w-019",
+   "title": {
+    "cs": "Pozvánka na grilování",
+    "uz": "Grillga taklif",
+    "en": "Invitation to a barbecue",
+    "ru": "Приглашение на барбекю",
+    "uk": "Запрошення на барбекю",
+    "vi": "Mời đi tiệc nướng"
+   },
+   "prompt": {
+    "cs": "Pozvěte sousedy na grilování na zahradě.",
+    "uz": "Qo'shnilarni bog'dagi grill kechasiga taklif qiling.",
+    "en": "Invite your neighbours to a barbecue in the garden.",
+    "ru": "Пригласите соседей на барбекю в саду.",
+    "uk": "Запросіть сусідів на барбекю в саду.",
+    "vi": "Hãy mời hàng xóm đến tiệc nướng trong vườn."
+   },
+   "points": [
+    {
+     "cs": "Kdy a kde",
+     "uz": "Qachon va qayerda",
+     "en": "When and where",
+     "ru": "Когда и где",
+     "uk": "Коли й де",
+     "vi": "Khi nào và ở đâu"
+    },
+    {
+     "cs": "Co připravíte",
+     "uz": "Nima tayyorlaysiz",
+     "en": "What you will prepare",
+     "ru": "Что вы приготовите",
+     "uk": "Що ви приготуєте",
+     "vi": "Bạn sẽ chuẩn bị gì"
+    },
+    {
+     "cs": "Co mají přinést",
+     "uz": "Ular nima olib kelishi kerak",
+     "en": "What they should bring",
+     "ru": "Что им принести",
+     "uk": "Що їм принести",
+     "vi": "Họ nên mang gì"
+    }
+   ],
+   "minWords": 30,
+   "model": "Milí sousedé,\n\nzveme vás na grilování na naší zahradě v neděli 15. června od 16 hodin. Připravíme klobásy, zeleninu a limonádu. Přineste si prosím jen dobrou náladu a když chcete, nějaký salát.\n\nTěšíme se na vás!\n\nS pozdravem\nrodina Kimových"
+  },
+  {
+   "id": "own-a2w-020",
+   "title": {
+    "cs": "Recenze restaurace",
+    "uz": "Restoran haqida sharh",
+    "en": "A restaurant review",
+    "ru": "Отзыв о ресторане",
+    "uk": "Відгук про ресторан",
+    "vi": "Đánh giá nhà hàng"
+   },
+   "prompt": {
+    "cs": "Byl nebo byla jste v nové restauraci. Napište krátkou recenzi na internet.",
+    "uz": "Yangi restoranda bo'ldingiz. Internetga qisqa sharh yozing.",
+    "en": "You have been to a new restaurant. Write a short online review.",
+    "ru": "Вы были в новом ресторане. Напишите короткий отзыв в интернете.",
+    "uk": "Ви були в новому ресторані. Напишіть короткий відгук в інтернеті.",
+    "vi": "Bạn đã đến một nhà hàng mới. Hãy viết một đánh giá ngắn trên mạng."
+   },
+   "points": [
+    {
+     "cs": "Co jste jedl nebo jedla",
+     "uz": "Nima yedingiz",
+     "en": "What you ate",
+     "ru": "Что вы ели",
+     "uk": "Що ви їли",
+     "vi": "Bạn đã ăn gì"
+    },
+    {
+     "cs": "Jaká byla obsluha",
+     "uz": "Xizmat qanday edi",
+     "en": "What the service was like",
+     "ru": "Каким было обслуживание",
+     "uk": "Яким було обслуговування",
+     "vi": "Phục vụ thế nào"
+    },
+    {
+     "cs": "Doporučujete restauraci",
+     "uz": "Restoranni tavsiya qilasizmi",
+     "en": "Whether you recommend it",
+     "ru": "Рекомендуете ли ресторан",
+     "uk": "Чи рекомендуєте ресторан",
+     "vi": "Bạn có giới thiệu nhà hàng không"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den všem,\n\nvčera jsem byl s manželkou v nové restauraci U Lípy. Měl jsem guláš s knedlíkem a byl výborný. Obsluha byla rychlá a příjemná, jen tam bylo trochu hlučno. Restauraci doporučuji, ceny jsou rozumné.\n\nS pozdravem\nRustam"
+  },
+  {
+   "id": "own-a2w-021",
+   "title": {
+    "cs": "Nefunguje topení",
+    "uz": "Isitish ishlamayapti",
+    "en": "The heating is not working",
+    "ru": "Не работает отопление",
+    "uk": "Не працює опалення",
+    "vi": "Lò sưởi không hoạt động"
+   },
+   "prompt": {
+    "cs": "V bytě nefunguje topení. Napište e-mail majiteli bytu.",
+    "uz": "Kvartirada isitish ishlamayapti. Kvartira egasiga xat yozing.",
+    "en": "The heating in your flat is not working. Write an e-mail to the landlord.",
+    "ru": "В квартире не работает отопление. Напишите письмо хозяину квартиры.",
+    "uk": "У квартирі не працює опалення. Напишіть листа власникові квартири.",
+    "vi": "Lò sưởi trong căn hộ không hoạt động. Hãy viết e-mail cho chủ nhà."
+   },
+   "points": [
+    {
+     "cs": "Od kdy topení nefunguje",
+     "uz": "Isitish qachondan ishlamayapti",
+     "en": "Since when it has not worked",
+     "ru": "С какого времени не работает",
+     "uk": "Відколи не працює",
+     "vi": "Hỏng từ khi nào"
+    },
+    {
+     "cs": "Jaká je v bytě teplota",
+     "uz": "Kvartirada harorat qanday",
+     "en": "What the temperature in the flat is",
+     "ru": "Какая в квартире температура",
+     "uk": "Яка в квартирі температура",
+     "vi": "Nhiệt độ trong nhà thế nào"
+    },
+    {
+     "cs": "Kdy můžete být doma",
+     "uz": "Qachon uyda bo'la olasiz",
+     "en": "When you can be at home",
+     "ru": "Когда вы можете быть дома",
+     "uk": "Коли ви можете бути вдома",
+     "vi": "Khi nào bạn có thể ở nhà"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den, paní Králová,\n\nv našem bytě od včerejšího večera nefunguje topení. V obýváku je jen 15 stupňů a máme malé dítě. Můžete prosím poslat opraváře? Doma jsem každý den po 16. hodině.\n\nDěkuji\nTran Van Minh"
+  },
+  {
+   "id": "own-a2w-022",
+   "title": {
+    "cs": "Gratulace ke svatbě",
+    "uz": "To'y bilan tabriklash",
+    "en": "Wedding congratulations",
+    "ru": "Поздравление со свадьбой",
+    "uk": "Привітання з весіллям",
+    "vi": "Chúc mừng đám cưới"
+   },
+   "prompt": {
+    "cs": "Kolega se oženil. Napište mu blahopřání.",
+    "uz": "Hamkasbingiz uylandi. Unga tabrik yozing.",
+    "en": "A colleague got married. Write him a congratulation.",
+    "ru": "Коллега женился. Напишите ему поздравление.",
+    "uk": "Колега одружився. Напишіть йому привітання.",
+    "vi": "Một đồng nghiệp vừa kết hôn. Hãy viết lời chúc mừng."
+   },
+   "points": [
+    {
+     "cs": "Pogratulujte",
+     "uz": "Tabriklang",
+     "en": "Congratulate him",
+     "ru": "Поздравьте",
+     "uk": "Привітайте",
+     "vi": "Chúc mừng"
+    },
+    {
+     "cs": "Popřejte něco do života",
+     "uz": "Hayotda biror narsa tilang",
+     "en": "Wish them something for their life",
+     "ru": "Пожелайте чего-нибудь",
+     "uk": "Побажайте чогось",
+     "vi": "Chúc điều tốt đẹp"
+    },
+    {
+     "cs": "Napište, jaký dárek posíláte",
+     "uz": "Qanday sovg'a yuborayotganingizni yozing",
+     "en": "Say what present you are sending",
+     "ru": "Напишите, какой подарок посылаете",
+     "uk": "Напишіть, який подарунок надсилаєте",
+     "vi": "Viết bạn gửi quà gì"
+    }
+   ],
+   "minWords": 30,
+   "model": "Milý Tomáši,\n\nsrdečně ti blahopřeji ke svatbě! Tobě a Kateřině přeji hodně lásky, zdraví a štěstí. Posílám vám malý dárek, poukaz na večeři v restauraci, abyste si užili hezký večer.\n\nS pozdravem\nAlina"
+  },
+  {
+   "id": "own-a2w-023",
+   "title": {
+    "cs": "Jak se k nám dostanete",
+    "uz": "Bizga qanday yetib kelasiz",
+    "en": "How to get to our place",
+    "ru": "Как до нас добраться",
+    "uk": "Як до нас дістатися",
+    "vi": "Đường đến nhà tôi"
+   },
+   "prompt": {
+    "cs": "Kamarád k vám jede poprvé. Napište mu, jak se k vám dostane z nádraží.",
+    "uz": "Do'stingiz sizga birinchi marta kelyapti. Vokzaldan qanday kelishini yozing.",
+    "en": "A friend is visiting you for the first time. Write how to get to your place from the station.",
+    "ru": "Друг едет к вам впервые. Напишите, как добраться от вокзала.",
+    "uk": "Друг їде до вас уперше. Напишіть, як дістатися від вокзалу.",
+    "vi": "Một người bạn lần đầu đến nhà bạn. Hãy viết cách đi từ nhà ga."
+   },
+   "points": [
+    {
+     "cs": "Jakým spojem má jet",
+     "uz": "Qaysi transportda kelishi kerak",
+     "en": "Which transport to take",
+     "ru": "На каком транспорте ехать",
+     "uk": "Яким транспортом їхати",
+     "vi": "Đi bằng phương tiện gì"
+    },
+    {
+     "cs": "Kde má vystoupit",
+     "uz": "Qayerda tushishi kerak",
+     "en": "Where to get off",
+     "ru": "Где выйти",
+     "uk": "Де вийти",
+     "vi": "Xuống ở đâu"
+    },
+    {
+     "cs": "Jak najde váš dům",
+     "uz": "Uyingizni qanday topadi",
+     "en": "How to find your house",
+     "ru": "Как найти ваш дом",
+     "uk": "Як знайти ваш будинок",
+     "vi": "Tìm nhà bạn thế nào"
+    }
+   ],
+   "minWords": 30,
+   "model": "Ahoj Davide,\n\nz nádraží jeď autobusem číslo 12 směr Lesná. Vystup na čtvrté zastávce, jmenuje se Školní. Pak jdi rovně asi sto metrů. Náš dům je žlutý, číslo 25, hned vedle pekárny. Zazvoň na Rahimovi.\n\nTěším se, ahoj\nSardor"
+  },
+  {
+   "id": "own-a2w-024",
+   "title": {
+    "cs": "Potvrzení o zaměstnání",
+    "uz": "Ish joyidan ma'lumotnoma",
+    "en": "Employment certificate",
+    "ru": "Справка с места работы",
+    "uk": "Довідка з місця роботи",
+    "vi": "Giấy xác nhận việc làm"
+   },
+   "prompt": {
+    "cs": "Potřebujete potvrzení o zaměstnání pro úřad. Napište e-mail na personální oddělení.",
+    "uz": "Davlat idorasi uchun ish joyidan ma'lumotnoma kerak. Kadrlar bo'limiga xat yozing.",
+    "en": "You need an employment certificate for an authority. Write an e-mail to the HR department.",
+    "ru": "Вам нужна справка с места работы для учреждения. Напишите в отдел кадров.",
+    "uk": "Вам потрібна довідка з місця роботи для установи. Напишіть до відділу кадрів.",
+    "vi": "Bạn cần giấy xác nhận việc làm cho cơ quan nhà nước. Hãy viết e-mail cho phòng nhân sự."
+   },
+   "points": [
+    {
+     "cs": "Co potřebujete",
+     "uz": "Nima kerak",
+     "en": "What you need",
+     "ru": "Что вам нужно",
+     "uk": "Що вам потрібно",
+     "vi": "Bạn cần gì"
+    },
+    {
+     "cs": "Na co to potřebujete",
+     "uz": "Nima uchun kerak",
+     "en": "What you need it for",
+     "ru": "Для чего это нужно",
+     "uk": "Для чого це потрібно",
+     "vi": "Cần để làm gì"
+    },
+    {
+     "cs": "Do kdy to potřebujete",
+     "uz": "Qachongacha kerak",
+     "en": "By when you need it",
+     "ru": "К какому сроку",
+     "uk": "До якого терміну",
+     "vi": "Cần trước khi nào"
+    }
+   ],
+   "minWords": 30,
+   "model": "Dobrý den,\n\npotřeboval bych prosím potvrzení o zaměstnání. Potřebuji ho na ministerstvo vnitra k žádosti o trvalý pobyt. Můžete mi ho prosím připravit do pátku? Vyzvednu si ho osobně.\n\nDěkuji\nDilshod Ergashev, oddělení logistiky"
+  },
+  {
+   "id": "own-a2w-025",
+   "title": {
+    "cs": "Vzkaz kolegovi",
+    "uz": "Hamkasbga xat",
+    "en": "A note to a colleague",
+    "ru": "Записка коллеге",
+    "uk": "Записка колезі",
+    "vi": "Lời nhắn cho đồng nghiệp"
+   },
+   "prompt": {
+    "cs": "Jedete na dovolenou. Napište kolegovi, co má během týdne udělat za vás.",
+    "uz": "Ta'tilga ketyapsiz. Hamkasbingizga hafta davomida siz uchun nima qilishi kerakligini yozing.",
+    "en": "You are going on holiday. Write to a colleague what he should do for you during the week.",
+    "ru": "Вы уезжаете в отпуск. Напишите коллеге, что он должен сделать за вас за неделю.",
+    "uk": "Ви їдете у відпустку. Напишіть колезі, що він має зробити за вас протягом тижня.",
+    "vi": "Bạn đi nghỉ phép. Hãy viết cho đồng nghiệp những việc cần làm thay bạn trong tuần."
+   },
+   "points": [
+    {
+     "cs": "Kdy nebudete v práci",
+     "uz": "Qachon ishda bo'lmaysiz",
+     "en": "When you won't be at work",
+     "ru": "Когда вас не будет на работе",
+     "uk": "Коли вас не буде на роботі",
+     "vi": "Khi nào bạn vắng mặt"
+    },
+    {
+     "cs": "Co má udělat",
+     "uz": "Nima qilishi kerak",
+     "en": "What he should do",
+     "ru": "Что ему сделать",
+     "uk": "Що йому зробити",
+     "vi": "Anh ấy cần làm gì"
+    },
+    {
+     "cs": "Poděkujte",
+     "uz": "Rahmat ayting",
+     "en": "Thank him",
+     "ru": "Поблагодарите",
+     "uk": "Подякуйте",
+     "vi": "Cảm ơn"
+    }
+   ],
+   "minWords": 30,
+   "model": "Ahoj Martine,\n\nod pondělí do pátku budu na dovolené. Prosím, odpověz v úterý na e-mail od firmy Stavex a ve čtvrtek objednej papír do tiskárny. Klíč od skříně je v mém stole. Moc děkuju za pomoc.\n\nAhoj\nLinh"
+  }
+ ]
 }
