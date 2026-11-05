@@ -63,34 +63,35 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   Divider(height: 1, color: AppColors.border),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+                    child: Row(
                       children: [
-                        Row(
-                          children: [
-                            Icon(Icons.contrast, color: AppColors.muted),
-                            const SizedBox(width: 16),
-                            Text(s.themeTitle, style: const TextStyle(fontSize: 16)),
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-                        SizedBox(
-                          width: double.infinity,
-                          child: SegmentedButton<ThemeMode>(
-                            showSelectedIcon: false,
-                            segments: [
-                              ButtonSegment(value: ThemeMode.system, icon: const Icon(Icons.brightness_auto_outlined), label: Text(s.themeSystem)),
-                              ButtonSegment(value: ThemeMode.light, icon: const Icon(Icons.light_mode_outlined), label: Text(s.themeLight)),
-                              ButtonSegment(value: ThemeMode.dark, icon: const Icon(Icons.dark_mode_outlined), label: Text(s.themeDark)),
-                            ],
-                            selected: {controller.themeMode},
-                            onSelectionChanged: (selection) => controller.setThemeMode(selection.first),
-                          ),
-                        ),
+                        Icon(Icons.contrast, color: AppColors.muted),
+                        const SizedBox(width: 16),
+                        Text(s.themeTitle, style: const TextStyle(fontSize: 16)),
                       ],
                     ),
                   ),
+                  // Uch variant ustma-ust: har qanday tilda yozuv to'liq sig'adi.
+                  for (final (mode, icon, label) in [
+                    (ThemeMode.system, Icons.brightness_auto_outlined, s.themeSystem),
+                    (ThemeMode.light, Icons.light_mode_outlined, s.themeLight),
+                    (ThemeMode.dark, Icons.dark_mode_outlined, s.themeDark),
+                  ])
+                    Semantics(
+                      inMutuallyExclusiveGroup: true,
+                      checked: controller.themeMode == mode,
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.only(left: 56, right: 16),
+                        leading: Icon(icon, color: controller.themeMode == mode ? AppColors.accent : AppColors.muted),
+                        title: Text(
+                          label,
+                          style: TextStyle(fontWeight: controller.themeMode == mode ? FontWeight.w700 : FontWeight.w400),
+                        ),
+                        trailing: controller.themeMode == mode ? Icon(Icons.check, color: AppColors.accent) : null,
+                        onTap: () => controller.setThemeMode(mode),
+                      ),
+                    ),
                   Divider(height: 1, color: AppColors.border),
                   ListTile(
                     leading: const Icon(Icons.privacy_tip_outlined),
