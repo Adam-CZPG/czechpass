@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/material.dart' show Brightness, ThemeMode;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -10,6 +11,7 @@ import 'package:czech_pass/core/exam_rules.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
 import 'package:czech_pass/core/session_store.dart';
+import 'package:czech_pass/core/settings_store.dart';
 import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/features/a2/a2_mock_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
@@ -200,5 +202,21 @@ void main() {
     expect((await store.award(got)).length, got.length);
     expect(await store.award(got), isEmpty);
     expect((await BadgeStore.load()).has(Badges.firstSteps), isTrue);
+  });
+
+  test('mavzu tanlovi saqlanadi va qorong\'i rejim to\'g\'ri aniqlanadi', () async {
+    SharedPreferences.setMockInitialValues({});
+    final settings = SettingsStore();
+    expect(await settings.loadThemeMode(), ThemeMode.system);
+
+    final controller = AppController(settings: settings, progress: await ProgressStore.load());
+    expect(controller.isDark(Brightness.dark), isTrue);
+    expect(controller.isDark(Brightness.light), isFalse);
+
+    await controller.setThemeMode(ThemeMode.light);
+    expect(controller.isDark(Brightness.dark), isFalse);
+    await controller.setThemeMode(ThemeMode.dark);
+    expect(controller.isDark(Brightness.light), isTrue);
+    expect(await settings.loadThemeMode(), ThemeMode.dark);
   });
 }

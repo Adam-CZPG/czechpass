@@ -33,6 +33,7 @@ Future<void> main() async {
     initialDailyGoal: await settings.loadDailyGoal(),
     initialReminder: await settings.loadReminder(),
     badges: await BadgeStore.load(),
+    initialThemeMode: await settings.loadThemeMode(),
   );
   // Ilova yangilangandan keyin ham eslatma ishlashi uchun qayta rejalashtiramiz.
   controller.rescheduleReminder();
@@ -93,29 +94,36 @@ class _CzechPassAppState extends State<CzechPassApp> with WidgetsBindingObserver
   }
 
   void _syncBrightness() {
-    AppColors.dark = WidgetsBinding.instance.platformDispatcher.platformBrightness == Brightness.dark;
+    AppColors.dark = controller.isDark(WidgetsBinding.instance.platformDispatcher.platformBrightness);
   }
 
   @override
   Widget build(BuildContext context) {
     return AppScope(
       controller: controller,
-      child: MaterialApp(
-        navigatorKey: _navigatorKey,
-        scaffoldMessengerKey: _messengerKey,
-        title: 'CzechPass',
-        debugShowCheckedModeBanner: false,
-        theme: buildTheme(Brightness.light),
-        darkTheme: buildTheme(Brightness.dark),
-        themeMode: AppColors.dark ? ThemeMode.dark : ThemeMode.light,
-        // Tizim oynalari (masalan, sana tanlash) ham ilova tilida chiqadi.
-        locale: Locale(controller.language.code),
-        supportedLocales: [for (final l in AppLanguage.values) Locale(l.code)],
-        localizationsDelegates: GlobalMaterialLocalizations.delegates,
-        // Til hali tanlanmagan bo'lsa — til tanlash ekrani, aks holda bosh sahifa.
-        home: controller.selectedLanguage == null
-            ? const LanguageScreen(isOnboarding: true)
-            : const HomeScreen(),
+      // Til yoki mavzu o'zgarganda butun ilova qayta chiziladi.
+      child: ListenableBuilder(
+        listenable: controller,
+        builder: (context, _) {
+          _syncBrightness();
+          return MaterialApp(
+            navigatorKey: _navigatorKey,
+            scaffoldMessengerKey: _messengerKey,
+            title: 'CzechPass',
+            debugShowCheckedModeBanner: false,
+            theme: buildTheme(Brightness.light),
+            darkTheme: buildTheme(Brightness.dark),
+            themeMode: AppColors.dark ? ThemeMode.dark : ThemeMode.light,
+            // Tizim oynalari (masalan, sana tanlash) ham ilova tilida chiqadi.
+            locale: Locale(controller.language.code),
+            supportedLocales: [for (final l in AppLanguage.values) Locale(l.code)],
+            localizationsDelegates: GlobalMaterialLocalizations.delegates,
+            // Til hali tanlanmagan bo'lsa — til tanlash ekrani, aks holda bosh sahifa.
+            home: controller.selectedLanguage == null
+                ? const LanguageScreen(isOnboarding: true)
+                : const HomeScreen(),
+          );
+        },
       ),
     );
   }

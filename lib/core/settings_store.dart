@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart' show ThemeMode;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:czech_pass/core/app_language.dart';
@@ -8,6 +9,7 @@ class SettingsStore {
   static const _examDateKey = 'exam_date';
   static const _dailyGoalKey = 'daily_goal';
   static const _reminderKey = 'reminder_minutes';
+  static const _themeKey = 'theme_mode';
 
   /// Eslatma vaqti standart holatda — 17:00.
   static const defaultReminderMinutes = 17 * 60;
@@ -64,5 +66,17 @@ class SettingsStore {
     } else {
       await prefs.setInt(_reminderKey, minutes);
     }
+  }
+
+  /// Mavzu: tizim (telefon sozlamasi), yorug' yoki qorong'i.
+  Future<ThemeMode> loadThemeMode() async {
+    final prefs = await SharedPreferences.getInstance();
+    final name = prefs.getString(_themeKey);
+    return ThemeMode.values.firstWhere((m) => m.name == name, orElse: () => ThemeMode.system);
+  }
+
+  Future<void> saveThemeMode(ThemeMode mode) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_themeKey, mode.name);
   }
 }

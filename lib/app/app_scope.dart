@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart' show ThemeMode;
 import 'package:flutter/widgets.dart';
 
 import 'package:czech_pass/core/app_language.dart';
@@ -24,7 +25,9 @@ class AppController extends ChangeNotifier {
     int initialDailyGoal = SettingsStore.defaultGoal,
     int? initialReminder,
     BadgeStore? badges,
+    ThemeMode initialThemeMode = ThemeMode.system,
   })  : _language = initialLanguage,
+        _themeMode = initialThemeMode,
         badges = badges ?? BadgeStore.memory(),
         _reminder = initialReminder,
         entitlements = entitlements ?? Entitlements(),
@@ -131,6 +134,21 @@ class AppController extends ChangeNotifier {
 
   /// Telefon mavzusi (yorug'/qorong'i) o'zgarganda ekranlarni qayta chizish uchun.
   void refreshTheme() => notifyListeners();
+
+  ThemeMode _themeMode;
+
+  /// Foydalanuvchi tanlagan mavzu: tizim (standart), yorug' yoki qorong'i.
+  ThemeMode get themeMode => _themeMode;
+
+  /// Hozir qorong'i ranglar ishlatiladimi (tanlov + telefonning yorqinlik sozlamasi).
+  bool isDark(Brightness platform) =>
+      _themeMode == ThemeMode.dark || (_themeMode == ThemeMode.system && platform == Brightness.dark);
+
+  Future<void> setThemeMode(ThemeMode mode) async {
+    _themeMode = mode;
+    notifyListeners();
+    await settings.saveThemeMode(mode);
+  }
 
   Future<void> setLanguage(AppLanguage language) async {
     _language = language;

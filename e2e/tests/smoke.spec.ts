@@ -113,6 +113,12 @@ test.describe('qorong\'i mavzu', () => {
     await chooseLanguage(page, 'English', 'Continue');
     await expect(ui(page, 'Which exam are we preparing for?')).toBeVisible();
     await page.screenshot({ path: 'test-results/dark-home.png' });
+    // Telefon qorong'i rejimda bo'lsa ham, sozlamalarda yorug' mavzuni tanlash mumkin.
+    await ui(page, 'Settings').click();
+    await expect(ui(page, 'Appearance')).toBeVisible();
+    await ui(page, 'Light').click();
+    await expect(ui(page, 'App language')).toBeVisible();
+    await page.screenshot({ path: 'test-results/light-settings.png' });
   });
 });
 

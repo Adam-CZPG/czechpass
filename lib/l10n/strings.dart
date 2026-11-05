@@ -1573,4 +1573,38 @@ class S {
         'ru': 'Новый значок: {n}',
         'uk': 'Новий значок: {n}',
       }).replaceAll('{n}', name);
+
+  // ── Mavzu (yorug'/qorong'i) ──
+  String get themeTitle => _t(const {
+        'uz': 'Mavzu',
+        'cs': 'Vzhled',
+        'en': 'Appearance',
+        'vi': 'Giao diện',
+        'ru': 'Тема',
+        'uk': 'Тема',
+      });
+  String get themeSystem => _t(const {
+        'uz': 'Tizim',
+        'cs': 'Podle systému',
+        'en': 'System',
+        'vi': 'Theo hệ thống',
+        'ru': 'Системная',
+        'uk': 'Системна',
+      });
+  String get themeLight => _t(const {
+        'uz': 'Yorug\'',
+        'cs': 'Světlý',
+        'en': 'Light',
+        'vi': 'Sáng',
+        'ru': 'Светлая',
+        'uk': 'Світла',
+      });
+  String get themeDark => _t(const {
+        'uz': 'Qorong\'i',
+        'cs': 'Tmavý',
+        'en': 'Dark',
+        'vi': 'Tối',
+        'ru': 'Тёмная',
+        'uk': 'Темна',
+      });
 }

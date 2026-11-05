@@ -37,7 +37,8 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final s = S.of(context);
-    final language = AppScope.of(context).language;
+    final controller = AppScope.of(context);
+    final language = controller.language;
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -58,6 +59,36 @@ class SettingsScreen extends StatelessWidget {
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => const LanguageScreen()),
+                    ),
+                  ),
+                  Divider(height: 1, color: AppColors.border),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.contrast, color: AppColors.muted),
+                            const SizedBox(width: 16),
+                            Text(s.themeTitle, style: const TextStyle(fontSize: 16)),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        SizedBox(
+                          width: double.infinity,
+                          child: SegmentedButton<ThemeMode>(
+                            showSelectedIcon: false,
+                            segments: [
+                              ButtonSegment(value: ThemeMode.system, icon: const Icon(Icons.brightness_auto_outlined), label: Text(s.themeSystem)),
+                              ButtonSegment(value: ThemeMode.light, icon: const Icon(Icons.light_mode_outlined), label: Text(s.themeLight)),
+                              ButtonSegment(value: ThemeMode.dark, icon: const Icon(Icons.dark_mode_outlined), label: Text(s.themeDark)),
+                            ],
+                            selected: {controller.themeMode},
+                            onSelectionChanged: (selection) => controller.setThemeMode(selection.first),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Divider(height: 1, color: AppColors.border),
