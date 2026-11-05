@@ -41,12 +41,12 @@
    "id": "own-geo-001",
    "topic": "geografie",
    "question": {
-    "cs": "Jak se jmenuje nejvyšší hora České republiky?",
-    "uz": "Chexiyaning eng baland tog'i qanday ataladi?",
-    "en": "What is the name of the highest mountain in the Czech Republic?",
-    "ru": "Как называется самая высокая гора Чешской Республики?",
-    "uk": "Як називається найвища гора Чеської Республіки?",
-    "vi": "Ngọn núi cao nhất Cộng hòa Séc tên là gì?"
+    "cs": "Která hora je nejvyšší v Česku?",
+    "en": "Which mountain is the highest in Czechia?",
+    "uz": "Chexiyadagi eng baland tog' qaysi?",
+    "ru": "Какая гора самая высокая в Чехии?",
+    "uk": "Яка гора найвища в Чехії?",
+    "vi": "Ngọn núi nào cao nhất ở Séc?"
    },
    "options": [
     "Sněžka",
@@ -95,12 +95,12 @@
    "id": "own-geo-003",
    "topic": "geografie",
    "question": {
-    "cs": "Které město je sídlem Jihomoravského kraje?",
-    "uz": "Janubiy Moraviya viloyatining markazi qaysi shahar?",
-    "en": "Which city is the seat of the South Moravian Region?",
-    "ru": "Какой город является центром Южноморавского края?",
-    "uk": "Яке місто є центром Південноморавського краю?",
-    "vi": "Thành phố nào là thủ phủ của vùng Nam Morava?"
+    "cs": "Ve kterém městě má sídlo krajský úřad Jihomoravského kraje?",
+    "en": "In which city is the regional office of the South Moravian Region?",
+    "uz": "Janubiy Moraviya viloyati ma'muriyati qaysi shaharda joylashgan?",
+    "ru": "В каком городе находится краевое управление Южноморавского края?",
+    "uk": "У якому місті розташоване крайове управління Південноморавського краю?",
+    "vi": "Văn phòng vùng Nam Moravia đặt ở thành phố nào?"
    },
    "options": [
     "Brno",
@@ -203,12 +203,12 @@
    "id": "own-geo-008",
    "topic": "geografie",
    "question": {
-    "cs": "Jak se jmenuje největší rybník v České republice?",
-    "uz": "Chexiyadagi eng katta hovuz (rybník) qanday ataladi?",
-    "en": "What is the name of the largest fishpond in the Czech Republic?",
-    "ru": "Как называется самый большой пруд в Чехии?",
-    "uk": "Як називається найбільший ставок у Чехії?",
-    "vi": "Ao cá lớn nhất ở Cộng hòa Séc tên là gì?"
+    "cs": "Který rybník má v Česku největší rozlohu?",
+    "en": "Which fishpond has the largest area in Czechia?",
+    "uz": "Chexiyada qaysi hovuzning maydoni eng katta?",
+    "ru": "Какой пруд в Чехии самый большой по площади?",
+    "uk": "Який ставок у Чехії найбільший за площею?",
+    "vi": "Ao cá nào ở Séc có diện tích lớn nhất?"
    },
    "options": [
     "Rožmberk",
@@ -902,303 +902,6 @@
    }
   },
   {
-   "id": "own-his-001",
-   "topic": "historie",
-   "question": {
-    "cs": "Kdy vzniklo samostatné Československo?",
-    "uz": "Mustaqil Chexoslovakiya qachon tashkil topgan?",
-    "en": "When was independent Czechoslovakia founded?",
-    "ru": "Когда была образована независимая Чехословакия?",
-    "uk": "Коли утворилася незалежна Чехословаччина?",
-    "vi": "Nhà nước Tiệp Khắc độc lập được thành lập khi nào?"
-   },
-   "options": [
-    "28. října 1918",
-    "1. ledna 1993",
-    "17. listopadu 1989",
-    "9. května 1945"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Samostatné Československo vzniklo 28. října 1918. Tento den je dnes státním svátkem.",
-    "uz": "Mustaqil Chexoslovakiya 1918-yil 28-oktabrda tashkil topgan. Bu kun hozir davlat bayrami.",
-    "en": "Independent Czechoslovakia was founded on 28 October 1918. The day is now a public holiday.",
-    "ru": "Независимая Чехословакия образована 28 октября 1918 года. Сегодня это государственный праздник.",
-    "uk": "Незалежна Чехословаччина утворилася 28 жовтня 1918 року. Сьогодні це державне свято.",
-    "vi": "Tiệp Khắc độc lập được thành lập ngày 28 tháng 10 năm 1918. Ngày này hiện là ngày lễ quốc gia."
-   }
-  },
-  {
-   "id": "own-his-002",
-   "topic": "historie",
-   "question": {
-    "cs": "Kdy vznikla samostatná Česká republika?",
-    "uz": "Mustaqil Chexiya Respublikasi qachon tashkil topgan?",
-    "en": "When did the independent Czech Republic come into being?",
-    "ru": "Когда возникла самостоятельная Чешская Республика?",
-    "uk": "Коли виникла самостійна Чеська Республіка?",
-    "vi": "Cộng hòa Séc độc lập ra đời khi nào?"
-   },
-   "options": [
-    "1. ledna 1993",
-    "28. října 1918",
-    "17. listopadu 1989",
-    "1. května 2004"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Po rozdělení Československa vznikla 1. ledna 1993 Česká republika.",
-    "uz": "Chexoslovakiya bo'lingach, 1993-yil 1-yanvarda Chexiya Respublikasi tashkil topdi.",
-    "en": "After Czechoslovakia split, the Czech Republic came into being on 1 January 1993.",
-    "ru": "После разделения Чехословакии 1 января 1993 года возникла Чешская Республика.",
-    "uk": "Після розділу Чехословаччини 1 січня 1993 року виникла Чеська Республіка.",
-    "vi": "Sau khi Tiệp Khắc chia tách, Cộng hòa Séc ra đời ngày 1 tháng 1 năm 1993."
-   }
-  },
-  {
-   "id": "own-his-003",
-   "topic": "historie",
-   "question": {
-    "cs": "Kdo byl prvním prezidentem Československa?",
-    "uz": "Chexoslovakiyaning birinchi prezidenti kim bo'lgan?",
-    "en": "Who was the first president of Czechoslovakia?",
-    "ru": "Кто был первым президентом Чехословакии?",
-    "uk": "Хто був першим президентом Чехословаччини?",
-    "vi": "Ai là tổng thống đầu tiên của Tiệp Khắc?"
-   },
-   "options": [
-    "Tomáš Garrigue Masaryk",
-    "Edvard Beneš",
-    "Václav Havel",
-    "Ludvík Svoboda"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Prvním prezidentem Československa byl Tomáš Garrigue Masaryk.",
-    "uz": "Chexoslovakiyaning birinchi prezidenti Tomáš Garrigue Masaryk bo'lgan.",
-    "en": "The first president of Czechoslovakia was Tomáš Garrigue Masaryk.",
-    "ru": "Первым президентом Чехословакии был Томаш Гарриг Масарик.",
-    "uk": "Першим президентом Чехословаччини був Томаш Гарріг Масарик.",
-    "vi": "Tổng thống đầu tiên của Tiệp Khắc là Tomáš Garrigue Masaryk."
-   }
-  },
-  {
-   "id": "own-his-004",
-   "topic": "historie",
-   "question": {
-    "cs": "Kdo byl prvním prezidentem samostatné České republiky?",
-    "uz": "Mustaqil Chexiya Respublikasining birinchi prezidenti kim bo'lgan?",
-    "en": "Who was the first president of the independent Czech Republic?",
-    "ru": "Кто был первым президентом самостоятельной Чешской Республики?",
-    "uk": "Хто був першим президентом самостійної Чеської Республіки?",
-    "vi": "Ai là tổng thống đầu tiên của Cộng hòa Séc độc lập?"
-   },
-   "options": [
-    "Václav Havel",
-    "Václav Klaus",
-    "Miloš Zeman",
-    "Tomáš Garrigue Masaryk"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Prvním prezidentem České republiky byl od roku 1993 Václav Havel.",
-    "uz": "1993-yildan Chexiya Respublikasining birinchi prezidenti Václav Havel bo'lgan.",
-    "en": "From 1993 the first president of the Czech Republic was Václav Havel.",
-    "ru": "С 1993 года первым президентом Чешской Республики был Вацлав Гавел.",
-    "uk": "З 1993 року першим президентом Чеської Республіки був Вацлав Гавел.",
-    "vi": "Từ năm 1993, tổng thống đầu tiên của Cộng hòa Séc là Václav Havel."
-   }
-  },
-  {
-   "id": "own-his-005",
-   "topic": "historie",
-   "question": {
-    "cs": "Kdy začala sametová revoluce?",
-    "uz": "«Baxmal inqilob» qachon boshlangan?",
-    "en": "When did the Velvet Revolution begin?",
-    "ru": "Когда началась «бархатная революция»?",
-    "uk": "Коли почалася «оксамитова революція»?",
-    "vi": "Cách mạng Nhung bắt đầu khi nào?"
-   },
-   "options": [
-    "17. listopadu 1989",
-    "28. října 1918",
-    "21. srpna 1968",
-    "1. ledna 1993"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Sametová revoluce začala 17. listopadu 1989 a vedla k pádu komunistického režimu.",
-    "uz": "Baxmal inqilob 1989-yil 17-noyabrda boshlanib, kommunistik tuzumning qulashiga olib kelgan.",
-    "en": "The Velvet Revolution began on 17 November 1989 and led to the fall of the communist regime.",
-    "ru": "Бархатная революция началась 17 ноября 1989 года и привела к падению коммунистического режима.",
-    "uk": "Оксамитова революція почалася 17 листопада 1989 року й призвела до падіння комуністичного режиму.",
-    "vi": "Cách mạng Nhung bắt đầu ngày 17 tháng 11 năm 1989 và dẫn đến sự sụp đổ của chế độ cộng sản."
-   }
-  },
-  {
-   "id": "own-his-006",
-   "topic": "historie",
-   "question": {
-    "cs": "Kdy vstoupila Česká republika do Evropské unie?",
-    "uz": "Chexiya Yevropa Ittifoqiga qachon kirgan?",
-    "en": "When did the Czech Republic join the European Union?",
-    "ru": "Когда Чехия вступила в Европейский союз?",
-    "uk": "Коли Чехія вступила до Європейського Союзу?",
-    "vi": "Cộng hòa Séc gia nhập Liên minh châu Âu khi nào?"
-   },
-   "options": [
-    "1. května 2004",
-    "1. ledna 1993",
-    "12. března 1999",
-    "1. ledna 2009"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Česká republika je členem Evropské unie od 1. května 2004.",
-    "uz": "Chexiya 2004-yil 1-maydan Yevropa Ittifoqi a'zosi.",
-    "en": "The Czech Republic has been an EU member since 1 May 2004.",
-    "ru": "Чехия — член Евросоюза с 1 мая 2004 года.",
-    "uk": "Чехія — член Євросоюзу з 1 травня 2004 року.",
-    "vi": "Cộng hòa Séc là thành viên EU từ ngày 1 tháng 5 năm 2004."
-   }
-  },
-  {
-   "id": "own-his-008",
-   "topic": "historie",
-   "question": {
-    "cs": "Který panovník založil v roce 1348 univerzitu v Praze?",
-    "uz": "1348-yilda Pragada universitetni qaysi hukmdor asos solgan?",
-    "en": "Which ruler founded the university in Prague in 1348?",
-    "ru": "Какой правитель основал университет в Праге в 1348 году?",
-    "uk": "Який правитель заснував університет у Празі 1348 року?",
-    "vi": "Vị vua nào đã thành lập trường đại học ở Praha năm 1348?"
-   },
-   "options": [
-    "Karel IV.",
-    "Rudolf II.",
-    "Josef II.",
-    "Václav II."
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Karel IV. založil v roce 1348 Karlovu univerzitu, nejstarší univerzitu ve střední Evropě.",
-    "uz": "Karel IV. 1348-yilda Markaziy Yevropadagi eng qadimgi universitet — Karl universitetiga asos solgan.",
-    "en": "Charles IV founded Charles University in 1348, the oldest university in Central Europe.",
-    "ru": "Карл IV в 1348 году основал Карлов университет — старейший в Центральной Европе.",
-    "uk": "Карл IV 1348 року заснував Карлів університет — найстаріший у Центральній Європі.",
-    "vi": "Karel IV thành lập Đại học Karlova năm 1348, trường đại học lâu đời nhất ở Trung Âu."
-   }
-  },
-  {
-   "id": "own-his-009",
-   "topic": "historie",
-   "question": {
-    "cs": "Kdy obsadila vojska Varšavské smlouvy Československo?",
-    "uz": "Varshava shartnomasi qo'shinlari Chexoslovakiyani qachon bosib olgan?",
-    "en": "When did Warsaw Pact troops occupy Czechoslovakia?",
-    "ru": "Когда войска Варшавского договора оккупировали Чехословакию?",
-    "uk": "Коли війська Варшавського договору окупували Чехословаччину?",
-    "vi": "Quân đội Khối Hiệp ước Warszawa chiếm đóng Tiệp Khắc khi nào?"
-   },
-   "options": [
-    "V srpnu 1968",
-    "V únoru 1948",
-    "V září 1938",
-    "V listopadu 1989"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Vojska Varšavské smlouvy obsadila Československo 21. srpna 1968 a ukončila Pražské jaro.",
-    "uz": "Varshava shartnomasi qo'shinlari 1968-yil 21-avgustda Chexoslovakiyani bosib olib, «Praga bahori»ga barham bergan.",
-    "en": "Warsaw Pact troops occupied Czechoslovakia on 21 August 1968, ending the Prague Spring.",
-    "ru": "Войска Варшавского договора оккупировали Чехословакию 21 августа 1968 года, положив конец Пражской весне.",
-    "uk": "Війська Варшавського договору окупували Чехословаччину 21 серпня 1968 року, поклавши край Празькій весні.",
-    "vi": "Quân đội Khối Hiệp ước Warszawa chiếm đóng Tiệp Khắc ngày 21 tháng 8 năm 1968, chấm dứt Mùa xuân Praha."
-   }
-  },
-  {
-   "id": "own-his-011",
-   "topic": "historie",
-   "question": {
-    "cs": "Ve kterém roce proběhla bitva na Bílé hoře?",
-    "en": "In which year was the Battle of White Mountain?",
-    "uz": "Bílá hora jangi qaysi yilda bo'lgan?",
-    "ru": "В каком году состоялась битва на Белой горе?",
-    "uk": "У якому році відбулася битва на Білій горі?",
-    "vi": "Trận Núi Trắng (Bílá hora) diễn ra năm nào?"
-   },
-   "options": [
-    "1620",
-    "1415",
-    "1848",
-    "1918"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "V roce 1620 byla poražena vojska českých stavů; následovala rekatolizace.",
-    "en": "In 1620 the Bohemian Estates’ army was defeated; re-Catholicisation followed.",
-    "uz": "1620-yilda Bogemiya zodagonlari qo'shini mag'lub bo'ldi; keyin rekatolizatsiya boshlandi.",
-    "ru": "В 1620 году войска чешских сословий были разбиты; последовала рекатолизация.",
-    "uk": "У 1620 році війська чеських станів були розбиті; почалася рекатолізація.",
-    "vi": "Năm 1620 quân đội các đẳng cấp Bohemia thất bại; sau đó là tái Công giáo hóa."
-   }
-  },
-  {
-   "id": "own-his-012",
-   "topic": "historie",
-   "question": {
-    "cs": "Která válka začala po pražské defenestraci v roce 1618?",
-    "en": "Which war began after the Defenestration of Prague in 1618?",
-    "uz": "1618-yildagi Praga defenestratsiyasidan keyin qaysi urush boshlangan?",
-    "ru": "Какая война началась после Пражской дефенестрации 1618 года?",
-    "uk": "Яка війна почалася після Празької дефенестрації 1618 року?",
-    "vi": "Cuộc chiến nào bắt đầu sau sự kiện ném qua cửa sổ ở Praha năm 1618?"
-   },
-   "options": [
-    "Třicetiletá válka",
-    "Sedmiletá válka",
-    "První světová válka",
-    "Husitské války"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Defenestrace roku 1618 byla podnětem k třicetileté válce (1618–1648).",
-    "en": "The 1618 defenestration triggered the Thirty Years’ War (1618–1648).",
-    "uz": "1618-yilgi defenestratsiya O'ttiz yillik urushga (1618–1648) sabab bo'lgan.",
-    "ru": "Дефенестрация 1618 года стала поводом к Тридцатилетней войне (1618–1648).",
-    "uk": "Дефенестрація 1618 року стала приводом до Тридцятилітньої війни (1618–1648).",
-    "vi": "Sự kiện năm 1618 dẫn tới Chiến tranh Ba Mươi Năm (1618–1648)."
-   }
-  },
-  {
-   "id": "own-his-013",
-   "topic": "historie",
-   "question": {
-    "cs": "Který císař přenesl na konci 16. století své sídlo do Prahy?",
-    "en": "Which emperor moved his residence to Prague at the end of the 16th century?",
-    "uz": "XVI asr oxirida qaysi imperator qarorgohini Pragaga ko'chirgan?",
-    "ru": "Какой император в конце XVI века перенёс свою резиденцию в Прагу?",
-    "uk": "Який імператор наприкінці XVI століття переніс свою резиденцію до Праги?",
-    "vi": "Hoàng đế nào chuyển nơi ở về Praha vào cuối thế kỷ 16?"
-   },
-   "options": [
-    "Rudolf II.",
-    "Josef II.",
-    "Ferdinand I.",
-    "Karel VI."
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Rudolf II. učinil Prahu centrem říše a podporoval umění a vědu.",
-    "en": "Rudolf II made Prague the centre of the empire and supported art and science.",
-    "uz": "Rudolf II Pragani imperiya markaziga aylantirgan, san'at va fanni qo'llab-quvvatlagan.",
-    "ru": "Рудольф II сделал Прагу центром империи и покровительствовал искусству и науке.",
-    "uk": "Рудольф II зробив Прагу центром імперії та підтримував мистецтво і науку.",
-    "vi": "Rudolf II biến Praha thành trung tâm đế chế và bảo trợ nghệ thuật, khoa học."
-   }
-  },
-  {
    "id": "own-his-014",
    "topic": "historie",
    "question": {
@@ -1253,33 +956,6 @@
    }
   },
   {
-   "id": "own-his-016",
-   "topic": "historie",
-   "question": {
-    "cs": "Ve kterém roce byla podepsána Mnichovská dohoda?",
-    "en": "In which year was the Munich Agreement signed?",
-    "uz": "Myunxen kelishuvi qaysi yilda imzolangan?",
-    "ru": "В каком году было подписано Мюнхенское соглашение?",
-    "uk": "У якому році було підписано Мюнхенську угоду?",
-    "vi": "Hiệp ước München được ký năm nào?"
-   },
-   "options": [
-    "1938",
-    "1945",
-    "1918",
-    "1968"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Mnichovská dohoda ze září 1938 donutila Československo odstoupit pohraničí Německu.",
-    "en": "The Munich Agreement of September 1938 forced Czechoslovakia to cede its border areas to Germany.",
-    "uz": "1938-yil sentabrdagi Myunxen kelishuvi Chexoslovakiyani chegara hududlarini Germaniyaga berishga majbur qilgan.",
-    "ru": "Мюнхенское соглашение сентября 1938 года вынудило Чехословакию отдать Германии пограничные районы.",
-    "uk": "Мюнхенська угода вересня 1938 року змусила Чехословаччину віддати Німеччині прикордонні райони.",
-    "vi": "Hiệp ước tháng 9/1938 buộc Tiệp Khắc nhượng vùng biên giới cho Đức."
-   }
-  },
-  {
    "id": "own-his-017",
    "topic": "historie",
    "question": {
@@ -1304,87 +980,6 @@
     "ru": "После оккупации остальной части чешских земель 15 марта 1939 года был провозглашён протекторат.",
     "uk": "Після окупації решти чеських земель 15 березня 1939 року було проголошено протекторат.",
     "vi": "Sau khi phần còn lại bị chiếm đóng ngày 15/3/1939, xứ bảo hộ được tuyên bố."
-   }
-  },
-  {
-   "id": "own-his-018",
-   "topic": "historie",
-   "question": {
-    "cs": "Která obec byla v roce 1942 vyhlazena nacisty?",
-    "en": "Which village was destroyed by the Nazis in 1942?",
-    "uz": "1942-yilda natsistlar qaysi qishloqni yo'q qilgan?",
-    "ru": "Какая деревня была уничтожена нацистами в 1942 году?",
-    "uk": "Яке село було знищене нацистами в 1942 році?",
-    "vi": "Ngôi làng nào bị Đức Quốc xã hủy diệt năm 1942?"
-   },
-   "options": [
-    "Lidice",
-    "Terezín",
-    "Kutná Hora",
-    "Mělník"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Lidice byly vyhlazeny po atentátu na Reinharda Heydricha (1942).",
-    "en": "Lidice was destroyed after the assassination of Reinhard Heydrich (1942).",
-    "uz": "Lidice Reynhard Geydrixga suiqasddan keyin (1942) yo'q qilingan.",
-    "ru": "Лидице уничтожили после покушения на Рейнхарда Гейдриха (1942).",
-    "uk": "Лідице знищили після замаху на Рейнгарда Гейдріха (1942).",
-    "vi": "Lidice bị hủy diệt sau vụ ám sát Reinhard Heydrich (1942)."
-   }
-  },
-  {
-   "id": "own-his-019",
-   "topic": "historie",
-   "question": {
-    "cs": "Co se stalo v únoru 1948?",
-    "en": "What happened in February 1948?",
-    "uz": "1948-yil fevralda nima sodir bo'lgan?",
-    "ru": "Что произошло в феврале 1948 года?",
-    "uk": "Що сталося в лютому 1948 року?",
-    "vi": "Điều gì xảy ra vào tháng 2/1948?"
-   },
-   "options": [
-    "Moc převzala komunistická strana",
-    "Vzniklo Československo",
-    "Skončila druhá světová válka",
-    "Česko vstoupilo do EU"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "V únoru 1948 převzala moc Komunistická strana Československa.",
-    "en": "In February 1948 the Communist Party of Czechoslovakia seized power.",
-    "uz": "1948-yil fevralda Chexoslovakiya Kommunistik partiyasi hokimiyatni egallagan.",
-    "ru": "В феврале 1948 года власть захватила Коммунистическая партия Чехословакии.",
-    "uk": "У лютому 1948 року владу захопила Комуністична партія Чехословаччини.",
-    "vi": "Tháng 2/1948 Đảng Cộng sản Tiệp Khắc giành chính quyền."
-   }
-  },
-  {
-   "id": "own-his-020",
-   "topic": "historie",
-   "question": {
-    "cs": "Co byla Charta 77?",
-    "en": "What was Charter 77?",
-    "uz": "Xartiya 77 nima edi?",
-    "ru": "Что такое Хартия-77?",
-    "uk": "Що таке Хартія-77?",
-    "vi": "Hiến chương 77 là gì?"
-   },
-   "options": [
-    "Prohlášení požadující dodržování lidských práv",
-    "Mírová smlouva po válce",
-    "Nová ústava",
-    "Hospodářský plán"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Charta 77 bylo prohlášení disidentů, kteří žádali, aby stát dodržoval lidská práva.",
-    "en": "Charter 77 was a declaration by dissidents demanding that the state respect human rights.",
-    "uz": "Xartiya 77 — davlatdan inson huquqlariga rioya qilishni talab qilgan dissidentlar bayonoti.",
-    "ru": "Хартия-77 — заявление диссидентов, требовавших соблюдения прав человека.",
-    "uk": "Хартія-77 — заява дисидентів, які вимагали дотримання прав людини.",
-    "vi": "Hiến chương 77 là tuyên bố của những người bất đồng chính kiến đòi tôn trọng nhân quyền."
    }
   },
   {
@@ -1439,33 +1034,6 @@
     "ru": "Ян Гус был сожжён 6 июля 1415 года в Констанце во время церковного собора.",
     "uk": "Ян Гус був спалений 6 липня 1415 року в Констанці під час церковного собору.",
     "vi": "Jan Hus bị thiêu ngày 6/7/1415 tại Konstanz trong một công đồng."
-   }
-  },
-  {
-   "id": "own-his-023",
-   "topic": "historie",
-   "question": {
-    "cs": "Která dynastie vládla v českých zemích v letech 1526–1918?",
-    "en": "Which dynasty ruled the Czech lands from 1526 to 1918?",
-    "uz": "1526–1918-yillarda Chexiya yerlarida qaysi sulola hukmronlik qilgan?",
-    "ru": "Какая династия правила чешскими землями в 1526–1918 годах?",
-    "uk": "Яка династія правила чеськими землями в 1526–1918 роках?",
-    "vi": "Triều đại nào cai trị các vùng đất Séc từ 1526 đến 1918?"
-   },
-   "options": [
-    "Habsburkové",
-    "Přemyslovci",
-    "Jagellonci",
-    "Romanovci"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Od roku 1526 do vzniku Československa v roce 1918 vládli Habsburkové.",
-    "en": "The Habsburgs ruled from 1526 until Czechoslovakia was founded in 1918.",
-    "uz": "1526-yildan 1918-yilgacha Gabsburglar hukmronlik qilgan.",
-    "ru": "С 1526 года до образования Чехословакии в 1918 году правили Габсбурги.",
-    "uk": "З 1526 року до утворення Чехословаччини в 1918 році правили Габсбурги.",
-    "vi": "Nhà Habsburg cai trị từ 1526 đến khi Tiệp Khắc ra đời năm 1918."
    }
   },
   {
@@ -1604,21 +1172,426 @@
    }
   },
   {
+   "id": "own-his-029",
+   "topic": "historie",
+   "question": {
+    "cs": "Jak se jmenoval kupec, který v 7. století vedl první známý svaz slovanských kmenů?",
+    "en": "What was the name of the merchant who led the first known union of Slavic tribes in the 7th century?",
+    "uz": "VII asrda slavyan qabilalarining birinchi ma'lum ittifoqiga boshchilik qilgan savdogar kim edi?",
+    "ru": "Как звали купца, возглавившего в VII веке первый известный союз славянских племён?",
+    "uk": "Як звали купця, який у VII столітті очолив перший відомий союз слов’янських племен?",
+    "vi": "Thương nhân lãnh đạo liên minh bộ tộc Slav đầu tiên được biết đến vào thế kỷ 7 tên là gì?"
+   },
+   "options": [
+    "Sámo",
+    "Mojmír",
+    "Svatopluk",
+    "Bořivoj"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Franský kupec Sámo stál v čele tzv. Sámovy říše v 7. století.",
+    "en": "The Frankish merchant Samo led the so-called Samo’s Empire in the 7th century.",
+    "uz": "Frank savdogari Samo VII asrda «Samo davlati»ga boshchilik qilgan.",
+    "ru": "Франкский купец Само возглавлял так называемую державу Само в VII веке.",
+    "uk": "Франкський купець Само очолював так звану державу Само в VII столітті.",
+    "vi": "Thương nhân người Frank tên Samo lãnh đạo «Vương quốc Samo» vào thế kỷ 7."
+   }
+  },
+  {
+   "id": "own-his-030",
+   "topic": "historie",
+   "question": {
+    "cs": "Kdo podle tradice zavraždil knížete Václava?",
+    "en": "According to tradition, who murdered Duke Wenceslas?",
+    "uz": "Rivoyatga ko'ra knyaz Vatslavni kim o'ldirgan?",
+    "ru": "Кто, по преданию, убил князя Вацлава?",
+    "uk": "Хто, за переказом, убив князя Вацлава?",
+    "vi": "Theo truyền thống, ai đã giết công tước Václav?"
+   },
+   "options": [
+    "Jeho bratr Boleslav",
+    "Jeho syn",
+    "Římský císař",
+    "Kněžna Libuše"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Knížete Václava nechal ve Staré Boleslavi zavraždit jeho bratr Boleslav.",
+    "en": "Duke Wenceslas was murdered in Stará Boleslav on the orders of his brother Boleslaus.",
+    "uz": "Knyaz Vatslavni Stará Boleslavda ukasi Boleslav o'ldirtirgan.",
+    "ru": "Князя Вацлава убили в Старой Болеславе по приказу его брата Болеслава.",
+    "uk": "Князя Вацлава вбили в Старій Болеславі за наказом його брата Болеслава.",
+    "vi": "Công tước Václav bị giết ở Stará Boleslav theo lệnh của em trai Boleslav."
+   }
+  },
+  {
+   "id": "own-his-031",
+   "topic": "historie",
+   "question": {
+    "cs": "Který panovník byl nazýván „král železný a zlatý“?",
+    "en": "Which ruler was called “the Iron and Golden King”?",
+    "uz": "Qaysi hukmdor «temir va oltin qirol» deb atalgan?",
+    "ru": "Какого правителя называли «железным и золотым королём»?",
+    "uk": "Якого правителя називали «залізним і золотим королем»?",
+    "vi": "Vị vua nào được gọi là «vua sắt và vàng»?"
+   },
+   "options": [
+    "Přemysl Otakar II.",
+    "Václav IV.",
+    "Jiří z Poděbrad",
+    "Rudolf II."
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Přemysl Otakar II. byl mocný a bohatý; padl v bitvě na Moravském poli roku 1278.",
+    "en": "Ottokar II was powerful and rich; he fell at the Battle on the Marchfeld in 1278.",
+    "uz": "Přemysl Otakar II kuchli va boy bo'lgan; 1278-yilda Moraviya maydonidagi jangda halok bo'lgan.",
+    "ru": "Пршемысл Отакар II был могущественным и богатым; погиб в битве на Моравском поле в 1278 году.",
+    "uk": "Пршемисл Отакар II був могутнім і багатим; загинув у битві на Моравському полі 1278 року.",
+    "vi": "Přemysl Otakar II giàu mạnh; ông tử trận năm 1278 ở Moravské pole."
+   }
+  },
+  {
+   "id": "own-his-032",
+   "topic": "historie",
+   "question": {
+    "cs": "Který český král navrhoval v 15. století mírový svaz evropských panovníků?",
+    "en": "Which Czech king proposed a peace union of European rulers in the 15th century?",
+    "uz": "XV asrda qaysi chex qiroli Yevropa hukmdorlarining tinchlik ittifoqini taklif qilgan?",
+    "ru": "Какой чешский король в XV веке предлагал мирный союз европейских правителей?",
+    "uk": "Який чеський король у XV столітті пропонував мирний союз європейських правителів?",
+    "vi": "Vị vua Séc nào đề xuất liên minh hòa bình giữa các quân vương châu Âu vào thế kỷ 15?"
+   },
+   "options": [
+    "Jiří z Poděbrad",
+    "Karel IV.",
+    "Václav II.",
+    "Ferdinand I."
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Jiří z Poděbrad navrhoval spolupráci panovníků, aby se zabránilo válkám.",
+    "en": "George of Poděbrady proposed cooperation among rulers to prevent wars.",
+    "uz": "Jiří z Poděbrad urushlarning oldini olish uchun hukmdorlar hamkorligini taklif qilgan.",
+    "ru": "Иржи из Подебрад предлагал сотрудничество правителей, чтобы предотвращать войны.",
+    "uk": "Їржі з Подєбрад пропонував співпрацю правителів, щоб запобігати війнам.",
+    "vi": "Jiří z Poděbrad đề xuất các quân vương hợp tác để ngăn chặn chiến tranh."
+   }
+  },
+  {
+   "id": "own-his-033",
+   "topic": "historie",
+   "question": {
+    "cs": "Který český král padl v roce 1346 v bitvě u Kresčaku, přestože byl slepý?",
+    "en": "Which Czech king, although blind, fell in the Battle of Crécy in 1346?",
+    "uz": "Qaysi chex qiroli ko'r bo'lishiga qaramay 1346-yilda Kresi jangida halok bo'lgan?",
+    "ru": "Какой чешский король, будучи слепым, погиб в битве при Креси в 1346 году?",
+    "uk": "Який чеський король, будучи сліпим, загинув у битві під Кресі 1346 року?",
+    "vi": "Vị vua Séc nào dù bị mù vẫn tử trận ở Crécy năm 1346?"
+   },
+   "options": [
+    "Jan Lucemburský",
+    "Václav I.",
+    "Přemysl Otakar I.",
+    "Ludvík Jagellonský"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Jan Lucemburský, otec Karla IV., padl jako slepý v bitvě u Kresčaku ve Francii.",
+    "en": "John of Luxembourg, father of Charles IV, fell blind at Crécy in France.",
+    "uz": "Karl IV ning otasi Jan Lyuksemburgskiy ko'r holda Fransiyadagi Kresi jangida halok bo'lgan.",
+    "ru": "Ян Люксембургский, отец Карла IV, погиб слепым в битве при Креси во Франции.",
+    "uk": "Ян Люксембурзький, батько Карла IV, загинув сліпим у битві під Кресі у Франції.",
+    "vi": "John xứ Luxembourg, cha của Charles IV, tử trận khi đã mù tại Crécy, Pháp."
+   }
+  },
+  {
+   "id": "own-his-034",
+   "topic": "historie",
+   "question": {
+    "cs": "Podle kterého krále se jmenuje velký gotický sál na Pražském hradě?",
+    "en": "Which king is the great Gothic hall at Prague Castle named after?",
+    "uz": "Praga qal'asidagi katta gotika zali qaysi qirol nomi bilan atalgan?",
+    "ru": "В честь какого короля назван большой готический зал Пражского Града?",
+    "uk": "На честь якого короля названо великий готичний зал Празького Граду?",
+    "vi": "Đại sảnh Gothic ở Lâu đài Praha được đặt theo tên vị vua nào?"
+   },
+   "options": [
+    "Vladislav Jagellonský",
+    "Karel IV.",
+    "Josef II.",
+    "Václav IV."
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Vladislavský sál dal postavit Vladislav Jagellonský na konci 15. století.",
+    "en": "The Vladislav Hall was built for King Vladislaus Jagiellon at the end of the 15th century.",
+    "uz": "Vladislav zali XV asr oxirida Vladislav Yagellon buyrug'i bilan qurilgan.",
+    "ru": "Владиславский зал построен по заказу Владислава Ягеллонского в конце XV века.",
+    "uk": "Владиславський зал збудовано на замовлення Владислава Ягеллонського наприкінці XV століття.",
+    "vi": "Sảnh Vladislav được xây cho vua Vladislav Jagiellon cuối thế kỷ 15."
+   }
+  },
+  {
+   "id": "own-his-035",
+   "topic": "historie",
+   "question": {
+    "cs": "Ve kterém roce byla v českých zemích zrušena robota?",
+    "en": "In which year was forced labour (robota) abolished in the Czech lands?",
+    "uz": "Chexiya yerlarida majburiy mehnat (robota) qaysi yilda bekor qilingan?",
+    "ru": "В каком году в чешских землях была отменена барщина?",
+    "uk": "У якому році в чеських землях скасували панщину?",
+    "vi": "Chế độ lao dịch (robota) ở các vùng đất Séc bị bãi bỏ năm nào?"
+   },
+   "options": [
+    "1848",
+    "1781",
+    "1918",
+    "1620"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Robota byla zrušena během revoluce v roce 1848.",
+    "en": "Forced labour was abolished during the revolution of 1848.",
+    "uz": "Majburiy mehnat 1848-yilgi inqilob davrida bekor qilingan.",
+    "ru": "Барщина была отменена во время революции 1848 года.",
+    "uk": "Панщину скасували під час революції 1848 року.",
+    "vi": "Lao dịch bị bãi bỏ trong cuộc cách mạng năm 1848."
+   }
+  },
+  {
+   "id": "own-his-036",
+   "topic": "historie",
+   "question": {
+    "cs": "Jak se nazývá období Československa v letech 1918–1938?",
+    "en": "What is the 1918–1938 period of Czechoslovakia called?",
+    "uz": "Chexoslovakiyaning 1918–1938-yillar davri qanday ataladi?",
+    "ru": "Как называют период Чехословакии 1918–1938 годов?",
+    "uk": "Як називають період Чехословаччини 1918–1938 років?",
+    "vi": "Giai đoạn 1918–1938 của Tiệp Khắc được gọi là gì?"
+   },
+   "options": [
+    "První republika",
+    "Protektorát",
+    "Normalizace",
+    "Národní obrození"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Demokratické Československo mezi světovými válkami se nazývá první republika.",
+    "en": "Democratic Czechoslovakia between the world wars is called the First Republic.",
+    "uz": "Ikki jahon urushi orasidagi demokratik Chexoslovakiya «Birinchi respublika» deb ataladi.",
+    "ru": "Демократическую Чехословакию между мировыми войнами называют Первой республикой.",
+    "uk": "Демократичну Чехословаччину між світовими війнами називають Першою республікою.",
+    "vi": "Tiệp Khắc dân chủ giữa hai cuộc thế chiến được gọi là Đệ nhất Cộng hòa."
+   }
+  },
+  {
+   "id": "own-his-037",
+   "topic": "historie",
+   "question": {
+    "cs": "Ve kterém městě bylo za 2. světové války židovské ghetto a koncentrační tábor?",
+    "en": "In which town was there a Jewish ghetto and concentration camp during the Second World War?",
+    "uz": "Ikkinchi jahon urushi davrida qaysi shaharda yahudiy getto va konslager bo'lgan?",
+    "ru": "В каком городе во время Второй мировой войны было еврейское гетто и концлагерь?",
+    "uk": "У якому місті під час Другої світової війни було єврейське гетто й концтабір?",
+    "vi": "Thị trấn nào có khu Do Thái và trại tập trung trong Thế chiến II?"
+   },
+   "options": [
+    "Terezín",
+    "Telč",
+    "Tábor",
+    "Třeboň"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "V Terezíně nacisté zřídili ghetto a koncentrační tábor; dnes je zde památník.",
+    "en": "The Nazis set up a ghetto and concentration camp in Terezín; today there is a memorial.",
+    "uz": "Natsistlar Terezinda getto va konslager tashkil qilgan; bugun u yerda yodgorlik bor.",
+    "ru": "В Терезине нацисты устроили гетто и концлагерь; сегодня там мемориал.",
+    "uk": "У Терезіні нацисти влаштували гетто й концтабір; сьогодні там меморіал.",
+    "vi": "Phát xít lập khu Do Thái và trại tập trung ở Terezín; nay là khu tưởng niệm."
+   }
+  },
+  {
+   "id": "own-his-038",
+   "topic": "historie",
+   "question": {
+    "cs": "Co v roce 1953 připravilo mnoho lidí v Československu o úspory?",
+    "en": "What made many people in Czechoslovakia lose their savings in 1953?",
+    "uz": "1953-yilda Chexoslovakiyada ko'p odamlar jamg'armasidan nima sababli mahrum bo'lgan?",
+    "ru": "Что в 1953 году лишило многих жителей Чехословакии сбережений?",
+    "uk": "Що в 1953 році позбавило багатьох жителів Чехословаччини заощаджень?",
+    "vi": "Điều gì khiến nhiều người Tiệp Khắc mất tiền tiết kiệm năm 1953?"
+   },
+   "options": [
+    "Měnová reforma",
+    "Povodně",
+    "Válka",
+    "Zemětřesení"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Měnová reforma v roce 1953 výrazně snížila hodnotu úspor obyvatel.",
+    "en": "The 1953 currency reform sharply reduced the value of people’s savings.",
+    "uz": "1953-yilgi pul islohoti aholi jamg'armalarining qiymatini keskin kamaytirgan.",
+    "ru": "Денежная реформа 1953 года резко обесценила сбережения населения.",
+    "uk": "Грошова реформа 1953 року різко знецінила заощадження населення.",
+    "vi": "Cuộc cải cách tiền tệ năm 1953 làm giá trị tiền tiết kiệm giảm mạnh."
+   }
+  },
+  {
+   "id": "own-his-039",
+   "topic": "historie",
+   "question": {
+    "cs": "Jak se nazývá období po roce 1968, kdy komunisté znovu zavedli tvrdou kontrolu společnosti?",
+    "en": "What is the period after 1968, when the communists reimposed strict control of society, called?",
+    "uz": "1968-yildan keyingi, kommunistlar jamiyat ustidan qattiq nazoratni qayta o'rnatgan davr qanday ataladi?",
+    "ru": "Как называется период после 1968 года, когда коммунисты вновь установили жёсткий контроль над обществом?",
+    "uk": "Як називається період після 1968 року, коли комуністи знову встановили жорсткий контроль над суспільством?",
+    "vi": "Giai đoạn sau 1968 khi những người cộng sản siết chặt lại xã hội được gọi là gì?"
+   },
+   "options": [
+    "Normalizace",
+    "První republika",
+    "Národní obrození",
+    "Pražské jaro"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Po potlačení Pražského jara následovalo období normalizace (70. a 80. léta).",
+    "en": "After the Prague Spring was crushed came the period of “normalisation” (1970s–80s).",
+    "uz": "«Praga bahori» bostirilgandan keyin «normallashtirish» davri (1970–80-yillar) boshlangan.",
+    "ru": "После подавления Пражской весны наступил период «нормализации» (1970–80-е годы).",
+    "uk": "Після придушення Празької весни настав період «нормалізації» (1970–80-ті роки).",
+    "vi": "Sau khi Mùa xuân Praha bị dập tắt là thời kỳ «bình thường hóa» (thập niên 70–80)."
+   }
+  },
+  {
+   "id": "own-his-040",
+   "topic": "historie",
+   "question": {
+    "cs": "Kdo byl prezidentem Československa v letech 1975–1989?",
+    "en": "Who was the president of Czechoslovakia from 1975 to 1989?",
+    "uz": "1975–1989-yillarda Chexoslovakiya prezidenti kim bo'lgan?",
+    "ru": "Кто был президентом Чехословакии в 1975–1989 годах?",
+    "uk": "Хто був президентом Чехословаччини в 1975–1989 роках?",
+    "vi": "Ai là tổng thống Tiệp Khắc từ 1975 đến 1989?"
+   },
+   "options": [
+    "Gustáv Husák",
+    "Alexander Dubček",
+    "Ludvík Svoboda",
+    "Antonín Zápotocký"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Gustáv Husák byl hlavní postavou normalizace a prezidentem v letech 1975–1989.",
+    "en": "Gustáv Husák was the key figure of normalisation and president from 1975 to 1989.",
+    "uz": "Gustav Gusak «normallashtirish»ning asosiy siymosi va 1975–1989-yillarda prezident bo'lgan.",
+    "ru": "Густав Гусак — главная фигура нормализации и президент в 1975–1989 годах.",
+    "uk": "Густав Гусак — головна постать нормалізації та президент у 1975–1989 роках.",
+    "vi": "Gustáv Husák là nhân vật chính của thời kỳ bình thường hóa, tổng thống 1975–1989."
+   }
+  },
+  {
+   "id": "own-his-041",
+   "topic": "historie",
+   "question": {
+    "cs": "Kdy se v Československu konaly první svobodné volby po pádu komunismu?",
+    "en": "When were the first free elections held in Czechoslovakia after the fall of communism?",
+    "uz": "Kommunizm qulagandan keyin Chexoslovakiyada birinchi erkin saylovlar qachon bo'lgan?",
+    "ru": "Когда в Чехословакии прошли первые свободные выборы после падения коммунизма?",
+    "uk": "Коли в Чехословаччині відбулися перші вільні вибори після падіння комунізму?",
+    "vi": "Cuộc bầu cử tự do đầu tiên ở Tiệp Khắc sau khi chế độ cộng sản sụp đổ diễn ra khi nào?"
+   },
+   "options": [
+    "V červnu 1990",
+    "V listopadu 1989",
+    "V lednu 1993",
+    "V květnu 2004"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "První svobodné parlamentní volby proběhly v červnu 1990.",
+    "en": "The first free parliamentary elections took place in June 1990.",
+    "uz": "Birinchi erkin parlament saylovlari 1990-yil iyunda bo'lgan.",
+    "ru": "Первые свободные парламентские выборы прошли в июне 1990 года.",
+    "uk": "Перші вільні парламентські вибори відбулися в червні 1990 року.",
+    "vi": "Cuộc bầu cử quốc hội tự do đầu tiên diễn ra tháng 6/1990."
+   }
+  },
+  {
+   "id": "own-his-042",
+   "topic": "historie",
+   "question": {
+    "cs": "Ve kterém roce zasáhly Prahu a velkou část Čech ničivé povodně?",
+    "en": "In which year did devastating floods hit Prague and much of Bohemia?",
+    "uz": "Qaysi yilda Praga va Bogemiyaning katta qismini vayronkor suv toshqini bosgan?",
+    "ru": "В каком году Прагу и большую часть Чехии поразило разрушительное наводнение?",
+    "uk": "У якому році Прагу і велику частину Чехії вразила руйнівна повінь?",
+    "vi": "Năm nào lũ lụt tàn khốc tràn vào Praha và phần lớn Bohemia?"
+   },
+   "options": [
+    "2002",
+    "1989",
+    "2015",
+    "1993"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Velké povodně v srpnu 2002 zaplavily i část pražského metra.",
+    "en": "The great floods of August 2002 even flooded part of the Prague metro.",
+    "uz": "2002-yil avgustdagi katta toshqin hatto Praga metrosining bir qismini ham suv bosgan.",
+    "ru": "Большое наводнение в августе 2002 года затопило даже часть пражского метро.",
+    "uk": "Велика повінь у серпні 2002 року затопила навіть частину празького метро.",
+    "vi": "Trận lũ lớn tháng 8/2002 làm ngập cả một phần tàu điện ngầm Praha."
+   }
+  },
+  {
+   "id": "own-his-043",
+   "topic": "historie",
+   "question": {
+    "cs": "Ve kterém roce byl prezident ČR poprvé zvolen přímo občany?",
+    "en": "In which year was the Czech president first elected directly by citizens?",
+    "uz": "Chexiya prezidenti birinchi marta qaysi yilda bevosita fuqarolar tomonidan saylangan?",
+    "ru": "В каком году президента Чехии впервые избрали прямым голосованием граждан?",
+    "uk": "У якому році президента Чехії вперше обрали прямим голосуванням громадян?",
+    "vi": "Năm nào tổng thống Séc lần đầu được công dân bầu trực tiếp?"
+   },
+   "options": [
+    "2013",
+    "1993",
+    "2003",
+    "2023"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Přímá volba prezidenta se poprvé konala v lednu 2013, předtím volil prezidenta parlament.",
+    "en": "The first direct presidential election was held in January 2013; before that, parliament elected the president.",
+    "uz": "Prezidentni bevosita saylash ilk bor 2013-yil yanvarda bo'lgan; undan oldin uni parlament saylagan.",
+    "ru": "Первые прямые выборы президента прошли в январе 2013 года; раньше президента избирал парламент.",
+    "uk": "Перші прямі вибори президента відбулися в січні 2013 року; раніше президента обирав парламент.",
+    "vi": "Bầu cử tổng thống trực tiếp lần đầu vào tháng 1/2013; trước đó quốc hội bầu tổng thống."
+   }
+  },
+  {
    "id": "own-sta-001",
    "topic": "stat",
    "question": {
-    "cs": "Kdo volí prezidenta České republiky?",
-    "uz": "Chexiya prezidentini kim saylaydi?",
-    "en": "Who elects the President of the Czech Republic?",
-    "ru": "Кто избирает президента Чешской Республики?",
-    "uk": "Хто обирає президента Чеської Республіки?",
-    "vi": "Ai bầu Tổng thống Cộng hòa Séc?"
+    "cs": "Jakým způsobem se v Česku volí prezident?",
+    "en": "How is the president elected in Czechia?",
+    "uz": "Chexiyada prezident qanday saylanadi?",
+    "ru": "Каким образом в Чехии избирают президента?",
+    "uk": "Яким чином у Чехії обирають президента?",
+    "vi": "Tổng thống Séc được bầu theo cách nào?"
    },
    "options": [
-    "Občané v přímé volbě",
-    "Poslanecká sněmovna",
-    "Vláda",
-    "Ústavní soud"
+    "Volí ho přímo občané",
+    "Volí ho Poslanecká sněmovna",
+    "Jmenuje ho vláda",
+    "Jmenuje ho Ústavní soud"
    ],
    "correct": 0,
    "explanation": {
@@ -2765,60 +2738,6 @@
    }
   },
   {
-   "id": "own-sta-051",
-   "topic": "stat",
-   "question": {
-    "cs": "Který svátek připadá na 5. července?",
-    "en": "Which holiday falls on 5 July?",
-    "uz": "5-iyulga qaysi bayram to'g'ri keladi?",
-    "ru": "Какой праздник отмечается 5 июля?",
-    "uk": "Яке свято припадає на 5 липня?",
-    "vi": "Ngày 5/7 là ngày lễ gì?"
-   },
-   "options": [
-    "Den slovanských věrozvěstů Cyrila a Metoděje",
-    "Den vzniku Československa",
-    "Svátek práce",
-    "Den vítězství"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "5. července je Den slovanských věrozvěstů Cyrila a Metoděje.",
-    "en": "5 July is the Day of Saints Cyril and Methodius, the Slavic missionaries.",
-    "uz": "5-iyul — slavyan ma'rifatparvarlari Kirill va Mefodiy kuni.",
-    "ru": "5 июля — День славянских просветителей Кирилла и Мефодия.",
-    "uk": "5 липня — День слов’янських просвітителів Кирила і Мефодія.",
-    "vi": "Ngày 5/7 là Ngày các thánh Cyril và Methodius."
-   }
-  },
-  {
-   "id": "own-sta-052",
-   "topic": "stat",
-   "question": {
-    "cs": "Co si Česká republika připomíná 8. května?",
-    "en": "What does the Czech Republic commemorate on 8 May?",
-    "uz": "Chexiya 8-may kuni nimani eslaydi?",
-    "ru": "Что Чехия отмечает 8 мая?",
-    "uk": "Що Чехія відзначає 8 травня?",
-    "vi": "Ngày 8/5 Cộng hòa Séc kỷ niệm sự kiện gì?"
-   },
-   "options": [
-    "Konec druhé světové války v Evropě",
-    "Vznik České republiky",
-    "Upálení Jana Husa",
-    "Vstup do NATO"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "8. května je Den vítězství – konec druhé světové války v Evropě (1945).",
-    "en": "8 May is Victory Day — the end of the Second World War in Europe (1945).",
-    "uz": "8-may — G'alaba kuni, Yevropada Ikkinchi jahon urushining tugashi (1945).",
-    "ru": "8 мая — День Победы, окончание Второй мировой войны в Европе (1945).",
-    "uk": "8 травня — День перемоги, закінчення Другої світової війни в Європі (1945).",
-    "vi": "Ngày 8/5 là Ngày Chiến thắng — kết thúc Thế chiến II ở châu Âu (1945)."
-   }
-  },
-  {
    "id": "own-sta-053",
    "topic": "stat",
    "question": {
@@ -2954,87 +2873,6 @@
    }
   },
   {
-   "id": "own-kul-003",
-   "topic": "kultura",
-   "question": {
-    "cs": "Kdo složil Symfonii č. 9 Z Nového světa?",
-    "uz": "«Yangi dunyodan» 9-simfoniyasini kim yaratgan?",
-    "en": "Who composed Symphony No. 9 From the New World?",
-    "ru": "Кто написал Симфонию № 9 «Из Нового Света»?",
-    "uk": "Хто написав Симфонію № 9 «З Нового світу»?",
-    "vi": "Ai sáng tác Giao hưởng số 9 «Từ Thế giới Mới»?"
-   },
-   "options": [
-    "Antonín Dvořák",
-    "Bedřich Smetana",
-    "Leoš Janáček",
-    "Bohuslav Martinů"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Symfonii Z Nového světa složil Antonín Dvořák.",
-    "uz": "«Yangi dunyodan» simfoniyasini Antonín Dvořák yaratgan.",
-    "en": "Antonín Dvořák composed the New World Symphony.",
-    "ru": "Симфонию «Из Нового Света» написал Антонин Дворжак.",
-    "uk": "Симфонію «З Нового світу» написав Антонін Дворжак.",
-    "vi": "Antonín Dvořák sáng tác Giao hưởng Thế giới Mới."
-   }
-  },
-  {
-   "id": "own-kul-004",
-   "topic": "kultura",
-   "question": {
-    "cs": "Kdo napsal divadelní hru R.U.R., ve které se poprvé objevilo slovo robot?",
-    "uz": "«Robot» so'zi ilk bor uchragan R.U.R. pyesasini kim yozgan?",
-    "en": "Who wrote the play R.U.R., in which the word robot first appeared?",
-    "ru": "Кто написал пьесу R.U.R., в которой впервые появилось слово «робот»?",
-    "uk": "Хто написав п'єсу R.U.R., у якій уперше з'явилося слово «робот»?",
-    "vi": "Ai viết vở kịch R.U.R., nơi từ «robot» lần đầu xuất hiện?"
-   },
-   "options": [
-    "Karel Čapek",
-    "Jaroslav Hašek",
-    "Václav Havel",
-    "Bohumil Hrabal"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Hru R.U.R. napsal Karel Čapek. Slovo robot vymyslel jeho bratr Josef.",
-    "uz": "R.U.R. pyesasini Karel Čapek yozgan. «Robot» so'zini uning akasi Josef o'ylab topgan.",
-    "en": "Karel Čapek wrote R.U.R.; the word robot was coined by his brother Josef.",
-    "ru": "Пьесу R.U.R. написал Карел Чапек; слово «робот» придумал его брат Йозеф.",
-    "uk": "П'єсу R.U.R. написав Карел Чапек; слово «робот» вигадав його брат Йозеф.",
-    "vi": "Karel Čapek viết R.U.R.; từ «robot» do anh trai ông là Josef nghĩ ra."
-   }
-  },
-  {
-   "id": "own-kul-005",
-   "topic": "kultura",
-   "question": {
-    "cs": "Kdo je autorem románu Osudy dobrého vojáka Švejka?",
-    "uz": "«Yaxshi askar Shveykning sarguzashtlari» romanining muallifi kim?",
-    "en": "Who is the author of the novel The Good Soldier Švejk?",
-    "ru": "Кто автор романа «Похождения бравого солдата Швейка»?",
-    "uk": "Хто автор роману «Пригоди бравого вояка Швейка»?",
-    "vi": "Ai là tác giả tiểu thuyết Những cuộc phiêu lưu của người lính tốt Švejk?"
-   },
-   "options": [
-    "Jaroslav Hašek",
-    "Karel Čapek",
-    "Milan Kundera",
-    "Alois Jirásek"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Román o vojákovi Švejkovi napsal Jaroslav Hašek.",
-    "uz": "Askar Shveyk haqidagi romanni Jaroslav Hašek yozgan.",
-    "en": "The novel about the soldier Švejk was written by Jaroslav Hašek.",
-    "ru": "Роман о солдате Швейке написал Ярослав Гашек.",
-    "uk": "Роман про вояка Швейка написав Ярослав Гашек.",
-    "vi": "Tiểu thuyết về người lính Švejk do Jaroslav Hašek viết."
-   }
-  },
-  {
    "id": "own-kul-009",
    "topic": "kultura",
    "question": {
@@ -3116,60 +2954,6 @@
    }
   },
   {
-   "id": "own-kul-012",
-   "topic": "kultura",
-   "question": {
-    "cs": "Který režisér českého původu natočil filmy Přelet nad kukaččím hnízdem a Amadeus?",
-    "en": "Which Czech-born director made One Flew Over the Cuckoo’s Nest and Amadeus?",
-    "uz": "«Kakku uyasi ustidan uchib» va «Amadeus» filmlarini chex kelib chiqishli qaysi rejissyor suratga olgan?",
-    "ru": "Какой режиссёр чешского происхождения снял «Пролетая над гнездом кукушки» и «Амадей»?",
-    "uk": "Який режисер чеського походження зняв «Політ над гніздом зозулі» та «Амадей»?",
-    "vi": "Đạo diễn gốc Séc nào làm phim Bay trên tổ chim cúc cu và Amadeus?"
-   },
-   "options": [
-    "Miloš Forman",
-    "Jiří Menzel",
-    "Jan Svěrák",
-    "Věra Chytilová"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Miloš Forman získal za oba filmy Oscara za režii.",
-    "en": "Miloš Forman won the Oscar for Best Director for both films.",
-    "uz": "Miloš Forman ikkala film uchun ham eng yaxshi rejissyorlik «Oskar»ini olgan.",
-    "ru": "Милош Форман получил «Оскар» за режиссуру за оба фильма.",
-    "uk": "Мілош Форман отримав «Оскар» за режисуру за обидва фільми.",
-    "vi": "Miloš Forman đoạt Oscar đạo diễn xuất sắc cho cả hai phim."
-   }
-  },
-  {
-   "id": "own-kul-013",
-   "topic": "kultura",
-   "question": {
-    "cs": "Kterým sportem se proslavil Emil Zátopek?",
-    "en": "In which sport did Emil Zátopek become famous?",
-    "uz": "Emil Zatopek qaysi sport turi bilan mashhur bo'lgan?",
-    "ru": "В каком виде спорта прославился Эмиль Затопек?",
-    "uk": "У якому виді спорту прославився Еміль Затопек?",
-    "vi": "Emil Zátopek nổi tiếng ở môn thể thao nào?"
-   },
-   "options": [
-    "Během na dlouhé tratě",
-    "Lední hokej",
-    "Tenis",
-    "Skoky na lyžích"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Emil Zátopek získal na olympiádě v Helsinkách 1952 tři zlaté medaile v běhu.",
-    "en": "Emil Zátopek won three gold medals in running at the 1952 Helsinki Olympics.",
-    "uz": "Emil Zatopek 1952-yil Xelsinki Olimpiadasida yugurishda uchta oltin medal olgan.",
-    "ru": "Эмиль Затопек выиграл три золотые медали в беге на Олимпиаде 1952 года в Хельсинки.",
-    "uk": "Еміль Затопек виграв три золоті медалі з бігу на Олімпіаді 1952 року в Гельсінкі.",
-    "vi": "Emil Zátopek giành ba huy chương vàng chạy tại Olympic Helsinki 1952."
-   }
-  },
-  {
    "id": "own-kul-014",
    "topic": "kultura",
    "question": {
@@ -3224,33 +3008,6 @@
    }
   },
   {
-   "id": "own-kul-016",
-   "topic": "kultura",
-   "question": {
-    "cs": "Kdo napsal romantickou báseň Máj?",
-    "en": "Who wrote the Romantic poem Máj (May)?",
-    "uz": "«Máj» (May) romantik dostonini kim yozgan?",
-    "ru": "Кто написал романтическую поэму «Май»?",
-    "uk": "Хто написав романтичну поему «Травень»?",
-    "vi": "Ai viết bài thơ lãng mạn Máj (Tháng Năm)?"
-   },
-   "options": [
-    "Karel Hynek Mácha",
-    "Karel Jaromír Erben",
-    "Jan Neruda",
-    "Jaroslav Seifert"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Báseň Máj (1836) napsal Karel Hynek Mácha.",
-    "en": "Máj (1836) was written by Karel Hynek Mácha.",
-    "uz": "«Máj» (1836) dostonini Karel Hynek Máxa yozgan.",
-    "ru": "Поэму «Май» (1836) написал Карел Гинек Маха.",
-    "uk": "Поему «Травень» (1836) написав Карел Гинек Маха.",
-    "vi": "Máj (1836) do Karel Hynek Mácha sáng tác."
-   }
-  },
-  {
    "id": "own-kul-017",
    "topic": "kultura",
    "question": {
@@ -3275,33 +3032,6 @@
     "ru": "Франц Кафка родился в Праге, но писал по-немецки.",
     "uk": "Франц Кафка народився в Празі, але писав німецькою.",
     "vi": "Kafka sinh ở Praha nhưng viết bằng tiếng Đức."
-   }
-  },
-  {
-   "id": "own-kul-018",
-   "topic": "kultura",
-   "question": {
-    "cs": "Kde se nachází pražský orloj?",
-    "en": "Where is the Prague astronomical clock?",
-    "uz": "Praga astronomik soati (orloj) qayerda joylashgan?",
-    "ru": "Где находятся пражские куранты (Орлой)?",
-    "uk": "Де розташований празький астрономічний годинник (Орлой)?",
-    "vi": "Đồng hồ thiên văn Praha nằm ở đâu?"
-   },
-   "options": [
-    "Na Staroměstské radnici",
-    "Na Pražském hradě",
-    "Na Karlově mostě",
-    "Na Vyšehradě"
-   ],
-   "correct": 0,
-   "explanation": {
-    "cs": "Orloj je na věži Staroměstské radnice a pochází z roku 1410.",
-    "en": "The clock is on the Old Town Hall tower and dates from 1410.",
-    "uz": "Orloj Eski shahar ratushasi minorasida joylashgan va 1410-yilga oid.",
-    "ru": "Орлой находится на башне Староместской ратуши и датируется 1410 годом.",
-    "uk": "Орлой розташований на вежі Староміської ратуші й датується 1410 роком.",
-    "vi": "Đồng hồ ở tháp Tòa thị chính Phố Cổ, có từ năm 1410."
    }
   },
   {
@@ -3518,6 +3248,195 @@
     "ru": "Вацлав Гавел писал пьесы и был одним из представителей Хартии-77.",
     "uk": "Вацлав Гавел писав п’єси й був одним із речників Хартії-77.",
     "vi": "Havel viết kịch và là một trong những người phát ngôn của Hiến chương 77."
+   }
+  },
+  {
+   "id": "own-kul-027",
+   "topic": "kultura",
+   "question": {
+    "cs": "Které divadlo založili Jiří Voskovec a Jan Werich?",
+    "en": "Which theatre did Jiří Voskovec and Jan Werich found?",
+    "uz": "Jiří Voskovec va Jan Werich qaysi teatrni asos solgan?",
+    "ru": "Какой театр основали Иржи Восковец и Ян Верих?",
+    "uk": "Який театр заснували Їржі Восковець і Ян Верих?",
+    "vi": "Jiří Voskovec và Jan Werich thành lập nhà hát nào?"
+   },
+   "options": [
+    "Osvobozené divadlo",
+    "Národní divadlo",
+    "Laterna magika",
+    "Divadlo Járy Cimrmana"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Voskovec a Werich proslavili ve 30. letech Osvobozené divadlo svými satirickými hrami.",
+    "en": "Voskovec and Werich made the Liberated Theatre famous in the 1930s with satirical plays.",
+    "uz": "Voskovec va Werich 1930-yillarda satirik spektakllari bilan «Ozod teatr»ni mashhur qilgan.",
+    "ru": "Восковец и Верих прославили Освобождённый театр в 1930-е годы сатирическими пьесами.",
+    "uk": "Восковець і Верих прославили Визволений театр у 1930-ті роки сатиричними п’єсами.",
+    "vi": "Hai ông làm nên tiếng tăm cho Nhà hát Giải phóng thập niên 1930 bằng các vở trào phúng."
+   }
+  },
+  {
+   "id": "own-kul-028",
+   "topic": "kultura",
+   "question": {
+    "cs": "Čím se proslavil Jiří Trnka?",
+    "en": "What was Jiří Trnka famous for?",
+    "uz": "Jiří Trnka nimasi bilan mashhur bo'lgan?",
+    "ru": "Чем прославился Иржи Трнка?",
+    "uk": "Чим прославився Їржі Трнка?",
+    "vi": "Jiří Trnka nổi tiếng về điều gì?"
+   },
+   "options": [
+    "Loutkovými filmy a ilustracemi",
+    "Stavbou mostů",
+    "Operním zpěvem",
+    "Skoky na lyžích"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Jiří Trnka byl mistr loutkového animovaného filmu a ilustrátor dětských knih.",
+    "en": "Jiří Trnka was a master of puppet animation and an illustrator of children’s books.",
+    "uz": "Jiří Trnka qo'g'irchoq animatsiyasi ustasi va bolalar kitoblari rassomi bo'lgan.",
+    "ru": "Иржи Трнка — мастер кукольной анимации и иллюстратор детских книг.",
+    "uk": "Їржі Трнка — майстер лялькової анімації та ілюстратор дитячих книжок.",
+    "vi": "Jiří Trnka là bậc thầy phim hoạt hình rối và họa sĩ minh họa sách thiếu nhi."
+   }
+  },
+  {
+   "id": "own-kul-029",
+   "topic": "kultura",
+   "question": {
+    "cs": "Kdo byla Ema Destinnová?",
+    "en": "Who was Ema Destinnová?",
+    "uz": "Ema Destinnová kim edi?",
+    "ru": "Кем была Эма Дестиннова?",
+    "uk": "Ким була Ема Дестіннова?",
+    "vi": "Ema Destinnová là ai?"
+   },
+   "options": [
+    "Slavná operní pěvkyně",
+    "První česká lékařka",
+    "Spisovatelka pohádek",
+    "Olympijská vítězka"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Ema Destinnová zpívala na velkých operních scénách, například v New Yorku a Londýně.",
+    "en": "Ema Destinnová sang on great opera stages such as New York and London.",
+    "uz": "Ema Destinnová Nyu-York va London kabi katta opera sahnalarida kuylagan.",
+    "ru": "Эма Дестиннова пела на крупных оперных сценах, например в Нью-Йорке и Лондоне.",
+    "uk": "Ема Дестіннова співала на великих оперних сценах, наприклад у Нью-Йорку та Лондоні.",
+    "vi": "Bà hát trên các sân khấu opera lớn như New York và London."
+   }
+  },
+  {
+   "id": "own-kul-030",
+   "topic": "kultura",
+   "question": {
+    "cs": "Ve kterém sportu získala Věra Čáslavská sedm zlatých olympijských medailí?",
+    "en": "In which sport did Věra Čáslavská win seven Olympic gold medals?",
+    "uz": "Věra Čáslavská qaysi sport turida yettita olimpiada oltin medalini qo'lga kiritgan?",
+    "ru": "В каком виде спорта Вера Чаславска завоевала семь олимпийских золотых медалей?",
+    "uk": "У якому виді спорту Віра Чаславська здобула сім олімпійських золотих медалей?",
+    "vi": "Věra Čáslavská giành bảy huy chương vàng Olympic ở môn nào?"
+   },
+   "options": [
+    "Ve sportovní gymnastice",
+    "V tenise",
+    "V plavání",
+    "V biatlonu"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Věra Čáslavská byla gymnastka; na olympiádách v Tokiu a Mexiku získala sedm zlatých medailí.",
+    "en": "Věra Čáslavská was a gymnast; she won seven golds at the Tokyo and Mexico City Olympics.",
+    "uz": "Věra Čáslavská gimnastikachi bo'lgan; Tokio va Mexiko olimpiadalarida yettita oltin olgan.",
+    "ru": "Вера Чаславска — гимнастка; на Олимпиадах в Токио и Мехико она выиграла семь золотых медалей.",
+    "uk": "Віра Чаславська — гімнастка; на Олімпіадах у Токіо та Мехіко здобула сім золотих медалей.",
+    "vi": "Bà là vận động viên thể dục dụng cụ, giành bảy HCV tại Olympic Tokyo và Mexico."
+   }
+  },
+  {
+   "id": "own-kul-031",
+   "topic": "kultura",
+   "question": {
+    "cs": "Kdo napsal knihu Staré pověsti české?",
+    "en": "Who wrote the book Old Czech Legends?",
+    "uz": "«Qadimgi chex afsonalari» kitobini kim yozgan?",
+    "ru": "Кто написал книгу «Старинные чешские сказания»?",
+    "uk": "Хто написав книжку «Старовинні чеські перекази»?",
+    "vi": "Ai viết cuốn Truyền thuyết Séc cổ?"
+   },
+   "options": [
+    "Alois Jirásek",
+    "Jan Neruda",
+    "Karel Čapek",
+    "Bohumil Hrabal"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Staré pověsti české (1894) převyprávěl Alois Jirásek.",
+    "en": "Old Czech Legends (1894) were retold by Alois Jirásek.",
+    "uz": "«Qadimgi chex afsonalari»ni (1894) Alois Jirásek qayta hikoya qilgan.",
+    "ru": "«Старинные чешские сказания» (1894) пересказал Алоис Ирасек.",
+    "uk": "«Старовинні чеські перекази» (1894) переказав Алоїс Їрасек.",
+    "vi": "Tác phẩm (1894) do Alois Jirásek kể lại."
+   }
+  },
+  {
+   "id": "own-kul-032",
+   "topic": "kultura",
+   "question": {
+    "cs": "Kdo je podle pověstí vládcem hor v Krkonoších?",
+    "en": "According to legend, who rules the Krkonoše mountains?",
+    "uz": "Afsonalarga ko'ra Krkonoše tog'larining hukmdori kim?",
+    "ru": "Кто, по легендам, правит горами Крконоше?",
+    "uk": "Хто, за легендами, править горами Крконоше?",
+    "vi": "Theo truyền thuyết, ai cai quản dãy núi Krkonoše?"
+   },
+   "options": [
+    "Krakonoš",
+    "Golem",
+    "Vodník",
+    "Praotec Čech"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Krakonoš je pohádkový duch a pán Krkonoš.",
+    "en": "Krakonoš is the fairy-tale spirit and lord of the Krkonoše.",
+    "uz": "Krakonoš — ertaklardagi ruh va Krkonoše hukmdori.",
+    "ru": "Краконош — сказочный дух и хозяин Крконоше.",
+    "uk": "Краконош — казковий дух і господар Крконоше.",
+    "vi": "Krakonoš là thần núi trong truyện cổ, chúa tể của Krkonoše."
+   }
+  },
+  {
+   "id": "own-kul-033",
+   "topic": "kultura",
+   "question": {
+    "cs": "Čím byl Bohuslav Martinů?",
+    "en": "What was Bohuslav Martinů?",
+    "uz": "Bohuslav Martinů kim bo'lgan?",
+    "ru": "Кем был Богуслав Мартину?",
+    "uk": "Ким був Богуслав Мартіну?",
+    "vi": "Bohuslav Martinů là ai?"
+   },
+   "options": [
+    "Hudební skladatel",
+    "Architekt",
+    "Malíř",
+    "Hokejista"
+   ],
+   "correct": 0,
+   "explanation": {
+    "cs": "Bohuslav Martinů patří k nejvýznamnějším českým skladatelům 20. století.",
+    "en": "Bohuslav Martinů is one of the most important Czech composers of the 20th century.",
+    "uz": "Bohuslav Martinů XX asrning eng muhim chex bastakorlaridan biri.",
+    "ru": "Богуслав Мартину — один из самых значительных чешских композиторов XX века.",
+    "uk": "Богуслав Мартіну — один із найвизначніших чеських композиторів XX століття.",
+    "vi": "Ông là một trong những nhà soạn nhạc Séc quan trọng nhất thế kỷ 20."
    }
   }
  ]
