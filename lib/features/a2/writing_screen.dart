@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/answer_feedback.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
@@ -79,6 +80,7 @@ class _WritingScreenState extends State<WritingScreen> {
     final ok = results.where(passed.contains).length;
     _scores[_taskIndex] = (ok, results.length);
     AppScope.read(context).recordAnswer(Exams.a2Writing, _task.id, ok == results.length);
+    AnswerFeedback.of(ok == passed.length);
     setState(() {
       _results = results;
       _checked = true;

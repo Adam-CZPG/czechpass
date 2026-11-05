@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/answer_feedback.dart';
 import 'package:czech_pass/core/audio_clips.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
@@ -130,6 +131,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
     }
     final right = _task.questions.where((q) => _picked[q.id] == q.correctIndex).length;
     _scores[_taskIndex] = (right, _task.questions.length);
+    AnswerFeedback.of(right == _task.questions.length);
     setState(() => _checked = true);
   }
 

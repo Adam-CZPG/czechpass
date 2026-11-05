@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/answer_feedback.dart';
 import 'package:czech_pass/core/badges.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/exam_rules.dart';
@@ -130,6 +131,7 @@ class _QuizScreenState extends State<QuizScreen> {
   void _check() {
     if (_picked == null) return;
     _saveAnswer();
+    AnswerFeedback.of(_picked == _current.correctIndex);
     setState(() => _checked = true);
   }
 

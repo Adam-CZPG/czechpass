@@ -10,6 +10,7 @@ class SettingsStore {
   static const _dailyGoalKey = 'daily_goal';
   static const _reminderKey = 'reminder_minutes';
   static const _themeKey = 'theme_mode';
+  static const _soundKey = 'answer_sound';
 
   /// Eslatma vaqti standart holatda — 17:00.
   static const defaultReminderMinutes = 17 * 60;
@@ -78,5 +79,16 @@ class SettingsStore {
   Future<void> saveThemeMode(ThemeMode mode) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_themeKey, mode.name);
+  }
+
+  /// Javobdan keyingi ovoz va tebranish (standart — yoqilgan).
+  Future<bool> loadAnswerSound() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_soundKey) ?? true;
+  }
+
+  Future<void> saveAnswerSound(bool on) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_soundKey, on);
   }
 }

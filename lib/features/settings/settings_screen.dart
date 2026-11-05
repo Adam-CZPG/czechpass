@@ -93,6 +93,14 @@ class SettingsScreen extends StatelessWidget {
                       ),
                     ),
                   Divider(height: 1, color: AppColors.border),
+                  SwitchListTile(
+                    secondary: const Icon(Icons.volume_up_outlined),
+                    title: Text(s.answerSoundTitle),
+                    subtitle: Text(s.answerSoundSubtitle),
+                    value: controller.answerSound,
+                    onChanged: controller.setAnswerSound,
+                  ),
+                  Divider(height: 1, color: AppColors.border),
                   ListTile(
                     leading: const Icon(Icons.privacy_tip_outlined),
                     title: Text(s.privacyPolicy),

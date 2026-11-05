@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/answer_feedback.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question.dart';
@@ -116,7 +117,9 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
     final hits = _task.keywords.where((k) => answer.contains(foldCzech(k))).length;
     _scores[_taskIndex] = (hits, _task.keywords.length);
     // Iboralarning kamida 2/3 qismi aytilgan bo'lsa — topshiriq bajarilgan hisoblanadi.
-    AppScope.read(context).recordAnswer(Exams.a2Speaking, _task.id, hits * 3 >= _task.keywords.length * 2);
+    final done = hits * 3 >= _task.keywords.length * 2;
+    AppScope.read(context).recordAnswer(Exams.a2Speaking, _task.id, done);
+    AnswerFeedback.of(done);
     setState(() {
       _listening = false;
       _checked = true;

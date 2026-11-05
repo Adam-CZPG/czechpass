@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/answer_feedback.dart';
 import 'package:czech_pass/core/app_language.dart';
 import 'package:czech_pass/core/app_update.dart';
 import 'package:czech_pass/core/badges.dart';
@@ -34,7 +35,9 @@ Future<void> main() async {
     initialReminder: await settings.loadReminder(),
     badges: await BadgeStore.load(),
     initialThemeMode: await settings.loadThemeMode(),
+    initialAnswerSound: await settings.loadAnswerSound(),
   );
+  AnswerFeedback.enabled = controller.answerSound;
   // Ilova yangilangandan keyin ham eslatma ishlashi uchun qayta rejalashtiramiz.
   controller.rescheduleReminder();
   runApp(CzechPassApp(controller: controller));

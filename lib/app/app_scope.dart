@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' show ThemeMode;
 import 'package:flutter/widgets.dart';
 
+import 'package:czech_pass/core/answer_feedback.dart';
 import 'package:czech_pass/core/app_language.dart';
 import 'package:czech_pass/core/badges.dart';
 import 'package:czech_pass/core/entitlements.dart';
@@ -26,7 +27,9 @@ class AppController extends ChangeNotifier {
     int? initialReminder,
     BadgeStore? badges,
     ThemeMode initialThemeMode = ThemeMode.system,
+    bool initialAnswerSound = true,
   })  : _language = initialLanguage,
+        _answerSound = initialAnswerSound,
         _themeMode = initialThemeMode,
         badges = badges ?? BadgeStore.memory(),
         _reminder = initialReminder,
@@ -143,6 +146,18 @@ class AppController extends ChangeNotifier {
   /// Hozir qorong'i ranglar ishlatiladimi (tanlov + telefonning yorqinlik sozlamasi).
   bool isDark(Brightness platform) =>
       _themeMode == ThemeMode.dark || (_themeMode == ThemeMode.system && platform == Brightness.dark);
+
+  bool _answerSound;
+
+  /// Javobdan keyingi ovoz va tebranish yoqilganmi.
+  bool get answerSound => _answerSound;
+
+  Future<void> setAnswerSound(bool on) async {
+    _answerSound = on;
+    AnswerFeedback.enabled = on;
+    notifyListeners();
+    await settings.saveAnswerSound(on);
+  }
 
   Future<void> setThemeMode(ThemeMode mode) async {
     _themeMode = mode;

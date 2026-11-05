@@ -1607,4 +1607,22 @@ class S {
         'ru': 'Тёмная',
         'uk': 'Темна',
       });
+
+  // ── Javob ovozi ──
+  String get answerSoundTitle => _t(const {
+        'uz': 'Ovoz va tebranish',
+        'cs': 'Zvuk a vibrace',
+        'en': 'Sound and vibration',
+        'vi': 'Âm thanh và rung',
+        'ru': 'Звук и вибрация',
+        'uk': 'Звук і вібрація',
+      });
+  String get answerSoundSubtitle => _t(const {
+        'uz': 'To\'g\'ri va noto\'g\'ri javobdan keyin',
+        'cs': 'Po správné a nesprávné odpovědi',
+        'en': 'After correct and wrong answers',
+        'vi': 'Sau câu trả lời đúng và sai',
+        'ru': 'После правильного и неправильного ответа',
+        'uk': 'Після правильної та неправильної відповіді',
+      });
 }

@@ -103,6 +103,8 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+          # Gradle paketlari keshlanadi: Maven serveri vaqtincha javob bermasa ham yig'ish ishlaydi.
+          cache: gradle
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
