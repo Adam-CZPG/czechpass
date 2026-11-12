@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
 import 'package:czech_pass/features/onboarding/language_screen.dart';
+import 'package:czech_pass/features/settings/privacy_screen.dart';
 import 'package:czech_pass/l10n/strings.dart';
 import 'package:czech_pass/widgets/common.dart';
 
@@ -105,8 +106,9 @@ class SettingsScreen extends StatelessWidget {
                     leading: const Icon(Icons.privacy_tip_outlined),
                     title: Text(s.privacyPolicy),
                     trailing: const Icon(Icons.chevron_right),
-                    // TODO: maxfiylik siyosati sahifasi tayyor bo'lgach, havolani oching.
-                    onTap: () => showComingSoon(context, s.comingSoon),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute<void>(builder: (_) => const PrivacyScreen()),
+                    ),
                   ),
                   Divider(height: 1, color: AppColors.border),
                   ListTile(

@@ -17,13 +17,16 @@ Tillar: chex (standart), ukrain, vyetnam, rus, ingliz, o'zbek.
 | `assets/questions` | Savollar (JSON) |
 | `assets/audio/listening` | Tinglash dialoglari (Azure TTS, avtomatik yaratiladi) |
 | `assets/info/exams.json` | Rasmiy imtihonlar haqida ma'lumot |
+| `assets/legal` | Maxfiylik siyosati (chexcha va inglizcha) |
 | `tool/` | Audio generatori, xavfsizlik tekshiruvi |
+| `docs/release-checklist.md` | Google Play'ga chiqarishdan oldingi ro'yxat |
 | `e2e/` | Playwright testlari |
 
 ## CI/CD (GitHub Actions)
 
 - **CI**: `flutter analyze` + unit testlar → xavfsizlik (gitleaks, OSV, `tool/security_check.sh`) →
-  Playwright (Flutter web) → APK (`czechpass-full` — hamma bo'lim ochiq, sinov uchun; `czechpass-free`).
+  Playwright (Flutter web) → APK (`czechpass-full` — hamma bo'lim ochiq, sinov uchun; `czechpass-free`)
+  va Google Play uchun AAB (`czechpass.aab`).
 - **Audio**: `a2_listening.json` o'zgarganda MP3 yaratiladi (Vlasta — ayol, Antonín — erkak).
 
 GitHub Secrets: `AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION`, `ANDROID_KEYSTORE_BASE64`,
