@@ -23,7 +23,8 @@ class Mocks {
 }
 
 /// Foydalanuvchi sotib olgan tariflar va bepul urinishlar hisobi.
-/// To'lov (Google Play Billing) keyinroq ulanadi va [grant] orqali tarifni ochadi.
+/// To'lov Google Play Billing orqali (billing.dart): xarid [grant] bilan ochiladi,
+/// har ochilishda Play'dagi holat [replaceOwned] bilan tekshiriladi.
 ///
 /// Sinov APK'sida hamma narsa ochiq bo'lishi uchun `--dart-define=DEV_UNLOCK=true`.
 class Entitlements {
@@ -85,6 +86,15 @@ class Entitlements {
 
   Future<void> grant(Tariff tariff) async {
     _owned.add(tariff);
+    await _prefs?.setStringList(_ownedKey, [for (final t in _owned) t.name]);
+  }
+
+  /// Google Play'dan olingan haqiqiy holat: ro'yxat to'liq almashtiriladi
+  /// (qaytarilgan yoki boshqa akkauntga tegishli xarid yopiladi).
+  Future<void> replaceOwned(Set<Tariff> tariffs) async {
+    _owned
+      ..clear()
+      ..addAll(tariffs);
     await _prefs?.setStringList(_ownedKey, [for (final t in _owned) t.name]);
   }
 }

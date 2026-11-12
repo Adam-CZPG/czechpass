@@ -1,12 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
+import 'package:czech_pass/app/app_scope.dart';
 import 'package:czech_pass/app/theme.dart';
+import 'package:czech_pass/core/billing.dart';
 import 'package:czech_pass/core/tariff.dart';
 import 'package:czech_pass/l10n/strings.dart';
-import 'package:czech_pass/widgets/common.dart';
 
 /// To'liq versiya: alohida tariflar (A2, fuqarolik yoki ikkalasi). Bir martalik xarid.
-/// Google Play Billing keyingi bosqichda `in_app_purchase` paketi bilan ulanadi.
+/// To'lov Google Play Billing orqali (core/billing.dart).
 class PremiumScreen extends StatefulWidget {
   const PremiumScreen({super.key, this.initial = Tariff.residence});
 
@@ -18,10 +21,77 @@ class PremiumScreen extends StatefulWidget {
 
 class _PremiumScreenState extends State<PremiumScreen> {
   late Tariff _selected = widget.initial;
+  StreamSubscription<BillingEvent>? _events;
+  bool _busy = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _events = AppScope.read(context).billing?.events.listen(_onEvent);
+  }
+
+  @override
+  void dispose() {
+    _events?.cancel();
+    super.dispose();
+  }
+
+  void _say(String message) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text(message)));
+  }
+
+  void _onEvent(BillingEvent event) {
+    if (!mounted) return;
+    final s = S.of(context);
+    _say(switch (event) {
+      BillingEvent.purchased => s.purchaseDone,
+      BillingEvent.pending => s.purchasePending,
+      BillingEvent.failed => s.purchaseFailed,
+    });
+  }
+
+  Future<void> _buy() async {
+    final s = S.of(context);
+    final billing = AppScope.read(context).billing;
+    if (billing == null || !billing.canBuy(_selected)) {
+      _say(s.billingUnavailable);
+      return;
+    }
+    setState(() => _busy = true);
+    final opened = await billing.buy(_selected);
+    if (!mounted) return;
+    setState(() => _busy = false);
+    if (!opened) _say(s.billingUnavailable);
+  }
+
+  Future<void> _restore() async {
+    final s = S.of(context);
+    final billing = AppScope.read(context).billing;
+    if (billing == null) {
+      _say(s.billingUnavailable);
+      return;
+    }
+    setState(() => _busy = true);
+    final result = await billing.restore();
+    if (!mounted) return;
+    setState(() => _busy = false);
+    _say(switch (result) {
+      RestoreResult.restored => s.restoreDone,
+      RestoreResult.nothing => s.restoreNothing,
+      RestoreResult.unavailable => s.billingUnavailable,
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     final s = S.of(context);
+    final controller = AppScope.of(context);
+    final billing = controller.billing;
+    String price(Tariff tariff) => billing?.priceOf(tariff) ?? Prices.of(tariff);
+    final owned = controller.entitlements.unlocked(_selected);
     final options = [
       (Tariff.residence, s.trackResidence, s.includesA2, null),
       (Tariff.citizenship, s.trackCitizenship, s.includesCitizenship, null),
@@ -55,7 +125,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
               _TariffTile(
                 title: title,
                 includes: includes,
-                price: Prices.of(tariff),
+                price: price(tariff),
                 badge: badge,
                 selected: _selected == tariff,
                 onTap: () => setState(() => _selected = tariff),
@@ -100,11 +170,11 @@ class _PremiumScreenState extends State<PremiumScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               FilledButton(
-                onPressed: () => showComingSoon(context, s.billingSoon),
-                child: Text(s.buyFor(Prices.of(_selected))),
+                onPressed: owned || _busy ? null : _buy,
+                child: Text(owned ? s.alreadyOwned : s.buyFor(price(_selected))),
               ),
               TextButton(
-                onPressed: () => showComingSoon(context, s.billingSoon),
+                onPressed: _busy ? null : _restore,
                 child: Text(s.restore),
               ),
             ],

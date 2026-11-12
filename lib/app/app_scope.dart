@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:czech_pass/core/answer_feedback.dart';
 import 'package:czech_pass/core/app_language.dart';
 import 'package:czech_pass/core/badges.dart';
+import 'package:czech_pass/core/billing.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/question_repository.dart';
@@ -46,6 +47,12 @@ class AppController extends ChangeNotifier {
 
   /// Olingan nishonlar.
   final BadgeStore badges;
+
+  /// Google Play to'lovi (testlarda va vebda — null).
+  BillingService? billing;
+
+  /// Tarif sotib olinganda yoki Play'dan tiklanganda ekranlarni yangilaydi.
+  void entitlementsChanged() => notifyListeners();
 
   /// Yangi nishon olinganda chaqiriladi (ekranda qisqa xabar ko'rsatish uchun).
   void Function(AppBadge badge)? onBadge;
