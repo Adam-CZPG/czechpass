@@ -151,8 +151,22 @@ jobs:
             echo "::warning::APK yig'ish muvaffaqiyatsiz ($i), qayta urinilmoqda"; sleep 30
           done
           cp build/app/outputs/flutter-apk/app-release.apk dist/czechpass-free.apk
+      # Google Play faqat AAB qabul qiladi. Bepul versiya bilan bir xil kod, to'lov Play orqali ochiladi.
+      - name: AAB (Google Play uchun)
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          for i in 1 2 3; do
+            flutter build appbundle --release --build-number=${{ github.run_number }} && break
+            [ "$i" = 3 ] && exit 1
+            echo "::warning::AAB yig'ish muvaffaqiyatsiz ($i), qayta urinilmoqda"; sleep 30
+          done
+          cp build/app/outputs/bundle/release/app-release.aab dist/czechpass.aab
       - uses: actions/upload-artifact@v7
         with:
           name: czechpass-apk
-          path: dist/*.apk
+          path: |
+            dist/*.apk
+            dist/*.aab
           retention-days: 14

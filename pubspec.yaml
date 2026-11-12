@@ -1,5 +1,5 @@
 name: czech_pass
-description: "A new Flutter project."
+description: "CzechPass: preparation for the Czech A2 permanent residence exam and the citizenship exam (české reálie)."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -69,6 +69,7 @@ flutter:
   assets:
     - assets/questions/
     - assets/info/
+    - assets/legal/
     - assets/audio/listening/
     - assets/sfx/
 
