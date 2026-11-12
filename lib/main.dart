@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
@@ -9,6 +11,7 @@ import 'package:czech_pass/core/answer_feedback.dart';
 import 'package:czech_pass/core/app_language.dart';
 import 'package:czech_pass/core/app_update.dart';
 import 'package:czech_pass/core/badges.dart';
+import 'package:czech_pass/core/billing.dart';
 import 'package:czech_pass/core/entitlements.dart';
 import 'package:czech_pass/core/progress_store.dart';
 import 'package:czech_pass/core/settings_store.dart';
@@ -38,6 +41,12 @@ Future<void> main() async {
     initialAnswerSound: await settings.loadAnswerSound(),
   );
   AnswerFeedback.enabled = controller.answerSound;
+  // Xaridlar Google Play'dan tekshiriladi (ilova ochilishini kutdirmaydi).
+  if (BillingService.supported) {
+    final billing = BillingService(entitlements: controller.entitlements, onChanged: controller.entitlementsChanged);
+    controller.billing = billing;
+    unawaited(billing.start());
+  }
   // Ilova yangilangandan keyin ham eslatma ishlashi uchun qayta rejalashtiramiz.
   controller.rescheduleReminder();
   runApp(CzechPassApp(controller: controller));

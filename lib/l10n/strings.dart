@@ -518,6 +518,62 @@ class S {
         'ru': 'Восстановить покупку',
         'uk': 'Відновити покупку',
       });
+  String get billingUnavailable => _t(const {
+        'uz': "Google Play hozir mavjud emas. Internetni tekshirib, keyinroq urinib ko'ring.",
+        'cs': 'Google Play teď není dostupný. Zkontrolujte připojení a zkuste to později.',
+        'en': 'Google Play is not available right now. Check your connection and try again later.',
+        'vi': 'Google Play hiện không khả dụng. Hãy kiểm tra kết nối và thử lại sau.',
+        'ru': 'Google Play сейчас недоступен. Проверьте подключение и попробуйте позже.',
+        'uk': 'Google Play зараз недоступний. Перевірте з’єднання і спробуйте пізніше.',
+      });
+  String get purchaseDone => _t(const {
+        'uz': 'Xarid muvaffaqiyatli. Rahmat!',
+        'cs': 'Nákup proběhl. Děkujeme!',
+        'en': 'Purchase complete. Thank you!',
+        'vi': 'Mua hàng thành công. Cảm ơn bạn!',
+        'ru': 'Покупка завершена. Спасибо!',
+        'uk': 'Покупку завершено. Дякуємо!',
+      });
+  String get purchasePending => _t(const {
+        'uz': "To'lov kutilmoqda. Tasdiqlangach bo'limlar ochiladi.",
+        'cs': 'Platba se zpracovává. Po potvrzení se obsah odemkne.',
+        'en': 'Payment is pending. The content unlocks once it is confirmed.',
+        'vi': 'Thanh toán đang chờ xử lý. Nội dung sẽ mở khi được xác nhận.',
+        'ru': 'Платёж обрабатывается. После подтверждения разделы откроются.',
+        'uk': 'Платіж обробляється. Після підтвердження розділи відкриються.',
+      });
+  String get purchaseFailed => _t(const {
+        'uz': "Xarid amalga oshmadi. Pul yechilmadi.",
+        'cs': 'Nákup se nezdařil. Platba nebyla stržena.',
+        'en': 'The purchase did not go through. You were not charged.',
+        'vi': 'Giao dịch không thành công. Bạn chưa bị trừ tiền.',
+        'ru': 'Покупка не прошла. Деньги не списаны.',
+        'uk': 'Покупка не відбулася. Кошти не списано.',
+      });
+  String get restoreDone => _t(const {
+        'uz': 'Xarid tiklandi.',
+        'cs': 'Nákup byl obnoven.',
+        'en': 'Purchase restored.',
+        'vi': 'Đã khôi phục giao dịch mua.',
+        'ru': 'Покупка восстановлена.',
+        'uk': 'Покупку відновлено.',
+      });
+  String get restoreNothing => _t(const {
+        'uz': 'Bu Google akkauntida xarid topilmadi.',
+        'cs': 'U tohoto účtu Google nebyl nalezen žádný nákup.',
+        'en': 'No purchase was found for this Google account.',
+        'vi': 'Không tìm thấy giao dịch mua nào cho tài khoản Google này.',
+        'ru': 'Для этого аккаунта Google покупок не найдено.',
+        'uk': 'Для цього облікового запису Google покупок не знайдено.',
+      });
+  String get alreadyOwned => _t(const {
+        'uz': 'Sotib olingan',
+        'cs': 'Zakoupeno',
+        'en': 'Purchased',
+        'vi': 'Đã mua',
+        'ru': 'Куплено',
+        'uk': 'Придбано',
+      });
   String get billingSoon => _t(const {
         'uz': "To'lov Google Play ulangandan keyin ishlaydi.",
         'cs': 'Platba bude fungovat po napojení Google Play.',

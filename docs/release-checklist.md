@@ -8,9 +8,12 @@ Belgilar: ✅ tayyor · 🟡 qisman · ⬜ qilinmagan.
 - ✅ AAB: CI `czechpass.aab` faylini yig'adi (artifact `czechpass-apk` ichida).
 - ✅ Kod kichraytirish (R8): Flutter release yig'ishda standart holatda yoqilgan.
 - ✅ Ilova ichida maxfiylik siyosati ekrani (`assets/legal/`).
-- ⬜ **Play Billing**: `Entitlements.grant` hozir faqat telefon xotirasiga yozadi. Play Console'da
-  3 ta mahsulot (residence, citizenship, both) yaratilgach `in_app_purchase` ulanadi va xarid
-  har ochilishda Play'dan tekshiriladi (shunda APK ulashilganda xarid o'tmaydi).
+- 🟡 **Play Billing**: kod ulangan (`lib/core/billing.dart`), haqiqiy telefonda hali sinalmagan. Qolgani:
+  1. Play Console → Monetize → In-app products: `czechpass_residence`, `czechpass_citizenship`,
+     `czechpass_both` (bir martalik, narxlar 199 / 299 / 399 Kč). ID'lar koddagi bilan bir xil bo'lishi shart.
+  2. AAB'ni Internal testing'ga yuklash va o'zingizni License tester qilib qo'shish.
+  3. Sinov: xarid, bekor qilish, "Xaridni tiklash", ilovani o'chirib qayta o'rnatish, pulni qaytarish.
+  Xarid har ochilishda Play'dan tekshiriladi, shuning uchun ulashilgan APK'da xarid o'tmaydi.
 - ⬜ Reklama (AdMob) va rozilik oynasi (UMP) — AdMob akkaunti ochilgach.
 - ⬜ Crash hisobotlari (Crashlytics yoki Sentry) — akkaunt kerak; qo'shilsa maxfiylik siyosati yangilanadi.
 - 🟡 Versiya: `pubspec.yaml`da `1.0.0`, sozlamalar ekranida `0.1.0` qo'lda yozilgan — bittasini tanlash kerak.
